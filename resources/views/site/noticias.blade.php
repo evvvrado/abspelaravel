@@ -33,7 +33,7 @@
                     <div class="vertical-blog">
                         <div class="img"><img src="{{asset($destaque->preview)}}" alt="{{$destaque->titulo}}"></div>
                         <div class="_title">{{$destaque->titulo}}</div>
-                        <button class="btn-alternative" onclick="window.location.href = '{{route('site.noticias', ['slug' => $destaque->slug])}}'">
+                        <button class="btn-alternative" onclick="window.location.href = '{{route('site.noticias', ['categoria' => $destaque->categoria->slug, 'destaque' => $destaque->slug])}}'">
                             <span>Saiba Mais</span>
                             <div class="svg">
                                 <img src="{{asset('site/img/arrowlong.svg')}}" alt="">
