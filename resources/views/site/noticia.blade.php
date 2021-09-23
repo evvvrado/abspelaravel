@@ -1,49 +1,134 @@
-@include('site.includes.head')
-<body class="cursos" style="overflow:hidden;">
+@include("site.includes.head")
 
-    <main class="main">
-        <section id="blogItem">
-            <article>
-                <header>
-                    <h2>{{$noticia->titulo}}</h2>
-                    <hr>
-                    <nav>
-                        <address class="author">
-                            <a rel="author" title="Enviar email para o autor" href="mailto:">
-                                <img width="27" height="27" src="{{asset('site/img/ico_user.svg')}}" alt="Ícone usuário">
-                                <span>
-                                    {{$noticia->autor}}
-                                </span>
-                            </a>
-                        </address>
-                        <div class="direita">
-                            <a href="."><img width="20" height="20" src="{{asset('site/img/ico_compart.svg')}}" alt="Icone compartilhar"><span>Share</span></a>
-                            <a class="whatsapp" href="https://api.whatsapp.com/send?text=Artigo blog ABS Brasil: {{ url()->current() }}" title="Compartilhar via WhatsApp" target="_blank" rel="nofollow noopener"><img width="27" height="27" src="{{asset('site/img/ico_whats.svg')}}" alt="WhatsApp"></a>
-                            <a href="http://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}" title="Compartilhar via Facebook" target="_blank" rel="nofollow noopener"><img width="27" height="27" src="{{asset('site/img/ico_face.svg')}}" alt="Facebook"></a>
-                            <a href="mailto:?subject=Artigo blog ABS Brasil&amp;body={{ url()->current() }}" title="Compartilhar via Email" target="_blank" rel="nofollow noopener"><img width="25" height="25" src="{{asset('site/img/ico_envelope.svg')}}" alt="Email"></a>
-                            <a href="https://twitter.com/home?status={{ url()->current() }}" title="Compartilhar via Twitter" target="_blank" rel="nofollow noopener"><img width="23" height="18" src="{{asset('site/img/ico_twitter.svg')}}" alt="Twitter"></a>
-                        </div>
-                    </nav>
-                    <img style="width: 100%; max-width: 500px;" src="{{asset($noticia->banner)}}" alt="Ilustração blog {{ url()->current() }}">
-                </header>
-                <main>
-                    <div class='container-fluid d-flex align-content-center my-5'> 
-                        <h3 style='margin:auto; width: 100%; max-width: 500px; text-align:center; font-weight:normal;'>
-                            {{$noticia->subtitulo}}
-                        </h3> 
-                    </div>
-                    <div style="margin: auto; background-image: url('{{asset('site/img/_linedivider.png')}}'); background-size: 100%; width: 250px; height: 50px;"></div>
-                    <div class='container-fluid d-flex align-content-center my-5'> 
-                        <div style='margin:auto; width: 100%; max-width: 500px;'>
-                            {!! $noticia->conteudo !!}
-                        </div>
-                    </div>
-                    
-                </main>
-            </article>
+<body class="_blog-post">
+
+    <section class="container-fluid _infobox">
+        <div class="_box">
+            <span id="_info"></span>
+        </div>
+        <div class="_loadingBox">
+        </div>
+    </section>
+
+     
+
+    <!-- MENU LATERAL -->
+    @include("site.includes.menu_lateral")
+    <!-- MENU LATERAL -->
+
+    {{-- BARRA DE LOGIN E CADASTRE-SE --}}
+    @include("site.includes.barra_login")
+
+
+    {{-- NAVBAR SUPEROR --}}
+    @include("site.includes.navbar")
+    <!-- BARRA SUPERIOR DE LOGIN E HEADER-->
+
+
+    
+        <!-- SECTION HERO -->
+        <section class="container-fluid s_hero">
+        <div class="container-fav">
+            <h1></h1>
+        </div>
+
         </section>
-    </main>
-    @include('site.includes.footer')
-</body>
+        <!-- SECTION HERO -->
 
-</html>
+
+        <!-- SECTIONS EXTRAS -->
+        <section class="container-fluid s_post">
+            
+            <div class="container-fav">
+
+                <nav class="post_topbar">
+                    <div class="author">
+                        <div class="svg">
+                            <img src="{{ asset('site/img/bUser.svg') }}" alt="">
+                        </div>
+                        <p id="post_author">{{$noticia->autor}}</p>
+                    </div>
+                    <div class="share">
+                        <button class="share_btn">
+                            <div class="svg">
+                                <img src="{{ asset('site/img/share.svg') }}" alt="">
+                            </div>
+                            <p>Share</p>
+                        </button>
+                        <div class="svg">
+                            <a href=""><img src="{{ asset('site/img/shareYoutube.svg') }}" alt=""></a>
+                        </div>
+                        <div class="svg">
+                            <a><img src="{{ asset('site/img/shareInstagram.svg') }}" alt=""></a>
+                        </div>
+                        <div class="svg">
+                            <a href="mailto:?subject=Artigo blog ABS Pernambuco&amp;body={{ url()->current() }}"><img src="{{ asset('site/img/shareEnvelop.svg') }}" alt=""></a>
+                        </div>
+                        <div class="svg">
+                            <a href="https://twitter.com/home?status={{ url()->current() }}"><img src="{{ asset('site/img/shareTwitter.svg') }}" alt=""></a>
+                        </div>
+                    </div>
+    
+            
+                </nav>
+
+
+                <div class="_text">
+                    <h2 id="post_title">{{$noticia->titulo}}</h2>
+                    <p id="post_content">
+                            {{$noticia->subtitulo}}
+                        
+                        <br><br>
+                        {!! $noticia->conteudo !!}
+                        <div id="post_img" class="img">
+                            <img src="{{ asset('site/img/detalhes.jpg') }}" alt="">
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section class="container-fluid s_vantagens">
+        <div class="container-fav">
+        <div class="_left">
+            <div class="text">
+            <h3>Club de vantagens</h3>
+            <h2>Seja um associado e viva experiências</h2>
+            <p>Quanto mais você usa, mais economiza. Use quantas vezes quiser veja a mágica acontecer.</p>
+            </div>
+            <div class="img showin">
+            <img src="{{ asset('site/img/clubdevantagens.png') }}" alt="">
+            </div>
+        </div>
+        <div class="_right">
+            <div class="list showin">
+            <div class="list-component">
+                
+                <h4>Obtenha o club sommelier</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat viverra facilisi nisi bibendum interdum ultrices pulvinar. </p>              
+            </div>
+            <div class="list-component">
+                
+                <h4>Valide o desconto</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat viverra facilisi nisi bibendum interdum ultrices pulvinar. </p>
+                
+            </div>
+            <div class="list-component">
+                
+                <h4>Economize</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat viverra facilisi nisi bibendum interdum ultrices pulvinar. </p>
+                
+            </div>
+            </div>
+            <button class="btn-primary">Quero as vantagens</button>
+        </div>
+        </div>
+        </section>     
+  
+
+{{-- PARCEIROS --}}
+@include("site.includes.parceiros")
+
+<script>
+
+</script>
+
+@include("site.includes.footer")
