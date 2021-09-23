@@ -68,7 +68,7 @@
             @endphp
             @foreach($noticias as $noticia)
                 @if($cont == 0)
-                    <div class="blo9g-group">
+                    <div class="blog-group">
                 @endif
                         <div class="blog-item">
                             <div class="blog-pic">
