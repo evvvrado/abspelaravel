@@ -1,8 +1,6 @@
 @include('site.includes.head')
 <body class="cursos" style="overflow:hidden;">
-    @include('site.includes.bodyHeader', [
-        "classe" => "blog"    
-    ])
+
     <main class="main">
         <section id="blogItem">
             <article>
