@@ -26,7 +26,8 @@
                 </div>
             </div>
 
-            <button class="btn-primary">
+            <button class="btn-primary"
+            onclick="window.location.href = '{{ route('site.experiencia')}}'"">
                 CONHEÇA AS VANTAGENS DE SER ASSOCIADO
             </button>
         </div>

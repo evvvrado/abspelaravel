@@ -55,16 +55,16 @@
                     <h1>
                         {{ $turma->parcelas }}X<span class="lowsized">R$</span>{{ $reais_parcelas }}<span
                                                 class="lowsized">,{{ number_format($centavos_parcelas * 100, 0) }}</span>
-                    </h1>
-                    <button class="btn-primary">
+                </h1>
                         @if($turma->aberto)
+                        <button class="btn-primary">
                             {!! $turma->botao_comprar !!}
+                        </button>
 
                             {{--  <a href="{{route('site.carrinho-adicionar', ['turma' => $turma])}}">Inscrever-se</a>  --}}
                         @else
-                            <button>Encerrado</button>
+                            Encerrado
                         @endif
-                    </button>
                 </div>
             </div>
         </div>
@@ -80,7 +80,7 @@
         <div class="container-fav">
             <div class="_menu">
                 <nav>
-                    <div class="nav-component @if($aba == 'detalhes') _active @endif">
+                    <div onclick="window.location.href = '{{ route('site.curso', ['slug' => $curso->slug])}}'" class="nav-component @if($aba == 'detalhes') _active @endif">
                         <div class="img">
                             @if($aba == 'detalhes')
                                 <img src="{{asset('site/img/active_textalign.svg')}}" alt="">
@@ -90,7 +90,7 @@
                         </div>
                         <a href="{{route('site.curso', ['slug' => $curso->slug])}}">Detalhes</a>
                     </div>
-                    <div class="nav-component @if($aba == 'programacao') _active @endif">
+                    <div onclick="window.location.href = '{{ route('site.curso.programacao', ['slug' => $curso->slug])}}'" class="nav-component @if($aba == 'programacao') _active @endif">
                         <div class="img">
                             @if($aba == 'programacao')
                                 <img src="{{asset('site/img/active_folder.svg')}}" alt="">
@@ -100,17 +100,17 @@
                         </div>
                         <a href="{{route('site.curso.programacao', ['slug' => $curso->slug])}}">Programação</a>
                     </div>
-                    <div class="nav-component @if($aba == 'instrutores') _active @endif">
+                    <div onclick="window.location.href = '{{ route('site.curso.instrutores', ['slug' => $curso->slug])}}'" class="nav-component @if($aba == 'instrutores') _active @endif">
                         <div class="img">
                             @if($aba == 'instrutores')
-                                <img src="{{asset('site/img/active_iUser.svg')}}" alt="">
+                                <img src="{{asset('site/img/active_user.svg')}}" alt="">
                             @else
                                 <img src="{{asset('site/img/iUser.svg')}}" alt="">
                             @endif
                         </div>
                         <a href="{{route('site.curso.instrutores', ['slug' => $curso->slug])}}">Instrutores</a>
                     </div>
-                    <div class="nav-component @if($aba == 'local') _active @endif">
+                    <div onclick="window.location.href = '{{ route('site.curso.local', ['slug' => $curso->slug])}}'" class="nav-component @if($aba == 'local') _active @endif">
                         <div class="img">
                             @if($aba == 'local')
                                 <img src="{{asset('site/img/active_pin.svg')}}" alt="">

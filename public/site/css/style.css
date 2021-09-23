@@ -386,6 +386,11 @@ body._curso-detalhes section.s_curso-conteudo .container-fav ._lists {
 }
 
 section.s_hero .container-fav .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
     width: 100%;
     max-width: 57.3rem;
     height: 51.6rem;
@@ -513,7 +518,7 @@ section.s_cursos .container-fav .title {
 }
 section.s_cursos .container-fav .title:first-child {
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 section.s_cursos .container-fav .title:nth-child(3) {
     margin-top: 4rem;
@@ -963,6 +968,10 @@ section.s_vantagens .container-fav ._left .img {
 section.s_vantagens .container-fav ._right {
     width: 100%;
     max-width: 38.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 section.s_vantagens .container-fav ._right .list .list-component {
     margin-bottom: 6.9rem;
@@ -2890,6 +2899,9 @@ body._minha-conta ._otherhalf ._card .row span {
     section.s_numeros .container-fav .text .number-card {
         margin-left: 0;
         padding: 10px;
+
+        width: auto;
+        transform: scale(0.965);
     }
 
     section.s_numeros .container-fav .img::after {
@@ -3130,6 +3142,9 @@ body._minha-conta ._otherhalf ._card .row span {
 }
 
 @media only screen and (max-width: 600px) {
+    section.s_cursos .container-fav .title p {
+        font-size: 2rem;
+    }
     section.s_welcome .main .text span a,
     section.s_welcome .main .text span {
         font-size: 1.5rem;
@@ -3148,6 +3163,9 @@ body._minha-conta ._otherhalf ._card .row span {
     }
     footer .container-fav .row .contact {
         gap: 5px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     section.s_blog .container-fav .blog-group .blog-item .blog-content {
         width: 36.7rem;
@@ -3181,6 +3199,42 @@ body._minha-conta ._otherhalf ._card .row span {
 
     section.s_descontos .container-fav ._descontoList ._descontoItem main {
         max-width: 100%;
+    }
+
+    section.s_vantagens .container-fav ._right .list .list-component::after {
+        left: 0;
+        opacity: 0.4;
+    }
+    section.s_quem .container-fav ._options div p {
+        font-size: 1.6rem;
+    }
+
+    body._curso-detalhes
+        section.s_curso-conteudo
+        .container-fav
+        ._menu
+        nav
+        .nav-component
+        a {
+        display: none;
+    }
+
+    body._curso-detalhes section.s_hero ._curso-card .row h1 .lowsized {
+        font-size: 2.6rem;
+    }
+    body._curso-detalhes section.s_hero ._curso-card {
+        max-width: 40rem;
+    }
+
+    section.s_cursos
+        .container-fav
+        .curso-group
+        .curso-item
+        .curso-content
+        .row
+        .icon-group
+        span {
+        font-size: 1.9rem;
     }
 }
 

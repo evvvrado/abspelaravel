@@ -24,6 +24,13 @@
     @include("site.includes.navbar")
     <!-- BARRA SUPERIOR DE LOGIN E HEADER-->
 
+    <section class="container-fluid s_hero">
+        <div class="container-fav">
+            <h1>Assessoria de Imprensa</h1>
+        </div>
+       
+      </section>
+      
 
     <!-- SECTIONS EXTRAS -->
     <div class="contaienr-fluid filterMenu">
@@ -41,22 +48,20 @@
             <div class="_right">
                 <div class="_text">
                     <h4>Acessoria de imprensa</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim placerat sed rhoncus, non
-                        ultricies odio volutpat magna leo. Tortor hac enim.</p>
+                    <p>Se você é jornalista ou profissional de comunicação e está interessados em falar conosco, entre em contato através dos canais abaixo:</p>
                 </div>
                 <div class="_info">
                     <div class="_contact">
                         <div class="svg">
                             <img src="{{asset('site/img/imprensaPhone.svg')}}" alt="">
                         </div>
-                        <span>11 2341 1497</span>
-                        <p>Arleyde Caldi</p>
+                        <span>(81) 98262-2200</span>
                     </div>
                     <div class="_pin">
                         <div class="svg">
                             <img src="{{asset('site/img/imprensaPin.svg')}}" alt="">
                         </div>
-                        <p>Arleyde@Caldi.com.br</p>
+                        <p>contato@abs-pe.com.br</p>
                     </div>
                 </div>
             </div>
@@ -79,35 +84,26 @@
                 <div class="_right">
                     <div class="_text">
                         <h4>Suporte Online</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim placerat sed rhoncus, non
-                            ultricies odio volutpat magna leo. Tortor hac enim.</p>
+                        <p>Nosso suporte online é um canal de comunicação desenvolvido para que possa nos enviar sugestões, solicitações e feedbacks. Fale conosco! </p>
                     </div>
                     <div class="_info">
                         <div class="_contact">
                             <div class="svg">
                                 <img src="{{asset('site/img/imprensaPhone.svg')}}" alt="">
                             </div>
-                            <span>11 2341 1497</span>
-                            <p>Capitais e regiões metropolitanas</p>
-                        </div>
-                        <div class="_contact">
-                            <div class="svg">
-                                <img src="{{asset('site/img/imprensaPhone.svg')}}" alt="">
-                            </div>
-                            <span>11 2341 1497</span>
-                            <p>Outras regiões</p>
+                            <span>(81) 98262-2200</span>
                         </div>
                         <div class="_pin">
                             <div class="svg">
                                 <img src="{{asset('site/img/imprensaPin.svg')}}" alt="">
                             </div>
-                            <p>Vila Olímpia, São Paulo, SP</p>
+                            <p>Av. República do Líbano, 251 <br>Torre 3 - Sala 2801<br> Recife, PE</p>
                         </div>
                         <div class="_pin">
                             <div class="svg">
                                 <img src="{{asset('site/img/imprensaEnvelop.svg')}}" alt="">
                             </div>
-                            <p>Contato@abs-pe.com.br</p>
+                            <p>contato@abs-pe.com.br</p>
                         </div>
                     </div>
                 </div>
@@ -141,7 +137,7 @@
                 </div>
             </div>
             <div class="local">
-                <img src="{{asset('site/img/local.jpg')}}" alt="">
+                <img src="{{asset('site/img/local.png')}}" alt="">
             </div>
         </div>
     </section>

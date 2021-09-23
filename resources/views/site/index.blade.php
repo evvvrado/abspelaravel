@@ -60,7 +60,10 @@
                             class="lowsized">,{{ number_format($centavos_parcelas * 100, 0) }}</span>
                     </h1>
                 </div>
-                <button class="btn-primary">Inscreva-se</button>
+                <button class="btn-primary"
+                 onclick="window.location.href = '{{route('site.curso', ['slug' => $turma->curso->slug])}}'">
+                 Inscreva-se
+                </button>
             </div>
 
             <div class="hero_indicator">
@@ -145,7 +148,8 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <button class="btn-primary">
+                                <button class="btn-primary"
+                                onclick="window.location.href = '{{route('site.curso', ['slug' => $turma->curso->slug])}}'">
                                     Inscreva-se
                                     <div class="svg">
                                         <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
@@ -286,7 +290,7 @@
                     </div>
                 </div> --}}
         <div class="btn-case">
-            <button class="btn-primary">Ver agenda completa</button>
+            <button class="btn-primary" onclick="window.location.href = '{{ route('site.cursos') }}'">Ver agenda completa</button>
         </div>
 
         </div>
@@ -312,7 +316,7 @@
                     <p>
                         Especialistas renomados garantem ensino de excelência para amadores e profissionais
                     </p>
-                    <button class="btn-alternative">AGENDA</button>
+                    <button class="btn-alternative" onclick="window.location.href = '{{ route('site.cursos') }}'">AGENDA</button>
                 </div>
 
                 <div>
@@ -320,7 +324,7 @@
                     <p>
                         Momentos únicos regados a maravilhosos vinhos compõem as degustações organizadas pela ABS – PE.
                     </p>
-                    <button class="btn-alternative">EVENTOS</button>
+                    <button class="btn-alternative" onclick="window.location.href = '{{ route('site.cursos') }}'">EVENTOS</button>
                 </div>
             </div>
         </div>
