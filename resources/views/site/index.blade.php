@@ -87,7 +87,7 @@
     <section class="container-fluid s_cursos ">
         <div class="container-fav showin">
             <div class="content">
-                <div class="title">
+                <div class="title confira">
                     <h2>Confira nossa agenda para os próximos dias</h2>
                     <p>
                         Acompanhe nossos cursos e eventos e fique por dentro de todas as novidades do mundo dos vinhos.

@@ -45,9 +45,7 @@
                             Presidente
                         </div>
                         <div class="_description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus rhoncus diam eros molestie
-                                augue volutpat turpis nibh. Sollicitudin non elit vitae egestas tempor consectetur
-                                curabitur sapien. Est aliquet a eget amet vel scelerisque. </p>
+                            <p>O vinho é uma bebida única, que desperta nossos sentidos e emoções, e cada garrafa aberta nos transporta para o local onde ele foi produzido. Os cuidados com as vinhas, a paixão e o respeito do enólogo em dar o seu máximo para produzir essa bebida é o que chega à nossa taça. O vinho tem uma capacidade incrível de aproximar as pessoas.</p>
                         </div>
                     </main>
 
@@ -65,9 +63,7 @@
                             Vice-presidente
                         </div>
                         <div class="_description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus rhoncus diam eros molestie
-                                augue volutpat turpis nibh. Sollicitudin non elit vitae egestas tempor consectetur
-                                curabitur sapien. Est aliquet a eget amet vel scelerisque. </p>
+                            <p>Através do vinho, aprendemos e ensinamos, viajamos, descobrimos lugares, fazemos amigos, sentimos emoções e até nos apaixonamos. </p>
                         </div>
                     </main>
 
@@ -126,9 +122,7 @@
                             Diretor Executivo
                         </div>
                         <div class="_description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus rhoncus diam eros molestie
-                                augue volutpat turpis nibh. Sollicitudin non elit vitae egestas tempor consectetur
-                                curabitur sapien. Est aliquet a eget amet vel scelerisque. </p>
+                            <p>O mais fascinante do mundo dos vinhos é a capacidade que ele tem de provocar  emoções</p>
                         </div>
                     </main>
 
@@ -147,9 +141,7 @@
                             Diretor Executivo
                         </div>
                         <div class="_description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus rhoncus diam eros molestie
-                                augue volutpat turpis nibh. Sollicitudin non elit vitae egestas tempor consectetur
-                                curabitur sapien. Est aliquet a eget amet vel scelerisque. </p>
+                            <p>O melhor do vinho é o fato de que ele agrega pessoas, pois degustado sozinho não tem graça.</p>
                         </div>
                     </main>
 
@@ -189,9 +181,7 @@
                             Diretor Executivo
                         </div>
                         <div class="_description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus rhoncus diam eros molestie
-                                augue volutpat turpis nibh. Sollicitudin non elit vitae egestas tempor consectetur
-                                curabitur sapien. Est aliquet a eget amet vel scelerisque. </p>
+                            <p>A possibilidade de conhecimentos em todos os âmbitos, geográfico, pessoal e principalmente do próximo vinho, é o mais fascinante desse universo</p>
                         </div>
                     </main>
 
@@ -210,9 +200,26 @@
                             Diretor Executivo
                         </div>
                         <div class="_description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus rhoncus diam eros molestie
-                                augue volutpat turpis nibh. Sollicitudin non elit vitae egestas tempor consectetur
-                                curabitur sapien. Est aliquet a eget amet vel scelerisque. </p>
+                            <p>Sobre vinhos: a certeza de que sempre haverá muito por descobrir e aprender me encanta! </p>
+                        </div>
+                    </main>
+
+                </div>
+
+                <div class="_diretor showin">
+                    <div class="img">
+                        <img src="{{ asset('site/img/_dRenato.jpg') }}" alt="">
+                    </div>
+                    <main>
+                        <div class="_name">
+                            SHEILA MACIEL
+                        </div>
+                        <div class="_cargo">
+                            <img src="{{ asset('site/img/medal.svg') }}" alt="">
+                            Diretor Executivo
+                        </div>
+                        <div class="_description">
+                            <p>O vinho é muito mais que uma bebida, é uma obra de arte! Da videira à taça há um grande processo que envolve pessoas dedicadas, conhecimentos herdados por muitas gerações, tecnologia, enfim, um mundo onde todos buscam a  entrega do melhor sabor do seu terroir </p>
                         </div>
                     </main>
 

@@ -233,12 +233,6 @@ $(
     ).addClass("_disable");
 });
 
-$(
-    "body._curso-detalhes section.s_hero ._curso-card .row button.btn-primary"
-).click(() => {
-    window.location.href = "/carrinho/identificacao";
-});
-
 const backdrop = {
     visivel: true,
     init: function () {

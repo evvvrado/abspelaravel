@@ -518,6 +518,9 @@ section.s_cursos .container-fav .title {
 }
 section.s_cursos .container-fav .title:first-child {
     align-items: center;
+    justify-content: center;
+}
+section.s_cursos .container-fav .title.confira:first-child {
     justify-content: space-between;
 }
 section.s_cursos .container-fav .title:nth-child(3) {
@@ -3235,6 +3238,15 @@ body._minha-conta ._otherhalf ._card .row span {
         .icon-group
         span {
         font-size: 1.9rem;
+    }
+
+    body._cursos-e-eventos
+        section.s_cursos
+        .container-fav
+        .title
+        nav._filter
+        h2 {
+        font-size: 2.8rem;
     }
 }
 

@@ -57,8 +57,8 @@
                                                 class="lowsized">,{{ number_format($centavos_parcelas * 100, 0) }}</span>
                 </h1>
                         @if($turma->aberto)
-                        <button class="btn-primary">
-                            {!! $turma->botao_comprar !!}
+                        <button class="btn-primary" onclick="window.location.href ='{!! $turma->botao_comprar !!}'">
+                            Inscrever
                         </button>
 
                             {{--  <a href="{{route('site.carrinho-adicionar', ['turma' => $turma])}}">Inscrever-se</a>  --}}
