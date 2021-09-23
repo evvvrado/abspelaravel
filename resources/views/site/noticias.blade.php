@@ -33,7 +33,7 @@
                     <div class="vertical-blog">
                         <div class="img"><img src="{{asset($destaque->preview)}}" alt="{{$destaque->titulo}}"></div>
                         <div class="_title">{{$destaque->titulo}}</div>
-                        <button class="btn-alternative" onclick="{{ asset('$destaque->slug') }}">
+                        <button class="btn-alternative" onclick="{{ asset($destaque->slug) }}">
                             <span>Saiba Mais</span>
                             <div class="svg">
                                 <img src="{{asset('site/img/arrowlong.svg')}}" alt="">
