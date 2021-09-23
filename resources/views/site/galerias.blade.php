@@ -10,9 +10,7 @@
         </div>
     </section>
 
-    <div id="backdrop">
-        <div class="logo"><img src="{{ asset('site/img/_logo91.png') }}" alt="Logo ABS-Brasil"></div>
-    </div>
+     
 
     <!-- MENU LATERAL -->
     @include("site.includes.menu_lateral")
@@ -29,78 +27,18 @@
 
     <section class="container-fluid s_galeria">
         <div class="container-fav">
-            <h2>Galeria 1</h2>
-            <div class="_list">
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery2.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery3.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery4.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery5.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery6.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery7.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery8.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-            </div>
-            <h2>Galeria 2</h2>
-            <div class="_list">
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery2.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery3.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery4.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery5.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery6.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery7.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery8.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-            </div>
-            <h2>Galeria 3</h2>
-            <div class="_list">
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery2.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery3.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery4.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery5.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery6.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery7.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-                <a href="/galeria.html" class="_img">
-                    <img src="{{asset('site/img/_gallery8.jpg')}}" alt="Imagem presente na galeria da ABS - Pernambuco">
-                </a>
-            </div>
+            @foreach($galerias as $galeria)
+                <h2>Galeria 1</h2>
+                <div class="galleryContent">
+                    <div class="_list">
+                        @foreach($galeria->fotos as $foto)
+                            <a href="{{route('site.galeria', ['slug' => $galeria->slug])}}" class="_img">
+                                <img src="{{asset($foto->imagem)}}" alt="Imagem presente na galeria - {{$foto->galeria->nome}}">
+                            </a>
+                        @endforeach
+                    </div>
+                </div>
+            @endforeach
         </div>
     </section>
 

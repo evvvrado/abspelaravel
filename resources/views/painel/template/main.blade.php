@@ -326,6 +326,15 @@ $usuario = \App\Models\Usuario::find(session()->get("usuario")["id"]);
                             </li>
                             <li>
                                 <a href="javascript: void(0);" class="waves-effect">
+                                    <i class="bx bxs-contact" aria-hidden="true"></i>
+                                    <span key="t-dashboards">Galerias</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="{{route('painel.galerias')}}" key="t-default">Cadastros</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect">
                                     <i class="far fa-sticky-note" aria-hidden="true"></i>
                                     <span key="t-dashboards">Institucional</span>
                                 </a>

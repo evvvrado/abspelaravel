@@ -1,14 +1,14 @@
 <section class="container-fluid s_numeros">
     <div class="container-fav showin">
         <div class="img">
-            <img src="{{asset('site/img/nossosnumeros.jpg')}}" alt="Duas taças">
+            <img src="{{ asset('site/img/nossosnumeros.jpg') }}" alt="Duas taças">
         </div>
 
         <div class="text">
             <h2>Nossos Números</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus sed felis ipsum mattis at. Duis
-                consequat dis dolor pellentesque tincidunt sit sit diam mattis. Imperdiet tristique felis etiam est.
-                Cursus sit potenti at ut a maecenas elit.</p>
+            <p>Não são apenas números. São momentos vividos, amizades construídas e muito trabalho dedicado ao longo
+                desses anos para oferecer o melhor para os amantes do universo dos vinhos, e com muita alegria e
+                satisfação podemos dizer que estamos construindo uma grande história! </p>
 
             <div class="number-card">
                 <div class="cards">
@@ -27,7 +27,7 @@
             </div>
 
             <button class="btn-primary">
-                Seja um associado e tenha inúmeras vantagens
+                CONHEÇA AS VANTAGENS DE SER ASSOCIADO
             </button>
         </div>
     </div>

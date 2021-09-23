@@ -170,7 +170,7 @@ $(" body._imprensa .container-fav .title ._filter h2._eventosbutton").click(
 // SIDE MENU ANIMATION
 
 $("header main button.hamburguer-menu").click(() => {
-    $("div._sidemenu nav").css("height", "100%");
+    $("div._sidemenu nav").css("height", "497px");
 });
 
 $("div._sidemenu nav .hamburguerClose").click(() => {
@@ -199,39 +199,10 @@ $("._otherhalf ._tologin").click(() => {
 });
 
 $("header main button.btn-primary").click(() => {
-    window.location.href = "/seja-um-associado-login.html";
+    window.location.href = "/seja-um-associado-login";
 });
 $("footer .novidades button").click(() => {
-    window.location.href = "/newsletter.html";
-});
-
-$("body._galeria section.s_galeria main ._arrow:first-child").click(() => {
-    if (gallerySelectedImage - 1 <= 1) return 0;
-    gallerySelectedImage--;
-    $("body._galeria section.s_galeria main ._mainImage img").attr(
-        "src",
-        `/site/img/_gallery${gallerySelectedImage}.jpg`
-    );
-    $(`body._galeria section.s_galeria ._list ._img`).removeClass("_active");
-    $(
-        `body._galeria section.s_galeria ._list ._img:nth-child(${
-            gallerySelectedImage - 1
-        })`
-    ).addClass("_active");
-});
-$("body._galeria section.s_galeria main ._arrow:last-child").click(() => {
-    if (gallerySelectedImage + 1 >= 9) return 0;
-    gallerySelectedImage++;
-    $("body._galeria section.s_galeria main ._mainImage img").attr(
-        "src",
-        `/site/img/_gallery${gallerySelectedImage}.jpg`
-    );
-    $(`body._galeria section.s_galeria ._list ._img`).removeClass("_active");
-    $(
-        `body._galeria section.s_galeria ._list ._img:nth-child(${
-            gallerySelectedImage - 1
-        })`
-    ).addClass("_active");
+    window.location.href = "/newsletter";
 });
 
 $("section.s_produtos .container-fav ._productlist ._product .content").hover(
@@ -243,7 +214,7 @@ $("section.s_produtos .container-fav ._productlist ._product .content").hover(
 $(
     "section.s_descontos .container-fav ._descontoList ._descontoItem button.btn-primary "
 ).click(() => {
-    window.location.href = "/experiencias-detalhes.html";
+    window.location.href = "/experiencias/detalhes";
 });
 
 $(
@@ -265,7 +236,7 @@ $(
 $(
     "body._curso-detalhes section.s_hero ._curso-card .row button.btn-primary"
 ).click(() => {
-    window.location.href = "/carrinho-identificacao.html";
+    window.location.href = "/carrinho/identificacao";
 });
 
 const backdrop = {

@@ -21,27 +21,27 @@
             <div class="_menu">
                 <nav>
                     <div class="nav-component">
-                        <a href="/quem-somos.html#quem-somos">Quem Somos</a>
+                        <a href="{{ route('site.quem_somos') }}#quem-somos">Quem Somos</a>
                     </div>
                     <div class="nav-component">
-                        <a href="/sommelier.html#quem-somos">Sommelier</a>
+                        <a href="{{ route('site.sommelier') }}#quem-somos">Sommelier</a>
                     </div>
                     <div class="nav-component _active">
-                        <a href="/diretoria.html#quem-somos">Diretoria</a>
+                        <a href="{{ route('site.diretoria') }}#quem-somos">Diretoria</a>
                     </div>
                 </nav>
             </div>
             <div class="_diretores">
                 <div class="_diretor showin">
                     <div class="img">
-                        <img src="{{asset('site/img/_dRenato.jpg')}}" alt="">
+                        <img src="{{ asset('site/img/_dRenato.jpg') }}" alt="">
                     </div>
                     <main>
                         <div class="_name">
-                            RENATO ARCANJO COSTA
+                            HERMILO BORBA GRIZ
                         </div>
                         <div class="_cargo">
-                            <img src="{{asset('site/img/medal.svg')}}" alt="">
+                            <img src="{{ asset('site/img/medal.svg') }}" alt="">
                             Presidente
                         </div>
                         <div class="_description">
@@ -54,15 +54,15 @@
                 </div>
                 <div class="_diretor showin">
                     <div class="img">
-                        <img src="{{asset('site/img/_dRenato.jpg')}}" alt="">
+                        <img src="{{ asset('site/img/_dRenato.jpg') }}" alt="">
                     </div>
                     <main>
                         <div class="_name">
-                            RENATO ARCANJO COSTA
+                            JOSÉ ROBERTO FERREIRA DANTAS
                         </div>
                         <div class="_cargo">
-                            <img src="{{asset('site/img/medal.svg')}}" alt="">
-                            Presidente
+                            <img src="{{ asset('site/img/medal.svg') }}" alt="">
+                            Vice-presidente
                         </div>
                         <div class="_description">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus rhoncus diam eros molestie
@@ -74,15 +74,15 @@
                 </div>
                 <div class="_diretor showin">
                     <div class="img">
-                        <img src="{{asset('site/img/_dRenato.jpg')}}" alt="">
+                        <img src="{{ asset('site/img/_dRenato.jpg') }}" alt="">
                     </div>
                     <main>
                         <div class="_name">
-                            RENATO ARCANJO COSTA
+                            PEDRO HENRIQUE DANTAS PERES DE OLIVEIRA
                         </div>
                         <div class="_cargo">
-                            <img src="{{asset('site/img/medal.svg')}}" alt="">
-                            Presidente
+                            <img src="{{ asset('site/img/medal.svg') }}" alt="">
+                            Diretor Tesoureiro
                         </div>
                         <div class="_description">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus rhoncus diam eros molestie
@@ -94,15 +94,15 @@
                 </div>
                 <div class="_diretor showin">
                     <div class="img">
-                        <img src="{{asset('site/img/_dRenato.jpg')}}" alt="">
+                        <img src="{{ asset('site/img/_dRenato.jpg') }}" alt="">
                     </div>
                     <main>
                         <div class="_name">
-                            RENATO ARCANJO COSTA
+                            PEDRO JOSÉ DE ALBUQUERQUE PONTES
                         </div>
                         <div class="_cargo">
-                            <img src="{{asset('site/img/medal.svg')}}" alt="">
-                            Presidente
+                            <img src="{{ asset('site/img/medal.svg') }}" alt="">
+                            Secretário
                         </div>
                         <div class="_description">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus rhoncus diam eros molestie
@@ -112,6 +112,113 @@
                     </main>
 
                 </div>
+
+                <div class="_diretor showin">
+                    <div class="img">
+                        <img src="{{ asset('site/img/_dRenato.jpg') }}" alt="">
+                    </div>
+                    <main>
+                        <div class="_name">
+                            MARCO ANTÔNIO GONÇALVES DE FREITAS
+                        </div>
+                        <div class="_cargo">
+                            <img src="{{ asset('site/img/medal.svg') }}" alt="">
+                            Diretor Executivo
+                        </div>
+                        <div class="_description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus rhoncus diam eros molestie
+                                augue volutpat turpis nibh. Sollicitudin non elit vitae egestas tempor consectetur
+                                curabitur sapien. Est aliquet a eget amet vel scelerisque. </p>
+                        </div>
+                    </main>
+
+                </div>
+
+                <div class="_diretor showin">
+                    <div class="img">
+                        <img src="{{ asset('site/img/_dRenato.jpg') }}" alt="">
+                    </div>
+                    <main>
+                        <div class="_name">
+                            ANTÔNIO AGOSTINHO LOPES DA SILVA
+                        </div>
+                        <div class="_cargo">
+                            <img src="{{ asset('site/img/medal.svg') }}" alt="">
+                            Diretor Executivo
+                        </div>
+                        <div class="_description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus rhoncus diam eros molestie
+                                augue volutpat turpis nibh. Sollicitudin non elit vitae egestas tempor consectetur
+                                curabitur sapien. Est aliquet a eget amet vel scelerisque. </p>
+                        </div>
+                    </main>
+
+                </div>
+
+                <div class="_diretor showin">
+                    <div class="img">
+                        <img src="{{ asset('site/img/_dRenato.jpg') }}" alt="">
+                    </div>
+                    <main>
+                        <div class="_name">
+                            MARIA EDUARDA VIEIRA DE FIGUEIREDO RAMALHO
+                        </div>
+                        <div class="_cargo">
+                            <img src="{{ asset('site/img/medal.svg') }}" alt="">
+                            Diretora Executiva
+                        </div>
+                        <div class="_description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus rhoncus diam eros molestie
+                                augue volutpat turpis nibh. Sollicitudin non elit vitae egestas tempor consectetur
+                                curabitur sapien. Est aliquet a eget amet vel scelerisque. </p>
+                        </div>
+                    </main>
+
+                </div>
+
+                <div class="_diretor showin">
+                    <div class="img">
+                        <img src="{{ asset('site/img/_dRenato.jpg') }}" alt="">
+                    </div>
+                    <main>
+                        <div class="_name">
+                            ROBERTO TENÓRIO
+                        </div>
+                        <div class="_cargo">
+                            <img src="{{ asset('site/img/medal.svg') }}" alt="">
+                            Diretor Executivo
+                        </div>
+                        <div class="_description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus rhoncus diam eros molestie
+                                augue volutpat turpis nibh. Sollicitudin non elit vitae egestas tempor consectetur
+                                curabitur sapien. Est aliquet a eget amet vel scelerisque. </p>
+                        </div>
+                    </main>
+
+                </div>
+
+                <div class="_diretor showin">
+                    <div class="img">
+                        <img src="{{ asset('site/img/_dRenato.jpg') }}" alt="">
+                    </div>
+                    <main>
+                        <div class="_name">
+                            ALCÉLIO SILVA
+                        </div>
+                        <div class="_cargo">
+                            <img src="{{ asset('site/img/medal.svg') }}" alt="">
+                            Diretor Executivo
+                        </div>
+                        <div class="_description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus rhoncus diam eros molestie
+                                augue volutpat turpis nibh. Sollicitudin non elit vitae egestas tempor consectetur
+                                curabitur sapien. Est aliquet a eget amet vel scelerisque. </p>
+                        </div>
+                    </main>
+
+                </div>
+
+
             </div>
         </div>
     </section>

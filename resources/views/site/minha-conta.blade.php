@@ -73,80 +73,67 @@
 </head>
 
 <body class="form _minha-conta" style="overflow:hidden;">
-    <header>
-        <div class="_half">
-            <div class="container-fav">
+
+    <div class="container-fluid">
+        <div class="container-fav">
+            <div class="_top">
                 <div class="logos">
                     <a href="/index.html">
                         <img src="{{ asset('site/img/_logo136.png') }}" alt="Logo ABS Pernambuco" />
                     </a>
-                    <img src="{{ asset('site/img/_logoASI_136.png') }}" alt="Logo ASI" />
+                    <a href="javascript: void(0)">
+                        <img src="{{ asset('site/img/_logoASI_136.png') }}" alt="Logo ASI" />
+                    </a>
                 </div>
+
                 <a href="/" class="_back">
                     <div class="svg">
                         <img src="{{ asset('site/img/arrowlong_left.svg') }}" alt="" />
                     </div>
                     <p>Voltar a página principal</p>
                 </a>
-                <div class="_text">
-                    Bem-vindo de volta, digite suas credenciais para fazer login com
-                    segurança em sua conta.
-                </div>
-                <div class="_contact">
-                    <div class="_c">
-                        <div class="svg">
-                            <img src="{{ asset('site/img/WhatsappLogo.svg') }}" alt="" />
-                            <span>xx 9999 9999</span>
-                        </div>
-                    </div>
-                    <div class="_c">
-                        <div class="svg">
-                            <img src="{{ asset('site/img/WhatsappLogo.svg') }}" alt="" />
-                            <span>xx 9999 9999</span>
-                        </div>
-                    </div>
-                    <div class="_c">
-                        <div class="svg">
-                            <img src="{{ asset('site/img/email.svg') }}" alt="" />
-                            <span>contato@abs-pe.com.br</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="_credit">
-                    <p>Desenvolvido por</p>
-                    <div class="logo7seven">
-                        <a href="https://7seventrends.com">
-                            <img src="{{ asset('site/img/_logo7seven.png') }}" alt="" />
-                        </a>
-                    </div>
-                </div>
             </div>
-        </div>
 
-        <div class="_otherhalf">
-            <div class="_login">
-                <div class="container-fav">
+
+            <main>
+                <div class="_form">
+
                     <div class="title">
                         <div class="svg">
                             <img src="{{ asset('site/img/loginuser.svg') }}" alt="" />
                         </div>
                         <h2>Identificação</h2>
                     </div>
-                    {{--  MENSAGENS DE ERRO  --}}
-                    @if(session()->get("erro"))
-                        {{--  {{session()->get("erro")}} para escrever a mensagem  --}}
-                        {{--  EX: <span>{{session()->get("erro")}}</span>  --}}                        
+                    {{-- MENSAGENS DE ERRO --}}
+                    @if (session()->get('erro'))
+                        {{-- {{session()->get("erro")}} para escrever a mensagem --}}
+                        {{-- EX: <span>{{session()->get("erro")}}</span> --}}
                         <div class="alert alert-danger">
-                            {{session()->get("erro")}}
+                            {{ session()->get('erro') }}
                         </div>
 
                         <style>
-                            .alert{position:relative;padding:.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:.25rem;}
-                            .alert-danger{color:#721c24;background-color:#f8d7da;border-color:#f5c6cb;font-family: "Spartan", sans-serif;font-weight: bold;font-size: 2rem;line-height: 22px;}
+                            .alert {
+                                position: relative;
+                                padding: .75rem 1.25rem;
+                                margin-bottom: 1rem;
+                                border: 1px solid transparent;
+                                border-radius: .25rem;
+                            }
+
+                            .alert-danger {
+                                color: #721c24;
+                                background-color: #f8d7da;
+                                border-color: #f5c6cb;
+                                font-family: "Spartan", sans-serif;
+                                font-weight: bold;
+                                font-size: 2rem;
+                                line-height: 22px;
+                            }
+
                         </style>
                     @endif
-                    <form action="{{route('site.aluno.logar')}}" method="POST">
+                    <form action="{{ route('site.aluno.logar') }}" method="POST">
                         @csrf
                         <label>
                             <span>Meu e-mail</span>
@@ -154,104 +141,151 @@
                         </label>
                         <label>
                             <span>Digite sua senha</span>
-                            <input type="password" name="senha" required/>
+                            <input type="password" name="senha" required />
                         </label>
-                        <button>Acessar <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" /></button>
+                        <button>acessar <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" /></button>
                     </form>
                     <div class="_forgot">
-                        <span>Esqueceu a<strong> sua senha ?</strong></span>
+                        <span>Esqueceu<strong> sua senha ?</strong></span>
                     </div>
-                    <div class="_toregister">
-                        <div class="img">
-                            <img src="{{ asset('site/img/card.svg') }}" alt="" />
-                        </div>
-                        <span>Faça seu cadastro</span>
-                    </div>
+
                 </div>
-            </div>
 
-            <div class="_register">
-                <div class="container-fav">
-                    <div class="title">
-                        <div class="svg">
-                            <img src="{{ asset('site/img/loginuser.svg') }}" alt="" />
-                        </div>
-                        <h2>Cadastre-se</h2>
-                    </div>
-                    {{--  MENSAGENS DE ERRO  --}}
-                    @if(session()->get("erro"))
-                        {{--  {{session()->get("erro")}} para escrever a mensagem  --}}
-                        {{--  EX: <span>{{session()->get("erro")}}</span>  --}}  
-                                         
-                        <div class="alert alert-danger">
-                            {{session()->get("erro")}}
-                        </div>
+                <div class="_form _password">
 
-                        <style>
-                            .alert{position:relative;padding:.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:.25rem;}
-                            .alert-danger{color:#721c24;background-color:#f8d7da;border-color:#f5c6cb;font-family: "Spartan", sans-serif;font-weight: bold;font-size: 2rem;line-height: 22px;}
-                        </style>
-                    @endif
-                    <form action="{{route('site.aluno.cadastrar')}}" method="POST">
-                        @csrf
-                        <label>
-                            <span>Nome</span>
-                            <input type="name" name="nome" maxlenght="50" required/>
-                        </label>
-                        <label>
-                            <span>Digite seu e-mail</span>
-                            <input type="email" name="email" maxlenght="50" required/>
-                        </label>
-                        <label>
-                            <span>Digite sua senha</span>
-                            <input type="password" name="senha" required/>
-                        </label>
-						<label>
-                            <span>Digite seu CPF</span>
-                            <input type="cpf" name="cpf" maxlenght="15" required/>
-                        </label>
-                        <label>
-                            <span>Telefone</span>
-                            <input type="tel" name="telefone" maxlenght="15" required/>
-                        </label>
-                        <button type="submit">Cadastrar<img src="{{ asset('site/img/arrowlong.svg') }}" alt="" /></button>
-                    </form>
-                    <div class="_forgot">
-                        <span>Esqueceu a<strong> sua senha ?</strong></span>
-                    </div>
-                    <div class="_toregister _tologin">
-                        <div class="img">
-                            <img src="{{ asset('site/img/card.svg') }}" alt="" />
-                        </div>
-                        <span>Faça seu login</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="_sendmessage">
-                <div class="container-fav">
                     <div class="title">
                         <div class="svg">
                             <img src="{{ asset('site/img/loginuser.svg') }}" alt="" />
                         </div>
                         <h2>Esqueceu sua senha?</h2>
                     </div>
-                    <form method="POST" onsubmit="return false">
+                    {{-- MENSAGENS DE ERRO --}}
+                    @if (session()->get('erro'))
+                        {{-- {{session()->get("erro")}} para escrever a mensagem --}}
+                        {{-- EX: <span>{{session()->get("erro")}}</span> --}}
+                        <div class="alert alert-danger">
+                            {{ session()->get('erro') }}
+                        </div>
+
+                        <style>
+                            .alert {
+                                position: relative;
+                                padding: .75rem 1.25rem;
+                                margin-bottom: 1rem;
+                                border: 1px solid transparent;
+                                border-radius: .25rem;
+                            }
+
+                            .alert-danger {
+                                color: #721c24;
+                                background-color: #f8d7da;
+                                border-color: #f5c6cb;
+                                font-family: "Spartan", sans-serif;
+                                font-weight: bold;
+                                font-size: 2rem;
+                                line-height: 22px;
+                            }
+
+                        </style>
+                    @endif
+                    <form action="{{ route('site.aluno.logar') }}" method="POST">
+                        @csrf
                         <label>
-                            <span>Email</span>
-                            <input type="email" name="email" />
+                            <span>Meu e-mail</span>
+                            <input type="email" name="email" required />
                         </label>
-
                         <button>Enviar <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" /></button>
-
-                        <div class="_tologin">
-                            <span>Pronto para<strong> entrar?</strong></span>
+                        <div class="_remember">
+                            <span>Lembrou?<strong> Bora entrar!</strong></span>
                         </div>
                     </form>
+
+                </div>
+
+                <div class="_form">
+
+                    <div class="title">
+                        <div class="svg">
+                            <img src="{{ asset('site/img/loginuser.svg') }}" alt="" />
+                        </div>
+                        <h2>Cadastre-se</h2>
+                    </div>
+                    {{-- MENSAGENS DE ERRO --}}
+                    @if (session()->get('erro'))
+                        {{-- {{session()->get("erro")}} para escrever a mensagem --}}
+                        {{-- EX: <span>{{session()->get("erro")}}</span> --}}
+
+                        <div class="alert alert-danger">
+                            {{ session()->get('erro') }}
+                        </div>
+
+                        <style>
+                            .alert {
+                                position: relative;
+                                padding: .75rem 1.25rem;
+                                margin-bottom: 1rem;
+                                border: 1px solid transparent;
+                                border-radius: .25rem;
+                            }
+
+                            .alert-danger {
+                                color: #721c24;
+                                background-color: #f8d7da;
+                                border-color: #f5c6cb;
+                                font-family: "Spartan", sans-serif;
+                                font-weight: bold;
+                                font-size: 2rem;
+                                line-height: 22px;
+                            }
+
+                        </style>
+                    @endif
+                    <form action="{{ route('site.aluno.cadastrar') }}" method="POST">
+                        @csrf
+                        <label>
+                            <span>Nome</span>
+                            <input type="name" name="nome" maxlenght="50" required />
+                        </label>
+                        <label>
+                            <span>Digite seu e-mail</span>
+                            <input type="email" name="email" maxlenght="50" required />
+                        </label>
+                        <label>
+                            <span>Digite sua senha</span>
+                            <input type="password" name="senha" required />
+                        </label>
+                        <label>
+                            <span>Digite seu CPF</span>
+                            <input type="cpf" name="cpf" maxlenght="15" required />
+                        </label>
+                        <label>
+                            <span>Telefone</span>
+                            <input type="tel" name="telefone" maxlenght="15" required />
+                        </label>
+                        <button type="submit">Cadastrar<img src="{{ asset('site/img/arrowlong.svg') }}"
+                                alt="" /></button>
+                    </form>
+
+                </div>
+
+            </main>
+
+            <div class="_bottom">
+                <p>Desenvolvido por</p>
+                <div class="logo7seven">
+                    <a href="https://7seventrends.com">
+                        <img src="{{ asset('site/img/_logo7seven.png') }}" alt="" />
+                    </a>
                 </div>
             </div>
+
         </div>
-    </header>
+
+
+
+    </div>
+
+
     <script>
         $("form label input,form label textarea").focus(function() {
             $(this).parent().find("span").addClass("active");
@@ -263,36 +297,24 @@
             }
         });
 
-        if ($(window).width() <= 960) {
+        $("._forgot").click(() => {
+            $('._form:first-child').hide();
+            $('._form._password').show();
+        })
 
-            $("._otherhalf ._toregister").click(() => {
-                $("._otherhalf").scrollLeft(400);
-            });
-
-            $("._otherhalf ._forgot").click(() => {
-                $("._otherhalf").scrollLeft(400 * 2);
-            });
-            $("._otherhalf ._tologin").click(() => {
-                $("._otherhalf").scrollLeft(0);
-            });
-        } else {
-            $("._otherhalf ._toregister").click(() => {
-                $("._otherhalf").scrollTop($("._otherhalf").height());
-            });
-
-            $("._otherhalf ._forgot").click(() => {
-                $("._otherhalf").scrollTop($("._otherhalf").height() * 2);
-            });
-            $("._otherhalf ._tologin").click(() => {
-                $("._otherhalf").scrollTop(0);
-            });
-
-        }
+        $("._remember").click(() => {
+            $('._form:first-child').show();
+            $('._form._password').hide();
+        })
     </script>
 
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+        integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"
+        integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="{{ asset('site/js/script.js') }}"></script>
     <script src="{{ asset('site/js/masks.js') }}"></script>

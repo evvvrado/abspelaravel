@@ -10,9 +10,7 @@
         </div>
     </section>
 
-    <div id="backdrop">
-        <div class="logo"><img src="{{ asset('site/img/_logo91.png') }}" alt="Logo ABS-Brasil"></div>
-    </div>
+     
 
     <!-- MENU LATERAL -->
     @include("site.includes.menu_lateral")

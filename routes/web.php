@@ -29,6 +29,7 @@ Route::get('/associe-se', [\App\Http\Controllers\SiteController::class, 'associe
 Route::get('/diretoria', [\App\Http\Controllers\SiteController::class, 'diretoria'])->name("site.diretoria");
 Route::get('/experiencia', [\App\Http\Controllers\SiteController::class, 'experiencia'])->name("site.experiencia");
 Route::get('/galerias', [\App\Http\Controllers\SiteController::class, 'galerias'])->name("site.galerias");
+Route::get('/galeria/{slug}', [\App\Http\Controllers\SiteController::class, 'galeria'])->name("site.galeria");
 Route::get('/imprensa', [\App\Http\Controllers\SiteController::class, 'imprensa'])->name("site.imprensa");
 Route::get('/estaduais', [\App\Http\Controllers\SiteController::class, 'estaduais'])->name("site.estaduais");
 Route::get('/estaduais/{slug}', [\App\Http\Controllers\SiteController::class, 'estaduais_filtro'])->name("site.estaduais.filtro");
@@ -37,6 +38,10 @@ Route::get('/sommelier', [\App\Http\Controllers\SiteController::class, 'sommelie
 Route::get('/noticias/{slug?}', [\App\Http\Controllers\SiteController::class, 'noticias'])->name("site.noticias");
 Route::get('/noticia/{categoria}/{noticia}', [\App\Http\Controllers\SiteController::class, 'noticia'])->name("site.noticia");
 Route::get('/recuperar-senha', [\App\Http\Controllers\SiteController::class, 'recuperar_senha'])->name("site.recuperar-senha");
+
+
+Route::get('/newsletter', [\App\Http\Controllers\SiteController::class, 'newsletter'])->name("site.newsletter");
+
 
 //ROTAS DE CARRINHO
 Route::get('/carrinho/adicionar/{turma}', [\App\Http\Controllers\CarrinhoController::class, 'adicionar'])->name("site.carrinho-adicionar");
@@ -51,7 +56,6 @@ Route::post('/carrinho/finalizar/credito/cielo', [\App\Http\Controllers\CieloCon
 
 // ROTAS GERENCIANET
 Route::get('/carrinho/finalizar/boleto/gerencianet/{parcelas}', [\App\Http\Controllers\GerencianetController::class, 'boleto'])->name("site.carrinho.finalizar.boleto.gerencianet");
-
 
 Route::get('/minha-conta', [\App\Http\Controllers\SiteController::class, 'minhaConta'])->name("site.minha-conta");
 Route::post('/aluno/cadastrar', [\App\Http\Controllers\AlunosController::class, 'cadastrar'])->name("site.aluno.cadastrar");
@@ -170,6 +174,14 @@ Route::middleware(['admin'])->group(function () {
     //ROTAS DE ALUNOS
     Route::get('/sistema/alunos', [\App\Http\Controllers\AlunosController::class, 'consultar'])->name("painel.alunos");
 
+    //ROTAS DE GALERIAS
+    Route::get('/sistema/galerias', [\App\Http\Controllers\GaleriaController::class, 'index'])->name("painel.galerias");
+    Route::post('/sistema/galerias/cadastrar', [\App\Http\Controllers\GaleriaController::class, 'cadastrar'])->name("painel.galeria.cadastrar");
+    Route::post('/sistema/galerias/salvar/{galeria}', [\App\Http\Controllers\GaleriaController::class, 'salvar'])->name("painel.galeria.salvar");
+    Route::get('/sistema/galerias/deletar/{galeria}', [\App\Http\Controllers\GaleriaController::class, 'deletar'])->name("painel.galeria.deletar");
+    Route::get('/sistema/galeria/{galeria}/fotos', [\App\Http\Controllers\GaleriaController::class, 'fotos'])->name("painel.galeria.fotos");
+    Route::post('/sistema/galeria/{galeria}/foto/adicionar', [\App\Http\Controllers\GaleriaController::class, 'adicionar_foto'])->name("painel.galeria.foto.adicionar");
+    Route::get('/sistema/galeria/foto/deletar/{foto}', [\App\Http\Controllers\GaleriaController::class, 'deletar_foto'])->name("painel.galeria.foto.deletar");
     // ROTAS DE DESTAQUES
     Route::get('/sistema/destaques', [\App\Http\Controllers\DestaquesController::class, 'index'])->name("painel.destaques");
     Route::post('/sistema/destaques/cadastrar', [\App\Http\Controllers\DestaquesController::class, 'cadastrar'])->name("painel.destaque.cadastrar");

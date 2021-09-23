@@ -6,24 +6,26 @@
         </p>
     </div>
 
-           <div style="margin-right:  276px; background-image: url('https://abs-brasil.com/site/img/_linedivider.png'); background-size: 100%; width: 250px; height: 50px;"></div>
+    <div
+        style="margin-right:  276px; background-image: url('https://abs-brasil.com/site/img/_linedivider.png'); background-size: 100%; width: 250px; height: 50px;">
+    </div>
 
     <div class="_text">
         {!! $curso->detalhes_conteudo !!}
 
-            <!-- <div class="_certify">
+        <!-- <div class="_certify">
                 <h2>Certificação Brasileira e Internacional</h2>
                 <p>Associação Brasileira de Sommelier, e ASI(Association de la Sommellerie Internationale - França)</p>
                 <div class="logo">
-                    <img src="{{asset('site/img/Mask Group.png')}}" alt="">
-                    <img src="{{asset('site/img/Logo asi.png')}}" alt="">
+                    <img src="{{ asset('site/img/Mask Group.png') }}" alt="">
+                    <img src="{{ asset('site/img/Logo asi.png') }}" alt="">
                 </div>
             </div> -->
 
     </div>
     <!-- <div class="_imgs">
         <div class="png">
-            <img src="{{asset('site/img/image_19.png')}}" alt="">                    
+            <img src="{{ asset('site/img/image_19.png') }}" alt="">                    
         </div>
 
         <div class="_card">
@@ -33,20 +35,20 @@
             <main>
                 <div class="row">
                     <div class="svg">
-                        <img src="{{asset('site/img/calendar.svg')}}" alt="">
+                        <img src="{{ asset('site/img/calendar.svg') }}" alt="">
                     </div>
                     21 De Setembro
                 </div>
 
                 <div class="row">
                     <div class="svg">
-                        <img src="{{asset('site/img/alarm.svg')}}" alt="">
+                        <img src="{{ asset('site/img/alarm.svg') }}" alt="">
                     </div>
-                    Ás 20 Horas
+                    às 20 Horas
                 </div>
                 <div class="row">
                     <div class="svg">
-                        <img src="{{asset('site/img/GlobeHemisphereWest.svg')}}" alt="">
+                        <img src="{{ asset('site/img/GlobeHemisphereWest.svg') }}" alt="">
                     </div>
                     Aulas Ministradas Online.
                 </div>
@@ -68,5 +70,5 @@
                 </div>
         </div>
     </div> -->
-   
+
 </div>

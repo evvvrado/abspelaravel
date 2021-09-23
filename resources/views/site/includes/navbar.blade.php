@@ -16,7 +16,7 @@
                     <li><a href="{{route('site.index')}}">Home</a></li>
                     <li><a href="{{route('site.cursos')}}">Cursos e Eventos</a></li>
                     <li><a href="{{route('site.quem_somos')}}">ABS - PE</a></li>
-                    <li><a href="{{route('site.experiencias')}}">Experiencias</a></li>
+                    <li><a href="{{route('site.experiencia')}}">Experiencias</a></li>
                     <li><a href="{{route('site.noticias')}}">Blog</a></li>
                     <li><a href="{{route('site.galerias')}}">Galeria</a></li>
                     <li><a href="{{route('site.imprensa')}}">Imprensa</a></li>
@@ -33,3 +33,7 @@
         </main>
     </div>
 </header>
+
+<div id="backdrop">
+    <div class="logo"><img src="{{asset('site/img/_logo91.png')}}" alt="Logo ABS-Brasil"></div>
+</div>

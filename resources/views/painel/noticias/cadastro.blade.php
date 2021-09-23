@@ -117,7 +117,7 @@
                     <div class="row mt-3">
                         <div class="col-12">
                             <label for="">Resumo</label>
-                            <textarea class="form-control" name="resumo" rows="3"></textarea>
+                            <textarea clas="form-control" name="resumo" rows="3"></textarea>
                         </div>
                     </div>
                     <div class="row mt-3">

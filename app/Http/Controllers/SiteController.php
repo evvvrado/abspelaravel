@@ -12,6 +12,8 @@ use App\Models\Visitas;
 use App\Models\DestaqueSuspenso;
 use App\Models\Curso;
 use App\Models\Aluno;
+use App\Models\Turma;
+use App\Models\Galeria;
 
 class SiteController extends Controller
 {
@@ -24,12 +26,13 @@ class SiteController extends Controller
         
         $pagina = Pagina::where("nome", "Home")->first();
         $destaques = Noticia::where("publicada", true)->orderBy("publicacao", "DESC")->take(4)->get();
+        $turmas = Turma::where("ativo", true)->orderBy("data", "DESC")->take(4)->get();
         if(!session()->get("destaque")){
             $destaque_suspenso = DestaqueSuspenso::where([["inicio", "<=", date("Y-m-d H:i:s")], ["fim", ">=", date("Y-m-d H:i:s")]])->orderBy("created_at")->first();
             session()->put(["destaque" => true]);
-            return view("site.index", ["pagina" => $pagina, "destaques" => $destaques, "destaque_suspenso" => $destaque_suspenso]);
+            return view("site.index", ["pagina" => $pagina, "destaques" => $destaques, "turmas" => $turmas, "destaque_suspenso" => $destaque_suspenso]);
         }else{
-            return view("site.index", ["pagina" => $pagina, "destaques" => $destaques]);
+            return view("site.index", ["pagina" => $pagina, "destaques" => $destaques, "turmas" => $turmas]);
         }
     }
 
@@ -38,8 +41,8 @@ class SiteController extends Controller
     }
 
     public function cursos(){
-        $cursos = Curso::where("ativo", true)->get();
-        return view("site.cursos", ["cursos" => $cursos]);
+        $turmas = Turma::where("ativo", true)->get();
+        return view("site.cursos", ["turmas" => $turmas]);
     }
 
     public function curso($slug){
@@ -71,6 +74,11 @@ class SiteController extends Controller
         return view("site.minha-conta");
     }
 
+    public function newsletter(){
+        return view("site.newsletter");
+    }
+
+
     public function associese(){
         return view("site.associe-se");
     }
@@ -84,7 +92,13 @@ class SiteController extends Controller
     }
 
     public function galerias(){
-        return view("site.galerias");
+        $galerias = Galeria::where("ativo", true)->get();
+        return view("site.galerias", ["galerias" => $galerias]);
+    }
+
+    public function galeria($slug){
+        $galeria = Galeria::where("slug", $slug)->first();
+        return view("site.galeria", ["galeria" => $galeria]);
     }
 
     public function imprensa(){
