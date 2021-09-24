@@ -1081,7 +1081,7 @@ section.s_blog .container-fav .blog-group .blog-item {
 section.s_blog .container-fav .blog-group .blog-item .blog-pic {
     position: relative;
     max-width: 38.5rem;
-    max-height: 24.2rem;
+    height: 24.2rem;
 }
 
 section.s_blog .container-fav .blog-group .blog-item .blog-content {

@@ -80,9 +80,6 @@
                         
                         <br><br>
                         {!! $noticia->conteudo !!}
-                        <div id="post_img" class="img">
-                            <img src="{{ asset('site/img/detalhes.jpg') }}" alt="">
-                        </div>
                 </div>
             </div>
         </section>
