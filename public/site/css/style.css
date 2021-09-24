@@ -2274,8 +2274,8 @@ body._galeria section.s_galeria main ._mainImage {
     justify-content: center;
 }
 body._galeria section.s_galeria main ._mainImage img {
-    width: 100%;
-    height: auto;
+    /* width: 100%; */
+    height: 100%;
 }
 body._galeria section.s_galeria ._list ._img._active {
     opacity: 1;
