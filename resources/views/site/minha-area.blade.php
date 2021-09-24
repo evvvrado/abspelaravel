@@ -158,12 +158,6 @@
         <div class="container-fav">
             <div class="_top">
                 <h2>Minha Área</h2>
-                <div class="_topbutton">
-                    <p>Ver mais +</p>
-                    <div class="_btn">
-                        <img src="{{asset('site/img/sistema/threeDots.svg')}}" alt="">
-                    </div>
-                </div>
             </div>
             <div class="_scrollMatriculas">
                 

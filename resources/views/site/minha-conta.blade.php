@@ -196,7 +196,7 @@
                         </label>
                         <button>Enviar <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" /></button>
                         <div class="_remember">
-                            <span>Lembrou?<strong> Bora entrar!</strong></span>
+                            <span><strong>Entrar</strong></span>
                         </div>
                     </form>
 

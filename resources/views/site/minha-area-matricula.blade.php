@@ -161,98 +161,31 @@
             </div>
             <div class="_contentList">
                 <div class="_matriculasList">
-                    <div class="_matricula">
-                        <div class="_image">
-                            <img src="{{asset('site/img/sistema/capaMatricula.jpg')}}" alt="">
-                        </div>
-                        <div class="_content">
-                            <h3>Meeting de Musculação</h3>
-                            <p>N. 558893390122</p>
-                            <div class="_date">
-                                <div class="_svg">
-                                    <img src="{{asset('site/img/sistema/calendar.svg')}}" alt="">
-                                </div>
-                                <p>12.05.2020</p>
+                    
+                        {{-- <div class="_matricula">
+                            <div class="_image">
+                                <img src="{{asset('site/img/sistema/capaMatricula.jpg')}}" alt="">
                             </div>
-                            <p>Curso Online</p>
-                            <button class="btn-primary">
-                                Acessar Curso
-                                <div class="_svg">
-                                    <img src="{{asset('site/img/sistema/buttonArrowRight.svg')}}" alt="">
-                                </div>
-                            </button>
-                        </div>
-
-                    </div>
-                    <div class="_matricula">
-                        <div class="_image">
-                            <img src="{{asset('site/img/sistema/capaMatricula.jpg')}}" alt="">
-                        </div>
-                        <div class="_content">
-                            <h3>Meeting de Musculação</h3>
-                            <p>N. 558893390122</p>
-                            <div class="_date">
-                                <div class="_svg">
-                                    <img src="{{asset('site/img/sistema/calendar.svg')}}" alt="">
-                                </div>
-                                <p>12.05.2020</p>
+                            <div class="_content">
+                                <h3>Meeting de Musculação</h3>
+                                <p>N. 558893390122</p>
+                                <div class="_date">
+                                    <div class="_svg">
+                                        <img src="{{asset('site/img/sistema/calendar.svg')}}" alt="">
+                                    </div>
+                                    <p>12.05.2020</p>
+                                </div>s
+                                <p>Curso Online</p>
+                                <button class="btn-primary">
+                                    Acessar Curso
+                                    <div class="_svg">
+                                        <img src="{{asset('site/img/sistema/buttonArrowRight.svg')}}" alt="">
+                                    </div>
+                                </button>
                             </div>
-                            <p>Curso Online</p>
-                            <button class="btn-primary">
-                                Acessar Curso
-                                <div class="_svg">
-                                    <img src="{{asset('site/img/sistema/buttonArrowRight.svg')}}" alt="">
-                                </div>
-                            </button>
-                        </div>
+                        </div> --}}
+                   
 
-                    </div>
-                    <div class="_matricula">
-                        <div class="_image">
-                            <img src="{{asset('site/img/sistema/capaMatricula.jpg')}}" alt="">
-                        </div>
-                        <div class="_content">
-                            <h3>Meeting de Musculação</h3>
-                            <p>N. 558893390122</p>
-                            <div class="_date">
-                                <div class="_svg">
-                                    <img src="{{asset('site/img/sistema/calendar.svg')}}" alt="">
-                                </div>
-                                <p>12.05.2020</p>
-                            </div>
-                            <p>Curso Online</p>
-                            <button class="btn-primary">
-                                Acessar Curso
-                                <div class="_svg">
-                                    <img src="{{asset('site/img/sistema/buttonArrowRight.svg')}}" alt="">
-                                </div>
-                            </button>
-                        </div>
-
-                    </div>
-                    <div class="_matricula">
-                        <div class="_image">
-                            <img src="{{asset('site/img/sistema/capaMatricula.jpg')}}" alt="">
-                        </div>
-                        <div class="_content">
-                            <h3>Meeting de Musculação</h3>
-                            <p>N. 558893390122</p>
-                            <div class="_date">
-                                <div class="_svg">
-                                    <img src="{{asset('site/img/sistema/calendar.svg')}}" alt="">
-                                </div>
-                                <p>12.05.2020</p>
-                            </div>
-                            <p>Curso Online</p>
-                            <button class="btn-primary">
-                                Acessar Curso
-                                <div class="_svg">
-                                    <img src="{{asset('site/img/sistema/buttonArrowRight.svg')}}" alt="">
-                                </div>
-                            </button>
-                        </div>
-
-                    </div>
                 </div>
             </div>
         </div>

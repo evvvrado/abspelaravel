@@ -100,7 +100,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="price">
-                                                {{ $turma->parcelas }}X<span class="lowsized">R$</span>{{ $reais_parcelas }}<span
+                                                {{ $turma->parcelas }}x<span class="lowsized">R$</span>{{ $reais_parcelas }}<span
                                                 class="lowsized">,{{ number_format($centavos_parcelas * 100, 0) }}</span>
                                             </div>
                                         </div>

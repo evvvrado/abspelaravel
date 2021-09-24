@@ -5,7 +5,7 @@
 <head>
         
         <meta charset="utf-8" />
-        <title>ABS - Painel Administrativo</title>
+        <title>ABS-PE - Sistema Administrativo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Painel de controle da Gefit" name="description" />
         <meta content="Luis Gustavo de Souza Carvalho" name="author" />

@@ -197,10 +197,6 @@ $("._otherhalf ._forgot").click(() => {
 $("._otherhalf ._tologin").click(() => {
     $("._otherhalf").scrollTop(0);
 });
-
-$("header main button.btn-primary").click(() => {
-    window.location.href = "/seja-um-associado-login";
-});
 $("footer .novidades button").click(() => {
     window.location.href = "/newsletter";
 });

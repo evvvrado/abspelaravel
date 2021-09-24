@@ -2,7 +2,7 @@
     <div class="container-fav">
         <div class="_left">
             <div class="text">
-                <h3>Club de vantagens</h3>
+                <h3>Club de Vantagens</h3>
                 <h2>Seja um associado e viva experiências marcantes</h2>
                 <p>Estamos aqui por um único objetivo: fazer com que você aproveite,
                     cada vez mais, nossa paixão em comum: os vinhos. Associe-se! </p>

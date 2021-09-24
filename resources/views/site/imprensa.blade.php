@@ -26,7 +26,7 @@
 
     <section class="container-fluid s_hero">
         <div class="container-fav">
-            <h1>Assessoria de Imprensa</h1>
+            <h1>Fale conosco!</h1>
         </div>
        
       </section>
@@ -37,8 +37,8 @@
         <div class="container-fav">
             <div class="title">
                 <nav class="_filter">
-                    <h2 class="_cursosbutton _active">Imprensa</h2>
-                    <h2 class="_eventosbutton">Contato</h2>
+                    <h2 class="_eventosbutton _active">Contato</h2>
+                    <h2 class="_cursosbutton">Imprensa</h2>
                 </nav>
             </div>
         </div>
@@ -97,7 +97,7 @@
                             <div class="svg">
                                 <img src="{{asset('site/img/imprensaPin.svg')}}" alt="">
                             </div>
-                            <p>Av. República do Líbano, 251 <br>Torre 3 - Sala 2801<br> Recife, PE</p>
+                            <p>Rua Desembargador Gois Cavalcante,<br> 316, Sala 101,<br> Parnamirim, Recife - PE</p>
                         </div>
                         <div class="_pin">
                             <div class="svg">
@@ -137,7 +137,7 @@
                 </div>
             </div>
             <div class="local">
-                <img src="{{asset('site/img/local.png')}}" alt="">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.682527679753!2d-34.9117342846195!3d-8.031631494216535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab19ab9cbc063b%3A0x86f15e42575e7623!2sRua%20Desembargador%20G%C3%B3is%20Cavalcante%2C%20316%20-%20Parnamirim%2C%20Recife%20-%20PE%2C%2052060-000!5e0!3m2!1spt-BR!2sbr!4v1632497925850!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>

@@ -151,9 +151,7 @@
 
         </section>
     </div>
-
-
-
+    
     <section class="container-fluid _meusDados">
         <div class="container-fav">
             <div class="_right">
@@ -163,7 +161,7 @@
                 <form action="return 0" class="_dados">
                     <div class="dados-div">
                         <label>                            
-                            <input type="text" name="_username" value="Everaldo Cristiano Reis Júnior" class="_dadosComponent">
+                            <input type="text" name="_username" value="{{ session()->get("aluno")["nome"] }}" class="_dadosComponent">
                             <div class="_icon">
                                 <img src="{{asset('site/img/sistema/userData.svg')}}" alt="">
                             </div>
@@ -171,21 +169,21 @@
                         </label>
 
                        <label>
-                            <input type="email" name="_useremail" value="everaldocrj@gmail.com" class="_dadosComponent">
+                            <input type="email" name="_useremail" value="{{ session()->get("aluno")["email"] }}" class="_dadosComponent">
                             <div class="_icon">
                                 <img src="{{asset('site/img/sistema/mailData.svg')}}" alt="">
                             </div>
                        </label>
 
                         <label>
-                            <input type="tel" name="_usercpf" value="158.828.820-20" class="_dadosComponent">
+                            <input type="tel" name="_usercpf" value="{{ session()->get("aluno")["cpf"] }}" class="_dadosComponent">
                             <div class="_icon">
                                 <img src="{{asset('site/img/sistema/userData.svg')}}" alt="">
                             </div>
                         </label>                    
 
                         <label>    
-                            <input type="tel" name="_usertel" value="35 9 8809-0305" class="_dadosComponent">
+                            <input type="tel" name="_usertel" value="{{ session()->get("aluno")["telefone"] }}" class="_dadosComponent">
                             <div class="_icon">
                                 <img src="{{asset('site/img/sistema/phoneData.svg')}}" alt="">
                             </div>                       
@@ -195,21 +193,21 @@
                     <div class="dados-div">
 
                         <label>                            
-                            <input type="text" name="_userendereco" value="Rua João Cesário, 180" class="_dadosComponent">
+                            <input type="text" name="_userendereco" placeholder="Rua, 180" class="_dadosComponent">
                             <div class="_icon">
                                 <img src="{{asset('site/img/sistema/doorData.svg')}}" alt="">
                             </div>                                
                         </label>
 
                        <label>
-                            <input type="text" name="_usercity" value="Alfenas" class="_dadosComponent">
+                            <input type="text" name="_usercity" placeholder="Cidade" class="_dadosComponent">
                             <div class="_icon">
                                 <img src="{{asset('site/img/sistema/pinData.svg')}}" alt="">
                             </div>
                        </label>
 
                         <label>
-                            <input type="text" name="_userUF" value="Minas Gerias" class="_dadosComponent">
+                            <input type="text" name="_userUF" placeholder="Estado" class="_dadosComponent">
                             <div class="_icon">
                                 <img src="{{asset('site/img/sistema/pinData.svg')}}" alt="">
                             </div>

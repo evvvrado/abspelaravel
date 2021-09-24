@@ -19,11 +19,12 @@
                     <li><a href="{{route('site.experiencia')}}">Experiencias</a></li>
                     <li><a href="{{route('site.noticias')}}">Blog</a></li>
                     <li><a href="{{route('site.galerias')}}">Galeria</a></li>
-                    <li><a href="{{route('site.imprensa')}}">Imprensa</a></li>
+                    <li><a href="{{route('site.imprensa')}}">Contato</a></li>
                 </ul>
             </nav>
 
-            <button class="menu-item btn-primary">Associado</a></button>
+            {{-- <button class="menu-item btn-primary">Associado</a></button> --}}
+            <button class="menu-item btn-primary" onclick="window.location.href = '{{ route('site.minha-conta') }}'">Minha conta</a></button>
 
             <button class="menu-item hamburguer-menu">
                 <img src="{{asset('site/img/hamburguer.svg')}}" alt="" />

@@ -13,11 +13,11 @@
                 <img src="{{asset('site/img/_logo91.png')}}" alt="">
                 <img src="{{asset('site/img/_logoASI_91.png')}}" alt="">
             </div>
-            <button class="btn-primary" onclick="window.location.href = '/conta.html'">Minha conta</button>
+            <button class="btn-primary" onclick="window.location.href = '{{ route('site.minha-conta') }}'">Minha conta</button>
         </div>
         <div class="row">
             <div class="endereco">
-                Av. Dr. Dante Pazzanese, 500 Vila Mariana, São Paulo SP, 04012-909
+                Rua Desembargador Gois Cavalcante, 316, Sala 101, Parnamirim, Recife - PE, 52.06-140
             </div>
             <div class="contact">
                 <div class="website">

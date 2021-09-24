@@ -8,7 +8,7 @@
         <div class="content">
             <div class="welcome_item">
                 <div class="phone welcome_item">
-                    <img src="{{ asset('site/img/tPhone.svg') }}" alt="" />
+                    <img height="20px" src="{{ asset('site/img/WhatsappLogoOferta.svg') }}" alt="" />
                 </div>
                 <span>(81) 9 8262-2200 </span>
             </div>

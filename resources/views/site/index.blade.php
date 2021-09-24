@@ -56,7 +56,7 @@
                 <div class="info">
                     <p class="minitext">Apenas</p>
                     <h1>
-                        {{ $turma->parcelas }}X<span class="lowsized">R$</span>{{ $reais_parcelas }}<span
+                        {{ $turma->parcelas }}x<span class="lowsized">R$</span>{{ $reais_parcelas }}<span
                             class="lowsized">,{{ number_format($centavos_parcelas * 100, 0) }}</span>
                     </h1>
                 </div>
@@ -142,7 +142,7 @@
                             </div>
                             <div class="row">
                                 <div class="price">
-                                    {{ $turma->parcelas }}X<span
+                                    {{ $turma->parcelas }}x<span
                                         class="lowsized">R$</span>{{ $reais_parcelas }}<span
                                         class="lowsized">,{{ number_format($centavos_parcelas * 100, 0) }}</span>
                                 </div>
@@ -301,7 +301,7 @@
     <section class="container-fluid s_quem">
         <div class="container-fav showin">
             <div class="title">
-                <h3>Quem somos</h3>
+                <h3>Quem Somos</h3>
                 <h2>O fascinante e sofisticado universo do vinho está aqui</h2>
                 <p>
                     Difundir a cultura do vinho - seu cultivo, produção, elaboração, degustação e avaliação, e
@@ -322,9 +322,9 @@
                 <div>
                     <h4>Nossos Eventos</h4>
                     <p>
-                        Momentos únicos regados a maravilhosos vinhos compõem as degustações organizadas pela ABS – PE.
+                        Momentos únicos regados a maravilhosos <br> vinhos compõem as degustações organizadas pela ABS – PE.
                     </p>
-                    <button class="btn-alternative" onclick="window.location.href = '{{ route('site.cursos') }}'">EVENTOS</button>
+                    <button class="btn-alternative" onclick="window.location.href = '{{ route('site.cursos') }}'">AGENDA</button>
                 </div>
             </div>
         </div>

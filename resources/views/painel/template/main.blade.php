@@ -10,12 +10,12 @@ $usuario = \App\Models\Usuario::find(session()->get("usuario")["id"]);
 <head>
         
         <meta charset="utf-8" />
-        <title>ABS - Painel Administrativo</title>
+        <title>ABS-PE - Sistema Administrativo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="_token" content="{{ csrf_token() }}">
 
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{asset('admin/images/favicon.png')}}">
+        <link rel="shortcut icon" href="{{asset('/admin/images/favicon.ico')}}">
 
         <!-- Bootstrap Css -->
         <link href="{{asset('admin/css/bootstrap.min.css')}}" id="bootstrap-style" rel="stylesheet" type="text/css" />

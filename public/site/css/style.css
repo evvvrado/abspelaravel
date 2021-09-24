@@ -620,12 +620,14 @@ section.s_cursos .container-fav .curso-group .curso-item .curso-pic {
 
     overflow: hidden;
 }
-section.s_cursos .container-fav .curso-group .curso-item .curso-pic .img,
-section.s_cursos .container-fav .curso-group .curso-item .curso-pic img{
+section.s_cursos .container-fav .curso-group .curso-item .curso-pic img:not(section.s_cursos .container-fav .curso-group .curso-item .curso-pic .curso_online img){
     height: 100%;
     max-width: unset;
 }
 
+section.s_cursos .container-fav .curso-group .curso-item .curso-pic .img{
+    height: 23.3rem;
+}
 section.s_cursos
     .container-fav
     .curso-group
@@ -1213,10 +1215,12 @@ section.s_parceiros .container-fav ._partnes {
 body._imprensa section.s_acessoria {
     padding-top: 9.9rem;
     padding-bottom: 28.9rem;
+    display: none;
+
 }
 body._imprensa section.s_acessoria.s_contato {
     padding-bottom: 25rem;
-    display: none;
+    display: block;
 }
 
 body._imprensa section.s_acessoria .container-fav {
@@ -1582,14 +1586,14 @@ body._quem-somos section.s_quem-somos ._diretores ._diretor {
 body._quem-somos section.s_quem-somos ._diretores ._diretor main {
     width: 100%;
     max-width: 74.5rem;
-    height: 24.7rem;
+    min-height: 24.7rem;
     padding-top: 1.8rem;
     padding-left: 7.5rem;
-
+    padding-bottom: 2rem;
+    padding-right: 2rem;
     margin-left: -3.2rem;
-
     background-color: white;
-    box-shadow: 0px 9px 28px -1px rgba(232, 31, 96, 0.5);
+    box-shadow: 0px 9px 28px -1px rgb(232 31 96 / 50%);
     border-radius: 9px;
 }
 
@@ -1766,7 +1770,7 @@ body._blog-post section.s_post nav.post_topbar .share_btn {
 footer {
     background: var(--background-gradient);
     padding-top: 4.7rem;
-    padding-bottom: 4.7rem;
+    padding-bottom: 3.7rem
 }
 
 footer .container-fav .row {
@@ -1867,14 +1871,16 @@ footer .container-fav .row .novidades .input button {
     align-items: center;
     justify-content: center;
 }
-
+footer .container-fav .row:last-child{
+    padding-top: 4rem;
+}
 footer .container-fav .row:last-child::before {
     content: "";
     position: absolute;
     height: 1px;
     width: 100%;
     left: 0;
-    margin-bottom: 6rem;
+    margin-bottom: 9rem;
     border-top: 1px solid rgba(234, 234, 234, 0.2);
 }
 footer .container-fav .row:last-child div {
@@ -2964,7 +2970,7 @@ body._minha-conta ._otherhalf ._card .row span {
         height: auto;
 
         overflow-x: scroll;
-        justify-content: flex-start;
+        justify-content: space-between;
     }
     section.s_vantagens .container-fav ._left .img {
         margin-left: -20rem;

@@ -27,8 +27,8 @@
             </div>
 
             <button class="btn-primary"
-            onclick="window.location.href = '{{ route('site.experiencia')}}'"">
-                CONHEÇA AS VANTAGENS DE SER ASSOCIADO
+            {{-- onclick="window.location.href = '{{ route('site.experiencia')}}'"--}}>
+                EM BREVE CONHEÇA AS VANTAGENS DE SER ASSOCIADO
             </button>
         </div>
     </div>
