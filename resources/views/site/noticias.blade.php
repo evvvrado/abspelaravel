@@ -87,7 +87,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="text" style="margin-top: 15px;">
-                                        <span>{!! $noticia->resumo !!}</span>
+                                        <span>{!! $noticia->titulo !!}</span>
                                     </div>
                                     <button class="btn-alternative" onclick="window.location = '{{route('site.noticia', ['categoria' => $noticia->categoria->slug, 'noticia' => $noticia->slug])}}'">
                                         LEIA MAIS

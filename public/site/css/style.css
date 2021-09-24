@@ -1700,7 +1700,16 @@ body._blog-post section.s_post .container-fav ._text {
 body._blog-post section.s_post .container-fav ._text h2 {
     margin-bottom: 2.7rem;
 }
+body._blog-post section.s_post .container-fav ._text ul li{
+    font-family: "Inter", sans-serif;
+    font-size: 1.8rem;
+    line-height: 189%;
+    list-style: circle;
+    list-style-image: url("/site/img/grayball.svg");
+    padding-left: 1.8rem;
+}
 
+}
 body._blog-post section.s_post .container-fav ._text p {
     margin-bottom: 4rem;
 }

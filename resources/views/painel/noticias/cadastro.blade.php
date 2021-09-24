@@ -27,6 +27,7 @@
                 <form action="{{route('painel.noticia.cadastrar')}}" method="POST" enctype="multipart/form-data">
                     @csrf
 
+                    {{--  
                     <div class="row">
                         <div class="col-12 text-center">
                             <div class="row">
@@ -47,11 +48,11 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 text-center">
-                                    {{--  <small style="color: red;">* Importante: Utilize imagens quadradas para garantir uma melhor visualização no site.</small>  --}}
+                                    <small style="color: red;">* Importante: Utilize imagens quadradas para garantir uma melhor visualização no site.</small> 
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="row">
                         <div class="form-group col-12 col-lg-6 mt-3">
