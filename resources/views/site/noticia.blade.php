@@ -27,7 +27,7 @@
 
     
         <!-- SECTION HERO -->
-        <section class="container-fluid s_hero" style="backgorund-image: url('{{ $noticia->banner}}}')">
+        <section class="container-fluid s_hero">
         <div class="container-fav">
             <h1></h1>
         </div>
