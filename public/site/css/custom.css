@@ -1970,8 +1970,10 @@ body._minha-conta ._bottom {
 
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 1.1rem;
+
+    border-top: 1px solid white;
 }
 
 body._minha-conta ._bottom p {

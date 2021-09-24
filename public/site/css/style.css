@@ -3108,7 +3108,9 @@ body._minha-conta ._otherhalf ._card .row span {
         align-items: center;
         text-align: center;
     }
-
+    section.s_blog .container-fav .blog-group{
+        justify-content: flex-start;
+    }
     section.s_blog .container-fav .blog-group .blog-item .blog-content {
         padding-left: 2rem;
         justify-content: center;
