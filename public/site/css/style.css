@@ -2250,6 +2250,16 @@ body._galeria section.s_galeria ._list ._img {
     opacity: 1;
     max-width: 166px;
     height: 122px;
+
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body._galeria section.s_galeria ._list ._img img,
+body._galeria section.s_galeria ._list ._img img {
+    height: 100%;
+    max-width: unset;
 }
 body._galeria section.s_galeria ._list ._img._active::after {
     content: "";

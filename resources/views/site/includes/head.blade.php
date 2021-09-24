@@ -37,5 +37,5 @@
         href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&family=Bebas+Neue&family=Inter&family=Poppins:wght@500;600;700&family=Share+Tech&display=swap"
         rel="stylesheet" />
 
-    <title>ABS - Pernambuco</title>
+    <title>Associação Brasileira de Sommelier Pernambuco</title>
 </head>
