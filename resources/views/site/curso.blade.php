@@ -26,7 +26,7 @@
 
 
     <!-- SECTION HERO -->
-    <section class="container-fluid s_hero" style="background-image: url('{{ $curso->banner }}')">
+    <section class="container-fluid s_hero" style="background-image: url('/{{ $curso->banner }}')">
         <div class="container-fav">
             <h1>{{$curso->titulo}}</h1>
             {{--  <h3>Módulo I</h3>  --}}
