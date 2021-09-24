@@ -368,7 +368,7 @@
                                 <div class="text">
                                     <span>{{ $noticia->titulo }}</span>
                                 </div>
-                                <button class="btn-alternative">
+                                <button class="btn-alternative" onclick="window.location = '{{route('site.noticia', ['categoria' => $noticia->categoria->slug, 'noticia' => $noticia->slug])}}'">
                                     LEIA MAIS
                                 </button>
                             </div>

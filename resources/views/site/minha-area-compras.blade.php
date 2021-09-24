@@ -3,50 +3,9 @@
 
 <head>
     <meta charset='utf-8'>
-    @if(isset($pagina))
-        <title>{{$pagina->titulo}}</title>
-        <meta name='keywords' content='{{$pagina->palavras}}'>
-        <meta name='description' content='{{$pagina->descricao}}'>
-        <meta property='og:title' content='{{$pagina->titulo}}'>
-        <meta property='og:site_name' content='{{$pagina->titulo}}'>
-        <meta name='twitter:title' content='{{$pagina->titulo}}'>
-        <meta property='og:description' content='{{$pagina->descricao}}'>
-        <meta name='twitter:description' content='{{$pagina->descricao}}'>
-        
-    @else
-        <title>Associação Brasileira de Sommeliers - Brasil</title>
-        <meta name='keywords' content=''>
-        <meta name='description' content=''>
-        <meta property='og:title' content='Associação Brasileira de Sommeliers - Brasil'>
-        <meta property='og:site_name' content='Associação Brasileira de Sommeliers - Brasil'>
-        <meta name='twitter:title' content='Associação Brasileira de Sommeliers - Brasil'>
-        <meta property='og:description' content=''>
-        <meta name='twitter:description' content=''>
-    @endif
-    <link rel='canonical' href='https://homolog.abs-brasil.com'>
-    
-    <meta property='og:url' content='https://homolog.abs-brasil.com'>
-    <meta http-equiv=Pragma content=no-cache>
-    <meta http-equiv=Expires content=-1>
-    <meta http-equiv=CACHE-CONTROL content=NO-CACHE>    
-    <meta name='theme-color' content='#8A143A'>
-    <meta name='msapplication-navbutton-color' content='#8A143A'>
-    <meta name='apple-mobile-web-app-status-bar-style' content='#8A143A'>
-    <meta property='og:type' content='website'>
-    <meta name='twitter:image' content='https://homolog.abs-brasil.com/img/og_home.jpg'>
-    <meta property='og:image' content='https://homolog.abs-brasil.com/img/og_home.jpg'>
-    <meta property='og:image:secure_url' content='https://homolog.abs-brasil.com/img/og_home.jpg'>
-    <meta name='twitter:image:alt' content='Associação Brasileira de Sommeliers - Brasil'>
-    <meta property='og:image:alt' content='Associação Brasileira de Sommeliers - Brasil'>
-    <meta property='og:image:width' content='1200'>
-    <meta property='og:image:height' content='630'>
-    <meta property='og:image:type' content='image/jpeg'>
-    <meta name='robots' content='index,follow' />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Área do Cliente -  ABS PE</title>
+  
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <meta name='mobile-web-app-capable' content='yes'>
-    <meta name='apple-mobile-web-app-capable' content='yes'>
-    <meta name='twitter:card' content='summary'>
     <link rel='icon' type='image/vnd.microsoft.icon'
         sizes='16x16 32x32 48x48 64x64 96x96 128x128 144x144 180x180 192x192 256x256'
         href='{{ asset('favicon.ico') }}' />
@@ -75,115 +34,123 @@
 
 
   <body class="_minhaArea">
-    <section class="container-fluid _menu">
-        <div class="container-fav">
-            <nav>
-                <ul>
-                <li>
-                    <a href="/minha-area">
-                        <div class="svg">
-                            <img src="{{asset('site/img/sistema/user.svg')}}" alt="">
-                        </div>
-                        Minha Área
-                    </a>
-                </li>
-                    <li class="_active">
-                        <a href="/minha-area/compras">
-                            <div class="svg">
-                                <img src="{{asset('site/img/sistema/bag.svg')}}" alt="">
-                            </div>
-                            Meus Pedidos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/minha-area/matriculas">
-                            <div class="svg">
-                                <img src="{{asset('site/img/sistema/page.svg')}}" alt="">
-                            </div>
-                            Minhas Matrículas
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/minha-area/dados">
-                            <div class="svg">
-                                <img src="{{asset('site/img/sistema/clipboard.svg')}}" alt="">
-                            </div>
-                            Meus Dados
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="_user">
-                <div class="_img">
-                    <img src="{{asset('site/img/sistema/user.svg')}}" alt="">
-                </div>
-                <div class="_text">
-                    Olá <span class="_username">Everaldo</span>
-                    <a href="/" class="_sair">
-                        Sair
-                    </a></div>
-            </div>
-        </div>
-
-    </section>
     
-    <div class="_menuMax">
-        <img src="{{asset('site/img/arrowright.svg')}}" alt="">
-    </div>
-    <section class="container-fluid _menu _mobileMenu">
-        <div class="_closeButton">
-            <img src="{{asset('site/img/arrowleft.svg')}}" alt="">
-        </div>
-        <div class="container-fav">
-            <nav>
-                <ul>
-                <li>
-                    <a href="/minha-area/">
-                        <div class="svg">
-                            <img src="{{asset('site/img/sistema/user.svg')}}" alt="">
-                        </div>
-                        Minha Área
-                    </a>
-                </li>
-                    <li class="_active">
-                        <a href="/minha-area/compras">
-                            <div class="svg">
-                                <img src="{{asset('site/img/sistema/bag.svg')}}" alt="">
-                            </div>
-                            Meus Pedidos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/minha-area/matriculas">
-                            <div class="svg">
-                                <img src="{{asset('site/img/sistema/page.svg')}}" alt="">
-                            </div>
-                            Minhas Matrículas
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/minha-area/dados">
-                            <div class="svg">
-                                <img src="{{asset('site/img/sistema/clipboard.svg')}}" alt="">
-                            </div>
-                            Meus Dados
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="_user">
-                <div class="_img">
-                    <img src="{{asset('site/img/sistema/user.svg')}}" alt="">
-                </div>
-                <div class="_text">
-                    Olá <span class="_username">Everaldo</span>
-                    <a href="/" class="_sair">
-                        Sair
-                    </a></div>
-            </div>
-        </div>
 
-    </section>
+     <div style="position: fixed; width: 100%; top: 0; z-index: 9999">
+            {{-- NAVBAR SUPEROR --}}
+        @include("site.includes.navbar")
+        <!-- MENU LATERAL -->
+        @include("site.includes.menu_lateral")
+        <!-- MENU LATERAL -->
+        <section class="container-fluid _menu">
+            <div class="container-fav">
+                <nav>
+                    <ul>
+                    <li>
+                        <a href="/minha-area">
+                            <div class="svg">
+                                <img src="{{asset('site/img/sistema/user.svg')}}" alt="">
+                            </div>
+                            Minha Área
+                        </a>
+                    </li>
+                        <li class="_active">
+                            <a href="/minha-area/compras">
+                                <div class="svg">
+                                    <img src="{{asset('site/img/sistema/bag.svg')}}" alt="">
+                                </div>
+                                Meus Pedidos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/minha-area/matriculas">
+                                <div class="svg">
+                                    <img src="{{asset('site/img/sistema/page.svg')}}" alt="">
+                                </div>
+                                Minhas Matrículas
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/minha-area/dados">
+                                <div class="svg">
+                                    <img src="{{asset('site/img/sistema/clipboard.svg')}}" alt="">
+                                </div>
+                                Meus Dados
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="_user">
+                    <div class="_img">
+                        <img src="{{asset('site/img/sistema/user.svg')}}" alt="">
+                    </div>
+                    <div class="_text">
+                        Olá <span class="_username">Everaldo</span>
+                        <a href="/" class="_sair">
+                            Sair
+                        </a></div>
+                </div>
+            </div>
+
+        </section>
+        <div class="_menuMax">
+            <img src="{{asset('site/img/arrowright.svg')}}" alt="">
+        </div>
+        <section class="container-fluid _menu _mobileMenu">
+            <div class="_closeButton">
+                <img src="{{asset('site/img/arrowleft.svg')}}" alt="">
+            </div>
+            <div class="container-fav">
+                <nav>
+                    <ul>
+                    <li>
+                        <a href="/minha-area/">
+                            <div class="svg">
+                                <img src="{{asset('site/img/sistema/user.svg')}}" alt="">
+                            </div>
+                            Minha Área
+                        </a>
+                    </li>
+                        <li class="_active">
+                            <a href="/minha-area/compras">
+                                <div class="svg">
+                                    <img src="{{asset('site/img/sistema/bag.svg')}}" alt="">
+                                </div>
+                                Meus Pedidos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/minha-area/matriculas">
+                                <div class="svg">
+                                    <img src="{{asset('site/img/sistema/page.svg')}}" alt="">
+                                </div>
+                                Minhas Matrículas
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/minha-area/dados">
+                                <div class="svg">
+                                    <img src="{{asset('site/img/sistema/clipboard.svg')}}" alt="">
+                                </div>
+                                Meus Dados
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="_user">
+                    <div class="_img">
+                        <img src="{{asset('site/img/sistema/user.svg')}}" alt="">
+                    </div>
+                    <div class="_text">
+                        Olá <span class="_username">Everaldo</span>
+                        <a href="/" class="_sair">
+                            Sair
+                        </a></div>
+                </div>
+            </div>
+
+        </section>
+    </div>
 
 
 
@@ -191,12 +158,7 @@
         <div class="container-fav">
             <div class="_top">
                 <h2>Meus Pedidos</h2>
-                <div class="_topbutton">
-                    <p>Status da Compra</p>
-                    <div class="_btn">
-                        <img src="{{asset('site/img/sistema/threeDots.svg')}}" alt="">
-                    </div>
-                </div>
+                 
             </div>
             <div class="_pedidosList">
                 @foreach($aluno->pedidos as $pedido)
@@ -438,6 +400,37 @@
             500
         );
         });
+
+        
+        $("header main button.hamburguer-menu").click(() => {
+            $("div._sidemenu nav").css("height", "497px");
+        });
+
+        $("div._sidemenu nav .hamburguerClose").click(() => {
+            $("div._sidemenu nav").css("height", "0");
+        });
+
+                
+        const backdrop = {
+            visivel: true,
+            init: function () {
+                setTimeout(function () {
+                    if (backdrop.visivel) {
+                        backdrop.esconde();
+                    }
+                }, 10 * 1000);
+            },
+            esconde: function () {
+                $("#backdrop").css("background", "");
+                $("#backdrop>div").fadeOut();
+                $("#backdrop").delay(350).fadeOut("slow");
+                $("body").delay(350).css("overflow", "");
+                backdrop.visivel = false;
+            },
+        };
+
+        backdrop.esconde();
+
 
     </script>
   </body>
