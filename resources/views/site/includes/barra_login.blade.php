@@ -10,7 +10,7 @@
                 <div class="phone welcome_item">
                     <img src="{{ asset('site/img/tPhone.svg') }}" alt="" />
                 </div>
-                <span>(35) 9 8809 0654 </span>
+                <span>(81) 9 8262-2200 </span>
             </div>
             <div class="social welcome_item">
                 <a href="https://www.facebook.com/abspernambuco/" class="wSVG">

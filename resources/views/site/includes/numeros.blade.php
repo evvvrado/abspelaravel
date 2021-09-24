@@ -13,16 +13,16 @@
             <div class="number-card">
                 <div class="cards">
                     <h1>31</h1>
-                    <span>Anos de história</span>
+                    <span>anos de história</span>
                 </div>
                 <div class="cards">
                     <span>mais de</span>
                     <h1>150</h1>
-                    <span>Associados</span>
+                    <span>associados</span>
                 </div>
                 <div class="cards">
                     <h1>41</h1>
-                    <span>Instrutores</span>
+                    <span>instrutores</span>
                 </div>
             </div>
 

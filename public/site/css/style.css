@@ -1052,7 +1052,6 @@ section.s_blog {
 section.s_blog .text {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 4.2rem;
 }
 
 section.s_blog .text button.btn-primary {
@@ -1109,6 +1108,20 @@ section.s_blog .container-fav .blog-group .blog-item .blog-content:hover {
     animation: none;
 }
 
+
+section.s_blog
+    .container-fav
+    .blog-group
+    .blog-item
+    .blog-content
+    .row:nth-child(2){
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between
+    }
+    
 section.s_blog
     .container-fav
     .blog-group
