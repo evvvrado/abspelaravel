@@ -66,7 +66,7 @@
             @php
                 $cont = 0;
             @endphp
-            @foreach (\App\Models\Noticia::orderBy('publicacao', 'DESC')->take(3)->get() as $noticia)
+            @foreach ($noticias as $noticia)
                 @if($cont == 0)
                     <div class="blog-group">
                 @endif
