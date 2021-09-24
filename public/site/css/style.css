@@ -1058,6 +1058,7 @@ section.s_blog {
     padding-bottom: 17.4rem;
 }
 section.s_blog .text {
+    margin-bottom: 1.5rem;
     display: flex;
     justify-content: space-between;
 }
@@ -2963,7 +2964,7 @@ body._minha-conta ._otherhalf ._card .row span {
         height: auto;
 
         overflow-x: scroll;
-        justify-content: center;
+        justify-content: flex-start;
     }
     section.s_vantagens .container-fav ._left .img {
         margin-left: -20rem;
@@ -3110,7 +3111,7 @@ body._minha-conta ._otherhalf ._card .row span {
 
     section.s_blog .container-fav .blog-group .blog-item .blog-content {
         padding-left: 2rem;
-        justify-content: flex-start;
+        justify-content: center;
     }
 
     section.s_cursos .container-fav .curso-group {
