@@ -28,7 +28,7 @@
     <section class="container-fluid s_galeria">
         <div class="container-fav">
             @foreach($galerias as $galeria)
-                <h2>Galeria 1</h2>
+                <h2>$galeria->nome</h2>
                 <div class="galleryContent">
                     <div class="_list">
                         @foreach($galeria->fotos as $foto)
