@@ -100,6 +100,7 @@
                 @endphp
                 @if($cont == 3)
                     </div>
+                    $cont = 0;
                 @endif
             @endforeach
             {{--  <div class="blog-group">
