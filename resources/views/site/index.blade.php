@@ -346,10 +346,9 @@
                     onclick="window.location.href = '{{ route('site.noticias') }}' ">Acessar
                     blog</button>
             </div>
-            @php
-                $cont = 0;
-            @endphp
-                @foreach ($noticias as $noticia)
+            
+            <div class="blog-group">
+                @foreach(\App\Models\Noticia::orderBy('publicacao', 'DESC')->take(3)->get() as $noticia)
                     <div class="blog-item">
                         <div class="blog-pic">
                             <div class="img">
