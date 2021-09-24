@@ -185,15 +185,15 @@
         reader.readAsDataURL(file);
     },false);
 
-    var inp = document.getElementById('banner-upload');
-    inp.addEventListener('change', function(e){
-        var file = this.files[0];
-        var reader = new FileReader();
-        reader.onload = function(){
-            document.getElementById('banner-preview').src = this.result;
-            };
-        reader.readAsDataURL(file);
-    },false);
+    // var inp = document.getElementById('banner-upload');
+    // inp.addEventListener('change', function(e){
+    //     var file = this.files[0];
+    //     var reader = new FileReader();
+    //     reader.onload = function(){
+    //         document.getElementById('banner-preview').src = this.result;
+    //         };
+    //     reader.readAsDataURL(file);
+    // },false);
 
     $(document).ready(function() {
         $('#summernote').summernote({

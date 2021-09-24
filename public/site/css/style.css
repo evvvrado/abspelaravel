@@ -1068,7 +1068,9 @@ section.s_blog .text h2 {
 
 section.s_blog .container-fav .blog-group {
     display: flex;
-    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    justify-content: flex-start;
 }
 section.s_blog .container-fav .blog-group .blog-item {
     display: flex;
