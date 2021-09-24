@@ -1086,8 +1086,7 @@ section.s_blog .container-fav .blog-group .blog-item .blog-pic {
 
 section.s_blog .container-fav .blog-group .blog-item .blog-pic .img, 
 section.s_blog .container-fav .blog-group .blog-item .blog-pic .img img{
-    height: 100%;
-    max-width: unset;
+    width: 100%;
 }
 section.s_blog .container-fav .blog-group .blog-item .blog-content {
     display: flex;
