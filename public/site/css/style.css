@@ -1080,9 +1080,15 @@ section.s_blog .container-fav .blog-group .blog-item {
 section.s_blog .container-fav .blog-group .blog-item .blog-pic {
     position: relative;
     max-width: 38.5rem;
+    overflow: hidden;
     height: 24.2rem;
 }
 
+section.s_blog .container-fav .blog-group .blog-item .blog-pic .img, 
+section.s_blog .container-fav .blog-group .blog-item .blog-pic .img img{
+    height: 100%;
+    max-width: unset;
+}
 section.s_blog .container-fav .blog-group .blog-item .blog-content {
     display: flex;
     align-content: center;
