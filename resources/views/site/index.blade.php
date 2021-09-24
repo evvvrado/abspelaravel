@@ -349,8 +349,8 @@
             @php
                 $cont = 0;
             @endphp
-            <div class="blog-group">
                 @foreach (\App\Models\Noticia::orderBy('publicacao', 'DESC')->take(3)->get() as $noticia)
+                <div class="blog-group">
                     <div class="blog-item">
                         <div class="blog-pic">
                             <div class="img">
@@ -376,7 +376,6 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
             </div>
         </div>
     </section>
