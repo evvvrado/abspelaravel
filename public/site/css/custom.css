@@ -1964,7 +1964,7 @@ body._minha-conta ._bottom {
     width: 100%;
     font-family: "Spartan" !important;
     font-size: 1.2rem;
-    line-height: 1.3rem;
+    line-height: 1.3rem;g
 
     color: #ffffff;
 
@@ -1972,6 +1972,8 @@ body._minha-conta ._bottom {
     align-items: center;
     justify-content: center;
     gap: 1.1rem;
+
+    padding-top: 2rem;
 
     border-top: 1px solid white;
 }
