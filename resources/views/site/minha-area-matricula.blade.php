@@ -159,7 +159,7 @@
                 <h2>Minhas Matrículas</h2>
                  
             </div>
-            <div class="_content">
+            <div class="_contentList">
                 <div class="_matriculasList">
                     <div class="_matricula">
                         <div class="_image">

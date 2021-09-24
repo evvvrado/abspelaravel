@@ -580,7 +580,7 @@ section._minhasMatriculas ._top ._topbutton ._btn {
 section._minhasMatriculas ._scrollMatriculas {
     width: 100%;
 }
-section._minhasMatriculas ._content {
+section._minhasMatriculas ._contentList {
     max-width: 100%;
     overflow: scroll;
 
