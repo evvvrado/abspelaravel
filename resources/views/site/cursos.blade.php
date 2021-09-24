@@ -539,3 +539,30 @@
     @include("site.includes.parceiros")
     <!-- SECTIONS EXTRAS -->
     @include("site.includes.footer")
+
+    <script>
+
+        $(document).ready(() => {
+            if (window.location.href.includes("#eventos")) {
+            $("section.s_cursos .container-fav .title ._filter h2").removeClass(
+                "_active"
+            );
+
+            $(
+                "section.s_cursos .container-fav .title ._filter h2._eventosbutton"
+            ).addClass("_active");
+
+            $("body._cursos-e-eventos section.s_cursos ._eventos").css(
+                "display",
+                "block"
+            );
+            $("body._cursos-e-eventos section.s_cursos ._cursos").css(
+                "display",
+                "none"
+            );
+            window.history.pushState('pagina', 'Teste', '/cursos');
+
+        }
+        })
+        
+    </script>

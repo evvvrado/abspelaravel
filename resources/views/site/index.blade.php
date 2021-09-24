@@ -324,7 +324,7 @@
                     <p>
                         Momentos únicos regados a maravilhosos <br> vinhos compõem as degustações organizadas pela ABS – PE.
                     </p>
-                    <button class="btn-alternative" onclick="window.location.href = '{{ route('site.cursos') }}'">AGENDA</button>
+                    <button class="btn-alternative" onclick="window.location.href = '{{ route('site.cursos') }}#eventos'">AGENDA</button>
                 </div>
             </div>
         </div>
