@@ -188,7 +188,7 @@
 
                         </style>
                     @endif
-                    <form action="{{ route('site.aluno.senha.recuperar') }}" method="POST">
+                    <form action="" method="POST">
                         @csrf
                         <label>
                             <span>Meu e-mail</span>
