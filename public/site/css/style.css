@@ -1754,6 +1754,7 @@ body._blog-post section.s_post nav.post_topbar .author,
 body._blog-post section.s_post nav.post_topbar .share,
 body._blog-post section.s_post nav.post_topbar .share_btn {
     display: flex;
+    cursor: default;
     align-items: center;
 }
 body._blog-post section.s_post nav.post_topbar .author {

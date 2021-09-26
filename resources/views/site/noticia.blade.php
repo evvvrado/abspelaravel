@@ -56,16 +56,16 @@
                             <p>Share</p>
                         </button>
                         <div class="svg">
-                            <a href=""><img src="{{ asset('site/img/shareYoutube.svg') }}" alt=""></a>
+                            <a href="https://wa.me/?text=Veja só essa notícia da ABS Pernambuco {{ url()->current() }}"><img src="{{ asset('site/img/WhatsappLogoOferta.svg') }}" target="_blank" height="28px" alt=""></a>
                         </div>
                         <div class="svg">
-                            <a><img src="{{ asset('site/img/shareInstagram.svg') }}" alt=""></a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}"><img src="{{ asset('site/img/facebookLogo.svg') }}" height="28px" target="_blank" alt=""></a>
                         </div>
                         <div class="svg">
-                            <a href="mailto:?subject=Artigo blog ABS Pernambuco&amp;body={{ url()->current() }}"><img src="{{ asset('site/img/shareEnvelop.svg') }}" alt=""></a>
+                            <a href="mailto:?subject=Veja só essa notícia da ABS Pernambuco&amp;body={{ url()->current() }}"><img src="{{ asset('site/img/shareEnvelop.svg') }}" target="_blank" alt=""></a>
                         </div>
                         <div class="svg">
-                            <a href="https://twitter.com/home?status={{ url()->current() }}"><img src="{{ asset('site/img/shareTwitter.svg') }}" alt=""></a>
+                            <a href="https://twitter.com/home?status={{ url()->current() }}"><img src="{{ asset('site/img/shareTwitter.svg') }}" target="_blank" alt=""></a>
                         </div>
                     </div>
     

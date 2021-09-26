@@ -164,6 +164,8 @@
                 <h2>Meus Pedidos</h2>
 
             </div>
+            <div class="_contentList">
+                
             <div class="_pedidosList">
                 @foreach ($aluno->pedidos as $pedido)
                     <div class="_pedido">
@@ -297,6 +299,7 @@
                         </div>
                     </div>
                 </div> --}}
+            </div>
             </div>
         </div>
     </section>
