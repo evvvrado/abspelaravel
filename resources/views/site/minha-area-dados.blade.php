@@ -343,7 +343,7 @@
             <p>
                 <strong>
                     Desenvolvido por
-                    <a href="https://7seventrends.com"" class="                                  _img">
+                    <a href="https://7seventrends.com"" class="                                      _img">
                         <img src="{{ asset('site/img/_logo7seven.png') }}" style="filter: brightness(0);""  alt="">
               </a> </div></p> 
               </strong>

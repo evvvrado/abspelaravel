@@ -15,9 +15,9 @@ class AlterTableAlunos extends Migration
     {
         //
         Schema::table('alunos', function (Blueprint $table) {
-            $table->string("rua", 100);
-            $table->string("cidade", 50);
-            $table->string("estado", 50);
+            $table->string("rua", 100)->nullable();
+            $table->string("cidade", 50)->nullable();
+            $table->string("estado", 50)->nullable();
         });
     }
 
