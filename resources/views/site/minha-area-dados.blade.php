@@ -168,8 +168,7 @@
                     @csrf
                     <div class="dados-div">
                         <label>
-                            <input type="text" name="nome" value="{{ session()->get('aluno')['nome'] }}"
-                                class="_dadosComponent">
+                            <input type="text" name="nome" value="{{ $aluno->nome }}" class="_dadosComponent">
                             <div class="_icon">
                                 <img src="{{ asset('site/img/sistema/userData.svg') }}" alt="">
                             </div>
@@ -177,24 +176,21 @@
                         </label>
 
                         <label>
-                            <input type="email" name="email" value="{{ session()->get('aluno')['email'] }}"
-                                class="_dadosComponent">
+                            <input type="email" name="email" value="{{ $aluno->email }}" class="_dadosComponent">
                             <div class="_icon">
                                 <img src="{{ asset('site/img/sistema/mailData.svg') }}" alt="">
                             </div>
                         </label>
 
                         <label>
-                            <input type="tel" name="cpf" value="{{ session()->get('aluno')['cpf'] }}"
-                                class="_dadosComponent">
+                            <input type="tel" name="cpf" value="{{ $aluno->cpf }}" class="_dadosComponent">
                             <div class="_icon">
                                 <img src="{{ asset('site/img/sistema/userData.svg') }}" alt="">
                             </div>
                         </label>
 
                         <label>
-                            <input type="tel" name="telefone" value="{{ session()->get('aluno')['telefone'] }}"
-                                class="_dadosComponent">
+                            <input type="tel" name="telefone" value="{{ $aluno->telefone }}" class="_dadosComponent">
                             <div class="_icon">
                                 <img src="{{ asset('site/img/sistema/phoneData.svg') }}" alt="">
                             </div>
@@ -204,24 +200,24 @@
                     <div class="dados-div">
 
                         <label>
-                            <input type="text" name="rua" placeholder="Rua, 180"
-                                value="{{ session()->get('aluno')['rua'] }}" class="_dadosComponent">
+                            <input type="text" name="rua" placeholder="Rua, 180" value="{{ $aluno->rua }}"
+                                class="_dadosComponent">
                             <div class="_icon">
                                 <img src="{{ asset('site/img/sistema/doorData.svg') }}" alt="">
                             </div>
                         </label>
 
                         <label>
-                            <input type="text" name="cidade" placeholder="Cidade"
-                                value="{{ session()->get('aluno')['cidade'] }}" class="_dadosComponent">
+                            <input type="text" name="cidade" placeholder="Cidade" value="{{ $aluno->cidade }}"
+                                class="_dadosComponent">
                             <div class="_icon">
                                 <img src="{{ asset('site/img/sistema/pinData.svg') }}" alt="">
                             </div>
                         </label>
 
                         <label>
-                            <input type="text" name="estado" placeholder="Estado"
-                                value="{{ session()->get('aluno')['estado'] }}" class="_dadosComponent">
+                            <input type="text" name="estado" placeholder="Estado" value="{{ $aluno->estado }}"
+                                class="_dadosComponent">
                             <div class="_icon">
                                 <img src="{{ asset('site/img/sistema/pinData.svg') }}" alt="">
                             </div>
@@ -343,7 +339,11 @@
             <p>
                 <strong>
                     Desenvolvido por
-                    <a href="https://7seventrends.com"" class="                                      _img">
+                    <a href="https://7seventrends.com"" class="
+                        
+                        
+                        
+                                                                           _img">
                         <img src="{{ asset('site/img/_logo7seven.png') }}" style="filter: brightness(0);""  alt="">
               </a> </div></p> 
               </strong>

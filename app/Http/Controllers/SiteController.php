@@ -114,7 +114,8 @@ class SiteController extends Controller
         return view("site.minha-area-compras", ["aluno" => $aluno]);
     }
     public function minhaAreaDados(){
-        return view("site.minha-area-dados");
+        $aluno = Aluno::find(session()->get("aluno")["id"]);
+        return view("site.minha-area-dados", ["aluno" => $aluno]);
     }
 
     public function minhaAreaDadosSalvar(Request $request){
@@ -127,8 +128,6 @@ class SiteController extends Controller
         $aluno->cidade = $request->cidade;
         $aluno->estado = $request->estado;
         $aluno->save();
-        session()->forget("aluno");
-        session()->put(["aluno" => $aluno->toArray()]);
         return redirect()->back();
     }
 
