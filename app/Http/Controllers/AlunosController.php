@@ -57,4 +57,9 @@ class AlunosController extends Controller
             return redirect()->back();
         }
     }
+
+    public function deslogar(){
+        session()->forget("aluno");
+        return redirect()->route("site.index");
+    }
 }

@@ -116,6 +116,33 @@ class SiteController extends Controller
     public function minhaAreaDados(){
         return view("site.minha-area-dados");
     }
+
+    public function minhaAreaDadosSalvar(Request $request){
+        $aluno = Aluno::find(session()->get("aluno")["id"]);
+        $aluno->nome = $request->nome;
+        $aluno->email = $request->email;
+        $aluno->cpf = $request->cpf;
+        $aluno->telefone = $request->telefone;
+        $aluno->rua = $request->rua;
+        $aluno->cidade = $request->cidade;
+        $aluno->estado = $request->estado;
+        $aluno->save();
+        session()->forget("aluno");
+        session()->put(["aluno" => $aluno->toArray()]);
+        return redirect()->back();
+    }
+
+    public function minhaAreaDadosSenhaAlterar(Request $request){
+        $aluno = Aluno::find(session()->get("aluno")["id"]);
+        if(Hash::check($request->senha_antiga, $aluno->senha)){
+            $aluno->senha = Hash::make($request->senha_nova);
+            $aluno->save();
+        }else{
+            session()->flash("erro", "A senha antiga informada está incorreta");
+        }
+        return redirect()->back();
+    }
+
     public function minhaAreaMatricula(){
         return view("site.minha-area-matricula");
     }

@@ -60,12 +60,15 @@ Route::get('/carrinho/finalizar/boleto/gerencianet/{parcelas}', [\App\Http\Contr
 Route::get('/minha-conta', [\App\Http\Controllers\SiteController::class, 'minhaConta'])->name("site.minha-conta");
 Route::post('/aluno/cadastrar', [\App\Http\Controllers\AlunosController::class, 'cadastrar'])->name("site.aluno.cadastrar");
 Route::post('/aluno/logar', [\App\Http\Controllers\AlunosController::class, 'logar'])->name("site.aluno.logar");
+Route::get('/aluno/deslogar', [\App\Http\Controllers\AlunosController::class, 'deslogar'])->name("site.aluno.deslogar");
 
 Route::middleware(['aluno'])->group(function () {
     //ROTAS DE MINHA ÁREA
     Route::get('/minha-area', [\App\Http\Controllers\SiteController::class, 'minhaArea'])->name("site.minha-area");
     Route::get('/minha-area/compras', [\App\Http\Controllers\SiteController::class, 'minhaAreaCompras'])->name("site.minha-area-compras");
     Route::get('/minha-area/dados', [\App\Http\Controllers\SiteController::class, 'minhaAreaDados'])->name("site.minha-area-dados");
+    Route::post('/minha-area/dados/salvar', [\App\Http\Controllers\SiteController::class, 'minhaAreaDadosSalvar'])->name("site.minha-area-dados.salvar");
+    Route::post('/minha-area/dados/senha/alterar', [\App\Http\Controllers\SiteController::class, 'minhaAreaDadosSenhaAlterar'])->name("site.minha-area-dados.senha.alterar");
     Route::get('/minha-area/matriculas', [\App\Http\Controllers\SiteController::class, 'minhaAreaMatricula'])->name("site.minha-area-matricula");
 });
 
