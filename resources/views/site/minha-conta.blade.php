@@ -62,7 +62,7 @@
     <link rel='preload' type='text/css' as='style' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css'
         crossorigin='anonymous' />
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' crossorigin='anonymous'>
-
+    <link href="{{ asset('admin/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <link rel='stylesheet'
         href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Lato&family=Roboto:wght@500&family=Spartan:wght@400;700&display=swap'
         crossorigin='anonymous'>
@@ -104,35 +104,6 @@
                         </div>
                         <h2>Identificação</h2>
                     </div>
-                    {{-- MENSAGENS DE ERRO --}}
-                    @if (session()->get('erro'))
-                        {{-- {{session()->get("erro")}} para escrever a mensagem --}}
-                        {{-- EX: <span>{{session()->get("erro")}}</span> --}}
-                        <div class="alert alert-danger">
-                            {{ session()->get('erro') }}
-                        </div>
-
-                        <style>
-                            .alert {
-                                position: relative;
-                                padding: .75rem 1.25rem;
-                                margin-bottom: 1rem;
-                                border: 1px solid transparent;
-                                border-radius: .25rem;
-                            }
-
-                            .alert-danger {
-                                color: #721c24;
-                                background-color: #f8d7da;
-                                border-color: #f5c6cb;
-                                font-family: "Spartan", sans-serif;
-                                font-weight: bold;
-                                font-size: 2rem;
-                                line-height: 22px;
-                            }
-
-                        </style>
-                    @endif
                     <form action="{{ route('site.aluno.logar') }}" method="POST">
                         @csrf
                         <label>
@@ -159,35 +130,6 @@
                         </div>
                         <h2>Esqueceu sua senha?</h2>
                     </div>
-                    {{-- MENSAGENS DE ERRO --}}
-                    @if (session()->get('erro'))
-                        {{-- {{session()->get("erro")}} para escrever a mensagem --}}
-                        {{-- EX: <span>{{session()->get("erro")}}</span> --}}
-                        <div class="alert alert-danger">
-                            {{ session()->get('erro') }}
-                        </div>
-
-                        <style>
-                            .alert {
-                                position: relative;
-                                padding: .75rem 1.25rem;
-                                margin-bottom: 1rem;
-                                border: 1px solid transparent;
-                                border-radius: .25rem;
-                            }
-
-                            .alert-danger {
-                                color: #721c24;
-                                background-color: #f8d7da;
-                                border-color: #f5c6cb;
-                                font-family: "Spartan", sans-serif;
-                                font-weight: bold;
-                                font-size: 2rem;
-                                line-height: 22px;
-                            }
-
-                        </style>
-                    @endif
                     <form action="" method="POST">
                         @csrf
                         <label>
@@ -210,36 +152,6 @@
                         </div>
                         <h2>Cadastre-se</h2>
                     </div>
-                    {{-- MENSAGENS DE ERRO --}}
-                    @if (session()->get('erro'))
-                        {{-- {{session()->get("erro")}} para escrever a mensagem --}}
-                        {{-- EX: <span>{{session()->get("erro")}}</span> --}}
-
-                        <div class="alert alert-danger">
-                            {{ session()->get('erro') }}
-                        </div>
-
-                        <style>
-                            .alert {
-                                position: relative;
-                                padding: .75rem 1.25rem;
-                                margin-bottom: 1rem;
-                                border: 1px solid transparent;
-                                border-radius: .25rem;
-                            }
-
-                            .alert-danger {
-                                color: #721c24;
-                                background-color: #f8d7da;
-                                border-color: #f5c6cb;
-                                font-family: "Spartan", sans-serif;
-                                font-weight: bold;
-                                font-size: 2rem;
-                                line-height: 22px;
-                            }
-
-                        </style>
-                    @endif
                     <form action="{{ route('site.aluno.cadastrar') }}" method="POST">
                         @csrf
                         <label>
@@ -285,6 +197,41 @@
 
     </div>
 
+    @if (session()->get('erro'))
+        <div class="modal fade" id="modalErro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" style="width: 100%; max-width: 500px;" role="document">
+                <div class="modal-content" style="padding: 0px 0 30px 0; border-radius: 20px;">
+
+                    <div class="modal-body px-5 py-0">
+                        <button type="button" id="close-modal" class="close cpointer" data-dismiss="modal"
+                            aria-label="Close" style="position: absolute; top: 10px; right: 10px; z-index: 22;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="mt-5">
+                            <div class="row mt-3">
+                                <div class="col-12 text-center">
+                                    <img src="{{ asset('site/img/icone_erro.png') }}"
+                                        style="width: 100px; margin: auto auto;" alt="Ícone de Cadastro">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 text-center modal-erro-text">
+                                    <h1>Ops !</h1>
+                                </div>
+                            </div>
+                            <div class="row mt-5 mb-4">
+                                <div class="col-12 text-center modal-erro-text">
+                                    <h2>{{ session()->get('erro') }}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
+
 
     <script>
         $("form label input,form label textarea").focus(function() {
@@ -308,7 +255,7 @@
         })
     </script>
 
-
+    <script src="{{ asset('admin/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
         integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -318,7 +265,16 @@
 
     <script src="{{ asset('site/js/script.js') }}"></script>
     <script src="{{ asset('site/js/masks.js') }}"></script>
-
+    @if (session()->get('erro'))
+        <script>
+            $(document).ready(function() {
+                $("#modalErro").modal("show");
+                $("#close-modal").click(function() {
+                    $("#modalErro").modal("hide");
+                })
+            });
+        </script>
+    @endif
     <script src="/_ifl1/ifl1formatador.js"></script>
     <script src="/_ifl1/ifl1validador.js"></script>
 </body>

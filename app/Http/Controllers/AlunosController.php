@@ -17,13 +17,11 @@ class AlunosController extends Controller
     }
 
     public function cadastrar(Request $request){
-        $validated = $request->validate([
-            'nome' => 'max:50',
-            'email' => 'max:50|unique:alunos',
-            'cpf' => 'max:15|unique:alunos',
-            'tel' => 'max:15'
-        ]);
-
+        $aluno = Aluno::where("email", $request->email)->orWhere("cpf", $request->cpf)->first();
+        if($aluno){
+            session()->flash("erro", "O email ou CPF já pertence a um usuário cadastrado.");
+            return redirect()->back();
+        }
         $aluno = new Aluno;
         $aluno->nome = $request->nome;
         $aluno->email = $request->email;
