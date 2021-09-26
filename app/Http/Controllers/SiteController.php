@@ -107,7 +107,8 @@ class SiteController extends Controller
     }
 
     public function minhaArea(){
-        return view("site.minha-area");
+        $aluno = Aluno::find(session()->get("aluno")["id"]);
+        return view("site.minha-area", ["aluno" => $aluno]);
     }
 
     public function minhaAreaCompras(){
@@ -157,7 +158,8 @@ class SiteController extends Controller
     }
 
     public function minhaAreaMatricula(){
-        return view("site.minha-area-matricula");
+        $aluno = Aluno::find(session()->get("aluno")["id"]);
+        return view("site.minha-area-matricula", ["aluno" => $aluno]);
     }
     
     public function estaduais(){

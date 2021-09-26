@@ -26,7 +26,7 @@
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' crossorigin='anonymous'>
 
     <link rel='stylesheet'
-        href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Lato&family=Roboto:wght@500&family=Spartan:wght@400;700&display=swap'
+        href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Poppins&family=Lato&family=Roboto:wght@500&family=Spartan:wght@400;700&display=swap'
         crossorigin='anonymous'>
     <link rel='stylesheet' href='{{ asset('site/css/reset.css') }}'>
     <link rel='stylesheet' href='{{ asset('site/css/sistema.css') }}'>
@@ -84,7 +84,13 @@
                 </nav>
                 <div class="_user">
                     <div class="_img">
-                        <img src="{{ asset('site/img/sistema/user.svg') }}" alt="">
+                        @if (!$aluno->avatar)
+                            <img src="{{ asset('site/img/sistema/user.svg') }}" style="max-width: 100%;
+                            min-height: unset;
+                            min-width: unset;" alt="">
+                        @else
+                            <img src="{{ asset($aluno->avatar) }}" style="max-width: 100%;" alt="">
+                        @endif
                     </div>
                     <div class="_text">
                         Olá <span
@@ -143,7 +149,13 @@
                 </nav>
                 <div class="_user">
                     <div class="_img">
-                        <img src="{{ asset('site/img/sistema/user.svg') }}" alt="">
+                        @if (!$aluno->avatar)
+                            <img src="{{ asset('site/img/sistema/user.svg') }}" style="max-width: 100%;
+                            min-height: unset;
+                            min-width: unset;" alt="">
+                        @else
+                            <img src="{{ asset($aluno->avatar) }}" alt="">
+                        @endif
                     </div>
                     <div class="_text">
                         Olá <span
@@ -153,7 +165,6 @@
                         </a>
                     </div>
                 </div>
-            </div>
 
         </section>
     </div>
@@ -260,13 +271,15 @@
             <div class="_left">
                 <div class="userImg">
                     @if (!$aluno->avatar)
-                        <img src="{{ asset('site/img/sistema/userBig.svg') }}" alt="">
+                        <img src="{{ asset('site/img/sistema/userBig.svg') }}" style="max-width: 100%;
+                        min-height: unset;
+                        min-width: unset;" alt="">
                     @else
                         <img src="{{ asset($aluno->avatar) }}" style="max-width: 100%;" alt="">
                     @endif
                 </div>
                 <a href="" id="select_avatar">Alterar Imagem</a>
-                <a style="display:none;" id="ajax_loading"><img src="{{ asset('site/img/ajax-loading.gif') }}" alt=""
+                <a style="display:none;     margin-left: 8.7rem;" id="ajax_loading"><img src="{{ asset('site/img/ajax-loading.gif') }}" alt=""
                         width="50"></a>
                 <form id="form-avatar" action="{{ route('site.minha-area-dados.avatar.alterar') }}" method="post"
                     enctype="multipart/form-data" style="display: none;">
