@@ -14,6 +14,7 @@ use App\Models\Curso;
 use App\Models\Aluno;
 use App\Models\Turma;
 use App\Models\Galeria;
+use Illuminate\Support\Facades\Storage;
 
 class SiteController extends Controller
 {
@@ -139,6 +140,19 @@ class SiteController extends Controller
         }else{
             session()->flash("erro", "A senha antiga informada está incorreta");
         }
+        return redirect()->back();
+    }
+
+    public function minhaAreaDadosAvatarAlterar(Request $request){
+        if($request->file("avatar")){
+            $aluno = Aluno::find(session()->get("aluno")["id"]);
+            Storage::delete($aluno->avatar);
+            $aluno->avatar = $request->file('avatar')->store(
+                'site/imagens/avatares/' . $aluno->id , 'local'
+            );
+            $aluno->save();
+        }
+
         return redirect()->back();
     }
 

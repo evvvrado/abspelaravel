@@ -259,9 +259,20 @@
             </div>
             <div class="_left">
                 <div class="userImg">
-                    <img src="{{ asset('site/img/sistema/userBig.svg') }}" alt="">
+                    @if (!$aluno->avatar)
+                        <img src="{{ asset('site/img/sistema/userBig.svg') }}" alt="">
+                    @else
+                        <img src="{{ asset($aluno->avatar) }}" style="max-width: 100%;" alt="">
+                    @endif
                 </div>
-                <a href="/">Alterar Imagem</a>
+                <a href="" id="select_avatar">Alterar Imagem</a>
+                <a style="display:none;" id="ajax_loading"><img src="{{ asset('site/img/ajax-loading.gif') }}" alt=""
+                        width="50"></a>
+                <form id="form-avatar" action="{{ route('site.minha-area-dados.avatar.alterar') }}" method="post"
+                    enctype="multipart/form-data" style="display: none;">
+                    @csrf
+                    <input type="file" id="avatar" name="avatar">
+                </form>
             </div>
         </div>
     </section>
@@ -339,69 +350,81 @@
             <p>
                 <strong>
                     Desenvolvido por
-                    <a href="https://7seventrends.com"" class="
-                        
-                        
-                        
-                                                                           _img">
-                        <img src="{{ asset('site/img/_logo7seven.png') }}" style="filter: brightness(0);""  alt="">
-              </a> </div></p> 
-              </strong>
-          </p>          
+                    <a href="https://7seventrends.com" class="_img">
+                        <img src="{{ asset('site/img/_logo7seven.png') }}" style="filter: brightness(0);" alt="">
+                    </a>
         </div>
-      </section>
+        </p>
+        </strong>
+        </p>
+        </div>
+    </section>
 
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js "></script>
-      <script>
-          $("._menuMax").click(() => {
-              $("._mobileMenu").css("display", "flex");
-              $("._mobileMenu").animate({
-                      left: "0",
-                      top: "0",
-                  },
-                  500
-              );
-          });
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js "></script>
+    <script>
+        $(document).ready(function() {
+            $("#select_avatar").click(function(e) {
+                e.preventDefault();
+                $("#avatar").trigger('click');
+            });
 
-          $("section._mobileMenu ._closeButton").click(() => {
-              $("._mobileMenu").animate({
-                      left: "-200vw",
-                      top: "0",
-                  },
-                  500
-              );
-          });
+            $("#avatar").change(function() {
+                $("#select_avatar").hide();
+                $("#ajax_loading").show();
+                $("#form-avatar").submit();
+            });
+        });
+
+        $("._menuMax").click(() => {
+            $("._mobileMenu").css("display", "flex");
+            $("._mobileMenu").animate({
+                    left: "0",
+                    top: "0",
+                },
+                500
+            );
+        });
+
+        $("section._mobileMenu ._closeButton").click(() => {
+            $("._mobileMenu").animate({
+                    left: "-200vw",
+                    top: "0",
+                },
+                500
+            );
+        });
 
 
-          $("header main button.hamburguer-menu").click(() => {
-              $("div._sidemenu nav").css("height", "497px");
-          });
+        $("header main button.hamburguer-menu").click(() => {
+            $("div._sidemenu nav").css("height", "497px");
+        });
 
-          $("div._sidemenu nav .hamburguerClose").click(() => {
-              $("div._sidemenu nav").css("height", "0");
-          });
+        $("div._sidemenu nav .hamburguerClose").click(() => {
+            $("div._sidemenu nav").css("height", "0");
+        });
 
 
-          const backdrop = {
-              visivel: true,
-              init: function() {
-                  setTimeout(function() {
-                      if (backdrop.visivel) {
-                          backdrop.esconde();
-                      }
-                  }, 10 * 1000);
-              },
-              esconde: function() {
-                  $("#backdrop").css("background", "");
-                  $("#backdrop>div").fadeOut();
-                  $("#backdrop").delay(350).fadeOut("slow");
-                  $("body").delay(350).css("overflow", "");
-                  backdrop.visivel = false;
-              },
-          };
+        const backdrop = {
+            visivel: true,
+            init: function() {
+                setTimeout(function() {
+                    if (backdrop.visivel) {
+                        backdrop.esconde();
+                    }
+                }, 10 * 1000);
+            },
+            esconde: function() {
+                $("#backdrop").css("background", "");
+                $("#backdrop>div").fadeOut();
+                $("#backdrop").delay(350).fadeOut("slow");
+                $("body").delay(350).css("overflow", "");
+                backdrop.visivel = false;
+            },
+        };
 
-          backdrop.esconde();
-      </script>
-    </body>
-  </html>
+        backdrop.esconde();
+    </script>
+</body>
+
+</html>
