@@ -55,8 +55,7 @@
                     <h1>
                         {{ $turma->parcelas }}x<span class="lowsized">R$</span>{{ $reais_parcelas }}<span
                                                 class="lowsized">,@if (number_format($centavos_parcelas) == 0)00
-                                        @else
-                                            {{number_format($centavos_parcelas)}}
+                                        @else{{number_format($centavos_parcelas)}}
                                         @endif</span>
                 </h1>
                         @if($turma->aberto)
