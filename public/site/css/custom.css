@@ -3069,6 +3069,13 @@ body._minha-conta ._otherhalf ._card .row span {
 }
 
 @media only screen and (max-width: 600px) {
+    div._sidemenu nav a:first-child {
+        padding-top: 51px;
+        padding-bottom: 52px;
+    }
+    header main ._hi.logos {
+        max-width: 17.3rem;
+    }
     section.s_welcome .main .text span a,
     section.s_welcome .main .text span {
         font-size: 1.5rem;

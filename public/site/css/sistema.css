@@ -1819,6 +1819,13 @@ body._carrinho
 }
 
 @media only screen and (max-width: 600px) {
+    div._sidemenu nav a:first-child {
+        padding-top: 51px;
+        padding-bottom: 52px;
+    }
+    header main ._hi.logos {
+        max-width: 17.3rem;
+    }
     section._meusPedidos ._pedidosList ._pedido {
         height: auto;
     }

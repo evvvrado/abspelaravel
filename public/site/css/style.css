@@ -3203,6 +3203,10 @@ body._minha-conta ._otherhalf ._card .row span {
 }
 
 @media only screen and (max-width: 600px) {
+    div._sidemenu nav a:first-child{
+        padding-top: 51px;
+        padding-bottom: 52px
+    }
     section.s_cursos .container-fav .title p {
         font-size: 2rem;
     }
@@ -3243,6 +3247,9 @@ body._minha-conta ._otherhalf ._card .row span {
     section.s_produtos .container-fav ._title {
         flex-direction: column;
         gap: 3rem;
+    }
+    header main ._hi.logos{
+        max-width: 17.3rem;
     }
 
     section.s_numeros
