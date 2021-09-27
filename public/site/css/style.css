@@ -1087,6 +1087,7 @@ section.s_blog .container-fav .blog-group .blog-item {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    scroll-snap-align: center;
 }
 section.s_blog .container-fav .blog-group .blog-item .blog-pic {
     position: relative;
@@ -3203,6 +3204,9 @@ body._minha-conta ._otherhalf ._card .row span {
 }
 
 @media only screen and (max-width: 600px) {
+    body._curso-detalhes section.s_hero ._curso-card .row:last-child{
+        gap: 1rem;
+    }
     div._sidemenu nav a:first-child{
         padding-top: 51px;
         padding-bottom: 52px
@@ -3236,6 +3240,8 @@ body._minha-conta ._otherhalf ._card .row span {
         width: 36.7rem;
         box-shadow: none;
         border: solid rgba(0, 0, 0, 0.2) 1px;
+
+        scroll-snap-type: x mandatory;
     }
     section.s_cursos .container-fav .curso-group .curso-item .curso-content {
         /* max-width: 100%; */

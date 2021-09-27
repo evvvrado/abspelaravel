@@ -374,7 +374,7 @@
         </section>
         <section class="container-fav s_info">
             <div class="_left">
-                <p>Rua Gaspar Lopes, 34 Centro, 37130-153 Alfenas/MG</p>
+                <p>RRua Desembargador Gois Cavalcante, 316, Sala 101, Parnamirim, Recife - PE, 52.06-140</p>
 
                 <div class="_siga">
                     <p>Siga-nos</p>
