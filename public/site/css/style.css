@@ -606,6 +606,7 @@ body._cursos-e-eventos section.s_cursos .container-fav .title nav._filter {
 section.s_cursos .container-fav .curso-group {
     display: flex;
     justify-content: space-between;
+    margin-top: 2rem;
 }
 section.s_cursos .container-fav .curso-group .curso-item {
     display: flex;
