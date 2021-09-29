@@ -606,6 +606,7 @@ body._cursos-e-eventos section.s_cursos .container-fav .title nav._filter {
 section.s_cursos .container-fav .curso-group {
     display: flex;
     justify-content: space-between;
+    margin-top: 2rem;
 }
 section.s_cursos .container-fav .curso-group .curso-item {
     display: flex;
@@ -1087,6 +1088,7 @@ section.s_blog .container-fav .blog-group .blog-item {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    scroll-snap-align: center;
 }
 section.s_blog .container-fav .blog-group .blog-item .blog-pic {
     position: relative;
@@ -2310,9 +2312,9 @@ body._galeria section.s_galeria ._list ._img._active::after {
     content: "";
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 5px;
     background: var(--white);
-    bottom: -1.7rem;
+    bottom: 0;
 }
 
 section.s_produtos {
@@ -3203,6 +3205,13 @@ body._minha-conta ._otherhalf ._card .row span {
 }
 
 @media only screen and (max-width: 600px) {
+    body._curso-detalhes section.s_hero ._curso-card .row:last-child{
+        gap: 1rem;
+    }
+    div._sidemenu nav a:first-child{
+        padding-top: 51px;
+        padding-bottom: 52px
+    }
     section.s_cursos .container-fav .title p {
         font-size: 2rem;
     }
@@ -3232,6 +3241,8 @@ body._minha-conta ._otherhalf ._card .row span {
         width: 36.7rem;
         box-shadow: none;
         border: solid rgba(0, 0, 0, 0.2) 1px;
+
+        scroll-snap-type: x mandatory;
     }
     section.s_cursos .container-fav .curso-group .curso-item .curso-content {
         /* max-width: 100%; */
@@ -3243,6 +3254,9 @@ body._minha-conta ._otherhalf ._card .row span {
     section.s_produtos .container-fav ._title {
         flex-direction: column;
         gap: 3rem;
+    }
+    header main ._hi.logos{
+        max-width: 17.3rem;
     }
 
     section.s_numeros

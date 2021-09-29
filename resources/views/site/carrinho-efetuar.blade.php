@@ -67,7 +67,7 @@
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' crossorigin='anonymous'>
 
     <link rel='stylesheet'
-        href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Lato&family=Roboto:wght@500&family=Spartan:wght@400;700&display=swap'
+        href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Poppins&family=Lato&family=Roboto:wght@500&family=Spartan:wght@400;700&display=swap'
         crossorigin='anonymous'>
     <link rel='stylesheet' href='{{ asset('site/css/reset.css') }}'>
     <link rel='stylesheet' href='{{ asset('site/css/sistema.css') }}'>
@@ -347,7 +347,7 @@
         </section>
         <section class="container-fav s_info">
             <div class="_left">
-                <p>Rua Gaspar Lopes, 34 Centro, 37130-153 Alfenas/MG</p>
+                <p>Rua Desembargador Gois Cavalcante, 316, Sala 101, Parnamirim, Recife - PE, 52.06-140</p>
 
                 <div class="_siga">
                     <p>Siga-nos</p>

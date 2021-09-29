@@ -26,7 +26,7 @@
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' crossorigin='anonymous'>
 
     <link rel='stylesheet'
-        href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Lato&family=Roboto:wght@500&family=Spartan:wght@400;700&display=swap'
+        href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Poppins&family=Lato&family=Roboto:wght@500&family=Spartan:wght@400;700&display=swap'
         crossorigin='anonymous'>
     <link rel='stylesheet' href='{{ asset('site/css/reset.css') }}'>
     <link rel='stylesheet' href='{{ asset('site/css/sistema.css') }}'>
@@ -84,10 +84,17 @@
                 </nav>
                 <div class="_user">
                     <div class="_img">
-                        <img src="{{ asset('site/img/sistema/user.svg') }}" alt="">
+                        @if (!$aluno->avatar)
+                            <img src="{{ asset('site/img/sistema/user.svg') }}" style="max-width: 100%;
+                            min-height: unset;
+                            min-width: unset;" alt="">
+                        @else
+                            <img src="{{ asset($aluno->avatar) }}" style="max-width: 100%;" alt="">
+                        @endif
                     </div>
                     <div class="_text">
-                        Olá <span class="_username">{{ explode(' ', session()->get('aluno')['nome'])[0] }}</span>
+                        Olá <span
+                            class="_username">{{ explode(' ', session()->get('aluno')['nome'])[0] }}</span>
                         <a href="{{ route('site.aluno.deslogar') }}" class="_sair">
                             Sair
                         </a>
@@ -142,10 +149,17 @@
                 </nav>
                 <div class="_user">
                     <div class="_img">
-                        <img src="{{ asset('site/img/sistema/user.svg') }}" alt="">
+                        @if (!$aluno->avatar)
+                            <img src="{{ asset('site/img/sistema/user.svg') }}" style="max-width: 100%;
+                            min-height: unset;
+                            min-width: unset;" alt="">
+                        @else
+                            <img src="{{ asset($aluno->avatar) }}" style="max-width: 100%;" alt="">
+                        @endif
                     </div>
                     <div class="_text">
-                        Olá <span class="_username">{{ explode(' ', session()->get('aluno')['nome'])[0] }}</span>
+                        Olá <span
+                            class="_username">{{ explode(' ', session()->get('aluno')['nome'])[0] }}</span>
                         <a href="{{ route('site.aluno.deslogar') }}" class="_sair">
                             Sair
                         </a>
@@ -331,7 +345,7 @@
         </section>
         <section class="container-fav s_info">
             <div class="_left">
-                <p>Rua Gaspar Lopes, 34 Centro, 37130-153 Alfenas/MG</p>
+                <p>Rua Desembargador Gois Cavalcante, 316, Sala 101, Parnamirim, Recife - PE, 52.06-140</p>
 
                 <div class="_siga">
                     <p>Siga-nos</p>

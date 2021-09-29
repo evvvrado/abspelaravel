@@ -1981,6 +1981,7 @@ body._minha-conta ._bottom {
 body._minha-conta ._bottom p {
     font-family: "Spartan" !important;
     font-size: 1.3rem;
+    margin-bottom: 0;
 }
 
 body._curso-detalhes section.s_curso-conteudo.s_instrutores {
@@ -2152,9 +2153,9 @@ body._galeria section.s_galeria ._list ._img._active::after {
     content: "";
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 5px;
     background: var(--white);
-    bottom: -1.7rem;
+    bottom: 0;
 }
 
 section.s_produtos {
@@ -3068,6 +3069,13 @@ body._minha-conta ._otherhalf ._card .row span {
 }
 
 @media only screen and (max-width: 600px) {
+    div._sidemenu nav a:first-child {
+        padding-top: 51px;
+        padding-bottom: 52px;
+    }
+    header main ._hi.logos {
+        max-width: 17.3rem;
+    }
     section.s_welcome .main .text span a,
     section.s_welcome .main .text span {
         font-size: 1.5rem;
@@ -3136,28 +3144,28 @@ body._minha-conta ._otherhalf ._card .row span {
 /* -webkit-transition: background-image 0.2s ease-in-out;
 transition: background-image 0.2s ease-in-out; */
 
-.modal-erro-text > h1{
+.modal-erro-text > h1 {
     font-size: 30px;
     font-weight: bold;
-    color: #FF4A34;
+    color: #ff4a34;
 }
 
-.modal-erro-text > h2{
+.modal-erro-text > h2 {
     font-size: 20px;
     font-weight: 600;
-    color: #6A6C79;
+    color: #6a6c79;
 }
 
-.modal-erro-text > h3{
+.modal-erro-text > h3 {
     font-size: 15px;
     font-weight: medium;
-    color: #6A6C79;
+    color: #6a6c79;
     opacity: 0.65;
 }
 
-.modal-erro-text > h4{
+.modal-erro-text > h4 {
     font-size: 15px;
     font-weight: 600;
-    color: #6A6C79;
+    color: #6a6c79;
     opacity: 0.85;
 }

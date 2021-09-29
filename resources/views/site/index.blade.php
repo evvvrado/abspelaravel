@@ -56,8 +56,12 @@
                 <div class="info">
                     <p class="minitext">Apenas</p>
                     <h1>
-                        {{ $turma->parcelas }}x<span class="lowsized">R$</span>{{ $reais_parcelas }}<span
-                            class="lowsized">,{{ number_format($centavos_parcelas * 100, 0) }}</span>
+                        {{ $turma->parcelas }}x <span class="lowsized">R$</span>{{ $reais_parcelas }}<span
+                            class="lowsized">,@if (number_format($centavos_parcelas) === 0)00
+                            @else {{number_format($centavos_parcelas)}}
+                            @endif
+                        
+                        </span>
                     </h1>
                 </div>
                 <button class="btn-primary"
@@ -144,7 +148,10 @@
                                 <div class="price">
                                     {{ $turma->parcelas }}x<span
                                         class="lowsized">R$</span>{{ $reais_parcelas }}<span
-                                        class="lowsized">,{{ number_format($centavos_parcelas * 100, 0) }}</span>
+                                        class="lowsized">,@if (number_format($centavos_parcelas) == 0)00
+                                        @else
+                                            {{number_format($centavos_parcelas)}}
+                                        @endif</span>
                                 </div>
                             </div>
                             <div class="row">

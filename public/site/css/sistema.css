@@ -580,13 +580,13 @@ section._minhasMatriculas ._top ._topbutton ._btn {
 section._minhasMatriculas ._scrollMatriculas {
     width: 100%;
 }
-section._minhasMatriculas ._contentList {
+._contentList {
     max-width: 100%;
     overflow: scroll;
 
     scroll-snap-type: x mandatory;
 }
-section._minhasMatriculas ._contentList::-webkit-scrollbar {
+._contentList::-webkit-scrollbar {
     display: none;
 }
 section._minhasMatriculas ._matriculasList {
@@ -740,8 +740,9 @@ section._meusDados .container-fav ._left {
 }
 section._meusDados .container-fav ._left .userImg {
     height: 23.5rem;
-    width: 100%;
-    max-width: 23.5rem;
+    width: 23.5rem;
+
+    overflow: hidden;
 
     display: flex;
     align-items: center;
@@ -751,6 +752,15 @@ section._meusDados .container-fav ._left .userImg {
     border-radius: 50%;
 
     margin-bottom: 4.1rem;
+}
+section._meusDados .container-fav ._left .userImg img,
+section._menu .container-fav ._user ._img img {
+    max-width: unset;
+    min-width: 100%;
+    min-height: 100%;
+}
+section._menu .container-fav ._user ._img {
+    overflow: hidden;
 }
 section._meusDados .container-fav ._left a {
     margin-left: 5.7rem;
@@ -1809,6 +1819,13 @@ body._carrinho
 }
 
 @media only screen and (max-width: 600px) {
+    div._sidemenu nav a:first-child {
+        padding-top: 51px;
+        padding-bottom: 52px;
+    }
+    header main ._hi.logos {
+        max-width: 17.3rem;
+    }
     section._meusPedidos ._pedidosList ._pedido {
         height: auto;
     }
