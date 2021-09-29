@@ -20,10 +20,11 @@ class GerencianetController extends Controller
         $carrinho = Carrinho::find(session()->get("carrinho"));
         $aluno = Aluno::find(session()->get("aluno")["id"]);
         if($parcelas == 1){
-            $desconto = ($carrinho->total * 10 / 100);
+            $desconto = intval($carrinho->total * 10 / 100);
         }else{
             $desconto = 0;
         }
+        // dd($desconto);
         // $gerencianet->enviarBoletoEmail(1334034, 'gusouza980@gmail.com');
         $turmas = [];
         foreach($carrinho->produtos as $produto){
@@ -78,6 +79,8 @@ class GerencianetController extends Controller
             $venda->parcelas = $parcelas;
             if($parcelas > 1){
                 $venda->forma = 2;
+            }else{
+                $venda->forma = 0;
             }
             $venda->valor_parcela = number_format($venda->total / $parcelas, 2,".","");
             $venda->desconto = $desconto;
