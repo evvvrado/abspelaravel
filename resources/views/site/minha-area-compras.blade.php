@@ -181,42 +181,46 @@
             <div class="_contentList">
                 
             <div class="_pedidosList">
-                @foreach ($aluno->pedidos as $pedido)
-                    <div class="_pedido">
-                        <h3>N. {{ $pedido->codigo }}</h3>
-                        <div class="_info">
-                            <div class="data">
-                                <div class="_svg">
-                                    <img src="{{ asset('site/img/sistema/calendar.svg') }}" alt="">
+                @if (count($aluno->pedidos) <= 0)
+                    <h3>Ainda não há nenhum pedido</h3>
+                @else
+                    @foreach ($aluno->pedidos as $pedido)
+                        <div class="_pedido">
+                            <h3>N.{{ $pedido->codigo }}</h3>
+                            <div class="_info">
+                                <div class="data">
+                                    <div class="_svg">
+                                        <img src="{{ asset('site/img/sistema/calendar.svg') }}" alt="">
+                                    </div>
+                                    <p>{{ date('d.m.Y', strtotime($pedido->created_at)) }}</p>
                                 </div>
-                                <p>{{ date('d.m.Y', strtotime($pedido->created_at)) }}</p>
+                                <div class="numero">
+                                    <div class="_svg">
+                                        <img src="{{ asset('site/img/sistema/plane.svg') }}" alt="">
+                                    </div>
+                                    <p>{{ $pedido->carrinho->produtos->count() }} Produtos</p>
+                                </div>
                             </div>
-                            <div class="numero">
+                            <button class="btn-primary">
+                                Mais detalhes
                                 <div class="_svg">
-                                    <img src="{{ asset('site/img/sistema/plane.svg') }}" alt="">
+                                    <img src="{{ asset('site/img/sistema/buttonArrowRight.svg') }}" alt="">
                                 </div>
-                                <p>{{ $pedido->carrinho->produtos->count() }} Produtos</p>
+                            </button>
+                            <div class="_status _waiting">
+                                <div class="_icon">
+                                    <img src="{{ asset('site/img/sistema/dollar.svg') }} " alt="">
+                                </div>
+                                <div class="_text">
+                                    <span>Aguardando Pag.</span>
+                                    @if ($pedido->forma == 0)
+                                        <p>{{ date('d.m.Y', strtotime($pedido->boleto->expira)) }}</p>
+                                    @endif
+                                </div>
                             </div>
                         </div>
-                        <button class="btn-primary">
-                            Mais detalhes
-                            <div class="_svg">
-                                <img src="{{ asset('site/img/sistema/buttonArrowRight.svg') }}" alt="">
-                            </div>
-                        </button>
-                        <div class="_status _waiting">
-                            <div class="_icon">
-                                <img src="{{ asset('site/img/sistema/dollar.svg') }} " alt="">
-                            </div>
-                            <div class="_text">
-                                <span>Aguardando Pag.</span>
-                                @if ($pedido->forma == 0)
-                                    <p>{{ date('d.m.Y', strtotime($pedido->boleto->expira)) }}</p>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                @endif
                 {{-- <div class="_pedido">
                     <h3>N. 5588893390122</h3>
                     <div class="_info">

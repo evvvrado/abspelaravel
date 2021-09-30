@@ -64,7 +64,7 @@
                                 Inscrever
                             </button> --}}
 
-                        <a href="{{ route('site.carrinho-adicionar', ['turma' => $turma]) }}">Inscrever-se</a>
+                            <button class="btn-primary" onclick="window.location.href ='{{ route('site.carrinho-adicionar', ['turma' => $turma]) }}' ">Inscrever</a>
                     @else
                         Encerrado
                     @endif

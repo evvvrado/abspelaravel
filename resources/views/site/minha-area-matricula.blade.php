@@ -179,30 +179,37 @@
             </div>
             <div class="_contentList">
                 <div class="_matriculasList">
-                    @foreach ($aluno->matriculas as $matricula)
-                        <div class="_matricula">
-                            <div class="_image">
-                                <img src="{{ asset($matricula->turma->curso->miniatura) }}" alt="">
-                            </div>
-                            <div class="_content">
-                                <h3>{{ $matricula->turma->curso->titulo }}</h3>
-                                {{-- <p>N. 558893390122</p> --}}
-                                <div class="_date">
-                                    <div class="_svg">
-                                        <img src="{{ asset('site/img/sistema/calendar.svg') }}" alt="">
-                                    </div>
-                                    <p>{{ date('d.m.Y', strtotime($matricula->created_at)) }}</p>
+                    @if (count($aluno->matriculas) <= 0)
+                    
+                            <h3>Ainda não há nenhuma matrícula</h3>
+                                
+                    @else
+                        @foreach ($aluno->matriculas as $matricula)
+                            <div class="_matricula">
+                                <div class="_image">
+                                    <img src="{{ asset($matricula->turma->curso->miniatura) }}" alt="">
                                 </div>
-                                <p>Curso Online</p>
-                                <button class="btn-primary">
-                                    Acessar Curso
-                                    <div class="_svg">
-                                        <img src="{{ asset('site/img/sistema/buttonArrowRight.svg') }}" alt="">
+                                <div class="_content">
+                                    <h3>{{ $matricula->turma->curso->titulo }}</h3>
+                                    {{-- <p>N. 558893390122</p> --}}
+                                    <div class="_date">
+                                        <div class="_svg">
+                                            <img src="{{ asset('site/img/sistema/calendar.svg') }}" alt="">
+                                        </div>
+                                        <p>{{ date('d.m.Y', strtotime($matricula->created_at)) }}</p>
                                     </div>
-                                </button>
+                                    <p>Curso Online</p>
+                                    <button class="btn-primary">
+                                        Acessar Curso
+                                        <div class="_svg">
+                                            <img src="{{ asset('site/img/sistema/buttonArrowRight.svg') }}" alt="">
+                                        </div>
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    @endif
+                    
                 </div>
             </div>
         </div>

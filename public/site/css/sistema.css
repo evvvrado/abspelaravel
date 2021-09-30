@@ -913,6 +913,11 @@ section._meuCarrinho ._innerCar ._innerItem {
     gap: 1.8rem;
 
     cursor: pointer;
+
+    width: 100%;
+}
+section._meuCarrinho ._innerCar ._innerItem ._content {
+    width: 100%;
 }
 section._meuCarrinho ._innerCar ._innerItem h3 {
     font-size: 1.4rem;
@@ -1507,7 +1512,8 @@ body._carrinho
     ._pagamento
     ._cupom
     ._input
-    input {
+    input,
+body._carrinho section.s_identificacao .container-fav ._pagamento select {
     border: 1px solid var(--gray11);
     max-width: 31.4rem;
     padding: 1.7rem 4.2rem;
@@ -1613,6 +1619,7 @@ body._carrinho
     span {
     font-family: 1.6rem;
     font-weight: 400;
+    position: static;
 }
 body._carrinho
     section.s_identificacao
