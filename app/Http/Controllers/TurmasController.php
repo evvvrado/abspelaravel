@@ -27,6 +27,8 @@ class TurmasController extends Controller
         }else{
             $turma = new Turma;
             $turma->curso_id = $request->curso_id;
+            $curso = Curso::find($request->curso_id);
+            $turma->modalidade = $curso->modalidade;
             toastr()->success("Turma cadastrada com sucesso!");
         }
         $turma->nome = $request->nome;

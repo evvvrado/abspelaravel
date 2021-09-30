@@ -45,6 +45,13 @@ class CursosController extends Controller
         $curso->instrutores_conteudo = $this->processa_editor($curso->id, $request->instrutores_conteudo);
         $curso->local_resumo = $this->processa_editor($curso->id, $request->local_resumo);
         $curso->local_conteudo = $this->processa_editor($curso->id, $request->local_conteudo);
+        if($curso->modalidade != $request->modalidade){
+            foreach($curso->turmas as $turma){
+                $turma->modalidade = $request->modalidade;
+                $turma->save();
+            }
+        }
+        $curso->modalidade = $request->modalidade;
 
         // MINIATURA
         if($request->file("miniatura")){

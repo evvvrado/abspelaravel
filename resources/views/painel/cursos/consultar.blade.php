@@ -2,10 +2,12 @@
 
 @section('styles')
     <!-- DataTables -->
-    <link href="{{asset('admin/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('admin/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admin/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet"
+        type="text/css" />
+    <link href="{{ asset('admin/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css') }}" rel="stylesheet"
+        type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-    <link href="{{asset('admin/libs/dropzone/min/dropzone.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admin/libs/dropzone/min/dropzone.min.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 
 @section('titulo')
@@ -17,7 +19,7 @@
 @endsection
 
 @section('conteudo')
-{{--  <div class="row">
+    {{-- <div class="row">
     <div class="form-group col-12">
         <form action="#" class="dropzone">
             <div class="fallback">
@@ -33,60 +35,68 @@
         </form>
         
     </div>
-</div>  --}}
-<div class="row mt-3">
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body" style="overflow-x: scroll; min-height: 80vh;">
-                <table id="datatable" class="table table-bordered dt-responsive text-left nowrap w-100">
-                    <thead>
-                        <tr>
-                            <th style="width: 30px;"></th>
-                            <th>Título, Turmas</th>
-                            <th style="width: 30px;">Ativo</th>
-                        </tr>
-                    </thead>
-
-
-                    <tbody>
-
-                        @foreach($cursos as $curso)
+</div> --}}
+    <div class="row mt-3">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body" style="overflow-x: scroll; min-height: 80vh;">
+                    <table id="datatable" class="table table-bordered dt-responsive text-left nowrap w-100">
+                        <thead>
                             <tr>
-                                <td class="text-center">
-                                    <div class="dropdown mt-4 mt-sm-0">
-                                        <a href="#" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="fas fa-bars" aria-hidden="true"></i>
-                                        </a>
-                                        <div class="dropdown-menu" style="margin: 0px;">
-                                            <a class="dropdown-item" onclick="carregaCurso({{$curso->id}})" role="button"><i class="bx bx-edit-alt"></i> Editar</a>
-                                            @if($curso->ativo)
-                                                <a href="{{route('painel.curso.ativo', ['curso' => $curso])}}" class="dropdown-item" role="button"><i class="fas fa-eye-slash"></i> Desativar</a>
-                                            @else
-                                                <a href="{{route('painel.curso.ativo', ['curso' => $curso])}}" class="dropdown-item" role="button"><i class="fas fa-eye"></i> Ativar</a>
-                                            @endif
-                                            {{--  <a href="{{route('painel.curso.deletar', ['curso' => $curso])}}" id="" class="dropdown-item" role="button"><i class="fas fa-trash-alt pr-3"></i> Excluir</a>  --}}
-                                            <a href="{{route('painel.turmas', ['curso' => $curso])}}" id="" class="dropdown-item" role="button"><i class="fas fa-user pr-3"></i> Turmas</a>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <span>{{$curso->titulo}}</span>
-                                    <br>
-                                    <small>{{$curso->turmas->count()}} turmas</small>
-                                </td>
-                                <td class="text-center" style="vertical-align: middle;">
-                                    <i class="fa fa-check" @if($curso->ativo) style="color: green;" @endif aria-hidden="true"></i>
-                                </td>
+                                <th style="width: 30px;"></th>
+                                <th>Título, Turmas</th>
+                                <th style="width: 30px;">Ativo</th>
                             </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div> <!-- end col -->
-</div> <!-- end row -->
+                        </thead>
 
-{{--  <div class="modal fade" id="modalNovoCurso" tabindex="-1" role="dialog" aria-labelledby="modalNovoCursoLabel"
+
+                        <tbody>
+
+                            @foreach ($cursos as $curso)
+                                <tr>
+                                    <td class="text-center">
+                                        <div class="dropdown mt-4 mt-sm-0">
+                                            <a href="#" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                <i class="fas fa-bars" aria-hidden="true"></i>
+                                            </a>
+                                            <div class="dropdown-menu" style="margin: 0px;">
+                                                <a class="dropdown-item" onclick="carregaCurso({{ $curso->id }})"
+                                                    role="button"><i class="bx bx-edit-alt"></i> Editar</a>
+                                                @if ($curso->ativo)
+                                                    <a href="{{ route('painel.curso.ativo', ['curso' => $curso]) }}"
+                                                        class="dropdown-item" role="button"><i
+                                                            class="fas fa-eye-slash"></i> Desativar</a>
+                                                @else
+                                                    <a href="{{ route('painel.curso.ativo', ['curso' => $curso]) }}"
+                                                        class="dropdown-item" role="button"><i class="fas fa-eye"></i>
+                                                        Ativar</a>
+                                                @endif
+                                                {{-- <a href="{{route('painel.curso.deletar', ['curso' => $curso])}}" id="" class="dropdown-item" role="button"><i class="fas fa-trash-alt pr-3"></i> Excluir</a> --}}
+                                                <a href="{{ route('painel.turmas', ['curso' => $curso]) }}" id=""
+                                                    class="dropdown-item" role="button"><i class="fas fa-user pr-3"></i>
+                                                    Turmas</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span>{{ $curso->titulo }}</span>
+                                        <br>
+                                        <small>{{ $curso->turmas->count() }} turmas</small>
+                                    </td>
+                                    <td class="text-center" style="vertical-align: middle;">
+                                        <i class="fa fa-check" @if ($curso->ativo) style="color: green;" @endif aria-hidden="true"></i>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div> <!-- end col -->
+    </div> <!-- end row -->
+
+    {{-- <div class="modal fade" id="modalNovoCurso" tabindex="-1" role="dialog" aria-labelledby="modalNovoCursoLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -171,30 +181,29 @@
             </div>
         </div>
     </div>
-</div>  --}}
+</div> --}}
 
-<div class="modal fade" id="modalCurso" tabindex="-1" role="dialog" aria-labelledby="modalCursoLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-body" id="modalCursoBody">
-                
+    <div class="modal fade" id="modalCurso" tabindex="-1" role="dialog" aria-labelledby="modalCursoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body" id="modalCursoBody">
+
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 @endsection
 
 @section('scripts')
     <!-- Required datatable js -->
-    <script src="{{asset('admin/libs/datatables.net/js/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('admin/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{ asset('admin/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('admin/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
-    <script src="{{asset('admin/libs/dropzone/min/dropzone.min.js')}}"></script>
+    <script src="{{ asset('admin/libs/dropzone/min/dropzone.min.js') }}"></script>
     <script>
-
-        function loadSummernote(){
+        function loadSummernote() {
             $('#detalhes_resumo').summernote({
                 height: 100,
             });
@@ -229,19 +238,19 @@
 
         }
 
-        function novoCurso(){
+        function novoCurso() {
             //$("#modalCursoBody").html("");
             var xhr = new XMLHttpRequest();
             xhr.open('GET', '/includes/loading');
             xhr.onreadystatechange = function() {
-                if (this.readyState!==4) return;
-                if (this.status!==200) return; // or whatever error handling you want
+                if (this.readyState !== 4) return;
+                if (this.status !== 200) return; // or whatever error handling you want
                 $("#modalCursoBody").html(this.responseText);
                 $("#modalCurso").modal("show");
                 xhr.open('GET', '/includes/curso/formulario');
                 xhr.onreadystatechange = function() {
-                    if (this.readyState!==4) return;
-                    if (this.status!==200) return; // or whatever error handling you want
+                    if (this.readyState !== 4) return;
+                    if (this.status !== 200) return; // or whatever error handling you want
                     $("#modalCursoBody").html(this.responseText);
                     return loadSummernote();
                 }
@@ -250,7 +259,7 @@
             xhr.send();
         }
 
-        function carregaCurso(id){
+        function carregaCurso(id) {
             var nome = $("input[name='nome']").val();
             var _token = $('meta[name="_token"]').attr('content');
 
@@ -258,32 +267,32 @@
                 headers: {
                     'X-CSRF-TOKEN': _token
                 }
-            });  
+            });
 
             $.ajax({
                 url: '/sistema/cursos/api/getCurso/' + id,
                 type: 'GET',
                 dataType: 'JSON',
-                beforeSend: function(){
+                beforeSend: function() {
                     //$("#modalCursoBody").html("");
                     var xhr = new XMLHttpRequest();
                     xhr.open('GET', '/includes/loading');
                     xhr.onreadystatechange = function() {
-                        if (this.readyState!==4) return;
-                        if (this.status!==200) return; // or whatever error handling you want
+                        if (this.readyState !== 4) return;
+                        if (this.status !== 200) return; // or whatever error handling you want
                         $("#modalCursoBody").html(this.responseText);
                         $("#modalCurso").modal("show");
                     }
                     xhr.send();
-                   
+
                 },
                 success: function(data) {
                     data = JSON.parse(data);
                     var xhr = new XMLHttpRequest();
                     xhr.open('GET', '/includes/curso/formulario');
                     xhr.onreadystatechange = function() {
-                        if (this.readyState!==4) return;
-                        if (this.status!==200) return; // or whatever error handling you want
+                        if (this.readyState !== 4) return;
+                        if (this.status !== 200) return; // or whatever error handling you want
                         $("#modalCursoBody").html(this.responseText);
                         $("#form-edicao input[id='titulo']").val(data.titulo);
                         $("#form-edicao input[id='curso_id']").val(data.id);
@@ -292,24 +301,31 @@
                         $("#form-edicao textarea[id='detalhes_resumo']").html(data.detalhes_resumo);
                         $("#form-edicao textarea[id='detalhes_conteudo']").html(data.detalhes_conteudo);
                         $("#form-edicao textarea[id='programacao_resumo']").html(data.programacao_resumo);
-                        $("#form-edicao textarea[id='programacao_conteudo']").html(data.programacao_conteudo);
+                        $("#form-edicao textarea[id='programacao_conteudo']").html(data
+                            .programacao_conteudo);
                         $("#form-edicao textarea[id='instrutores_resumo']").html(data.instrutores_resumo);
-                        $("#form-edicao textarea[id='instrutores_conteudo']").html(data.instrutores_conteudo);
+                        $("#form-edicao textarea[id='instrutores_conteudo']").html(data
+                            .instrutores_conteudo);
                         $("#form-edicao textarea[id='local_resumo']").html(data.local_resumo);
                         $("#form-edicao textarea[id='local_conteudo']").html(data.local_conteudo);
+                        if (data.modalidade == 0) {
+                            $("#modalidade_curso").attr("checked", "checked");
+                        } else {
+                            $("#modalidade_evento").attr("checked", "checked");
+                        }
                         return loadSummernote();
                     }
                     xhr.send();
                 },
-                error: function(err){
+                error: function(err) {
                     console.log(err);
                 }
             });
         }
 
         $(document).ready(function() {
-            var tabela = $('#datatable').DataTable( {
-                language:{
+            var tabela = $('#datatable').DataTable({
+                language: {
                     "emptyTable": "Nenhum registro encontrado",
                     "info": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
                     "infoEmpty": "Mostrando 0 até 0 de 0 registros",
@@ -439,9 +455,9 @@
                     },
                     "searchPlaceholder": "Digite um termo para pesquisar",
                     "thousands": "."
-                } 
-            } );
+                }
+            });
             tabela.columns.adjust().draw();
-        } );    
-    </script> 
+        });
+    </script>
 @endsection
