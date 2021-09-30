@@ -1997,3 +1997,101 @@ body._carrinho
     cursor: pointer;
     opacity: 0.8;
 }
+
+.detalhesdeCurso {
+    padding-top: 7.3rem;
+}
+
+.detalhesdeCurso h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.2rem;
+    color: #bb1048;
+
+    width: 100%;
+    max-width: 72.1rem;
+
+    padding-bottom: 2.9rem;
+
+    border-bottom: 2px solid #d9a863;
+}
+.detalhesdeCurso .container-fav main {
+    position: relative;
+    padding-bottom: 20rem;
+}
+
+.detalhesdeCurso .container-fav main .list article {
+    width: 100%;
+    max-width: 35.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.detalhesdeCurso .container-fav main .list article .date {
+    font-weight: 300;
+    font-size: 1.269rem;
+    line-height: 1.5rem;
+
+    color: #977983;
+}
+
+.detalhesdeCurso .container-fav main .list article picture {
+    height: 5rem;
+    width: 5rem;
+    background: #f78eb0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.detalhesdeCurso .container-fav main .list article .content {
+    display: flex;
+    flex-direction: column;
+}
+.detalhesdeCurso .container-fav main .list article .content span {
+    font-family: "Gilroy";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+
+    color: #977983;
+}
+
+.detalhesdeCurso .container-fav main::after {
+    position: absolute;
+    content: "";
+    left: 12rem;
+    top: 0;
+
+    height: 100%;
+    width: 2px;
+    background: rgba(187, 16, 72, 0.1);
+
+    z-index: -1;
+}
+.detalhesdeCurso .container-fav main .list article .content a {
+    height: 4.2rem;
+    width: 100%;
+    max-width: 19.5rem;
+
+    background: #bb1048;
+
+    color: white;
+    font-weight: bold;
+    border-radius: 0.4rem;
+
+    text-align: center;
+    line-height: 4.2rem;
+
+    cursor: pointer;
+
+    margin-top: 0.65rem;
+}

@@ -110,7 +110,10 @@ class SiteController extends Controller
         $aluno = Aluno::find(session()->get("aluno")["id"]);
         return view("site.minha-area", ["aluno" => $aluno]);
     }
-
+    public function minhaAreaComprasDetalhes(){
+        $aluno = Aluno::find(session()->get("aluno")["id"]);
+        return view("site.compras-detalhes", ["aluno" => $aluno]);
+    }
     public function minhaAreaCompras(){
         $aluno = Aluno::find(session()->get("aluno")["id"]);
         return view("site.minha-area-compras", ["aluno" => $aluno]);

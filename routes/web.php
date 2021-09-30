@@ -66,6 +66,7 @@ Route::middleware(['aluno'])->group(function () {
     //ROTAS DE MINHA ÁREA
     Route::get('/minha-area', [\App\Http\Controllers\SiteController::class, 'minhaArea'])->name("site.minha-area");
     Route::get('/minha-area/compras', [\App\Http\Controllers\SiteController::class, 'minhaAreaCompras'])->name("site.minha-area-compras");
+    Route::get('/minha-area/compras/detalhes', [\App\Http\Controllers\SiteController::class, 'minhaAreaComprasDetalhes'])->name("site.compras-detalhes");
     Route::get('/minha-area/dados', [\App\Http\Controllers\SiteController::class, 'minhaAreaDados'])->name("site.minha-area-dados");
     Route::post('/minha-area/dados/salvar', [\App\Http\Controllers\SiteController::class, 'minhaAreaDadosSalvar'])->name("site.minha-area-dados.salvar");
     Route::post('/minha-area/dados/avatar/alterar', [\App\Http\Controllers\SiteController::class, 'minhaAreaDadosAvatarAlterar'])->name("site.minha-area-dados.avatar.alterar");
