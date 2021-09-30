@@ -2,8 +2,10 @@
 
 @section('styles')
     <!-- DataTables -->
-    <link href="{{asset('admin/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('admin/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admin/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet"
+        type="text/css" />
+    <link href="{{ asset('admin/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css') }}" rel="stylesheet"
+        type="text/css" />
 @endsection
 
 @section('titulo')
@@ -15,87 +17,57 @@
 @endsection
 
 @section('conteudo')
-@include('painel.includes.errors')
-<div class="row mt-3">
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body" style="overflow-x: scroll;">
-                <table id="datatable" class="table table-bordered dt-responsive  nowrap w-100">
-                    <thead>
-                        <tr>
-                            <th>Nome</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-
-
-                    <tbody>
-
-                        @foreach($tags as $tag)
+    @include('painel.includes.errors')
+    <div class="row mt-3">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body" style="overflow-x: scroll;">
+                    <table id="datatable" class="table table-bordered dt-responsive  nowrap w-100">
+                        <thead>
                             <tr>
-                                <td>{{$tag->nome}}</td>
-                                <td>
-                                    <a href="" id="" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditaTag{{$tag->id}}" role="button">Editar</a>
-                                    <a name="" id="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalExcluiTag{{$tag->id}}" role="button">Excluir</a>
-                                </td>
+                                <th>Nome</th>
+                                <th></th>
                             </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                        </thead>
+
+
+                        <tbody>
+
+                            @foreach ($tags as $tag)
+                                <tr>
+                                    <td>{{ $tag->nome }}</td>
+                                    <td>
+                                        <a href="" id="" class="btn btn-warning" data-bs-toggle="modal"
+                                            data-bs-target="#modalEditaTag{{ $tag->id }}" role="button">Editar</a>
+                                        <a name="" id="" class="btn btn-danger" data-bs-toggle="modal"
+                                            data-bs-target="#modalExcluiTag{{ $tag->id }}" role="button">Excluir</a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
-    </div> <!-- end col -->
-</div> <!-- end row -->
+        </div> <!-- end col -->
+    </div> <!-- end row -->
 
 
-<div class="modal fade" id="modalNotaTag" tabindex="-1" role="dialog" aria-labelledby="modalNotaTagLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <form action="{{route('painel.tag.cadastrar')}}" method="post">
-                    @csrf
-                    <div class="row">
-                        <div class="form-group col-12">
-                            <label for="nome">Nome</label>
-                            <input type="text" class="form-control" name="nome"
-                                id="nome" aria-describedby="helpId" 
-                            >
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-12 text-end">
-                            <button type="submit"
-                                class="btn btn-primary">Salvar</button>
-                        </div>
-                    </div>
-
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-@foreach($tags as $tag)
-    <div class="modal fade" id="modalEditaTag{{$tag->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditaTag{{$tag->id}}Label"
+    <div class="modal fade" id="modalNotaTag" tabindex="-1" role="dialog" aria-labelledby="modalNotaTagLabel"
         aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <form action="{{route('painel.tag.salvar', ['tag' => $tag])}}" method="post">
+                    <form action="{{ route('painel.tag.cadastrar') }}" method="post">
                         @csrf
                         <div class="row">
                             <div class="form-group col-12">
                                 <label for="nome">Nome</label>
-                                <input type="text" class="form-control" name="nome"
-                                    id="nome" aria-describedby="helpId" 
-                                    value="{{$tag->nome}}">
+                                <input type="text" class="form-control" name="nome" id="nome" aria-describedby="helpId">
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-12 text-end">
-                                <button type="submit"
-                                    class="btn btn-primary">Salvar</button>
+                                <button type="submit" class="btn btn-primary">Salvar</button>
                             </div>
                         </div>
 
@@ -104,37 +76,66 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="modalExcluiTag{{$tag->id}}" tabindex="-1" role="dialog" aria-labelledby="modalExcluiTag{{$tag->id}}Label"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <h5>Ao excluir a tag "{{$tag->nome}}" a mesma será removida de todas as notícias onde é utilizada. Deseja continuar ?</h5>
-                        </div>
+
+    @foreach ($tags as $tag)
+        <div class="modal fade" id="modalEditaTag{{ $tag->id }}" tabindex="-1" role="dialog"
+            aria-labelledby="modalEditaTag{{ $tag->id }}Label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <form action="{{ route('painel.tag.salvar', ['tag' => $tag]) }}" method="post">
+                            @csrf
+                            <div class="row">
+                                <div class="form-group col-12">
+                                    <label for="nome">Nome</label>
+                                    <input type="text" class="form-control" name="nome" id="nome"
+                                        aria-describedby="helpId" value="{{ $tag->nome }}">
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-12 text-end">
+                                    <button type="submit" class="btn btn-primary">Salvar</button>
+                                </div>
+                            </div>
+
+                        </form>
                     </div>
-                    <div class="row mt-3">
-                        <div class="col-12 text-center">
-                            <a name="" id="" class="btn btn-danger" href="{{route('painel.tag.deletar', ['tag' => $tag])}}" role="button">Excluir</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modalExcluiTag{{ $tag->id }}" tabindex="-1" role="dialog"
+            aria-labelledby="modalExcluiTag{{ $tag->id }}Label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <h5>Ao excluir a tag "{{ $tag->nome }}" a mesma será removida de todas as notícias onde
+                                    é utilizada. Deseja continuar ?</h5>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12 text-center">
+                                <a name="" id="" class="btn btn-danger"
+                                    href="{{ route('painel.tag.deletar', ['tag' => $tag]) }}" role="button">Excluir</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-@endforeach
+    @endforeach
 
 @endsection
 
 @section('scripts')
     <!-- Required datatable js -->
-    <script src="{{asset('admin/libs/datatables.net/js/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('admin/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{ asset('admin/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('admin/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
     <script>
         $(document).ready(function() {
-            $('#datatable').DataTable( {
-                language:{
+            $('#datatable').DataTable({
+                language: {
                     "emptyTable": "Nenhum registro encontrado",
                     "info": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
                     "infoEmpty": "Mostrando 0 até 0 de 0 registros",
@@ -264,8 +265,8 @@
                     },
                     "searchPlaceholder": "Digite um termo para pesquisar",
                     "thousands": "."
-                } 
-            } );
-        } );    
-    </script> 
+                }
+            });
+        });
+    </script>
 @endsection

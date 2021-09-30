@@ -14,6 +14,7 @@ use App\Models\Curso;
 use App\Models\Aluno;
 use App\Models\Turma;
 use App\Models\Galeria;
+use App\Models\Matricula;
 use Illuminate\Support\Facades\Storage;
 
 class SiteController extends Controller
@@ -163,6 +164,11 @@ class SiteController extends Controller
     public function minhaAreaMatricula(){
         $aluno = Aluno::find(session()->get("aluno")["id"]);
         return view("site.minha-area-matricula", ["aluno" => $aluno]);
+    }
+
+    public function minhaAreaMatriculaConteudo(Matricula $matricula){
+        $aluno = Aluno::find(session()->get("aluno")["id"]);
+        return view("site.matricula-conteudo", ["matricula" => $matricula, "aluno" => $aluno]);
     }
     
     public function estaduais(){

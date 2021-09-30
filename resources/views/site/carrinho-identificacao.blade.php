@@ -102,155 +102,6 @@
                     <p>Dúvida na compra ligue - 35 992611988</p>
                 </div>
             </div>
-            {{--  <section class="_meuCarrinho">
-                <div class="_top">
-                    <div class="_title">
-                        <div class="_icon">
-                            <img src="{{ asset('site/img/sistema/car.svg') }}" alt="" />
-                            <img src="{{ asset('site/img/sistema/cancel.svg') }}" alt="" />
-                        </div>
-                        <span>Meu Carrinho</span>
-                    </div>
-                    <div class="_numberofItems">
-                        <span>2</span>
-                    </div>
-                </div>
-                <div class="_value">
-                    <p>Total</p>
-                    <div class="_svg">
-                        <img src="{{ asset('site/img/sistema/arrowright.svg') }}" alt="" />
-                    </div>
-                    <strong>R$ <span class="_total">160,00</span></strong>
-                </div>
-                <div class="_innerCar">
-                    <div class="_innerItem">
-                        <div class="_img">
-                            <img src="{{ asset('site/img/sistema/carrinhoExample.jpg') }}" alt="" />
-                        </div>
-                        <div class="_content">
-                            <h3 class="isOnline">Curso Online</h3>
-                            <h2 class="itemName">Meeting de Musculação</h2>
-                            <p class="itemExtra">Certificado de 10hs</p>
-                            <div class="itemValue">
-                                <strong>R$ <span class="_itemValue">100,00</span></strong>
-                                <div class="_controls">
-                                    <div class="itemControl cancel">
-                                        <div class="_img">
-                                            <img src="{{ asset('site/img/sistema/cancel.svg') }}" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class="itemControl more">
-                                        <div class="_img">
-                                            <img src="{{ asset('site/img/sistema/more.svg') }}" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="_innerItem">
-                        <div class="_img">
-                            <img src="{{ asset('site/img/sistema/carrinhoExample.jpg') }}" alt="" />
-                        </div>
-                        <div class="_content">
-                            <h3 class="isOnline">Curso Online</h3>
-                            <h2 class="itemName">Meeting de Musculação</h2>
-                            <p class="itemExtra">Certificado de 10hs</p>
-                            <div class="itemValue">
-                                <strong>R$ <span class="_itemValue">100,00</span></strong>
-                                <div class="_controls">
-                                    <div class="itemControl cancel">
-                                        <div class="_img">
-                                            <img src="{{ asset('site/img/sistema/cancel.svg') }}" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class="itemControl more">
-                                        <div class="_img">
-                                            <img src="{{ asset('site/img/sistema/more.svg') }}" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="_innerItem">
-                        <div class="_img">
-                            <img src="{{ asset('site/img/sistema/carrinhoExample.jpg') }}" alt="" />
-                        </div>
-                        <div class="_content">
-                            <h3 class="isOnline">Curso Online</h3>
-                            <h2 class="itemName">Meeting de Musculação</h2>
-                            <p class="itemExtra">Certificado de 10hs</p>
-                            <div class="itemValue">
-                                <strong>R$ <span class="_itemValue">100,00</span></strong>
-                                <div class="_controls">
-                                    <div class="itemControl cancel">
-                                        <div class="_img">
-                                            <img src="{{ asset('site/img/sistema/cancel.svg') }}" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class="itemControl more">
-                                        <div class="_img">
-                                            <img src="{{ asset('site/img/sistema/more.svg') }}" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="_innerItem">
-                        <div class="_img">
-                            <img src="{{ asset('site/img/sistema/carrinhoExample.jpg') }}" alt="" />
-                        </div>
-                        <div class="_content">
-                            <h3 class="isOnline">Curso Online</h3>
-                            <h2 class="itemName">Meeting de Musculação</h2>
-                            <p class="itemExtra">Certificado de 10hs</p>
-                            <div class="itemValue">
-                                <strong>R$ <span class="_itemValue">100,00</span></strong>
-                                <div class="_controls">
-                                    <div class="itemControl cancel">
-                                        <div class="_img">
-                                            <img src="{{ asset('site/img/sistema/cancel.svg') }}" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class="itemControl more">
-                                        <div class="_img">
-                                            <img src="{{ asset('site/img/sistema/more.svg') }}" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="_bottom">
-                    <div class="_subTotal _bottomSub">
-                        <div class="_title">
-                            <span>Sub Total</span>
-                        </div>
-                        <div class="_svg">
-                            <img src="{{ asset('site/img/sistema/arrowright.svg') }}" alt="" />
-                        </div>
-                        <span>R$ <span class="_subtotalValue">160,00</span></span>
-                    </div>
-                    <div class="_subDesconto _bottomSub">
-                        <span>Desconto</span>
-                        <div class="_svg">
-                            <img src="{{ asset('site/img/sistema/arrowright.svg') }}" alt="" />
-                        </div>
-                        <span><span class="_subdescontoValue">-</span></span>
-                    </div>
-                </div>
-
-                <div class="_finalTotal _bottomSub">
-                    <span>Total</span>
-                    <div class="_svg">
-                        <img src="{{ asset('site/img/sistema/arrowright.svg') }}" alt="" />
-                    </div>
-                    <strong>R$ <span class="_finaltotalValue">160,00</span> </strong>
-                </div>
-            </section>  --}}
         </div>
     </header>
     <!-- HEADER -->
@@ -280,32 +131,48 @@
                     <h2>Já sou Cadastrado</h2>
                     <div class="_offtitle">
                         <div class="_left">
-                            
-                            {{--  MENSAGENS DE ERRO  --}}
-                            @if(session()->get("erro"))
-                                {{--  {{session()->get("erro")}} para escrever a mensagem  --}}
-                                {{--  EX: <span>{{session()->get("erro")}}</span>  --}}  
-                                                
+
+                            {{-- MENSAGENS DE ERRO --}}
+                            @if (session()->get('erro'))
+                                {{-- {{session()->get("erro")}} para escrever a mensagem --}}
+                                {{-- EX: <span>{{session()->get("erro")}}</span> --}}
+
                                 <div class="alert alert-danger">
-                                    {{session()->get("erro")}}
+                                    {{ session()->get('erro') }}
                                 </div>
 
                                 <style>
-                                    .alert{position:relative;padding:.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:.25rem;}
-                                    .alert-danger{color:#721c24;background-color:#f8d7da;border-color:#f5c6cb;font-family: "Spartan", sans-serif;font-weight: bold;font-size: 2rem;line-height: 22px;}
+                                    .alert {
+                                        position: relative;
+                                        padding: .75rem 1.25rem;
+                                        margin-bottom: 1rem;
+                                        border: 1px solid transparent;
+                                        border-radius: .25rem;
+                                    }
+
+                                    .alert-danger {
+                                        color: #721c24;
+                                        background-color: #f8d7da;
+                                        border-color: #f5c6cb;
+                                        font-family: "Spartan", sans-serif;
+                                        font-weight: bold;
+                                        font-size: 2rem;
+                                        line-height: 22px;
+                                    }
+
                                 </style>
                             @endif
 
 
-                            <form action="{{route('site.carrinho-identificar')}}" method="POST">
-								@csrf
+                            <form action="{{ route('site.carrinho-identificar') }}" method="POST">
+                                @csrf
                                 <label>
                                     <span>Meu e-mail</span>
-                                    <input type="email" name="email"/>
+                                    <input type="email" name="email" />
                                 </label>
                                 <label>
                                     <span>Digite sua senha</span>
-                                    <input type="password" name="senha"/>
+                                    <input type="password" name="senha" />
                                 </label>
                                 <button>
                                     Acessar <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
@@ -319,7 +186,7 @@
                                 Esqueci minha senha
                             </a>
 
-                            {{--  <div class="_others">
+                            {{-- <div class="_others">
                                 <h2>Login com um clique</h2>
                                 <div class="_buttons">
                                     <div class="_button">
@@ -335,7 +202,7 @@
                                         Facebook
                                     </div>
                                 </div>
-                            </div>  --}}
+                            </div> --}}
                         </div>
 
                         <a href="/minha-conta" class="_right">
@@ -422,7 +289,7 @@
             <p>
                 <strong>
                     Desenvolvido por
-                    <a href="https://7seventrends.com"" class=" _img">
+                    <a href="https://7seventrends.com"" class="  _img">
                         <img src="{{ asset('site/img/_logo7seven.png') }}" style="filter: brightness(0);""  alt="">
               </a> </div></p> 
               </strong>

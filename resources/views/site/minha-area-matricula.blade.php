@@ -180,9 +180,9 @@
             <div class="_contentList">
                 <div class="_matriculasList">
                     @if (count($aluno->matriculas) <= 0)
-                    
-                            <h3>Ainda não há nenhuma matrícula</h3>
-                                
+
+                        <h3>Ainda não há nenhuma matrícula</h3>
+
                     @else
                         @foreach ($aluno->matriculas as $matricula)
                             <div class="_matricula">
@@ -199,7 +199,8 @@
                                         <p>{{ date('d.m.Y', strtotime($matricula->created_at)) }}</p>
                                     </div>
                                     <p>Curso Online</p>
-                                    <button class="btn-primary">
+                                    <button class="btn-primary"
+                                        onclick="window.location.href = '{{ route('site.minha-area-matricula.conteudo', ['matricula' => $matricula]) }}'">
                                         Acessar Curso
                                         <div class="_svg">
                                             <img src="{{ asset('site/img/sistema/buttonArrowRight.svg') }}" alt="">
@@ -209,7 +210,7 @@
                             </div>
                         @endforeach
                     @endif
-                    
+
                 </div>
             </div>
         </div>
@@ -286,7 +287,7 @@
             <p>
                 <strong>
                     Desenvolvido por
-                    <a href="https://7seventrends.com"" class="                            _img">
+                    <a href="https://7seventrends.com"" class="                                _img">
                         <img src="{{ asset('site/img/_logo7seven.png') }}" style="filter: brightness(0);" alt="">
                     </a>
         </div>

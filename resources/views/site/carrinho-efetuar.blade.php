@@ -102,128 +102,55 @@
                     <p>Dúvida na compra ligue - 35 992611988</p>
                 </div>
             </div>
-            <section class="_meuCarrinho">
-                <div class="_top">
-                    <div class="_title">
-                        <div class="_icon">
-                            <img src="{{ asset('site/img/sistema/car.svg') }}" alt="" />
-                            <img src="{{ asset('site/img/sistema/cancel.svg') }}" alt="" />
-                        </div>
-                        <span>Meu Carrinho</span>
-                    </div>
-                    <div class="_numberofItems">
-                        <span>{{$carrinho->produtos->count()}}</span>
-                    </div>
-                </div>
-                <div class="_value">
-                    <p>Total</p>
-                    <div class="_svg">
-                        <img src="{{ asset('site/img/sistema/arrowright.svg') }}" alt="" />
-                    </div>
-                    <strong>R$ <span class="_total">{{number_format($carrinho->total, 2, ",", ".")}}</span></strong>
-                </div>
-                <div class="_innerCar">
-					@foreach($carrinho->produtos as $produto)
-						<div class="_innerItem">
-							<div class="_img">
-								<img src="{{ asset('site/img/sistema/carrinhoExample.jpg') }}" alt="" />
-							</div>
-							<div class="_content">
-								{{--  <h3 class="isOnline">Curso Online</h3>  --}}
-								<h2 class="itemName">{{$produto->turma->curso->titulo}}</h2>
-								{{--  <p class="itemExtra">Certificado de 10hs</p>  --}}
-								<div class="itemValue">
-									<strong>R$ <span class="_itemValue">{{number_format($produto->total, 2, ",", ".")}}</span></strong>
-									<div class="_controls">
-										<div class="itemControl cancel">
-											<div class="_img">
-												<img src="{{ asset('site/img/sistema/cancel.svg') }}" alt="" />
-											</div>
-										</div>
-										{{--  <div class="itemControl more">
-											<div class="_img">
-												<img src="{{ asset('site/img/sistema/more.svg') }}" alt="" />
-											</div>
-										</div>  --}}
-									</div>
-								</div>
-							</div>
-						</div>
-					@endforeach
-                </div>
-                <div class="_bottom">
-                    <div class="_subTotal _bottomSub">
-                        <div class="_title">
-                            <span>Sub Total</span>
-                        </div>
-                        <div class="_svg">
-                            <img src="{{ asset('site/img/sistema/arrowright.svg') }}" alt="" />
-                        </div>
-                        <span>R$ <span class="_subtotalValue">{{number_format($carrinho->total, 2, ",", ".")}}</span></span>
-                    </div>
-                    {{--  <div class="_subDesconto _bottomSub">
-                        <span>Desconto</span>
-                        <div class="_svg">
-                            <img src="{{ asset('site/img/sistema/arrowright.svg') }}" alt="" />
-                        </div>
-                        <span><span class="_subdescontoValue">-</span></span>
-                    </div>  --}}
-                </div>
-
-                <div class="_finalTotal _bottomSub">
-                    <span>Total</span>
-                    <div class="_svg">
-                        <img src="{{ asset('site/img/sistema/arrowright.svg') }}" alt="" />
-                    </div>
-                    <strong>R$ <span class="_finaltotalValue">{{number_format($carrinho->total, 2, ",", ".")}}</span> </strong>
-                </div>
-            </section>
+            @include('site.includes.carrinho')
         </div>
     </header>
     <!-- HEADER -->
 
     <div class="pop-up-confirmacao">
-  
+
         <div class="pop-up-box">
-            
+
             <div class="pop-up-header">
-                <div class="logos">        
-                        <img src="{{ asset('site/img/_logo92.png') }}" alt="" />      
-                        <img src="{{ asset('site/img/_logoASI_92.png') }}" alt="" />
+                <div class="logos">
+                    <img src="{{ asset('site/img/_logo92.png') }}" alt="" />
+                    <img src="{{ asset('site/img/_logoASI_92.png') }}" alt="" />
                 </div>
-                
+
                 <div class="icon">
                     <img src="{{ asset('site/img/sistema/happyemoji.svg') }}" alt="" />
                 </div>
-            
+
                 <p>Tudo pronto para finalizar?</p>
-            
+
             </div>
             <div class="pop-up-middle">
-            
+
                 <div class="icon">
-                    <img src="{{ asset('site/img/sistema/mailData.svg') }}"/>
+                    <img src="{{ asset('site/img/sistema/mailData.svg') }}" />
                 </div>
-                
+
                 <p>Toda as informações de sua compra<br> serão enviadas para seu email.</p>
-            
+
             </div>
-            
+
             <div class="pop-up-buttons">
                 <button class="cancel" onclick="activepopup()">Cancelar</button>
-                <button class="confirm" onclick="window.location = '{{route('site.carrinho.finalizar.boleto')}}'" >Finalizar Compra</button>
+                <button class="confirm"
+                    onclick="window.location = '{{ route('site.carrinho.finalizar.boleto') }}'">Finalizar
+                    Compra</button>
             </div>
-            
+
         </div>
 
         <script>
-            function activepopup(){
-               $('.pop-up-confirmacao').toggleClass('active')
-            }        
+            function activepopup() {
+                $('.pop-up-confirmacao').toggleClass('active')
+            }
         </script>
-    
-    <div class="pop-up-blackground"></div>
-  
+
+        <div class="pop-up-blackground"></div>
+
     </div>
 
 
@@ -260,7 +187,7 @@
                             </div>
                             <p>{{ $aluno->email }}</p>
                         </div>
-                        {{--  <div class="row">
+                        {{-- <div class="row">
                             <div>
                                 <p>
                                     Rua Rio Grande do Sul - Centro Poços de Caldas - MG Numero
@@ -270,9 +197,9 @@
                             <div>
                                 <span>JAD Log - R$ 19,90</span>
                             </div>
-                        </div>  --}}
+                        </div> --}}
                     </div>
-                    {{--  <div class="_cupom">
+                    {{-- <div class="_cupom">
                         <div class="_text">
                             <span>Cupom de desconto</span>
                             <p>Digite o código de desconto ao lado:</p>
@@ -289,14 +216,15 @@
                             </div>
                             <p>- R$ 20 aplicado na sua compra</p>
                         </div>
-                    </div>  --}}
+                    </div> --}}
                     <div class="_choose">
                         <div class="_title">
                             <span>Escolha a forma de pagamento</span>
                             <p>Selecione qual opçao deseja realizar o pagamento</p>
                         </div>
                         <div class="_buttons">
-                            <div class="bolet button" onclick="window.location.href = '{{route('site.carrinho.pagamento.boleto')}}'">
+                            <div class="bolet button"
+                                onclick="window.location.href = '{{ route('site.carrinho.pagamento.boleto') }}'">
                                 <div class="_icon">
                                     <img src="{{ asset('site/img/sistema/boleto.svg') }}" alt="" />
                                 </div>
@@ -306,7 +234,8 @@
                                 </div>
                             </div>
 
-                            <div class="creditCard button" onclick="window.location.href = '{{route('site.carrinho.pagamento.cartao')}}'">
+                            <div class="creditCard button"
+                                onclick="window.location.href = '{{ route('site.carrinho.pagamento.cartao') }}'">
                                 <div class="_icon">
                                     <img src="{{ asset('site/img/sistema/creditcard.svg') }}" alt="" />
                                 </div>
@@ -393,7 +322,7 @@
             <p>
                 <strong>
                     Desenvolvido por
-                    <a href="https://7seventrends.com"" class=" _img">
+                    <a href="https://7seventrends.com"" class="   _img">
                         <img src="{{ asset('site/img/_logo7seven.png') }}" style="filter: brightness(0);""  alt="">
               </a> </div></p> 
               </strong>

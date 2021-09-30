@@ -100,7 +100,7 @@ class GerencianetController extends Controller
                 $boleto->status = $res["data"]["status"];
                 $boleto->total = $res["data"]["total"];
                 $boleto->save();
-                // $gerencianet->enviarBoletoEmail($boleto->charge_id, $aluno->email);
+                $gerencianet->enviarBoletoEmail($boleto->charge_id, $aluno->email);
             }else{
                 $carne = new PagamentoCarne;
                 $carne->venda_id = $venda->id;
@@ -120,6 +120,8 @@ class GerencianetController extends Controller
                     $parcela->save();
                 }
             }
+            $carrinho->aberto = false;
+            $carrinho->save();
             session()->forget("carrinho");
             session()->put(["venda_finalizada" => $venda->id]);
             return redirect()->route("site.carrinho-confirmacao");

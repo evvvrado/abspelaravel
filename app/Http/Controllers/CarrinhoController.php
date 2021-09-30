@@ -48,6 +48,20 @@ class CarrinhoController extends Controller
         }
     }
 
+    public function remover(Turma $turma){
+        $carrinho = Carrinho::find(session()->get("carrinho"));
+        $produto = CarrinhoProduto::where([["carrinho_id", $carrinho->id], ["turma_id", $turma->id]]);
+        $produto->delete();
+        $carrinho->total -= $turma->preco;
+        $carrinho->save();
+        if($carrinho->produtos->count() == 0){
+            $carrinho->delete();
+            session()->forget("carrinho");
+            return redirect()->route('site.index');
+        }
+        return redirect()->back();
+    }
+
     public function identificar(Request $request){
         $aluno = Aluno::where("email", $request->email)->first();
         if($aluno && Hash::check($request->senha, $aluno->senha)){

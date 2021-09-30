@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Curso;
 use App\Models\Turma;
+use App\Models\TurmaConteudo;
 
 class TurmasController extends Controller
 {
@@ -51,6 +52,24 @@ class TurmasController extends Controller
     public function inscricao(Turma $turma){
         $turma->aberto = !$turma->aberto;
         $turma->save();
+        return redirect()->back();
+    }
+
+    public function conteudo(Turma $turma){
+        return view("painel.turmas.conteudo", ['turma' => $turma]);
+    }
+
+    public function cadastrar_conteudo(Request $request, Turma $turma){
+        $conteudo = new TurmaConteudo;
+        $conteudo->turma_id = $turma->id;
+        $conteudo->descricao = $request->descricao;
+        $conteudo->publicacao = $request->publicacao;
+        if($request->file("arquivo")){
+            $conteudo->arquivo = $request->file('arquivo')->store(
+                'site/curso/'.$turma->curso->slug.'/'.$turma->id.'/conteudo', 'local'
+            );
+        }
+        $conteudo->save();
         return redirect()->back();
     }
 }

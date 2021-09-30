@@ -45,6 +45,7 @@ Route::get('/newsletter', [\App\Http\Controllers\SiteController::class, 'newslet
 
 //ROTAS DE CARRINHO
 Route::get('/carrinho/adicionar/{turma}', [\App\Http\Controllers\CarrinhoController::class, 'adicionar'])->name("site.carrinho-adicionar");
+Route::get('/carrinho/remover/{turma}', [\App\Http\Controllers\CarrinhoController::class, 'remover'])->name("site.carrinho-remover");
 Route::get('/carrinho/pagamento/cartao', [\App\Http\Controllers\CarrinhoController::class, 'pagamento_cartao'])->name("site.carrinho.pagamento.cartao");
 Route::get('/carrinho/pagamento/boleto', [\App\Http\Controllers\CarrinhoController::class, 'pagamento_boleto'])->name("site.carrinho.pagamento.boleto");
 Route::get('/carrinho/identificacao', [\App\Http\Controllers\CarrinhoController::class, 'identificacao'])->name("site.carrinho-identificacao");
@@ -72,6 +73,7 @@ Route::middleware(['aluno'])->group(function () {
     Route::post('/minha-area/dados/avatar/alterar', [\App\Http\Controllers\SiteController::class, 'minhaAreaDadosAvatarAlterar'])->name("site.minha-area-dados.avatar.alterar");
     Route::post('/minha-area/dados/senha/alterar', [\App\Http\Controllers\SiteController::class, 'minhaAreaDadosSenhaAlterar'])->name("site.minha-area-dados.senha.alterar");
     Route::get('/minha-area/matriculas', [\App\Http\Controllers\SiteController::class, 'minhaAreaMatricula'])->name("site.minha-area-matricula");
+    Route::get('/minha-area/matricula/{matricula}/conteudo', [\App\Http\Controllers\SiteController::class, 'minhaAreaMatriculaConteudo'])->name("site.minha-area-matricula.conteudo");
 });
 
 Route::get('/links/{slug}', [\App\Http\Controllers\AppController::class, 'index'])->name("site.app");
@@ -168,6 +170,9 @@ Route::middleware(['admin'])->group(function () {
     Route::post('/sistema/turmas/cadastrar', [\App\Http\Controllers\TurmasController::class, 'cadastrar'])->name("painel.turma.cadastrar");
     Route::get('/sistema/turmas/api/getTurma/{turma}', [\App\Http\Controllers\TurmasController::class, 'getTurma']);
     Route::get('/sistema/turma/ativo/{turma}', [\App\Http\Controllers\TurmasController::class, 'ativo'])->name("painel.turma.ativo");
+    Route::get('/sistema/turma/conteudo/{turma}', [\App\Http\Controllers\TurmasController::class, 'conteudo'])->name("painel.turma.conteudo");
+    Route::post('/sistema/turma/conteudo/{turma}/cadastrar', [\App\Http\Controllers\TurmasController::class, 'cadastrar_conteudo'])->name("painel.turma.conteudo.cadastrar");
+    Route::get('/sistema/turma/{turma}/conteudo/', [\App\Http\Controllers\TurmasController::class, 'conteudo'])->name("painel.turma.conteudo");
     Route::get('/sistema/turma/inscricao/{turma}', [\App\Http\Controllers\TurmasController::class, 'inscricao'])->name("painel.turma.inscricao");
     Route::get('/includes/turma/formulario', function(){
         return view("painel.turmas.formulario");

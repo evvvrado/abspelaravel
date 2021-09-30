@@ -172,48 +172,24 @@
 
     <div class="detalhesdeCurso container-fluid">
         <div class="container-fav">
-            <h1>Curso de Sommelier Brabo</h1>
+            <h1>{{ $matricula->turma->curso->titulo }}</h1>
 
             <main>
                 <div class="list">
-                    <article>
-                        <div class="date">
-                            12/06/2003<br>
-                            20:00
-                        </div>
-                        <picture><img src="{{ asset('site/img/sistema/approved.svg')}}" alt="Aprovado"></picture>
-                        <div class="content">
-                            <span>Nome do arquifo.pdf</span>
-                            <a herf="/aquitovo" download>Baixar</a>
-                        </div>
-                    </article>
-
-                    
-                    <article>
-                        <div class="date">
-                            12/06/2003<br>
-                            20:00
-                        </div>
-                        <picture><img src="{{ asset('site/img/sistema/approved.svg')}}" alt="Aprovado"></picture>
-                        <div class="content">
-                            <span>Nome do arquifo.pdf</span>
-                            <a herf="/aquitovo" download>Baixar</a>
-                        </div>
-                    </article>
-
-
-                    
-                    <article>
-                        <div class="date">
-                            12/06/2003<br>
-                            20:00
-                        </div>
-                        <picture><img src="{{ asset('site/img/sistema/approved.svg')}}" alt="Aprovado"></picture>
-                        <div class="content">
-                            <span>Nome do arquifo.pdf</span>
-                            <a herf="/aquitovo" download>Baixar</a>
-                        </div>
-                    </article>
+                    @foreach ($matricula->turma->conteudos->where('publicacao', '<=', date('Y-m-d H:i:s')) as $conteudo)
+                        <article>
+                            <div class="date">
+                                {{ date('d/m/Y', strtotime($conteudo->publicacao)) }}<br>
+                                {{-- 20:00 --}}
+                            </div>
+                            <picture><img src="{{ asset('site/img/sistema/approved.svg') }}" alt="Aprovado">
+                            </picture>
+                            <div class="content">
+                                <span>{{ $conteudo->descricao }}</span>
+                                <a href="{{ asset($conteudo->arquivo) }}" download>Baixar</a>
+                            </div>
+                        </article>
+                    @endforeach
                 </div>
             </main>
         </div>
@@ -292,7 +268,7 @@
             <p>
                 <strong>
                     Desenvolvido por
-                    <a href="https://7seventrends.com"" class=" _img">
+                    <a href="https://7seventrends.com"" class="               _img">
                         <img src="{{ asset('site/img/_logo7seven.png') }}" style="filter: brightness(0);""  alt="">
               </a> </div></p> 
               </strong>

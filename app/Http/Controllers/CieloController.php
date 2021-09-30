@@ -63,7 +63,9 @@ class CieloController extends Controller
                     $matricula->turma_id = $produto->turma_id;
                     $matricula->save();
                 }
-
+                
+                $carrinho->aberto = false;
+                $carrinho->save();
                 session()->forget("carrinho");
                 session()->put(["venda_finalizada" => $venda->id]);
 

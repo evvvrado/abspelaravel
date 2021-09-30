@@ -12,4 +12,8 @@ class Turma extends Model
     public function curso(){
         return $this->belongsTo(Curso::class);
     }
+
+    public function conteudos(){
+        return $this->hasMany(TurmaConteudo::class);
+    }
 }

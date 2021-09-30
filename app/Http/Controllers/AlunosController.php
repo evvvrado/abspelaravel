@@ -43,6 +43,10 @@ class AlunosController extends Controller
         if($aluno && Hash::check($request->senha, $aluno->senha)){
             $aluno->ultimo_acesso = date("Y-m-d");
             $aluno->save();
+            $carrinho = Carrinho::where([["aluno_id", $aluno->id], ["aberto", true]])->first();
+            if($carrinho){
+                session()->put(["carrinho" => $carrinho->id]);
+            }
             session()->put(["aluno" => $aluno->toArray()]);
             Log::channel('acessos')->info('LOGIN: O aluno ' . $aluno->nome . ' logou no sistema.');
             if(session()->get("produto_adicionar")){

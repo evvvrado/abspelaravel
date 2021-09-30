@@ -12,12 +12,13 @@
 @endsection
 
 @section('titulo')
-    Turmas do Curso: {{ $curso->titulo }}
+    Conteúdo programático
 @endsection
 
 @section('botoes')
-    <a name="" id="" class="btn btn-success" onclick="novaTurma()" role="button">Nova Turma</a>
-    <a href="{{ route('painel.cursos') }}" name="" id="" class="btn btn-primary" role="button">Voltar</a>
+    <a name="" id="" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalNovoConteudo">Novo Conteúdo</a>
+    <a href="{{ route('painel.turmas', ['curso' => $turma->curso]) }}" name="" id="" class="btn btn-primary"
+        role="button">Voltar</a>
 @endsection
 
 @section('conteudo')
@@ -29,19 +30,16 @@
                         <thead>
                             <tr>
                                 <th style="width: 30px;"></th>
-                                <th>Nome, Período</th>
-                                <th>Data</th>
-                                <th>Vagas</th>
-                                <th>Valor</th>
-                                <th>Inscrições</th>
-                                <th style="width: 30px;">Ativo</th>
+                                <th>Descrição</th>
+                                <th>Publicação</th>
+                                <th>Arquivo</th>
                             </tr>
                         </thead>
 
 
                         <tbody>
 
-                            @foreach ($turmas as $turma)
+                            @foreach ($turma->conteudos as $conteudo)
                                 <tr>
                                     <td class="text-center">
                                         <div class="dropdown mt-4 mt-sm-0">
@@ -52,50 +50,20 @@
                                             <div class="dropdown-menu" style="margin: 0px;">
                                                 <a class="dropdown-item" onclick="carregaTurma({{ $turma->id }})"
                                                     role="button"><i class="bx bx-edit-alt"></i> Editar</a>
-                                                @if ($turma->ativo)
-                                                    <a href="{{ route('painel.turma.ativo', ['turma' => $turma]) }}"
-                                                        class="dropdown-item" role="button"><i
-                                                            class="fas fa-eye-slash"></i> Desativar</a>
-                                                @else
-                                                    <a href="{{ route('painel.turma.ativo', ['turma' => $turma]) }}"
-                                                        class="dropdown-item" role="button"><i class="fas fa-eye"></i>
-                                                        Ativar</a>
-                                                @endif
-
-                                                @if ($turma->aberto)
-                                                    <a href="{{ route('painel.turma.inscricao', ['turma' => $turma]) }}"
-                                                        class="dropdown-item" role="button"><i class="fas fa-lock"></i>
-                                                        Fechar Inscrições</a>
-                                                @else
-                                                    <a href="{{ route('painel.turma.inscricao', ['turma' => $turma]) }}"
-                                                        class="dropdown-item" role="button"><i
-                                                            class="fas fa-lock-open"></i> Abrir Inscrições</a>
-                                                @endif
-                                                <a href="{{ route('painel.turma.conteudo', ['turma' => $turma]) }}" id=""
-                                                    class="dropdown-item" role="button"><i class="fas fa-list pr-3"></i>
-                                                    Conteudo</a>
+                                                {{-- <a href="{{ route('painel.turma.deletar', ['turma' => $turma]) }}" id=""
+                                                    class="dropdown-item" role="button"><i
+                                                        class="fas fa-trash-alt pr-3"></i> Excluir</a> --}}
                                             </div>
                                         </div>
                                     </td>
                                     <td>
-                                        <span>{{ $turma->nome }}</span>
-                                        <br>
-                                        <small>{{ config('globals.periodos')[$turma->periodo] }}</small>
+                                        {{ $conteudo->descricao }}
                                     </td>
-                                    <td style="vertical-align: middle;">{{ date('d/m/Y', strtotime($turma->data)) }}</td>
-                                    <td style="vertical-align: middle;">{{ $turma->inscritos }} de {{ $turma->vagas }}
-                                    </td>
-                                    <td style="vertical-align: middle;">R${{ number_format($turma->preco, 2, ',', '.') }}
-                                    </td>
-                                    <td>
-                                        @if ($turma->aberto)
-                                            Abertas
-                                        @else
-                                            Fechadas
-                                        @endif
-                                    </td>
-                                    <td class="text-center" style="vertical-align: middle;">
-                                        <i class="fa fa-check" @if ($turma->ativo) style="color: green;" @endif aria-hidden="true"></i>
+                                    <td style="vertical-align: middle;">
+                                        {{ date('d/m/Y', strtotime($conteudo->publicacao)) }}</td>
+                                    <td style="vertical-align: middle;">
+                                        <a href="{{ asset($conteudo->arquivo) }}" class="btn btn-primary"
+                                            target="_blank">Visualizar</a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -106,12 +74,36 @@
         </div> <!-- end col -->
     </div> <!-- end row -->
 
-    <div class="modal fade" id="modalTurma" tabindex="-1" role="dialog" aria-labelledby="modalTurmaLabel"
+    <div class="modal fade" id="modalNovoConteudo" tabindex="-1" role="dialog" aria-labelledby="modalNovoConteudo"
         aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-body" id="modalTurmaBody">
+                    <form action="{{ route('painel.turma.conteudo.cadastrar', ['turma' => $turma]) }}" method="post"
+                        enctype="multipart/form-data">
+                        @csrf
+                        <div class="form-group">
+                            <label for="descricao">Descrição</label>
+                            <input type="text" class="form-control" name="descricao" id="descricao"
+                                aria-describedby="helpId" placeholder="Descrição do arquivo" maxlength="255" required>
+                            <small id="helpId" class="form-text text-muted">A descrição será exibida na página do
+                                aluno</small>
+                        </div>
+                        <div class="mt-3">
+                            <label for="formFile" class="form-label">Arquivo</label>
+                            <input class="form-control" name="arquivo" type="file" id="formFile" required>
+                        </div>
+                        <div class="mt-3">
+                            <label for="publicacao">Data de Publicação</label>
+                            <input type="date" class="form-control" name="publicacao" id="publicacao"
+                                aria-describedby="helpId" value="{{ date('Y-m-d') }}" required>
+                            <small>O conteúdo só estará disponível para o aluno apartir da data informada</small>
+                        </div>
+                        <div class="form-group text-end mt-3">
+                            <button type="submit" class="btn btn-primary px-4">Salvar</button>
+                        </div>
 
+                    </form>
                 </div>
             </div>
         </div>
@@ -123,85 +115,8 @@
     <!-- Required datatable js -->
     <script src="{{ asset('admin/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('admin/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <script src="{{ asset('admin/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js') }}"></script>
     <script>
-        function novaTurma() {
-            //$("#modalTurmaBody").html("");
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', '/includes/loading');
-            xhr.onreadystatechange = function() {
-                if (this.readyState !== 4) return;
-                if (this.status !== 200) return; // or whatever error handling you want
-                $("#modalTurmaBody").html(this.responseText);
-                $("#modalTurma").modal("show");
-                xhr.open('GET', '/includes/turma/formulario');
-                xhr.onreadystatechange = function() {
-                    if (this.readyState !== 4) return;
-                    if (this.status !== 200) return; // or whatever error handling you want
-                    $("#modalTurmaBody").html(this.responseText);
-                    $("#form-edicao input[id='curso_id']").val({!! $curso->id !!});
-                }
-                xhr.send();
-            }
-            xhr.send();
-        }
-
-        function carregaTurma(id) {
-            var nome = $("input[name='nome']").val();
-            var _token = $('meta[name="_token"]').attr('content');
-
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': _token
-                }
-            });
-
-            $.ajax({
-                url: '/sistema/turmas/api/getTurma/' + id,
-                type: 'GET',
-                dataType: 'JSON',
-                beforeSend: function() {
-                    //$("#modalTurmaBody").html("");
-                    var xhr = new XMLHttpRequest();
-                    xhr.open('GET', '/includes/loading');
-                    xhr.onreadystatechange = function() {
-                        if (this.readyState !== 4) return;
-                        if (this.status !== 200) return; // or whatever error handling you want
-                        $("#modalTurmaBody").html(this.responseText);
-                        $("#modalTurma").modal("show");
-                    }
-                    xhr.send();
-
-                },
-                success: function(data) {
-                    data = JSON.parse(data);
-                    var xhr = new XMLHttpRequest();
-                    xhr.open('GET', '/includes/turma/formulario');
-                    xhr.onreadystatechange = function() {
-                        if (this.readyState !== 4) return;
-                        if (this.status !== 200) return; // or whatever error handling you want
-                        $("#modalTurmaBody").html(this.responseText);
-                        $("#form-edicao input[id='turma_id']").val(data.id);
-                        $("#form-edicao input[id='nome']").val(data.nome);
-                        $("#form-edicao input[id='local']").val(data.local);
-                        $("#form-edicao input[id='data']").val(data.data);
-                        $("#form-edicao input[id='horario']").val(data.horario);
-                        $("#form-edicao input[id='periodo']").val(data.periodo);
-                        $("#form-edicao input[id='preco']").val(data.preco);
-                        $("#form-edicao input[id='parcelas']").val(data.parcelas);
-                        $("#form-edicao input[id='vagas']").val(data.vagas);
-                        $("#form-edicao input[id='botao_comprar']").val(data.botao_comprar);
-                        $("#form-edicao input[id='texto_turma']").val(data.texto_turma);
-                    }
-                    xhr.send();
-                },
-                error: function(err) {
-                    console.log(err);
-                }
-            });
-        }
-
         $(document).ready(function() {
             var tabela = $('#datatable').DataTable({
                 language: {
