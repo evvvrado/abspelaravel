@@ -10,6 +10,7 @@ use App\Models\Carrinho;
 use Jlorente\CreditCards\CreditCardTypeConfig;
 use Jlorente\CreditCards\CreditCardValidator;
 use App\Classes\Cielo\CieloRequisicaoCredito;
+use App\Models\Matricula;
 
 class CieloController extends Controller
 {
@@ -41,7 +42,7 @@ class CieloController extends Controller
                 $venda->codigo = $codigo;
                 $venda->total = $carrinho->total;
                 $venda->forma = 1;
-                $venda->status = 0;
+                $venda->status = 1;
                 $venda->gateway = 1;
                 $venda->parcelas = $request->parcelas;
                 $venda->valor_parcela = $venda->total / $venda->parcelas;
@@ -52,7 +53,16 @@ class CieloController extends Controller
                 $pagamento->venda_id = $venda->id;
                 $pagamento->codigo = $res["payment_id"];
                 $pagamento->numero = $res["numero"];
+                $pagamento->status = 1;
                 $pagamento->save();
+
+                $aluno = $venda->aluno_id;
+                foreach($venda->carrinho->produtos as $produto){
+                    $matricula = new Matricula;
+                    $matricula->aluno_id = $venda->aluno_id;
+                    $matricula->turma_id = $produto->turma_id;
+                    $matricula->save();
+                }
 
                 session()->forget("carrinho");
                 session()->put(["venda_finalizada" => $venda->id]);
@@ -60,11 +70,11 @@ class CieloController extends Controller
                 return redirect()->route("site.carrinho-confirmacao");
             }else{
                 session()->flash("erro", config("cielo.erros")[$res["retorno"]]);
-                return redirect()->route("site.carrinho-pagamento");
+                return redirect()->route("site.carrinho.pagamento.cartao");
             }
         }else{
             session()->flash("erro", "Erro nos dados do cartão. Verifique se as informações estão corretas e tente novamente.");
-            return redirect()->route("site.carrinho-pagamento");
+            return redirect()->route("site.carrinho.pagamento.cartao");
         }
 
         

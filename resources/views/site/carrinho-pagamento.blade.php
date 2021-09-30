@@ -111,7 +111,7 @@
                         <span>Meu Carrinho</span>
                     </div>
                     <div class="_numberofItems">
-                        <span>{{$carrinho->produtos->count()}}</span>
+                        <span>{{ $carrinho->produtos->count() }}</span>
                     </div>
                 </div>
                 <div class="_value">
@@ -119,36 +119,38 @@
                     <div class="_svg">
                         <img src="{{ asset('site/img/sistema/arrowright.svg') }}" alt="" />
                     </div>
-                    <strong>R$ <span class="_total">{{number_format($carrinho->total, 2, ",", ".")}}</span></strong>
+                    <strong>R$ <span
+                            class="_total">{{ number_format($carrinho->total, 2, ',', '.') }}</span></strong>
                 </div>
                 <div class="_innerCar">
-					@foreach($carrinho->produtos as $produto)
-						<div class="_innerItem">
-							<div class="_img">
-								<img src="{{ asset('site/img/sistema/carrinhoExample.jpg') }}" alt="" />
-							</div>
-							<div class="_content">
-								{{--  <h3 class="isOnline">Curso Online</h3>  --}}
-								<h2 class="itemName">{{$produto->turma->curso->titulo}}</h2>
-								{{--  <p class="itemExtra">Certificado de 10hs</p>  --}}
-								<div class="itemValue">
-									<strong>R$ <span class="_itemValue">{{number_format($produto->total, 2, ",", ".")}}</span></strong>
-									<div class="_controls">
-										<div class="itemControl cancel">
-											<div class="_img">
-												<img src="{{ asset('site/img/sistema/cancel.svg') }}" alt="" />
-											</div>
-										</div>
-										{{--  <div class="itemControl more">
+                    @foreach ($carrinho->produtos as $produto)
+                        <div class="_innerItem">
+                            <div class="_img">
+                                <img src="{{ asset('site/img/sistema/carrinhoExample.jpg') }}" alt="" />
+                            </div>
+                            <div class="_content">
+                                {{-- <h3 class="isOnline">Curso Online</h3> --}}
+                                <h2 class="itemName">{{ $produto->turma->curso->titulo }}</h2>
+                                {{-- <p class="itemExtra">Certificado de 10hs</p> --}}
+                                <div class="itemValue">
+                                    <strong>R$ <span
+                                            class="_itemValue">{{ number_format($produto->total, 2, ',', '.') }}</span></strong>
+                                    <div class="_controls">
+                                        <div class="itemControl cancel">
+                                            <div class="_img">
+                                                <img src="{{ asset('site/img/sistema/cancel.svg') }}" alt="" />
+                                            </div>
+                                        </div>
+                                        {{-- <div class="itemControl more">
 											<div class="_img">
 												<img src="{{ asset('site/img/sistema/more.svg') }}" alt="" />
 											</div>
-										</div>  --}}
-									</div>
-								</div>
-							</div>
-						</div>
-					@endforeach
+										</div> --}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
                 <div class="_bottom">
                     <div class="_subTotal _bottomSub">
@@ -158,15 +160,16 @@
                         <div class="_svg">
                             <img src="{{ asset('site/img/sistema/arrowright.svg') }}" alt="" />
                         </div>
-                        <span>R$ <span class="_subtotalValue">{{number_format($carrinho->total, 2, ",", ".")}}</span></span>
+                        <span>R$ <span
+                                class="_subtotalValue">{{ number_format($carrinho->total, 2, ',', '.') }}</span></span>
                     </div>
-                    {{--  <div class="_subDesconto _bottomSub">
+                    {{-- <div class="_subDesconto _bottomSub">
                         <span>Desconto</span>
                         <div class="_svg">
                             <img src="{{ asset('site/img/sistema/arrowright.svg') }}" alt="" />
                         </div>
                         <span><span class="_subdescontoValue">-</span></span>
-                    </div>  --}}
+                    </div> --}}
                 </div>
 
                 <div class="_finalTotal _bottomSub">
@@ -174,7 +177,9 @@
                     <div class="_svg">
                         <img src="{{ asset('site/img/sistema/arrowright.svg') }}" alt="" />
                     </div>
-                    <strong>R$ <span class="_finaltotalValue">{{number_format($carrinho->total, 2, ",", ".")}}</span> </strong>
+                    <strong>R$ <span
+                            class="_finaltotalValue">{{ number_format($carrinho->total, 2, ',', '.') }}</span>
+                    </strong>
                 </div>
             </section>
         </div>
@@ -216,17 +221,17 @@
                     </div>
 
                     <div class="_pagamentoCartao">
-                        @if($forma == 'cartão')
+                        @if ($forma == 'cartao')
                             <div class="_text">
                                 <span>Pagamento Cartão de Crédito</span>
                                 <p>Digite os dados do seu cartão abaixo:</p>
                             </div>
                             <div class="_form">
                                 <div>
-                                    <small style="color: red;">{{session()->get("erro")}}</small>
+                                    <small style="color: red;">{{ session()->get('erro') }}</small>
                                 </div>
-                                
-                                <form action="{{route('site.carrinho.finalizar.credito.cielo')}}" method="POST">
+
+                                <form action="{{ route('site.carrinho.finalizar.credito.cielo') }}" method="POST">
                                     @csrf
                                     <label>
                                         <span>N. Cartão</span>
@@ -235,7 +240,7 @@
                                     </label>
                                     <label>
                                         <span>Nome do cartão</span>
-                                        <input type="text" name="nome"/>
+                                        <input type="text" name="nome" />
                                     </label>
                                     <label>
                                         <span>Validade</span>
@@ -243,11 +248,11 @@
                                     </label>
                                     <label>
                                         <span>CVV</span>
-                                        <input type="tel" maxlength="3" name="cvv"/>
+                                        <input type="tel" maxlength="3" name="cvv" />
                                     </label>
                                     <label>
                                         <span>Parcelas</span>
-                                        <input type="number" name="parcelas" max="10" min="1" step="1" required/>
+                                        <input type="number" name="parcelas" max="10" min="1" step="1" required />
                                     </label>
                                     <button type="submit">
                                         Efetuar pagamento <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
@@ -261,29 +266,33 @@
                             </div>
                             <div class="_form">
                                 <div>
-                                    <small style="color: red;">{{session()->get("erro")}}</small>
+                                    <small style="color: red;">{{ session()->get('erro') }}</small>
                                 </div>
-                                
-                                <form action="{{route('site.carrinho.finalizar.boleto')}}" method="POST">
+
+                                <form action="{{ route('site.carrinho.finalizar.boleto') }}" method="POST">
                                     @csrf
                                     <label>
                                         <span>Parcelas</span>
                                         <select name="parcelas" required>
-                                            <option value="1">1x de {{$carrinho->total - ($carrinho->total * 10 / 100)}}</option>
-                                            @for($i = 2; ((($carrinho->total / $i) > $configuracao->min_valor_parcela_boleto) && $i <= $configuracao->max_parcelas_boleto); $i++)
-                                                <option value="{{$i}}">{{$i}}x de {{number_format($carrinho->total / $i, 2, ",", ".")}}</option>
-                                            @endfor
-                                        </select>
-                                    </label>
-                                    <button type="submit">
-                                        Efetuar pagamento <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
-                                    </button>
-                                </form>
-                            </div>
-                        @endif
+                                            <option value="1">1x de
+                                                {{ $carrinho->total - ($carrinho->total * 10) / 100 }}</option>
+                                            @for($i = 2; ((($carrinho->total / $i) >
+                                            $configuracao->min_valor_parcela_boleto) && $i <= $configuracao->
+                                                max_parcelas_boleto); $i++)
+                                                <option value="{{ $i }}">{{ $i }}x de
+                                                    {{ number_format($carrinho->total / $i, 2, ',', '.') }}</option>
+                        @endfor
+                        </select>
+                        </label>
+                        <button type="submit">
+                            Efetuar pagamento <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
+                        </button>
+                        </form>
                     </div>
+                    @endif
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -359,7 +368,7 @@
             <p>
                 <strong>
                     Desenvolvido por
-                    <a href="https://7seventrends.com"" class=" _img">
+                    <a href="https://7seventrends.com"" class="   _img">
                         <img src="{{ asset('site/img/_logo7seven.png') }}" style="filter: brightness(0);""  alt="">
               </a> </div></p> 
               </strong>
@@ -400,8 +409,12 @@
     </script>
 
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+        integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"
+        integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
   </body>

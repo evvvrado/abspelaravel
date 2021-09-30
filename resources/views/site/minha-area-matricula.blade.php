@@ -179,31 +179,30 @@
             </div>
             <div class="_contentList">
                 <div class="_matriculasList">
-
-                    {{-- <div class="_matricula">
+                    @foreach ($aluno->matriculas as $matricula)
+                        <div class="_matricula">
                             <div class="_image">
-                                <img src="{{asset('site/img/sistema/capaMatricula.jpg')}}" alt="">
+                                <img src="{{ asset($matricula->turma->curso->miniatura) }}" alt="">
                             </div>
                             <div class="_content">
-                                <h3>Meeting de Musculação</h3>
-                                <p>N. 558893390122</p>
+                                <h3>{{ $matricula->turma->curso->titulo }}</h3>
+                                {{-- <p>N. 558893390122</p> --}}
                                 <div class="_date">
                                     <div class="_svg">
-                                        <img src="{{asset('site/img/sistema/calendar.svg')}}" alt="">
+                                        <img src="{{ asset('site/img/sistema/calendar.svg') }}" alt="">
                                     </div>
-                                    <p>12.05.2020</p>
-                                </div>s
+                                    <p>{{ date('d.m.Y', strtotime($matricula->created_at)) }}</p>
+                                </div>
                                 <p>Curso Online</p>
                                 <button class="btn-primary">
                                     Acessar Curso
                                     <div class="_svg">
-                                        <img src="{{asset('site/img/sistema/buttonArrowRight.svg')}}" alt="">
+                                        <img src="{{ asset('site/img/sistema/buttonArrowRight.svg') }}" alt="">
                                     </div>
                                 </button>
                             </div>
-                        </div> --}}
-
-
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -280,7 +279,7 @@
             <p>
                 <strong>
                     Desenvolvido por
-                    <a href="https://7seventrends.com"" class=" _img">
+                    <a href="https://7seventrends.com"" class="                            _img">
                         <img src="{{ asset('site/img/_logo7seven.png') }}" style="filter: brightness(0);" alt="">
                     </a>
         </div>

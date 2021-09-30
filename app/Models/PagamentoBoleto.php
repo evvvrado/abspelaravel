@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class PagamentoBoleto extends Model
 {
     use HasFactory;
+
+    public function venda(){
+        return $this->belongsTo(Venda::class);
+    }
 }

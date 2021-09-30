@@ -12,4 +12,8 @@ class Aluno extends Model
     public function pedidos(){
         return $this->hasMany(Venda::class);
     }
+
+    public function matriculas(){
+        return $this->hasMany(Matricula::class);
+    }
 }

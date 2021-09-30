@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class PagamentoCarne extends Model
+class Matricula extends Model
 {
     use HasFactory;
 
-    public function venda(){
-        return $this->belongsTo(Venda::class);
+    public function turma(){
+        return $this->belongsTo(Turma::class);
     }
 }

@@ -11,6 +11,7 @@ use App\Models\Venda;
 use App\Models\PagamentoBoleto;
 use App\Models\PagamentoCarne;
 use App\Models\ParcelaCarne;
+use App\Models\Matricula;
 
 class GerencianetController extends Controller
 {
@@ -138,7 +139,21 @@ class GerencianetController extends Controller
         $res = $gerencianet->notificacao($_POST["notification"]);
         if($res["code"] == 200){
             $pagamento = PagamentoBoleto::where("charge_id", $res["charge_id"])->first();
+            if(!$pagamento){
+                $pagamento = PagamentoCarne::where("charge_id", $res["charge_id"])->first();
+            }
             $pagamento->status = $res["status"];
+            if($res["status"] == "paid"){
+                $pagamento->venda->status = 1;
+                $pagamento->venda->save();
+                $aluno = $pagamento->venda->aluno_id;
+                foreach($pagamento->venda->carrinho->produtos as $produto){
+                    $matricula = new Matricula;
+                    $matricula->aluno_id = $aluno;
+                    $matricula->turma_id = $produto->turma_id;
+                    $matricula->save();
+                }
+            }
             Log::channel('notificacoes')->info('NOTIFICAÇÃO: Pagamento ' . $res["charge_id"] . " notificado com o status " . config("gerencianet.status")[$res["status"]]);
             $pagamento->save();
         }elseif($res["code"] == -1){
