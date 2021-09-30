@@ -48,11 +48,14 @@
                                                 <i class="fas fa-bars" aria-hidden="true"></i>
                                             </a>
                                             <div class="dropdown-menu" style="margin: 0px;">
-                                                <a class="dropdown-item" onclick="carregaTurma({{ $turma->id }})"
-                                                    role="button"><i class="bx bx-edit-alt"></i> Editar</a>
-                                                {{-- <a href="{{ route('painel.turma.deletar', ['turma' => $turma]) }}" id=""
+                                                <a class="dropdown-item" data-bs-toggle="modal"
+                                                    data-bs-target="#modalEditaConteudo{{ $conteudo->id }}"
+                                                    role="button"><i class="bx bx-edit-alt"></i>
+                                                    Editar</a>
+                                                <a data-bs-toggle="modal"
+                                                    data-bs-target="#modalExcluiConteudo{{ $conteudo->id }}"
                                                     class="dropdown-item" role="button"><i
-                                                        class="fas fa-trash-alt pr-3"></i> Excluir</a> --}}
+                                                        class="fas fa-trash-alt pr-3"></i> Excluir</a>
                                             </div>
                                         </div>
                                     </td>
@@ -73,6 +76,69 @@
             </div>
         </div> <!-- end col -->
     </div> <!-- end row -->
+
+    @foreach ($turma->conteudos as $conteudo)
+
+        <div class="modal fade" id="modalEditaConteudo{{ $conteudo->id }}" tabindex="-1" role="dialog"
+            aria-labelledby="modalEditaConteudo{{ $conteudo->id }}" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body" id="modalTurmaBody">
+                        <form action="{{ route('painel.turma.conteudo.salvar', ['conteudo' => $conteudo]) }}"
+                            method="post" enctype="multipart/form-data">
+                            @csrf
+                            <div class="form-group">
+                                <label for="descricao">Descrição</label>
+                                <input type="text" class="form-control" name="descricao" aria-describedby="helpId"
+                                    placeholder="Descrição do arquivo" maxlength="255" value="{{ $conteudo->descricao }}"
+                                    required>
+                                <small id="helpId" class="form-text text-muted">A descrição será exibida na página do
+                                    aluno</small>
+                            </div>
+                            <div class="mt-3">
+                                <label for="formFile" class="form-label">Arquivo</label>
+                                <input class="form-control" name="arquivo" type="file">
+                            </div>
+                            <div class="mt-3">
+                                <label for="publicacao">Data de Publicação</label>
+                                <input type="date" class="form-control" name="publicacao" aria-describedby="helpId"
+                                    value="{{ date('Y-m-d', strtotime($conteudo->publicacao)) }}" required>
+                                <small>O conteúdo só estará disponível para o aluno apartir da data informada</small>
+                            </div>
+                            <div class="form-group text-end mt-3">
+                                <button type="submit" class="btn btn-primary px-4">Salvar</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalExcluiConteudo{{ $conteudo->id }}" tabindex="-1" role="dialog"
+            aria-labelledby="modalExcluiConteudo{{ $conteudo->id }}Label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <h5>Ao excluir este conteúdo o mesmo será removido do painel de todos os alunos
+                                    matriculados. Deseja continuar ?</h5>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12 text-center">
+                                <a name="" id="" class="btn btn-danger"
+                                    href="{{ route('painel.turma.conteudo.deletar', ['conteudo' => $conteudo]) }}"
+                                    role="button">Excluir</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    @endforeach
 
     <div class="modal fade" id="modalNovoConteudo" tabindex="-1" role="dialog" aria-labelledby="modalNovoConteudo"
         aria-hidden="true">

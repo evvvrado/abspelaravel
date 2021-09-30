@@ -170,9 +170,10 @@ Route::middleware(['admin'])->group(function () {
     Route::post('/sistema/turmas/cadastrar', [\App\Http\Controllers\TurmasController::class, 'cadastrar'])->name("painel.turma.cadastrar");
     Route::get('/sistema/turmas/api/getTurma/{turma}', [\App\Http\Controllers\TurmasController::class, 'getTurma']);
     Route::get('/sistema/turma/ativo/{turma}', [\App\Http\Controllers\TurmasController::class, 'ativo'])->name("painel.turma.ativo");
-    Route::get('/sistema/turma/conteudo/{turma}', [\App\Http\Controllers\TurmasController::class, 'conteudo'])->name("painel.turma.conteudo");
-    Route::post('/sistema/turma/conteudo/{turma}/cadastrar', [\App\Http\Controllers\TurmasController::class, 'cadastrar_conteudo'])->name("painel.turma.conteudo.cadastrar");
     Route::get('/sistema/turma/{turma}/conteudo/', [\App\Http\Controllers\TurmasController::class, 'conteudo'])->name("painel.turma.conteudo");
+    Route::post('/sistema/turma/{turma}/conteudo/cadastrar', [\App\Http\Controllers\TurmasController::class, 'cadastrar_conteudo'])->name("painel.turma.conteudo.cadastrar");
+    Route::post('/sistema/turma/conteudo/{conteudo}/salvar', [\App\Http\Controllers\TurmasController::class, 'salvar_conteudo'])->name("painel.turma.conteudo.salvar");
+    Route::get('/sistema/turma/conteudo/{conteudo}/deletar', [\App\Http\Controllers\TurmasController::class, 'deletar_conteudo'])->name("painel.turma.conteudo.deletar");
     Route::get('/sistema/turma/inscricao/{turma}', [\App\Http\Controllers\TurmasController::class, 'inscricao'])->name("painel.turma.inscricao");
     Route::get('/includes/turma/formulario', function(){
         return view("painel.turmas.formulario");

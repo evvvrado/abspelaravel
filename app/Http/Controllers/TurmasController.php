@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Curso;
 use App\Models\Turma;
 use App\Models\TurmaConteudo;
+use Illuminate\Support\Facades\Storage;
 
 class TurmasController extends Controller
 {
@@ -70,6 +71,25 @@ class TurmasController extends Controller
             );
         }
         $conteudo->save();
+        return redirect()->back();
+    }
+
+    public function salvar_conteudo(Request $request, TurmaConteudo $conteudo){
+        $conteudo->descricao = $request->descricao;
+        $conteudo->publicacao = $request->publicacao;
+        if($request->file("arquivo")){
+            Storage::delete($conteudo->arquivo);
+            $conteudo->arquivo = $request->file('arquivo')->store(
+                'site/curso/'.$turma->curso->slug.'/'.$turma->id.'/conteudo', 'local'
+            );
+        }
+        $conteudo->save();
+        return redirect()->back();
+    }
+
+    public function deletar_conteudo(TurmaConteudo $conteudo){
+        Storage::delete($conteudo->arquivo);
+        $conteudo->delete();
         return redirect()->back();
     }
 }
