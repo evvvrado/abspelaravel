@@ -18,21 +18,24 @@ class CieloController extends Controller
     public function finalizar_credito(Request $request){
         $carrinho = Carrinho::find(session()->get("carrinho"));
         $codigo = date("Ymd") . str_pad($carrinho->id, 8, "0", STR_PAD_LEFT);
-        // $validator = new CreditCardValidator();
-        // $valido = $validator->isValid($request->numero)
-        // if($valido){
-        //     $bandeira = $validator->getType($request->numero)->getType();
-        // }
-        $bandeira = 'visa';
+        $validator = new CreditCardValidator();
+        $valido = $validator->isValid(str_replace(" ", "", $request->numero));
+        if($valido){
+            $bandeira = $validator->getType(str_replace(" ", "", $request->numero))->getNiceType();
+        }else{
+            session()->flash("erro", "Número de cartão inválido");
+            return redirect()->back();
+        }
+        // $bandeira = 'visa';
         $cielo = new CieloRequisicaoCredito();
 
         $cielo->addSale($codigo);
         $cielo->addCustomer($request->nome);
         $cielo->addPayment($carrinho->total);
         // $cielo->addCreditCard($request->numero, $bandeira, $request->expiracao, $request->cvv, $request->nome, $request->parcelas);
-        $cielo->addCreditCard($request->numero, $bandeira, $request->expiracao, $request->cvv, $request->nome, $request->parcelas);
+        $cielo->addCreditCard(str_replace(" ", "", $request->numero), config("cielo.bandeiras")[$bandeira], $request->expiracao, $request->cvv, $request->nome, $request->parcelas);
         $res = $cielo->efetuar();
-
+        dd($res);
         if($res["status"] == 200){
 
             if($res["retorno"] == "04" || $res["retorno"] == "06"){
@@ -71,7 +74,11 @@ class CieloController extends Controller
 
                 return redirect()->route("site.carrinho-confirmacao");
             }else{
-                session()->flash("erro", config("cielo.erros")[$res["retorno"]]);
+                if(isset(config("cielo.erros")[$res["retorno"]])){
+                    session()->flash("erro", config("cielo.erros")[$res["retorno"]]);
+                }else{
+                    session()->flash("erro", "Ocorreu um problema com a Cielo. Tente novamente mais tarde, ou entre em contato com a gente.");
+                }
                 return redirect()->route("site.carrinho.pagamento.cartao");
             }
         }else{

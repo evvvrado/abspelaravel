@@ -44,18 +44,16 @@ class CieloRequisicaoCredito{
     }
 
     public function addPayment($valor){
-        $this->payment = $this->sale->payment($valor);
+        $this->payment = $this->sale->payment($valor * 100);
     }
 
     public function addCreditCard($numero, $bandeira, $expiracao, $cvv, $nome, $parcelas){
-        
         $this->payment->setType(Payment::PAYMENTTYPE_CREDITCARD)
                         ->creditCard($cvv, $bandeira)
                         ->setExpirationDate($expiracao)
                         ->setCardNumber($numero)
                         ->setHolder($nome);
         $this->payment->setInstallments($parcelas);
-        // dd($this->sale);
     }
 
     public function efetuar(){
