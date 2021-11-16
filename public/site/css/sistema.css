@@ -1116,7 +1116,7 @@ section.s_compraRealizada .container-fav ._half ._buttons button.btn-primary._se
 }
 
 body._carrinho section.s_identificacao .container-fav {
-    padding-top: 131px !important;
+    /* padding-top: 131px !important; */
 }
 
 body._carrinho._tocenter section.s_identificacao .container-fav {
@@ -1180,7 +1180,7 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._topInfo .row
 }
 body._carrinho section.s_identificacao .container-fav ._pagamento ._topInfo .row p {
     font-size: 1.4rem;
-    color: #1ac7d6;
+    color: var(--wine12);
 }
 body._carrinho section.s_identificacao .container-fav ._pagamento ._cupom {
     width: 100%;
@@ -1360,11 +1360,10 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCar
         width: 100%;
     }
 
-    body._carrinho._tocenter .container-fav ._carButton {
-        display: none;
-    }
     body._carrinho .container-fav ._carButton {
         display: flex;
+        background: white;
+        z-index: 999;
     }
     section._meuCarrinho {
         position: fixed;
@@ -1647,7 +1646,7 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCar
 
     padding-bottom: 2.9rem;
 
-    border-bottom: 2px solid #1ac7d6;
+    border-bottom: 2px solidvar(--wine12);
 }
 .detalhesdeCurso .container-fav main {
     position: relative;
@@ -1671,7 +1670,7 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCar
     font-size: 1.269rem;
     line-height: 1.5rem;
 
-    color: #1ac7d6;
+    color: var(--wine12);
 }
 
 .detalhesdeCurso .container-fav main .list article picture {
@@ -1695,7 +1694,7 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCar
     font-size: 1.8rem;
     line-height: 1.8rem;
 
-    color: #1ac7d6;
+    color: var(--wine12);
 }
 
 .detalhesdeCurso .container-fav main::after {
@@ -2204,6 +2203,8 @@ div.d_carrinho {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
+    overflow: hidden;
 }
 div.d_carrinho ._header {
     height: 10.4rem;
@@ -2355,7 +2356,7 @@ div.d_carrinho ._bottom div button {
     margin-top: 2.5rem;
     display: inline-block;
     height: 5.2rem;
-    background-color: #1ac7d6;
+    background-color: var(--wine12);
     border-radius: 0.6rem;
     padding: 0 5rem;
     font-weight: bold;
@@ -2370,8 +2371,8 @@ div.d_carrinho ._bottom div button {
 }
 div.d_carrinho ._bottom div button:hover {
     background-color: #fff;
-    color: #1ac7d6;
-    border: solid 1px #1ac7d6;
+    color: var(--wine12);
+    border: solid 1pxvar (--wine12);
 }
 /*! CSS Used fontfaces */
 @font-face {

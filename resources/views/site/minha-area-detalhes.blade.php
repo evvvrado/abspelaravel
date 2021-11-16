@@ -238,7 +238,7 @@
         <div class="_pedidosList">
             @foreach($venda->carrinho->produtos as $produto)
             <div class="_pedido" onclick="window.open('{{route('site.curso', ['slug' => $produto->turma->curso->slug])}}')">
-                <h3>{{$produto->turma->curso->nome}}</h3>
+                <h3>{{$produto->turma->curso->titulo}}</h3>
                 <div class="_info">
                     <div class="data">
                         <div class="_svg">
