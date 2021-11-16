@@ -896,7 +896,7 @@ section.s_numeros .container-fav .text .number-card {
     justify-content: space-between;
     align-items: center;
 
-    width: 100%;
+    /* width: 100%; */
     max-width: 50.2rem;
     height: 12.1rem;
     border-radius: 0.4rem 1.6rem 0.4rem 1.6rem;
