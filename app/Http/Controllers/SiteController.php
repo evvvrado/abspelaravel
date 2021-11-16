@@ -15,6 +15,7 @@ use App\Models\Aluno;
 use App\Models\Turma;
 use App\Models\Galeria;
 use App\Models\Matricula;
+use App\Models\Venda;
 use Illuminate\Support\Facades\Storage;
 
 class SiteController extends Controller
@@ -119,6 +120,13 @@ class SiteController extends Controller
         $aluno = Aluno::find(session()->get("aluno")["id"]);
         return view("site.minha-area-compras", ["aluno" => $aluno]);
     }
+
+    public function minhaAreaDetalhes(Venda $venda)
+    {
+        $aluno = Aluno::find(session()->get("aluno")["id"]);
+        return view("site.minha-area-detalhes", ["aluno" => $aluno, "venda" => $venda]);
+    }
+
     public function minhaAreaDados(){
         $aluno = Aluno::find(session()->get("aluno")["id"]);
         return view("site.minha-area-dados", ["aluno" => $aluno]);
