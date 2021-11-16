@@ -63,7 +63,7 @@
                 <div class="info">
                     <p class="minitext">Apenas</p>
                     <h1>
-                        {{ $turma->parcelas }}x <span class="lowsized">R$</span>{{ $reais_parcelas }}<span class="lowsized">,@if (number_format($centavos_parcelas) === 0)00
+                        {{ $turma->parcelas }}x <span class="lowsized">R$</span>{{ $reais_parcelas }}<span class="lowsized">,@if (number_format($centavos_parcelas) == 0)00
                             @else {{number_format($centavos_parcelas)}}
                             @endif
 
@@ -139,6 +139,13 @@
                 @if ($cont == 0)
                 <div class="curso-group">
                     @endif
+                    @php
+                    $parcelas = $turma->parcelas;
+                    $valor_parcela = $turma->preco / $parcelas;
+                    $reais_parcelas = floor($valor_parcela);
+                    $centavos_parcelas = $valor_parcela - $reais_parcelas;
+                    @endphp
+
                     <div class="curso-item">
                         <div class="curso-pic">
                             <div class="img">
