@@ -63,11 +63,14 @@
                 <div class="info">
                     <p class="minitext">Apenas</p>
                     <h1>
-                        {{ $turma->parcelas }}x <span class="lowsized">R$</span>{{ $reais_parcelas }}<span class="lowsized">,@if (number_format($centavos_parcelas) == 0)00
-                            @else {{number_format($centavos_parcelas)}}
+                        {{ $turma->parcelas }}x <span class="lowsized">R$</span>{{ $reais_parcelas }}<span class="lowsized">,@if ($centavos_parcelas === 0)00
+                            @else{{number_format($centavos_parcelas * 100)}}
                             @endif
-
                         </span>
+
+                        <script>
+                            console.log({{number_format($centavos_parcelas)}})
+                        </script>
                     </h1>
                 </div>
                 <button class="btn-primary" onclick="window.location.href = '{{route('site.curso', ['slug' => $turma->curso->slug])}}'">
@@ -187,9 +190,8 @@
                             </div>
                             <div class="row">
                                 <div class="price">
-                                    {{ $turma->parcelas }}x<span class="lowsized">R$</span>{{ $reais_parcelas }}<span class="lowsized">,@if (number_format($centavos_parcelas) == 0)00
-                                        @else
-                                        {{number_format($centavos_parcelas)}}
+                                    {{ $turma->parcelas }}x<span class="lowsized">R$</span>{{ $reais_parcelas }}<span class="lowsized">,@if ($centavos_parcelas == 0)00
+                                        @else{{number_format($centavos_parcelas * 100)}}
                                         @endif</span>
                                 </div>
                             </div>

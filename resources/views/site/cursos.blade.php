@@ -47,17 +47,17 @@
                 </div>
                 <div class="_cursos">
                     @php
-                        $cont = 0;
+                    $cont = 0;
                     @endphp
                     @foreach ($turmas->where('modalidade', 0) as $turma)
-                        @php
-                            $parcelas = $turma->parcelas;
-                            $valor_parcela = $turma->preco / $parcelas;
-                            $reais_parcelas = floor($valor_parcela);
-                            $centavos_parcelas = $valor_parcela - $reais_parcelas;
-                        @endphp
-                        @if ($cont == 0)
-                            <div class="curso-group">
+                    @php
+                    $parcelas = $turma->parcelas;
+                    $valor_parcela = $turma->preco / $parcelas;
+                    $reais_parcelas = floor($valor_parcela);
+                    $centavos_parcelas = $valor_parcela - $reais_parcelas;
+                    @endphp
+                    @if ($cont == 0)
+                    <div class="curso-group">
                         @endif
                         <div class="curso-item">
                             <div class="curso-pic">
@@ -100,17 +100,13 @@
                                 </div>
                                 <div class="row">
                                     <div class="price">
-                                        {{ $turma->parcelas }}x<span
-                                            class="lowsized">R$</span>{{ $reais_parcelas }}<span
-                                            class="lowsized">,@if (number_format($centavos_parcelas) == 0)00
-                                            @else
-                                                {{ number_format($centavos_parcelas) }}
+                                        {{ $turma->parcelas }}x<span class="lowsized">R$</span>{{ $reais_parcelas }}<span class="lowsized">,@if ($centavos_parcelas == 0)00
+                                            @else{{number_format($centavos_parcelas * 100)}}
                                             @endif</span>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <button class="btn-primary"
-                                        onclick="window.location.href = '{{ route('site.curso', ['slug' => $turma->curso->slug]) }}'">
+                                    <button class="btn-primary" onclick="window.location.href = '{{ route('site.curso', ['slug' => $turma->curso->slug]) }}'">
                                         Inscreva-se
                                         <div class="svg">
                                             <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
@@ -120,200 +116,199 @@
                             </div>
                         </div>
                         @php
-                            $cont++;
+                        $cont++;
                         @endphp
 
                         @if ($cont == 2)
-                </div>
-                @php
+                    </div>
+                    @php
                     $cont = 0;
-                @endphp
-                @endif
-                @endforeach
-                {{-- <div class="curso-item">
-                    <div class="curso-pic">
-                        <div class="img">
-                            <img src="{{ asset('site/img/_curso2.png') }}" alt="" />
-                        </div>
-                        <div class="curso_online">
-                            <img src="{{ asset('site/img/greenball.svg') }}" alt="" />
-                            <p>Curso online</p>
-                        </div>
-                    </div>
-                    <div class="curso-content">
-                        <div class="row">
-                            <div class="icon-group">
-                                <div class="svg">
-                                    <img src="{{ asset('site/img/calendar.svg') }}" alt="" />
-                                </div>
-                                <span>às 20hs</span>
+                    @endphp
+                    @endif
+                    @endforeach
+                    {{-- <div class="curso-item">
+                        <div class="curso-pic">
+                            <div class="img">
+                                <img src="{{ asset('site/img/_curso2.png') }}" alt="" />
                             </div>
-                            <div class="icon-group">
-                                <div class="svg">
-                                    <img src="{{ asset('site/img/bUser.svg') }}" alt="" />
-                                </div>
-                                <span>Presencial</span>
-                            </div>
-                            <div class="icon-group">
-                                <div class="svg">
-                                    <img src="{{ asset('site/img/clock.svg') }}" alt="" />
-                                </div>
-                                <span>às 20hs</span>
+                            <div class="curso_online">
+                                <img src="{{ asset('site/img/greenball.svg') }}" alt="" />
+                                <p>Curso online</p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="text">
-                                <div class="svg">
-                                    <img src="{{ asset('site/img/cup.svg') }}" alt="" />
+                        <div class="curso-content">
+                            <div class="row">
+                                <div class="icon-group">
+                                    <div class="svg">
+                                        <img src="{{ asset('site/img/calendar.svg') }}" alt="" />
+                                    </div>
+                                    <span>às 20hs</span>
                                 </div>
-                                <span>Curso de formação de Sommelier</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="price">
-                                10X<span class="lowsized">R$</span>550<span class="lowsized">,00</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <button class="btn-primary">
-                                Inscreva-se
-                                <div class="svg">
-                                    <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
+                                <div class="icon-group">
+                                    <div class="svg">
+                                        <img src="{{ asset('site/img/bUser.svg') }}" alt="" />
+                                    </div>
+                                    <span>Presencial</span>
                                 </div>
-                            </button>
+                                <div class="icon-group">
+                                    <div class="svg">
+                                        <img src="{{ asset('site/img/clock.svg') }}" alt="" />
+                                    </div>
+                                    <span>às 20hs</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="text">
+                                    <div class="svg">
+                                        <img src="{{ asset('site/img/cup.svg') }}" alt="" />
+                                    </div>
+                                    <span>Curso de formação de Sommelier</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="price">
+                                    10X<span class="lowsized">R$</span>550<span class="lowsized">,00</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <button class="btn-primary">
+                                    Inscreva-se
+                                    <div class="svg">
+                                        <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
+                                    </div>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="title">
-                <h2>Junho</h2>
-            </div>
+                <div class="title">
+                    <h2>Junho</h2>
+                </div>
 
-            <div class="curso-group">
-                <div class="curso-item">
-                    <div class="curso-pic">
-                        <div class="img">
-                            <img src="{{ asset('site/img/_curso2.png') }}" alt="" />
+                <div class="curso-group">
+                    <div class="curso-item">
+                        <div class="curso-pic">
+                            <div class="img">
+                                <img src="{{ asset('site/img/_curso2.png') }}" alt="" />
+                            </div>
+                            <div class="curso_online">
+                                <img src="{{ asset('site/img/greenball.svg') }}" alt="" />
+                                <p>Curso online</p>
+                            </div>
                         </div>
-                        <div class="curso_online">
-                            <img src="{{ asset('site/img/greenball.svg') }}" alt="" />
-                            <p>Curso online</p>
+                        <div class="curso-content">
+                            <div class="row">
+                                <div class="icon-group">
+                                    <div class="svg">
+                                        <img src="{{ asset('site/img/calendar.svg') }}" alt="" />
+                                    </div>
+                                    <span>às 20hs</span>
+                                </div>
+                                <div class="icon-group">
+                                    <div class="svg">
+                                        <img src="{{ asset('site/img/bUser.svg') }}" alt="" />
+                                    </div>
+                                    <span>Presencial</span>
+                                </div>
+                                <div class="icon-group">
+                                    <div class="svg">
+                                        <img src="{{ asset('site/img/clock.svg') }}" alt="" />
+                                    </div>
+                                    <span>às 20hs</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="text">
+                                    <div class="svg">
+                                        <img src="{{ asset('site/img/cup.svg') }}" alt="" />
+                                    </div>
+                                    <span>Curso de formação de Sommelier</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="price">
+                                    10X<span class="lowsized">R$</span>550<span class="lowsized">,00</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <button class="btn-primary" onclick="window.location.href = '/curso-detalhes.html#conteudo'">
+                                    Inscreva-se
+                                    <div class="svg">
+                                        <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
+                                    </div>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="curso-content">
-                        <div class="row">
-                            <div class="icon-group">
-                                <div class="svg">
-                                    <img src="{{ asset('site/img/calendar.svg') }}" alt="" />
-                                </div>
-                                <span>às 20hs</span>
+                    <div class="curso-item">
+                        <div class="curso-pic">
+                            <div class="img">
+                                <img src="{{ asset('site/img/_curso2.png') }}" alt="" />
                             </div>
-                            <div class="icon-group">
-                                <div class="svg">
-                                    <img src="{{ asset('site/img/bUser.svg') }}" alt="" />
-                                </div>
-                                <span>Presencial</span>
-                            </div>
-                            <div class="icon-group">
-                                <div class="svg">
-                                    <img src="{{ asset('site/img/clock.svg') }}" alt="" />
-                                </div>
-                                <span>às 20hs</span>
+                            <div class="curso_online">
+                                <img src="{{ asset('site/img/greenball.svg') }}" alt="" />
+                                <p>Curso online</p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="text">
-                                <div class="svg">
-                                    <img src="{{ asset('site/img/cup.svg') }}" alt="" />
+                        <div class="curso-content">
+                            <div class="row">
+                                <div class="icon-group">
+                                    <div class="svg">
+                                        <img src="{{ asset('site/img/calendar.svg') }}" alt="" />
+                                    </div>
+                                    <span>às 20hs</span>
                                 </div>
-                                <span>Curso de formação de Sommelier</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="price">
-                                10X<span class="lowsized">R$</span>550<span class="lowsized">,00</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <button class="btn-primary"
-                                onclick="window.location.href = '/curso-detalhes.html#conteudo'">
-                                Inscreva-se
-                                <div class="svg">
-                                    <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
+                                <div class="icon-group">
+                                    <div class="svg">
+                                        <img src="{{ asset('site/img/bUser.svg') }}" alt="" />
+                                    </div>
+                                    <span>Presencial</span>
                                 </div>
-                            </button>
+                                <div class="icon-group">
+                                    <div class="svg">
+                                        <img src="{{ asset('site/img/clock.svg') }}" alt="" />
+                                    </div>
+                                    <span>às 20hs</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="text">
+                                    <div class="svg">
+                                        <img src="{{ asset('site/img/cup.svg') }}" alt="" />
+                                    </div>
+                                    <span>Curso de formação de Sommelier</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="price">
+                                    10X<span class="lowsized">R$</span>550<span class="lowsized">,00</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <button class="btn-primary">
+                                    Inscreva-se
+                                    <div class="svg">
+                                        <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
+                                    </div>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="curso-item">
-                    <div class="curso-pic">
-                        <div class="img">
-                            <img src="{{ asset('site/img/_curso2.png') }}" alt="" />
-                        </div>
-                        <div class="curso_online">
-                            <img src="{{ asset('site/img/greenball.svg') }}" alt="" />
-                            <p>Curso online</p>
-                        </div>
-                    </div>
-                    <div class="curso-content">
-                        <div class="row">
-                            <div class="icon-group">
-                                <div class="svg">
-                                    <img src="{{ asset('site/img/calendar.svg') }}" alt="" />
-                                </div>
-                                <span>às 20hs</span>
-                            </div>
-                            <div class="icon-group">
-                                <div class="svg">
-                                    <img src="{{ asset('site/img/bUser.svg') }}" alt="" />
-                                </div>
-                                <span>Presencial</span>
-                            </div>
-                            <div class="icon-group">
-                                <div class="svg">
-                                    <img src="{{ asset('site/img/clock.svg') }}" alt="" />
-                                </div>
-                                <span>às 20hs</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="text">
-                                <div class="svg">
-                                    <img src="{{ asset('site/img/cup.svg') }}" alt="" />
-                                </div>
-                                <span>Curso de formação de Sommelier</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="price">
-                                10X<span class="lowsized">R$</span>550<span class="lowsized">,00</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <button class="btn-primary">
-                                Inscreva-se
-                                <div class="svg">
-                                    <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
+                </div> --}}
             </div>
             <div class="_eventos">
                 @php
-                    $cont = 0;
+                $cont = 0;
                 @endphp
                 @foreach ($turmas->where('modalidade', 1) as $turma)
-                    @php
-                        $parcelas = $turma->parcelas;
-                        $valor_parcela = $turma->preco / $parcelas;
-                        $reais_parcelas = floor($valor_parcela);
-                        $centavos_parcelas = $valor_parcela - $reais_parcelas;
-                    @endphp
-                    @if ($cont == 0)
-                        <div class="curso-group">
+                @php
+                $parcelas = $turma->parcelas;
+                $valor_parcela = $turma->preco / $parcelas;
+                $reais_parcelas = floor($valor_parcela);
+                $centavos_parcelas = $valor_parcela - $reais_parcelas;
+                @endphp
+                @if ($cont == 0)
+                <div class="curso-group">
                     @endif
                     <div class="curso-item">
                         <div class="curso-pic">
@@ -356,17 +351,14 @@
                             </div>
                             <div class="row">
                                 <div class="price">
-                                    {{ $turma->parcelas }}x<span
-                                        class="lowsized">R$</span>{{ $reais_parcelas }}<span
-                                        class="lowsized">,@if (number_format($centavos_parcelas) == 0)00
+                                    {{ $turma->parcelas }}x<span class="lowsized">R$</span>{{ $reais_parcelas }}<span class="lowsized">,@if (number_format($centavos_parcelas) == 0)00
                                         @else
-                                            {{ number_format($centavos_parcelas) }}
+                                        {{ number_format($centavos_parcelas) }}
                                         @endif</span>
                                 </div>
                             </div>
                             <div class="row">
-                                <button class="btn-primary"
-                                    onclick="window.location.href = '{{ route('site.curso', ['slug' => $turma->curso->slug]) }}'">
+                                <button class="btn-primary" onclick="window.location.href = '{{ route('site.curso', ['slug' => $turma->curso->slug]) }}'">
                                     Inscreva-se
                                     <div class="svg">
                                         <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
@@ -376,17 +368,17 @@
                         </div>
                     </div>
                     @php
-                        $cont++;
+                    $cont++;
                     @endphp
 
                     @if ($cont == 2)
-            </div>
-            @php
+                </div>
+                @php
                 $cont = 0;
-            @endphp
-            @endif
-            @endforeach
-        </div>
+                @endphp
+                @endif
+                @endforeach
+            </div>
 
 
         </div>

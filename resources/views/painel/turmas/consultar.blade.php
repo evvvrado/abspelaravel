@@ -326,5 +326,7 @@ Turmas do Curso: {{ $curso->titulo }}
             tabela.columns.adjust().draw();
 
         });
+
+
 </script>
 @endsection
