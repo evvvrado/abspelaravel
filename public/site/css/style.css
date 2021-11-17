@@ -411,7 +411,7 @@ section.s_hero .container-fav .text .curso_online {
 section.s_hero .container-fav .text h1{
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
 }
