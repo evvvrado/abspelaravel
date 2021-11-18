@@ -2795,7 +2795,9 @@ body._minha-conta ._otherhalf ._card .row span {
         gap: 3rem;
     }
     body._minha-conta .container-fluid main ._form {
-        border-radius: 0;
+        /* border-radius: 0; */
+
+        padding: 30px;
     }
 }
 

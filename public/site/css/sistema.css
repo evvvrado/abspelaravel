@@ -286,12 +286,12 @@ section._menu .container-fav ._user ._img {
     width: 100%;
 }
 ._menuMax img {
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     margin-left: 3rem;
     border-radius: 50%;
 }
 section._mobileMenu {
-    top: 44px;
+    top: 104px;
     left: -200vw;
     height: auto;
     width: 100%;
@@ -520,6 +520,9 @@ section._minhasMatriculas ._top ._topbutton {
 section._minhasMatriculas ._top ._topbutton p {
     font-size: 1.4rem;
 }
+.changefom {
+    color: var(--orange);
+}
 section._minhasMatriculas ._top ._topbutton ._btn {
     width: 100%;
     max-width: 3rem;
@@ -575,6 +578,11 @@ section._minhasMatriculas ._matriculasList ._matricula {
     border-radius: 0.4rem;
 
     color: var(--orange2);
+}
+
+section._minhasMatriculas ._matriculasList ._matricula.disabled {
+    cursor: default;
+    opacity: 0.5;
 }
 section._minhasMatriculas ._matriculasList._expanded ._matricula:not(:first-child) {
     opacity: 0.5;
@@ -804,12 +812,13 @@ body._carrinho header .container-fav ._first ._duvidas p {
 }
 
 section.s_identificacao form label input,
-section.s_identificacao form label textarea {
+section.s_identificacao form label textarea,
+section.s_identificacao form label select {
     width: 100%;
-    border: solid 2px var(--gray13);
+    border: solid 1px #d8d8d8;
     padding-top: 0.8rem;
     padding-left: 2.7rem;
-    height: 6.2rem;
+    height: 5.2rem;
 
     font-family: "Inter";
     font-weight: bold;
@@ -1209,8 +1218,7 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._cupom ._inpu
     background-color: var(--wine11);
     max-width: 6.3rem;
 }
-body._carrinho section.s_identificacao .container-fav ._pagamento ._cupom ._input input,
-body._carrinho section.s_identificacao .container-fav ._pagamento select {
+body._carrinho section.s_identificacao .container-fav ._pagamento ._cupom ._input input {
     border: 1px solid var(--gray11);
     max-width: 31.4rem;
     padding: 1.7rem 4.2rem;
@@ -1270,14 +1278,16 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCar
     padding-top: 2.4rem;
 }
 body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCartao ._form form label span {
-    font-family: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     position: static;
 }
-body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCartao ._form form label input {
+body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCartao ._form form label input,
+body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCartao ._form form label select {
     font-size: 1.6rem;
     font-weight: 400;
-    border-radius: 0.4rem;
+    /* border-radius: 0.4rem; */
+    margin-top: 11px;
 }
 body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCartao ._form form label:nth-last-child(3),
 body._carrinho
@@ -1319,12 +1329,13 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCar
 
 @media (max-width: 1200px) {
     header main nav,
-    header main button.btn-primary {
+    header main .btn-primary {
         display: none;
     }
 
     header main button.hamburguer-menu {
-        display: inline-block;
+        display: inline-block !important;
+        min-width: 12%;
     }
     div._sidemenu {
         display: inline-block;
@@ -1338,7 +1349,7 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCar
     section._meusPedidos ._scrollMatriculas {
         overflow-x: scroll;
 
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
     section._minhasMatriculas ._matriculasList {
         width: max-content;
@@ -1456,8 +1467,11 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCar
 }
 
 @media only screen and (max-width: 600px) {
+    section._minhasMatriculas ._matriculasList._expanded {
+        flex-wrap: nowrap;
+    }
     section._minhasMatriculas ._matriculasList._expanded ._matricula {
-        max-width: 100%;
+        max-width: 30rem;
     }
     section._minhasMatriculas ._matriculasList ._matricula {
         max-width: 28rem;
@@ -1471,6 +1485,11 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCar
     }
     section._meusPedidos ._pedidosList ._pedido {
         height: auto;
+    }
+    section.s_identificacao .container-fav ._half .content ._offtitle {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     footer section.s_faleConosco,
     footer section.s_faleConosco ._text,
@@ -1488,7 +1507,9 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCar
     }
     ._menuMax {
         display: block;
-        margin-top: 44px;
+        /* margin-top: 44px; */
+        padding: 15px;
+        padding-left: 0;
         background: white;
     }
     body._carrinho header .container-fav ._first ._duvidas {

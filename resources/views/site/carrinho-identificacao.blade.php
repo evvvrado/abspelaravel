@@ -14,7 +14,7 @@
         <meta name='twitter:description' content='{{ $pagina->descricao }}'>
 
     @else
-        <title>Associação Brasileira de Sommeliers - Brasil</title>
+    <title>Associação Brasileira de Sommeliers - Pernambuco</title>
         <meta name='keywords' content=''>
         <meta name='description' content=''>
         <meta property='og:title' content='Associação Brasileira de Sommeliers - Brasil'>
@@ -76,10 +76,11 @@
 </head>
 
 
-<body class="_carrinho">
+<body class="_carrinho _tocenter">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;700&display=swap"
         rel="stylesheet" />
+
 
 
 
@@ -88,8 +89,13 @@
         <div class="container-fav">
             <div class="_first">
                 <div class="_logos">
-                    <img src="{{ asset('site/img/_logo92.png') }}" alt="" />
-                    <img src="{{ asset('site/img/_logoASI_92.png') }}" alt="" />
+                    <a href="/" class="logo-abspe">
+                        <img src="{{ asset('site/img/_logo92.png') }}" alt="Logo ABS-Pernambuco" />
+                    </a>
+    
+                    <a href="/" class="logo-asi">
+                        <img src="{{ asset('site/img/_logoASI_92.png') }}" alt="Logo ASI" />
+                    </a>
                     <div class="_carButton">
                         <img src="{{ asset('site/img/sistema/car.svg') }}" alt="" />
                     </div>
@@ -205,7 +211,7 @@
                             </div> --}}
                         </div>
 
-                        <a href="/minha-conta" class="_right">
+                        <a href="/minha-conta"  style="display: flex!important;" class="_right">
                             <div class="_icon">
                                 <img src="{{ asset('site/img/sistema/register.svg') }}" alt="" />
                             </div>
@@ -227,16 +233,16 @@
                 <p>Estamos prontos para te ajudar</p>
             </div>
             <div class="_buttons">
-                <div>
+                <div style="cursor: pointer" onclick="window.open('https://web.whatsapp.com/send?phone=8198262-2200')">
                     <img src="{{ asset('site/img/sistema/chat.svg') }}" alt="" />
                 </div>
-                <div>
+                <div style="cursor: pointer" onclick="window.open('tel:(81) 9 8262-2200')">
                     <img src="{{ asset('site/img/sistema/call.svg') }}" alt="" />
                 </div>
-                <div>
+                <div style="cursor: pointer" onclick="window.open('https://web.whatsapp.com/send?phone=8198262-2200')">
                     <img src="{{ asset('site/img/sistema/whatsappButton.svg') }}" alt="" />
                 </div>
-                <div>
+                <div style="cursor: pointer" onclick="window.open('mailto:contato@abs-pe.com.br')">
                     <img src="{{ asset('site/img/sistema/envelopButton.svg') }}" alt="" />
                 </div>
             </div>
@@ -248,8 +254,8 @@
                 <div class="_siga">
                     <p>Siga-nos</p>
                     <div class="_social">
-                        <a href="/"><img src="{{ asset('site/img/sistema/instagramLogo.svg') }}" alt="" /></a>
-                        <a href="/"><img src="{{ asset('site/img/sistema/facebookLogo.svg') }}" alt="" /></a>
+                        <a href="https://www.instagram.com/abs_pe/"><img src="{{ asset('site/img/sistema/instagramLogo.svg') }}" alt="" /></a>
+                        <a href="https://www.facebook.com/abspernambuco"><img src="{{ asset('site/img/sistema/facebookLogo.svg') }}" alt="" /></a>
                     </div>
                 </div>
 
@@ -277,14 +283,16 @@
     </footer>
 
 
+
     <section class="container-fluid _copyRight">
         <div class="container-fav">
-            <p>Copyright © ABS Brasil - Todos os direitos reservados. Todo o conteúdo do site, incluindo fotos, imagens,
+              <p>Copyright © ABS PERNAMBUCO - Todos os direitos reservados. Todo o conteúdo do site, incluindo fotos, imagens,
                 logotipos, marcas, dizeres, som, software, conjunto imagem, layout e trade dress, são de propriedade
                 exclusiva da ABS. É vedada a reprodução total ou parcial de qualquer elemento de identidade sem a
                 expressa autorização. A violação de qualquer direito mencionado implicará na responsabilização cível e
-                criminal nos termos da Lei. CNPJ: 17.190.409/0001-10
+                criminal nos termos da Lei. CNPJ: 21.957.764/0001-40
             </p>
+
 
             <p>
                 <strong>

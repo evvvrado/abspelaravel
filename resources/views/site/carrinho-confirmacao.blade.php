@@ -14,7 +14,7 @@
         <meta name='twitter:description' content='{{ $pagina->descricao }}'>
 
     @else
-        <title>Associação Brasileira de Sommeliers - Brasil</title>
+    <title>Associação Brasileira de Sommeliers - Pernambuco</title>
         <meta name='keywords' content=''>
         <meta name='description' content=''>
         <meta property='og:title' content='Associação Brasileira de Sommeliers - Brasil'>
@@ -81,15 +81,18 @@
         rel="stylesheet" />
 
 
-
-
     <!-- HEADER -->
     <header class="container-fluid">
         <div class="container-fav">
             <div class="_first">
                 <div class="_logos">
-                    <img src="{{ asset('site/img/_logo92.png') }}" alt="" />
-                    <img src="{{ asset('site/img/_logoASI_92.png') }}" alt="" />
+                    <a href="/" class="logo-abspe">
+                        <img src="{{ asset('site/img/_logo92.png') }}" alt="Logo ABS-Pernambuco" />
+                    </a>
+    
+                    <a href="/" class="logo-asi">
+                        <img src="{{ asset('site/img/_logoASI_92.png') }}" alt="Logo ASI" />
+                    </a>
                     <div class="_carButton">
                         <img src="{{ asset('site/img/sistema/car.svg') }}" alt="" />
                     </div>
@@ -102,155 +105,7 @@
                     <p>Dúvida na compra ligue - 35 992611988</p>
                 </div>
             </div>
-            {{--  <section class="_meuCarrinho">
-                <div class="_top">
-                    <div class="_title">
-                        <div class="_icon">
-                            <img src="{{ asset('site/img/sistema/car.svg') }}" alt="" />
-                            <img src="{{ asset('site/img/sistema/cancel.svg') }}" alt="" />
-                        </div>
-                        <span>Meu Carrinho</span>
-                    </div>
-                    <div class="_numberofItems">
-                        <span>2</span>
-                    </div>
-                </div>
-                <div class="_value">
-                    <p>Total</p>
-                    <div class="_svg">
-                        <img src="{{ asset('site/img/sistema/arrowright.svg') }}" alt="" />
-                    </div>
-                    <strong>R$ <span class="_total">160,00</span></strong>
-                </div>
-                <div class="_innerCar">
-                    <div class="_innerItem">
-                        <div class="_img">
-                            <img src="{{ asset('site/img/sistema/carrinhoExample.jpg') }}" alt="" />
-                        </div>
-                        <div class="_content">
-                            <h3 class="isOnline">Curso Online</h3>
-                            <h2 class="itemName">Meeting de Musculação</h2>
-                            <p class="itemExtra">Certificado de 10hs</p>
-                            <div class="itemValue">
-                                <strong>R$ <span class="_itemValue">100,00</span></strong>
-                                <div class="_controls">
-                                    <div class="itemControl cancel">
-                                        <div class="_img">
-                                            <img src="{{ asset('site/img/sistema/cancel.svg') }}" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class="itemControl more">
-                                        <div class="_img">
-                                            <img src="{{ asset('site/img/sistema/more.svg') }}" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="_innerItem">
-                        <div class="_img">
-                            <img src="{{ asset('site/img/sistema/carrinhoExample.jpg') }}" alt="" />
-                        </div>
-                        <div class="_content">
-                            <h3 class="isOnline">Curso Online</h3>
-                            <h2 class="itemName">Meeting de Musculação</h2>
-                            <p class="itemExtra">Certificado de 10hs</p>
-                            <div class="itemValue">
-                                <strong>R$ <span class="_itemValue">100,00</span></strong>
-                                <div class="_controls">
-                                    <div class="itemControl cancel">
-                                        <div class="_img">
-                                            <img src="{{ asset('site/img/sistema/cancel.svg') }}" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class="itemControl more">
-                                        <div class="_img">
-                                            <img src="{{ asset('site/img/sistema/more.svg') }}" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="_innerItem">
-                        <div class="_img">
-                            <img src="{{ asset('site/img/sistema/carrinhoExample.jpg') }}" alt="" />
-                        </div>
-                        <div class="_content">
-                            <h3 class="isOnline">Curso Online</h3>
-                            <h2 class="itemName">Meeting de Musculação</h2>
-                            <p class="itemExtra">Certificado de 10hs</p>
-                            <div class="itemValue">
-                                <strong>R$ <span class="_itemValue">100,00</span></strong>
-                                <div class="_controls">
-                                    <div class="itemControl cancel">
-                                        <div class="_img">
-                                            <img src="{{ asset('site/img/sistema/cancel.svg') }}" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class="itemControl more">
-                                        <div class="_img">
-                                            <img src="{{ asset('site/img/sistema/more.svg') }}" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="_innerItem">
-                        <div class="_img">
-                            <img src="{{ asset('site/img/sistema/carrinhoExample.jpg') }}" alt="" />
-                        </div>
-                        <div class="_content">
-                            <h3 class="isOnline">Curso Online</h3>
-                            <h2 class="itemName">Meeting de Musculação</h2>
-                            <p class="itemExtra">Certificado de 10hs</p>
-                            <div class="itemValue">
-                                <strong>R$ <span class="_itemValue">100,00</span></strong>
-                                <div class="_controls">
-                                    <div class="itemControl cancel">
-                                        <div class="_img">
-                                            <img src="{{ asset('site/img/sistema/cancel.svg') }}" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class="itemControl more">
-                                        <div class="_img">
-                                            <img src="{{ asset('site/img/sistema/more.svg') }}" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="_bottom">
-                    <div class="_subTotal _bottomSub">
-                        <div class="_title">
-                            <span>Sub Total</span>
-                        </div>
-                        <div class="_svg">
-                            <img src="{{ asset('site/img/sistema/arrowright.svg') }}" alt="" />
-                        </div>
-                        <span>R$ <span class="_subtotalValue">160,00</span></span>
-                    </div>
-                    <div class="_subDesconto _bottomSub">
-                        <span>Desconto</span>
-                        <div class="_svg">
-                            <img src="{{ asset('site/img/sistema/arrowright.svg') }}" alt="" />
-                        </div>
-                        <span><span class="_subdescontoValue">-</span></span>
-                    </div>
-                </div>
-
-                <div class="_finalTotal _bottomSub">
-                    <span>Total</span>
-                    <div class="_svg">
-                        <img src="{{ asset('site/img/sistema/arrowright.svg') }}" alt="" />
-                    </div>
-                    <strong>R$ <span class="_finaltotalValue">160,00</span> </strong>
-                </div>
-            </section>  --}}
+            @include('site.includes.carrinho')
         </div>
     </header>
     <!-- HEADER -->
@@ -358,16 +213,16 @@
                 <p>Estamos prontos para te ajudar</p>
             </div>
             <div class="_buttons">
-                <div>
+                <div style="cursor: pointer" onclick="window.open('https://web.whatsapp.com/send?phone=8198262-2200')">
                     <img src="{{ asset('site/img/sistema/chat.svg') }}" alt="" />
                 </div>
-                <div>
+                <div style="cursor: pointer" onclick="window.open('tel:(81) 9 8262-2200')">
                     <img src="{{ asset('site/img/sistema/call.svg') }}" alt="" />
                 </div>
-                <div>
+                <div style="cursor: pointer" onclick="window.open('https://web.whatsapp.com/send?phone=8198262-2200')">
                     <img src="{{ asset('site/img/sistema/whatsappButton.svg') }}" alt="" />
                 </div>
-                <div>
+                <div style="cursor: pointer" onclick="window.open('mailto:contato@abs-pe.com.br')">
                     <img src="{{ asset('site/img/sistema/envelopButton.svg') }}" alt="" />
                 </div>
             </div>
@@ -379,8 +234,8 @@
                 <div class="_siga">
                     <p>Siga-nos</p>
                     <div class="_social">
-                        <a href="/"><img src="{{ asset('site/img/sistema/instagramLogo.svg') }}" alt="" /></a>
-                        <a href="/"><img src="{{ asset('site/img/sistema/facebookLogo.svg') }}" alt="" /></a>
+                        <a href="https://www.instagram.com/abs_pe/"><img src="{{ asset('site/img/sistema/instagramLogo.svg') }}" alt="" /></a>
+                        <a href="https://www.facebook.com/abspernambuco"><img src="{{ asset('site/img/sistema/facebookLogo.svg') }}" alt="" /></a>
                     </div>
                 </div>
 
@@ -410,12 +265,13 @@
 
     <section class="container-fluid _copyRight">
         <div class="container-fav">
-            <p>Copyright © ABS Brasil - Todos os direitos reservados. Todo o conteúdo do site, incluindo fotos, imagens,
+            <p>Copyright © ABS PERNAMBUCO - Todos os direitos reservados. Todo o conteúdo do site, incluindo fotos, imagens,
                 logotipos, marcas, dizeres, som, software, conjunto imagem, layout e trade dress, são de propriedade
                 exclusiva da ABS. É vedada a reprodução total ou parcial de qualquer elemento de identidade sem a
                 expressa autorização. A violação de qualquer direito mencionado implicará na responsabilização cível e
-                criminal nos termos da Lei. CNPJ: 17.190.409/0001-10
+                criminal nos termos da Lei. CNPJ: 21.957.764/0001-40
             </p>
+
 
             <p>
                 <strong>

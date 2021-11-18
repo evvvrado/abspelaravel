@@ -394,12 +394,13 @@
 
 <section class="container-fluid _copyRight">
     <div class="container-fav">
-        <p>Copyright © ABS Brasil - Todos os direitos reservados. Todo o conteúdo do site, incluindo fotos, imagens,
-            logotipos, marcas, dizeres, som, software, conjunto imagem, layout e trade dress, são de propriedade
-            exclusiva da ABS. É vedada a reprodução total ou parcial de qualquer elemento de identidade sem a
-            expressa autorização. A violação de qualquer direito mencionado implicará na responsabilização cível e
-            criminal nos termos da Lei. CNPJ: 17.190.409/0001-10
-        </p>
+          <p>Copyright © ABS PERNAMBUCO - Todos os direitos reservados. Todo o conteúdo do site, incluindo fotos, imagens,
+                logotipos, marcas, dizeres, som, software, conjunto imagem, layout e trade dress, são de propriedade
+                exclusiva da ABS. É vedada a reprodução total ou parcial de qualquer elemento de identidade sem a
+                expressa autorização. A violação de qualquer direito mencionado implicará na responsabilização cível e
+                criminal nos termos da Lei. CNPJ: 21.957.764/0001-40
+            </p>
+
 
         <p>
             <strong>
@@ -419,7 +420,6 @@
         $("._mobileMenu").css("display", "flex");
         $("._mobileMenu").animate({
                 left: "0",
-                top: "0",
             },
             500
         );
@@ -428,7 +428,6 @@
     $("section._mobileMenu ._closeButton").click(() => {
         $("._mobileMenu").animate({
                 left: "-200vw",
-                top: "0",
             },
             500
         );

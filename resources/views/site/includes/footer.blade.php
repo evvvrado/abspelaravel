@@ -1,9 +1,6 @@
-
-
-
-    <div class="_toUp">
-        <img src="{{asset('site/img/arrow.svg')}}" alt="Seta para cima">
-    </div>
+<div class="_toUp">
+    <img src="{{asset('site/img/arrow.svg')}}" alt="Seta para cima">
+</div>
 
 
 <footer class="container-fluid">
@@ -24,13 +21,13 @@
                     <div class="svg">
                         <img src="{{asset('site/img/laptop.svg')}}" alt="">
                     </div>
-                    <span>www.abspe.com.br</span>
+                    <span>www.abs-pe.com.br</span>
                 </div>
                 <div class="email">
                     <div class="svg">
                         <img src="{{asset('site/img/phone.svg')}}" alt="">
                     </div>
-                    <span>contato@abspe.com.br</span>
+                    <span>contato@abs-pe.com.br</span>
                 </div>
             </div>
             <div class="novidades">

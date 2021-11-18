@@ -233,7 +233,7 @@ body._blog-post header main nav ul._hi li:nth-child(5) a {
     border-bottom: 3px solid var(--lightbrown);
 }
 
-header main button.btn-primary {
+header main .btn-primary {
     height: 4.4rem;
 
     padding: 1rem 5.5rem;
@@ -2929,7 +2929,7 @@ body._minha-conta ._otherhalf ._card .row span {
 
 @media (max-width: 1200px) {
     header main nav,
-    header main button.btn-primary {
+    header main .btn-primary {
         display: none;
     }
 

@@ -11,7 +11,7 @@
         <meta name='twitter:description' content='{{ $pagina->descricao }}'>
 
     @else
-        <title>Associação Brasileira de Sommeliers - Brasil</title>
+    <title>ABS PE - Associação Brasileira de Sommeliers - Pernambuco</title>
         <meta name='keywords' content=''>
         <meta name='description' content=''>
         <meta property='og:title' content='Associação Brasileira de Sommeliers - Brasil'>

@@ -25,11 +25,9 @@
 
             {{-- <button class="menu-item btn-primary">Associado</a></button> --}}
             @if (!session()->get('aluno'))
-                <button class="menu-item btn-primary"
-                    onclick="window.location.href = '{{ route('site.minha-conta') }}'">Minha conta</a></button>
+            <a href="{{ route('site.minha-conta') }}" class="menu-item btn-primary">Minha conta</a>
             @else
-                <button class="menu-item btn-primary"
-                    onclick="window.location.href = '{{ route('site.minha-area') }}'">Minha área</a></button>
+            <a href="{{ route('site.minha-area') }}" class="menu-item btn-primary">Minha area</a>
             @endif
             <button class="menu-item hamburguer-menu">
                 <img src="{{ asset('site/img/hamburguer.svg') }}" alt="" />
