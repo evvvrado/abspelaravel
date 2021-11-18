@@ -68,7 +68,7 @@ class GerencianetController extends Controller
             $res = $gerencianet->gerarCarne();
         }
 
-        dd($res);
+        // dd($res);
         if ($res["code"] == 200) {
 
             $venda = new Venda;
