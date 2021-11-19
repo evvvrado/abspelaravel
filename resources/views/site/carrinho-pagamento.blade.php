@@ -153,7 +153,7 @@
                                 <p>Digite os dados do seu cartão abaixo:</p>
                             </div>
                             <div class="_form">
-                                <div>
+                                <div style="margin-bottom: 20px;">
                                     <small style="    color: red;
                                     font-size: 20px;
                                     background: #ffffad;
@@ -161,7 +161,6 @@
                                     padding-left: 20px;
                                     padding-right: 20px;
                                     margin-bottom: 20px;
-                                    display: block;
                                     padding: 20px;">{{ session()->get('erro') }}</small>
                                 </div>
 
@@ -207,7 +206,7 @@
                                 <p>Escolha o número de parcelas desejadas:</p>
                             </div>
                             <div class="_form">
-                                <div>
+                                <div style="margin-bottom: 20px;">
                                     <small style="    color: red;
                                     font-size: 20px;
                                     background: #ffffad;
@@ -215,7 +214,6 @@
                                     padding-left: 20px;
                                     padding-right: 20px;
                                     margin-bottom: 20px;
-                                    display: block;
                                     padding: 20px;">{{ session()->get('erro') }}</small>
                                 </div>
 
