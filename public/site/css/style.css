@@ -1658,6 +1658,7 @@ body._curso-detalhes section.s_curso-conteudo .container-fav ._text h2 {
 }
 body._curso-detalhes section.s_curso-conteudo .container-fav ._text {
     color: var(--gray7);
+    padding-left: 25px;
 }
 
 body._curso-detalhes section.s_curso-conteudo .container-fav ._menu {
