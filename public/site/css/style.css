@@ -1644,7 +1644,8 @@ body._curso-detalhes section.s_curso-conteudo .container-fav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+    padding-left: 15px;
 }
 body._curso-detalhes section.s_curso-conteudo .container-fav ._text {
     width: 100%;
@@ -1688,7 +1689,18 @@ body._curso-detalhes
     justify-content: center;
     align-items: center;
     gap: 1.7rem;
+    cursor: pointer;
 }
+
+body._curso-detalhes
+    section.s_curso-conteudo
+    .container-fav
+    ._menu
+    nav
+    .nav-component:nth-child(3) img{
+        height: 3.3rem;
+    }
+
 
 body._curso-detalhes
     section.s_curso-conteudo
