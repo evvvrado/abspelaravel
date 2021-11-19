@@ -178,7 +178,7 @@
                                     </label>
                                     <label>
                                         <span>Parcelas</span>
-                                        <select name="" id="parcelas" required>
+                                        <select name="parcelas" id="parcelas" required>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>

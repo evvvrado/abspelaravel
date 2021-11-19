@@ -56,7 +56,7 @@
                                 Minha Área
                             </a>
                         </li>
-                        <li class="_active">
+                        <li>
                             <a href="/minha-area/compras">
                                 <div class="svg">
                                     <img src="{{ asset('site/img/sistema/bag.svg') }}" alt="">
@@ -64,7 +64,7 @@
                                 Meus Pedidos
                             </a>
                         </li>
-                        <li>
+                        <li class="_active">
                             <a href="/minha-area/matriculas">
                                 <div class="svg">
                                     <img src="{{ asset('site/img/sistema/page.svg') }}" alt="">
@@ -121,7 +121,7 @@
                                 Minha Área
                             </a>
                         </li>
-                        <li class="_active">
+                        <li>
                             <a href="/minha-area/compras">
                                 <div class="svg">
                                     <img src="{{ asset('site/img/sistema/bag.svg') }}" alt="">
@@ -129,7 +129,7 @@
                                 Meus Pedidos
                             </a>
                         </li>
-                        <li>
+                        <li  class="_active">
                             <a href="/minha-area/matriculas">
                                 <div class="svg">
                                     <img src="{{ asset('site/img/sistema/page.svg') }}" alt="">

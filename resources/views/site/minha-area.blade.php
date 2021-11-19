@@ -232,7 +232,7 @@
                     </div>
                     <div class="_matricula disabled">
                         <div class="_image">
-                            <img src="{{ asset('site/img/sistema/Icone (1).png') }}" alt="">
+                            <img src="{{ asset('site/img/sistema/Icone (4).png') }}" alt="">
                         </div>
                         <div class="_content">
                             <h3>Experiências</h3>

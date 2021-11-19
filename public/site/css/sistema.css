@@ -1673,14 +1673,13 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCar
 
 .detalhesdeCurso .container-fav main .list article {
     width: 100%;
-    max-width: 35.4rem;
-
+    max-width: max-content;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding-top: 5rem;
     padding-bottom: 5rem;
+    gap: 6rem;
 }
 
 .detalhesdeCurso .container-fav main .list article .date {
@@ -1694,7 +1693,7 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCar
 .detalhesdeCurso .container-fav main .list article picture {
     height: 5rem;
     width: 5rem;
-    background: #1ac6d644;
+    background: rgb(230 169 189);
 
     display: flex;
     align-items: center;
@@ -1732,7 +1731,7 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCar
     width: 100%;
     max-width: 19.5rem;
 
-    background: #20356f;
+    background: var(--wine5);
 
     color: white;
     font-weight: bold;
@@ -2238,7 +2237,7 @@ div.d_carrinho ._header span {
     font-size: 1.8rem;
     letter-spacing: 0.02em;
     font-weight: 500;
-    color: #20356f;
+    color: var(--wine5);
 }
 div.d_carrinho ._header ._close {
     cursor: pointer;
