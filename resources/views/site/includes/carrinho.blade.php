@@ -32,7 +32,7 @@
                     <strong>R$ <span class="_itemValue">{{ number_format($produto->total, 2, ',', '.') }}</span></strong>
                     <div class="_controls">
                         <div class="itemControl cancel">
-                            <div class="_img"  onclick="window.location.href = '{{ route('site.carrinho-remover', ['turma' => $produto->turma]) }}'" >
+                            <div class="_img" onclick="window.location.href = '{{ route('site.carrinho-remover', ['turma' => $produto->turma]) }}'">
                                 <img src="{{ asset('site/img/sistema/cancel.svg') }}" alt="" />
                             </div>
                         </div>
@@ -92,10 +92,9 @@
 
         margin-top: -2.5rem;
 
-        position: absolute;
+        position: fixed;
 
         z-index: 665;
-        right: 0;
         top: 0;
     }
 

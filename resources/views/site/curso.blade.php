@@ -80,9 +80,9 @@
     <!-- SECTIONS EXTRAS -->
     <section class="container-fluid s_curso-conteudo" id="conteudo">
         <div class="container-fav">
-            <div class="_menu">
+            <div class="_menu" id="menu">
                 <nav>
-                    <div onclick="window.location.href = '{{ route('site.curso', ['slug' => $curso->slug]) }}'" class="nav-component @if ($aba == 'detalhes') _active @endif">
+                    <div onclick="window.location.href = '{{ route('site.curso', ['slug' => $curso->slug]) }}#conteudo'" class="nav-component @if ($aba == 'detalhes') _active @endif">
                         <div class="img">
                             @if ($aba == 'detalhes')
                             <img src="{{ asset('site/img/active_textalign.svg') }}" alt="">
@@ -90,9 +90,9 @@
                             <img src="{{ asset('site/img/textalign.svg') }}" alt="">
                             @endif
                         </div>
-                        <a href="{{ route('site.curso', ['slug' => $curso->slug]) }}">Detalhes</a>
+                        <a href="{{ route('site.curso', ['slug' => $curso->slug]) }}#conteudo">Detalhes</a>
                     </div>
-                    <div onclick="window.location.href = '{{ route('site.curso.programacao', ['slug' => $curso->slug]) }}'" class="nav-component @if ($aba == 'programacao') _active @endif">
+                    <div onclick="window.location.href = '{{ route('site.curso.programacao', ['slug' => $curso->slug]) }}#conteudo'" class="nav-component @if ($aba == 'programacao') _active @endif">
                         <div class="img">
                             @if ($aba == 'programacao')
                             <img src="{{ asset('site/img/active_folder.svg') }}" alt="">
@@ -100,9 +100,9 @@
                             <img src="{{ asset('site/img/folder.svg') }}" alt="">
                             @endif
                         </div>
-                        <a href="{{ route('site.curso.programacao', ['slug' => $curso->slug]) }}">Programação</a>
+                        <a href="{{ route('site.curso.programacao', ['slug' => $curso->slug]) }}#conteudo">Programação</a>
                     </div>
-                    <div onclick="window.location.href = '{{ route('site.curso.instrutores', ['slug' => $curso->slug]) }}'" class="nav-component @if ($aba == 'instrutores') _active @endif">
+                    <div onclick="window.location.href = '{{ route('site.curso.instrutores', ['slug' => $curso->slug]) }}#conteudo'" class="nav-component @if ($aba == 'instrutores') _active @endif">
                         <div class="img">
                             @if ($aba == 'instrutores')
                             <img src="{{ asset('site/img/active_user.svg') }}" alt="">
@@ -110,9 +110,9 @@
                             <img src="{{ asset('site/img/iUser.svg') }}" alt="">
                             @endif
                         </div>
-                        <a href="{{ route('site.curso.instrutores', ['slug' => $curso->slug]) }}">Instrutores</a>
+                        <a href="{{ route('site.curso.instrutores', ['slug' => $curso->slug]) }}#conteudo">Instrutores</a>
                     </div>
-                    <div onclick="window.location.href = '{{ route('site.curso.local', ['slug' => $curso->slug]) }}'" class="nav-component @if ($aba == 'local') _active @endif">
+                    <div onclick="window.location.href = '{{ route('site.curso.local', ['slug' => $curso->slug]) }}#conteudo'" class="nav-component @if ($aba == 'local') _active @endif">
                         <div class="img">
                             @if ($aba == 'local')
                             <img src="{{ asset('site/img/active_pin.svg') }}" alt="">
@@ -120,11 +120,11 @@
                             <img src="{{ asset('site/img/pin.svg') }}" alt="">
                             @endif
                         </div>
-                        <a href="{{ route('site.curso.local', ['slug' => $curso->slug]) }}">Local</a>
+                        <a href="{{ route('site.curso.local', ['slug' => $curso->slug]) }}#conteudo">Local</a>
                     </div>
                 </nav>
             </div>
-            <div class="_text">
+            <div id="text" class="_text">
                 @if ($aba == 'detalhes')
                 <h2>Detalhes</h2>
                 {!! $curso->detalhes_conteudo !!}
