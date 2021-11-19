@@ -3,7 +3,7 @@
 <section class="container-fluid s_welcome">
     <div class="main container-fav">
         <div class="text">
-            <span>Seja Bem-vindo! Faça <a href="{{ route('site.minha-conta') }}">Login</a> ou
+            <span>Seja bem-vindo! Faça <a href="{{ route('site.minha-conta') }}">Login</a> ou
                 <a href="{{ route('site.minha-conta') }}">Cadastre-se</a></span>
         </div>
         <div class="content">
@@ -32,7 +32,7 @@
 <section class="container-fluid s_welcome">
     <div class="main container-fav">
         <div class="text">
-            <span>Seja Bem-vindo de volta!</span>
+            <span>Seja bem-vindo de volta!</span>
         </div>
         <div class="content">
             <div class="welcome_item">

@@ -154,7 +154,15 @@
                             </div>
                             <div class="_form">
                                 <div>
-                                    <small style="color: red;">{{ session()->get('erro') }}</small>
+                                    <small style="    color: red;
+                                    font-size: 20px;
+                                    background: #ffffad;
+                                    border-radius: 5px;
+                                    padding-left: 20px;
+                                    padding-right: 20px;
+                                    margin-bottom: 20px;
+                                    display: block;
+                                    padding: 20px;">{{ session()->get('erro') }}</small>
                                 </div>
 
                                 <form action="{{ route('site.carrinho.finalizar.credito.cielo') }}" method="POST">
@@ -200,7 +208,15 @@
                             </div>
                             <div class="_form">
                                 <div>
-                                    <small style="color: red;">{{ session()->get('erro') }}</small>
+                                    <small style="    color: red;
+                                    font-size: 20px;
+                                    background: #ffffad;
+                                    border-radius: 5px;
+                                    padding-left: 20px;
+                                    padding-right: 20px;
+                                    margin-bottom: 20px;
+                                    display: block;
+                                    padding: 20px;">{{ session()->get('erro') }}</small>
                                 </div>
 
                                 <form action="{{ route('site.carrinho.finalizar.boleto') }}" method="POST">
