@@ -36,7 +36,7 @@ class CieloController extends Controller
         // $cielo->addCreditCard($request->numero, $bandeira, $request->expiracao, $request->cvv, $request->nome, $request->parcelas);
         $cielo->addCreditCard(str_replace(" ", "", $request->numero), config("cielo.bandeiras")[$bandeira], $request->expiracao, $request->cvv, $request->nome, $request->parcelas);
         $res = $cielo->efetuar();
-        // dd($res);
+        dd($res);
         if ($res["status"] == 200) {
 
             if ($res["retorno"] == "04" || $res["retorno"] == "06") {
