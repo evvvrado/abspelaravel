@@ -156,7 +156,6 @@
                                 <div style="margin-bottom: 20px;">
                                     <small style="    color: red;
                                     font-size: 20px;
-                                    background: #ffffad;
                                     border-radius: 5px;
                                     padding-left: 20px;
                                     padding-right: 20px;
@@ -209,7 +208,6 @@
                                 <div style="margin-bottom: 20px;">
                                     <small style="    color: red;
                                     font-size: 20px;
-                                    background: #ffffad;
                                     border-radius: 5px;
                                     padding-left: 20px;
                                     padding-right: 20px;
