@@ -89,7 +89,7 @@
                             min-height: unset;
                             min-width: unset;" alt="">
                         @else
-                            <img src="{{ asset($aluno->avatar) }}" style="max-width: 100%;" alt="">
+                        <img src="{{ asset($aluno->avatar) }}" style="width: 100%; height: 100%; object-fit: cover;" alt="">
                         @endif
                     </div>
                     <div class="_text">
@@ -154,7 +154,7 @@
                             min-height: unset;
                             min-width: unset;" alt="">
                         @else
-                            <img src="{{ asset($aluno->avatar) }}" style="max-width: 100%;" alt="">
+                        <img src="{{ asset($aluno->avatar) }}" style="width: 100%; height: 100%; object-fit: cover;" alt="">
                         @endif
                     </div>
                     <div class="_text">
@@ -184,7 +184,7 @@
                         <h3>Ainda não há nenhuma matrícula</h3>
 
                     @else
-                        @foreach ($aluno->matriculas as $matricula)
+                        @foreach ($aluno->matriculas->sortByDesc("created_at")  as $matricula)
                             <div class="_matricula">
                                 <div class="_image">
                                     <img src="{{ asset($matricula->turma->curso->miniatura) }}" alt="">

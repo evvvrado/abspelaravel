@@ -92,7 +92,7 @@
                         <img src="{{ asset('site/img/_logo92.png') }}" alt="Logo ABS-Pernambuco" />
                     </a>
     
-                    <a href="/" class="logo-asi">
+                    <a href="https://abs-pe.com.br/noticia/abs-pe/association-de-la-sommellerie-internationale-asi" class="logo-asi">
                         <img src="{{ asset('site/img/_logoASI_92.png') }}" alt="Logo ASI" />
                     </a>
                     <div class="_carButton">

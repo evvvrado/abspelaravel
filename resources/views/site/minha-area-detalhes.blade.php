@@ -333,7 +333,6 @@
     </div>
 </section>
 @endif
-
 <footer class="container-fluid">
     <section class="container-fav s_faleConosco">
         <div class="_text">
@@ -342,16 +341,16 @@
             <p>Estamos prontos para te ajudar</p>
         </div>
         <div class="_buttons">
-            <div>
+            <div style="cursor: pointer" onclick="window.open('https://web.whatsapp.com/send?phone=8198262-2200')">
                 <img src="{{ asset('site/img/sistema/chat.svg') }}" alt="" />
             </div>
-            <div>
+            <div style="cursor: pointer" onclick="window.open('tel:(81) 9 8262-2200')">
                 <img src="{{ asset('site/img/sistema/call.svg') }}" alt="" />
             </div>
-            <div>
+            <div style="cursor: pointer" onclick="window.open('https://web.whatsapp.com/send?phone=8198262-2200')">
                 <img src="{{ asset('site/img/sistema/whatsappButton.svg') }}" alt="" />
             </div>
-            <div>
+            <div style="cursor: pointer" onclick="window.open('mailto:contato@abs-pe.com.br')">
                 <img src="{{ asset('site/img/sistema/envelopButton.svg') }}" alt="" />
             </div>
         </div>
@@ -363,8 +362,8 @@
             <div class="_siga">
                 <p>Siga-nos</p>
                 <div class="_social">
-                    <a href="/"><img src="{{ asset('site/img/sistema/instagramLogo.svg') }}" alt="" /></a>
-                    <a href="/"><img src="{{ asset('site/img/sistema/facebookLogo.svg') }}" alt="" /></a>
+                    <a href="https://www.instagram.com/abs_pe/"><img src="{{ asset('site/img/sistema/instagramLogo.svg') }}" alt="" /></a>
+                    <a href="https://www.facebook.com/abspernambuco"><img src="{{ asset('site/img/sistema/facebookLogo.svg') }}" alt="" /></a>
                 </div>
             </div>
 
@@ -394,27 +393,29 @@
 
 <section class="container-fluid _copyRight">
     <div class="container-fav">
-          <p>Copyright © ABS PERNAMBUCO - Todos os direitos reservados. Todo o conteúdo do site, incluindo fotos, imagens,
-                logotipos, marcas, dizeres, som, software, conjunto imagem, layout e trade dress, são de propriedade
-                exclusiva da ABS. É vedada a reprodução total ou parcial de qualquer elemento de identidade sem a
-                expressa autorização. A violação de qualquer direito mencionado implicará na responsabilização cível e
-                criminal nos termos da Lei. CNPJ: 21.957.764/0001-40
-            </p>
+        <p>Copyright © ABS PERNAMBUCO - Todos os direitos reservados. Todo o conteúdo do site, incluindo fotos, imagens,
+            logotipos, marcas, dizeres, som, software, conjunto imagem, layout e trade dress, são de propriedade
+            exclusiva da ABS. É vedada a reprodução total ou parcial de qualquer elemento de identidade sem a
+            expressa autorização. A violação de qualquer direito mencionado implicará na responsabilização cível e
+            criminal nos termos da Lei. CNPJ: 21.957.764/0001-40
+        </p>
 
 
         <p>
             <strong>
                 Desenvolvido por
-                <a href="https://7seventrends.com"" class=" _img">
+                <a href="https://7seventrends.com"" class="   _img">
                     <img src="{{ asset('site/img/_logo7seven.png') }}" style="filter: brightness(0);""  alt="">
           </a> </div></p> 
           </strong>
       </p>          
     </div>
-  </section>
+</section>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js "></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js "></script>
 <script>
     $("._menuMax").click(() => {
         $("._mobileMenu").css("display", "flex");

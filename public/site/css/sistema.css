@@ -436,7 +436,7 @@ section._meusPedidos ._pedidosList ._pedido ._info p {
     font-weight: 500;
     color: var(--wine12);
 }
-section._meusPedidos ._pedidosList ._pedido button.btn-primary {
+section._meusPedidos ._pedidosList ._pedido .btn-primary {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -452,7 +452,7 @@ section._meusPedidos ._pedidosList ._pedido button.btn-primary {
 
     font-size: 1.4rem;
 }
-section._meusPedidos._detalhes ._pedidosList ._pedido button.btn-primary {
+section._meusPedidos._detalhes ._pedidosList ._pedido .btn-primary {
     margin-bottom: 0;
     justify-content: center;
 }
@@ -584,10 +584,6 @@ section._minhasMatriculas ._matriculasList ._matricula.disabled {
     cursor: default;
     opacity: 0.5;
 }
-section._minhasMatriculas ._matriculasList._expanded ._matricula:not(:first-child) {
-    opacity: 0.5;
-    cursor: default;
-}
 section._minhasMatriculas ._matriculasList ._matricula ._image {
     height: 15.5rem;
     width: 100%;
@@ -597,7 +593,7 @@ section._minhasMatriculas ._matriculasList ._matricula ._image img {
     width: 100%;
     object-fit: cover;
 }
-section._minhasMatriculas ._matriculasList ._matricula button.btn-primary {
+section._minhasMatriculas ._matriculasList ._matricula .btn-primary {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -745,13 +741,14 @@ section._meusDados .container-fav ._left .userImg {
 
     margin-bottom: 4.1rem;
 }
+/* 
 section._meusDados .container-fav ._left .userImg img,
 section._menu .container-fav ._user ._img img {
     max-width: unset !important;
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-}
+} */
 section._menu .container-fav ._user ._img {
     overflow: hidden;
 }
@@ -1106,7 +1103,7 @@ section.s_compraRealizada .container-fav ._half ._buttons {
     /* max-width: 64.1rem; */
     justify-content: space-between;
 }
-section.s_compraRealizada .container-fav ._half ._buttons button.btn-primary {
+section.s_compraRealizada .container-fav ._half ._buttons .btn-primary {
     width: 100%;
     max-width: 29.6rem;
     height: 5.2rem;
@@ -1119,7 +1116,7 @@ section.s_compraRealizada .container-fav ._half ._buttons button.btn-primary {
 
     background: var(--orange2);
 }
-section.s_compraRealizada .container-fav ._half ._buttons button.btn-primary._secundary {
+section.s_compraRealizada .container-fav ._half ._buttons .btn-primary._secundary {
     background: var(--gray11);
     color: var(--orange2);
 }
@@ -1881,7 +1878,7 @@ header main nav {
     justify-content: center;
 
     width: 100%;
-    max-width: 95.5rem;
+    max-width: 84.5rem;
 }
 
 header main nav ul {
@@ -1904,7 +1901,7 @@ header main nav ul li a {
     padding-bottom: 4.7rem;
 }
 
-header main button.btn-primary {
+header main .btn-primary {
     height: 4.4rem;
 
     padding: 1rem 5.5rem;

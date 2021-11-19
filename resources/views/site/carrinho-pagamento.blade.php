@@ -92,7 +92,7 @@
                         <img src="{{ asset('site/img/_logo92.png') }}" alt="Logo ABS-Pernambuco" />
                     </a>
     
-                    <a href="/" class="logo-asi">
+                    <a href="https://abs-pe.com.br/noticia/abs-pe/association-de-la-sommellerie-internationale-asi" class="logo-asi">
                         <img src="{{ asset('site/img/_logoASI_92.png') }}" alt="Logo ASI" />
                     </a>
                     <div class="_carButton">
@@ -161,20 +161,20 @@
                                     @csrf
                                     <label>
                                         <span>N. Cartão</span>
-                                        <input type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}"
+                                        <input type="tel" placeholder="0000 0000 0000 0000" inputmode="numeric" pattern="[0-9\s]{13,19}"
                                             autocomplete="cc-number" name="numero" maxlength="19" />
                                     </label>
                                     <label>
                                         <span>Nome do cartão</span>
-                                        <input type="text" name="nome" />
+                                        <input type="text" name="nome" placeholder="Seu nome"/>
                                     </label>
                                     <label>
                                         <span>Validade</span>
-                                        <input type="tel" inputmode="numeric" name="expiracao" maxlength="7" />
+                                        <input type="tel" inputmode="numeric" name="expiracao" maxlength="7" placeholder="00/0000"/>
                                     </label>
                                     <label>
                                         <span>CVV</span>
-                                        <input type="tel" maxlength="3" name="cvv" />
+                                        <input type="tel" maxlength="3" name="cvv" placeholder="000" />
                                     </label>
                                     <label>
                                         <span>Parcelas</span>

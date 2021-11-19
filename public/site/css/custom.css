@@ -1648,7 +1648,7 @@ body._minha-conta {
 }
 
 body._minha-conta .container-fluid {
-    height: 100vh;
+    padding-top: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;

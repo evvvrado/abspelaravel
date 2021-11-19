@@ -89,7 +89,7 @@
                             min-height: unset;
                             min-width: unset;" alt="">
                         @else
-                            <img src="{{ asset($aluno->avatar) }}" style="max-width: 100%;" alt="">
+                        <img src="{{ asset($aluno->avatar) }}" style="width: 100%; height: 100%; object-fit: cover;" alt="">
                         @endif
                     </div>
                     <div class="_text">
@@ -154,7 +154,7 @@
                             min-height: unset;
                             min-width: unset;" alt="">
                         @else
-                            <img src="{{ asset($aluno->avatar) }}" alt="">
+                        <img src="{{ asset($aluno->avatar) }}" style="width: 100%; height: 100%; object-fit: cover;" alt="">
                         @endif
                     </div>
                     <div class="_text">
@@ -272,11 +272,11 @@
                 <div class="userImg">
                     @if (!$aluno->avatar)
                         <img src="{{ asset('site/img/sistema/userBig.svg') }}" style="max-width: 100%;
-                        min-height: unset;
-                        min-width: unset;" alt="">
-                    @else
-                        <img src="{{ asset($aluno->avatar) }}" style="max-width: 100%;" alt="">
-                    @endif
+                                min-height: unset;
+                                min-width: unset;" alt="">
+                        @else
+                        <img src="{{ asset($aluno->avatar) }}" style="width: 100%; height: 100%; object-fit: cover;" alt="">
+                        @endif
                 </div>
                 <a href="" id="select_avatar">Alterar Imagem</a>
                 <a style="display:none;     margin-left: 8.7rem;" id="ajax_loading"><img src="{{ asset('site/img/ajax-loading.gif') }}" alt=""

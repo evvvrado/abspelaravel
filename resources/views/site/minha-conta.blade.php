@@ -78,10 +78,10 @@
         <div class="container-fav">
             <div class="_top">
                 <div class="logos">
-                    <a href="/index.html">
+                    <a href="/">
                         <img src="{{ asset('site/img/_logo136.png') }}" alt="Logo ABS Pernambuco" />
                     </a>
-                    <a href="javascript: void(0)">
+                    <a href="https://abs-pe.com.br/noticia/abs-pe/association-de-la-sommellerie-internationale-asi">
                         <img src="{{ asset('site/img/_logoASI_136.png') }}" alt="Logo ASI" />
                     </a>
                 </div>
