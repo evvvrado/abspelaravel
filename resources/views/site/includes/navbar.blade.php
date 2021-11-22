@@ -53,7 +53,7 @@
         height: 70 px;
         width: 70 px;
         z-index: 999;
-        background-image: url({{ asset('site/img/logowhatsapp.png'}});
+        background-image: url(../img/logowhatsapp.png);
         background-position: center;
         background-size: 100% 100%;
         pointer-events: all;
