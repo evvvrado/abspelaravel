@@ -10,7 +10,7 @@
         </div>
     </section>
 
-     
+
 
     <!-- MENU LATERAL -->
     @include("site.includes.menu_lateral")
@@ -28,9 +28,9 @@
         <div class="container-fav">
             <h1>Fale conosco!</h1>
         </div>
-       
-      </section>
-      
+
+    </section>
+
 
     <!-- SECTIONS EXTRAS -->
     <div class="contaienr-fluid filterMenu">
@@ -127,7 +127,7 @@
                         <label>
                             <textarea name="text" id="" cols="30" rows="10" placeholder="Mensagem:"></textarea>
                         </label>
-                        <button class="btn-primary">
+                        <button class="btn-primary" onclick="sendmessage()">
                             Enviar
                             <div class="svg">
                                 <img src="{{asset('site/img/arrowlong.svg')}}" alt="">
@@ -137,7 +137,9 @@
                 </div>
             </div>
             <div class="local">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.682527679753!2d-34.9117342846195!3d-8.031631494216535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab19ab9cbc063b%3A0x86f15e42575e7623!2sRua%20Desembargador%20G%C3%B3is%20Cavalcante%2C%20316%20-%20Parnamirim%2C%20Recife%20-%20PE%2C%2052060-000!5e0!3m2!1spt-BR!2sbr!4v1632497925850!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.682527679753!2d-34.9117342846195!3d-8.031631494216535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab19ab9cbc063b%3A0x86f15e42575e7623!2sRua%20Desembargador%20G%C3%B3is%20Cavalcante%2C%20316%20-%20Parnamirim%2C%20Recife%20-%20PE%2C%2052060-000!5e0!3m2!1spt-BR!2sbr!4v1632497925850!5m2!1spt-BR!2sbr"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
@@ -146,7 +148,14 @@
     @include("site.includes.parceiros")
 
     <script>
+        function sendmessage() {
+            var nome = $('input[name = "nome"]').val();
+            var email = $('input[name = "email"]').val();
+            var cellphone = $('input[name = "telefone"]').val();
+            var message = $('textarea[name = "text"]').val();
 
+            window.open(`https://web.whatsapp.com/send?phone=5581982622200&text=Olá, sou ${nome}. ${message}. Me contate! E-mail: ${email}\nCelular: ${cellphone}`)
+        }
     </script>
 
     @include("site.includes.footer")

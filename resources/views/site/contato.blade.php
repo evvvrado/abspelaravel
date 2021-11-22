@@ -149,7 +149,7 @@
               <textarea class=".textA" name="message" id="" cols="30" rows="10"></textarea>
             </label>
 
-            <button>Enviar <img src="{{asset('site/img/arrowlong.svg')}}" alt="" /></button>
+            <button>EnvAAAAar <img src="{{asset('site/img/arrowlong.svg')}}" alt="" /></button>
           </form>
         </div>
       </div>
