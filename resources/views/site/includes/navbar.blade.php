@@ -41,3 +41,25 @@
 <div id="backdrop">
     <div class="logo"><img src="{{ asset('site/img/_logo91.png') }}" alt="Logo ABS-Brasil"></div>
 </div>
+
+<a id="whats_button" target="_plank" href="https://api.whatsapp.com/send?phone=55(11)%20%2095158-0544">
+</a>
+
+<style>
+    #whats_button {
+        position: fixed;
+        bottom: 15 px;
+        right: 15 px;
+        height: 70 px;
+        width: 70 px;
+        z-index: 999;
+        background-image: url({{ asset('site/img/logowhatsapp.png'}});
+        background-position: center;
+        background-size: 100% 100%;
+        pointer-events: all;
+        border-radius: 50%;
+        color: white;
+        border: 1 px solid white;
+        transition: 0.32s;
+    }
+</style>
