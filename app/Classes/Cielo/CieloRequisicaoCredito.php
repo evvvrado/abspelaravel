@@ -102,6 +102,5 @@ class CieloRequisicaoCredito
     public function capturar($paymentId, $valor)
     {
         $res = (new CieloEcommerce($this->merchant, $this->environment))->captureSale($paymentId, $valor, 0);
-        dd($res);
     }
 }
