@@ -41,8 +41,10 @@
                                             <i class="fas fa-bars" aria-hidden="true"></i>
                                         </a>
                                         <div class="dropdown-menu" style="margin: 0px;">
-                                            {{--  <a href="{{route('painel.estadual.editar', ['estadual' => $estadual])}}" id="" class="dropdown-item" role="button"><i class="bx bx-edit-alt pr-3"></i> Editar</a>
-                                            <a href="{{route('painel.estadual.deletar', ['estadual' => $estadual])}}" id="" class="dropdown-item" role="button"><i class="fas fa-trash-alt pr-3"></i> Excluir</a>
+                                            @if($venda->forma == 1)
+                                                <a href="{{route('painel.venda.cielo.capturar', ['venda' => $venda])}}" id="" class="dropdown-item" role="button"><i class="bx bx-edit-alt pr-3"></i> Capturar</a>
+                                            @endif
+                                            {{-- <a href="{{route('painel.estadual.deletar', ['estadual' => $estadual])}}" id="" class="dropdown-item" role="button"><i class="fas fa-trash-alt pr-3"></i> Excluir</a>
                                             <a href="{{route('painel.diretorias', ['estadual' => $estadual])}}" id="" class="dropdown-item" role="button"><i class="fas fa-user pr-3"></i> Diretoria</a>  --}}
                                         </div>
                                     </div>
