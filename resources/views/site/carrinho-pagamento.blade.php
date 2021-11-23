@@ -161,14 +161,39 @@
                             </div>
                             <div class="_form">
                                 <div style="margin-bottom: 20px;">
-                                    <small style="    color: red;
-                                    font-size: 20px;
-                                    border-radius: 5px;
-                                    padding-left: 20px;
-                                    padding-right: 20px;
-                                    margin-bottom: 20px;
-                                    padding: 20px;">{{ session()->get('erro') }}</small>
+                                    @if (session()->get('erro') )
+                                        <small>{{session()->get('erro')}}</small>
+                                    @endif
                                 </div>
+
+                                <style>
+                                    ._form small {
+                                        font-size: 20px;
+                                        border-radius: 5px;
+                                        padding-left: 20px;
+                                        padding-right: 20px;
+                                        margin-bottom: 20px;
+                                        font-weight: bold;
+                                        padding: 20px;
+                                        color: red;
+                                        background: #ffff0070;
+                                        position: relative
+                                    }
+    
+                                    ._form small::after {
+                                        height: 15px;
+                                        width: 15px;
+                                        background-color: red;
+                                        position: absolute;
+                                        left: 0;
+                                        content: "";
+                                        top: 0;
+                                        bottom: 0;
+                                        border-radius: 100%;
+                                        margin: auto 0;
+    
+                                    }
+                                </style>
 
                                 <form action="{{ route('site.carrinho.finalizar.credito.cielo') }}" method="POST">
                                     @csrf
@@ -179,7 +204,7 @@
                                     </label>
                                     <label>
                                         <span>Nome do cartão</span>
-                                        <input type="text" name="nome" placeholder="Seu nome"/>
+                                        <input type="text" name="nome" placeholder="Nome no cartão"/>
                                     </label>
                                     <label>
                                         <span>Validade</span>
