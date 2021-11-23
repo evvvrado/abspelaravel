@@ -168,7 +168,9 @@
 </section>
 </div>
 
-
+<script>
+    console.log('{!!$venda!!}')
+</script>
 <section class="container-fluid _detalhesdoPedido">
     <div class="container-fav">
         <div class="_top">
@@ -255,6 +257,11 @@
                     Ver Boleto
                 </button> --}}
             </div>
+
+            <script>
+                
+    console.log('{!!$produto!!}')
+            </script>
             @endforeach
         </div>
     </div>
