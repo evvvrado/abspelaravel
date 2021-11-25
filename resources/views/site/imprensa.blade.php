@@ -154,7 +154,7 @@
             var cellphone = $('input[name = "telefone"]').val();
             var message = $('textarea[name = "text"]').val();
 
-            window.open(`https://web.whatsapp.com/send?phone=5581982622200&text=Olá, sou ${nome}. ${message}. Me contate! E-mail: ${email}\nCelular: ${cellphone}`)
+            window.open(`https://wa.me/5581982622200/?text=Ol%C3%A1%2C+sou+${nome}+.+${message}+Me+contate%21+E-mail+${email}+%0D%0A++Celular%3A+${cellphone}`)
         }
     </script>
 

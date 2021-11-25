@@ -100,7 +100,8 @@
                                 </div>
                                 <div class="row">
                                     <div class="price">
-                                        {{ $turma->parcelas }}x<span class="lowsized">R$</span>{{ $reais_parcelas }}<span class="lowsized">,@if ($centavos_parcelas == 0)00
+                                        {{ $turma->parcelas }}x<span class="lowsized">R$</span>@if($reais_parcelas > 1000){{ number_format($reais_parcelas, 0, ",", ".")
+                                        }}@else{{$reais_parcelas}}@endif<span class="lowsized">,@if ($centavos_parcelas == 0)00
                                             @else{{number_format($centavos_parcelas * 100)}}
                                             @endif</span>
                                     </div>
@@ -352,7 +353,8 @@
                         </div>
                         <div class="row">
                             <div class="price">
-                                {{ $turma->parcelas }}x<span class="lowsized">R$</span>{{ $reais_parcelas }}<span class="lowsized">,@if (number_format($centavos_parcelas) == 0)00
+                                {{ $turma->parcelas }}x<span class="lowsized">R$</span>@if($reais_parcelas > 1000){{ number_format($reais_parcelas, 0, ",", ".") }}@else{{$reais_parcelas}}@endif<span
+                                    class="lowsized">,@if (number_format($centavos_parcelas) == 0)00
                                     @else
                                     {{ number_format($centavos_parcelas) }}
                                     @endif</span>

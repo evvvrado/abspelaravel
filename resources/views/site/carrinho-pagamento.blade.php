@@ -177,7 +177,9 @@
                                         padding: 20px;
                                         color: red;
                                         background: #ffff0070;
-                                        position: relative
+                                        position: relative;
+                                        padding-left: 40px;
+                                        display: block;
                                     }
     
                                     ._form small::after {
@@ -185,7 +187,7 @@
                                         width: 15px;
                                         background-color: red;
                                         position: absolute;
-                                        left: 0;
+                                        left: 1.5rem;
                                         content: "";
                                         top: 0;
                                         bottom: 0;
@@ -200,19 +202,19 @@
                                     <label>
                                         <span>N. Cartão</span>
                                         <input type="tel" placeholder="0000 0000 0000 0000" inputmode="numeric" pattern="[0-9\s]{13,19}"
-                                            autocomplete="cc-number" name="numero" maxlength="19" />
+                                            autocomplete="cc-number" name="numero" maxlength="19" required />
                                     </label>
                                     <label>
                                         <span>Nome do cartão</span>
-                                        <input type="text" name="nome" placeholder="Nome no cartão"/>
+                                        <input type="text" name="nome" placeholder="Nome no cartão" required/>
                                     </label>
                                     <label>
                                         <span>Validade</span>
-                                        <input type="tel" inputmode="numeric" name="expiracao" maxlength="7" placeholder="00/0000"/>
+                                        <input type="tel" inputmode="numeric" name="expiracao" maxlength="7" placeholder="00/0000" required/>
                                     </label>
                                     <label>
                                         <span>CVV</span>
-                                        <input type="tel" maxlength="3" name="cvv" placeholder="000" />
+                                        <input type="tel" maxlength="3" name="cvv" placeholder="000"  required/>
                                     </label>
                                     <label>
                                         <span>Parcelas</span>

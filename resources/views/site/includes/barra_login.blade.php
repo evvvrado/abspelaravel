@@ -29,10 +29,14 @@
 </section>
 
 @else
+@php
+
+$aluno = App\Models\Aluno::find(session()->get("aluno")["id"]);
+@endphp
 <section class="container-fluid s_welcome">
     <div class="main container-fav">
         <div class="text">
-            <span>Seja bem-vindo de volta!</span>
+            <span>Seja bem-vindo de volta, {{$aluno->nome}}!</span>
         </div>
         <div class="content">
             <div class="welcome_item">
