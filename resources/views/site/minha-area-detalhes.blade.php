@@ -224,7 +224,7 @@
                     </div>
                     <div class="_payment">R$ {{number_format($venda->total, 2 , ",", ".")}} em {{$venda->parcelas}}x
                     @if($venda->forma == 0)
-                    <br><strong>* com desconto</strong>
+                    <br><strong style="display: contents; color:black;">* com desconto</strong>
                     @endif</div>
                 </div>
             </div>
