@@ -231,7 +231,7 @@
                     </div> --}}
 
 
-                    <h2 style="padding-top: 20px">Termos de contrato</h2>
+                    <span style="display: block;padding-top: 20px; font-size: 1.8rem; font-weight: normal">Termos de contrato</span>
 
                     <a style="font-size: 14px; color: gray; float: right;" target="_blank" href="{{route('site.termos')}}">
                         Clique aqui para ler os termos
