@@ -69,6 +69,7 @@ class CieloRequisicaoCredito
         try {
             // Configure o SDK com seu merchant e o ambiente apropriado para criar a venda
             $this->sale = (new CieloEcommerce($this->merchant, $this->environment))->createSale($this->sale);
+            // dd($this->sale);
             // Com a venda criada na Cielo, já temos o ID do pagamento, TID e demais
             // dados retornados pela Cielo
             $paymentId = $this->sale->getPayment()->getPaymentId();

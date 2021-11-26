@@ -60,7 +60,7 @@ class CieloController extends Controller
                 $pagamento->status = 1;
                 $pagamento->save();
 
-                $cielo->capturar($pagamento->codigo, $pagamento->venda->total);
+                // $cielo->capturar($pagamento->codigo, $pagamento->venda->total);
 
                 $aluno = $venda->aluno_id;
                 foreach ($venda->carrinho->produtos as $produto) {
