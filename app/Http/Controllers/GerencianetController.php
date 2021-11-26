@@ -55,7 +55,7 @@ class GerencianetController extends Controller
 
         if ($parcelas == 1) {
             $gerencianet->addDesconto([
-                'type' => 'currency',
+                'type' => 'percentage',
                 'value' => $desconto
             ]);
             $gerencianet->addBoleto([
@@ -68,7 +68,7 @@ class GerencianetController extends Controller
             $res = $gerencianet->gerarCarne();
         }
 
-        // dd($res);
+        dd($res);
         if ($res["code"] == 200) {
 
             $venda = new Venda;

@@ -212,8 +212,8 @@
                                     <img src="{{ asset('site/img/sistema/dollar.svg') }} " alt="">
                                 </div>
                                 <div class="_text">
-                                    <span>Aguardando Pag.</span>
                                     @if ($pedido->forma == 0)
+                                        <span>{{config("gerencianet.status")[$pedido->boleto->status]}}</span>
                                         <p>{{ date('d.m.Y', strtotime($pedido->boleto->expira)) }}</p>
                                     @endif
                                 </div>

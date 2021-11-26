@@ -52,7 +52,16 @@
                                 <td>{{$venda->codigo}}</td>
                                 <td>{{$venda->aluno->nome}}</td>
                                 <td>{{config("pagamento.formas")[$venda->forma]}}</td>
-                                <td>{{config("pagamento.status")[$venda->status]}}</td>
+                                <td>
+                                    @if($venda->forma == 0)
+                                        {{config("gerencianet.status")[$venda->boleto->status]}}
+                                    @elseif($venda->forma == 1)
+
+                                    @else
+
+                                    @endif
+                                    
+                                </td>
                                 <td>R${{number_format($venda->total, 2, ",", ".")}}</td>
 
                             </tr>

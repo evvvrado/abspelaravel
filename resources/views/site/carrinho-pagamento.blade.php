@@ -255,7 +255,7 @@
                                         <span>Parcelas</span>
                                         <select name="parcelas" required>
                                             <option value="1">1x de
-                                                {{ $carrinho->total - ($carrinho->total * 10) / 100 }}</option>
+                                                {{ number_format($carrinho->total - ($carrinho->total * 10) / 100, 2, ",", ".") }}</option>
                                             @for($i = 2; ((($carrinho->total / $i) >
                                             $configuracao->min_valor_parcela_boleto) && $i <= $configuracao->
                                                 max_parcelas_boleto); $i++)
