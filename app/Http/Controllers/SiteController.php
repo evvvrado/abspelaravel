@@ -73,6 +73,9 @@ class SiteController extends Controller
         return view("site.contato");
     }
 
+    public function termos(){
+        return view("site.termos");
+    }
     public function minhaConta(){
         return view("site.minha-conta");
     }

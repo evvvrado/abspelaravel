@@ -1264,6 +1264,10 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._buttons .but
 
     cursor: pointer;
 }
+body._carrinho section.s_identificacao .container-fav ._pagamento ._buttons .button.invalid{
+    pointer-events: none;
+    opacity: 0.5;
+}
 body._carrinho section.s_identificacao .container-fav ._pagamento ._buttons .button p {
     margin: 0;
 }

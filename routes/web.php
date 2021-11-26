@@ -12,9 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/testes', [\App\Http\Controllers\CieloController::class, 'capturar']);
 
 Route::get('/', [\App\Http\Controllers\SiteController::class, 'index'])->name("site.index");
+Route::get('/termos', [\App\Http\Controllers\SiteController::class, 'termos'])->name("site.termos");
 Route::get('/abspe/quem-somos', [\App\Http\Controllers\SiteController::class, 'quem_somos'])->name("site.quem_somos");
 Route::get('/cursos', [\App\Http\Controllers\SiteController::class, 'cursos'])->name("site.cursos");
 Route::get('/curso/{slug}', [\App\Http\Controllers\SiteController::class, 'curso'])->name("site.curso");
@@ -86,7 +88,7 @@ Route::post('/sistema/logar', [\App\Http\Controllers\PainelController::class, 'l
 Route::post('/gerencianet/notificacao', [\App\Http\Controllers\GerencianetController::class, 'notificacao'])->name("gerencianet.notificacao")->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);;
 
 Route::middleware(['admin'])->group(function () {
-    
+
     Route::get('/sistema', [\App\Http\Controllers\PainelController::class, 'index'])->name("painel.index");
     Route::get('/sistema/indisponivel', [\App\Http\Controllers\PainelController::class, 'indisponivel'])->name("painel.indisponivel");
     Route::get('/sistema/sair', [\App\Http\Controllers\PainelController::class, 'sair'])->name("painel.sair");
@@ -156,13 +158,13 @@ Route::middleware(['admin'])->group(function () {
     Route::post('/sistema/configuracoes/seo/salvar/{pagina}', [\App\Http\Controllers\ConfiguracoesController::class, 'seo_salvar'])->name("painel.configuracoes.seo.salvar");
     Route::get('/sistema/configuracoes/meios-pagamento', [\App\Http\Controllers\ConfiguracoesController::class, 'meios_pagamento'])->name("painel.configuracoes.meios-pagamento");
     Route::post('/sistema/configuracoes/meios-pagamento/salvar', [\App\Http\Controllers\ConfiguracoesController::class, 'meios_pagamento_salvar'])->name("painel.configuracoes.meios-pagamento.salvar");
-    
+
     // ROTAS DE CURSOS
     Route::get('/sistema/cursos/api/getCurso/{curso}', [\App\Http\Controllers\CursosController::class, 'getCurso']);
     Route::get('/sistema/cursos', [\App\Http\Controllers\CursosController::class, 'consultar'])->name("painel.cursos");
     Route::get('/sistema/curso/ativo/{curso}', [\App\Http\Controllers\CursosController::class, 'ativo'])->name("painel.curso.ativo");
     Route::post('/sistema/cursos/cadastrar', [\App\Http\Controllers\CursosController::class, 'cadastrar'])->name("painel.curso.cadastrar");
-    Route::get('/includes/curso/formulario', function(){
+    Route::get('/includes/curso/formulario', function () {
         return view("painel.cursos.formulario");
     });
 
@@ -176,14 +178,14 @@ Route::middleware(['admin'])->group(function () {
     Route::post('/sistema/turma/conteudo/{conteudo}/salvar', [\App\Http\Controllers\TurmasController::class, 'salvar_conteudo'])->name("painel.turma.conteudo.salvar");
     Route::get('/sistema/turma/conteudo/{conteudo}/deletar', [\App\Http\Controllers\TurmasController::class, 'deletar_conteudo'])->name("painel.turma.conteudo.deletar");
     Route::get('/sistema/turma/inscricao/{turma}', [\App\Http\Controllers\TurmasController::class, 'inscricao'])->name("painel.turma.inscricao");
-    Route::get('/includes/turma/formulario', function(){
+    Route::get('/includes/turma/formulario', function () {
         return view("painel.turmas.formulario");
     });
 
     //ROTAS DE VENDAS
     Route::get('/sistema/vendas', [\App\Http\Controllers\PagamentosController::class, 'vendas'])->name("painel.vendas");
     Route::get('/sistema/venda/cielo/capturar/{venda}', [\App\Http\Controllers\CieloController::class, 'capturar'])->name("painel.venda.cielo.capturar");
-    
+
     //ROTAS DE ALUNOS
     Route::get('/sistema/alunos', [\App\Http\Controllers\AlunosController::class, 'consultar'])->name("painel.alunos");
 
@@ -214,13 +216,13 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/sistema/app/rede/remover/{elemento}', [\App\Http\Controllers\AppController::class, 'remover_rede'])->name("painel.app.rede.remover");
 
     // ROTAS DE INCLUDES
-    Route::get('/includes/loading', function(){
+    Route::get('/includes/loading', function () {
         return view("painel.includes.loading");
     });
 
-    
-    
-    Route::get('/teste', function(){
+
+
+    Route::get('/teste', function () {
         return view("site.teste");
     });
     Route::get('/sistema/logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index')->name("painel.logs");
