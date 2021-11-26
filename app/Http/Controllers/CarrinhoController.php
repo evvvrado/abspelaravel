@@ -36,6 +36,10 @@ class CarrinhoController extends Controller
                 $carrinho = Carrinho::find(session()->get("carrinho"));
             }
 
+            if($carrinho->produtos->where("turma_id", $turma->id)){
+                return redirect()->route("site.carrinho-efetuar");
+            }
+
             $produto = new CarrinhoProduto;
             $produto->carrinho_id = $carrinho->id;
             $produto->turma_id = $turma->id;
