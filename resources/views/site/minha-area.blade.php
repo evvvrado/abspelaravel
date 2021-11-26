@@ -110,7 +110,7 @@
 
         </section>
         <div class="_menuMax">
-            <img src="{{ asset('site/img/arrowright.svg') }}" alt="">
+            <img src="{{ asset('site/img/hamburguerCOLOR.svg') }}" alt="">
         </div>
         <section class="container-fluid _menu _mobileMenu">
             <div class="_closeButton">
@@ -192,7 +192,7 @@
                         </div>
                         <div class="_content">
                             <h3>Cursos</h3>
-                            <p>Nenhuma Matrícula</p>
+                            <p>{{count($aluno->matriculas->where('modalidade', 0))}} Matrículas</p>
                             <button class="btn-primary" onclick="window.location.href = '/minha-area/matriculas'">
                                 + VER CURSOS
                                 <div class="_svg">
@@ -208,9 +208,9 @@
                         </div>
                         <div class="_content">
                             <h3>Eventos</h3>
-                            <p>Nenhuma Inscrição</p>
+                            <p>{{count($aluno->matriculas->where('modalidade', 1))}} Inscrições</p>
                             <button class="btn-primary" style="background-color: orange;"
-                                onclick="window.location.href = '/minha-area/compras'">
+                                onclick="window.location.href = '/minha-area/matriculas'">
                                 + VER EVENTOS
                                 <div class="_svg">
                                     <img src="{{ asset('site/img/sistema/buttonArrowRight.svg') }}" alt="">
