@@ -1300,6 +1300,13 @@ section._meusPedidos ._pedidosList ._pedido._approved ._status ._icon img {
 section._meusPedidos ._pedidosList ._pedido._approved ._status::before {
     background-color: #00ff00;
 }
+section._meusPedidos ._pedidosList ._pedido._approved .btn-primary{
+    background-color: #00a800;
+
+}
+section._meusPedidos ._pedidosList ._pedido._approved h3{
+    color: #00a800;
+}
 
 body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCartao ._form form label input,
 body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCartao ._form form label select {
