@@ -116,7 +116,11 @@
                 <div class="_top">
 
                     <picture><img src="{{ asset('site/img/sistema/approved2.svg')}}" alt=""></picture>
-                    <h2 style="color: green;">Sua compra foi realizada com sucesso! Aguardando o pagamento.</h2>
+                    @if ($venda->forma == 0 || $venda->forma == 2)
+                        <h2 style="color: green;">Sua compra foi realizada com sucesso! Aguardando o pagamento.</h2>
+                    @else
+                        <h2 style="color: green;">Sua compra foi realizada com sucesso!</h2>
+                    @endif
                 </div>
                 <div class="_title">
                     <h2>Pedido - {{ $venda->codigo }}</h2>
