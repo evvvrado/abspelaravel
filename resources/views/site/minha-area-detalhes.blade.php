@@ -222,7 +222,7 @@
                         <p>Carnê<br /></p>
                         @endif
                     </div>
-                    <div class="_payment">R$ {{number_format($venda->total, 2 , ",", ".")}} em {{$venda->parcelas}}x</div>
+                    <div class="_payment">R$ {{number_format($venda->total, 2 , ",", ".")}} em {{$venda->parcelas}}x <br> * Com desconto</div>
                 </div>
             </div>
         </div>

@@ -185,7 +185,16 @@
                     <h3>Ainda não há nenhum pedido</h3>
                 @else
                     @foreach ($aluno->pedidos->sortByDesc("created_at")  as $pedido)
-                        <div class="_pedido">
+                        <div class="_pedido
+                        @if ($pedido->forma == 0)
+                        
+                            @if (config('gerencianet.status')[$pedido->boleto->status] === 'Pagamento Realizado')
+                            _approved               
+                            @endif
+
+                            
+
+                        @endif">
                             <h3>N.{{ $pedido->codigo }}</h3>
                             <div class="_info">
                                 <div class="data">
@@ -214,7 +223,7 @@
                                 <div class="_text">
                                     @if ($pedido->forma == 0)
                                         <span>{{config("gerencianet.status")[$pedido->boleto->status]}}</span>
-                                        <p>{{ date('d.m.Y', strtotime($pedido->boleto->expira)) }}</p>
+                                        {{-- <p>{{ date('d.m.Y', strtotime($pedido->boleto->expira)) }}</p> --}}
                                     @endif
                                 </div>
                             </div>

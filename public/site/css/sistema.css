@@ -460,12 +460,17 @@ section._meusPedidos ._pedidosList ._pedido ._status {
     padding-top: 2.2rem;
     display: flex;
     gap: 1.2rem;
+    
+    align-items: center;
+    justify-content: unset;
+
 }
 section._meusPedidos ._pedidosList ._pedido ._status::before {
     content: "";
     position: absolute;
     height: 0.1rem;
     width: 100%;
+    top: 75%;
     left: 0;
     margin-top: -2.5rem;
     background-color: var(--gray11);
@@ -1486,6 +1491,12 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCar
     }
     section._meusPedidos ._pedidosList ._pedido {
         height: auto;
+    }
+    section._meusPedidos ._pedidosList ._pedido._approved{
+        border-color: green;
+    }
+    section._meusPedidos ._pedidosList ._pedido._approved ._status ._icon{
+        background: green;
     }
     section.s_identificacao .container-fav ._half .content ._offtitle {
         flex-direction: column;
