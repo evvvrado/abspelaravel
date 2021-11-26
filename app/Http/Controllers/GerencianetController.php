@@ -71,6 +71,7 @@ class GerencianetController extends Controller
         // dd($res);
         if ($res["code"] == 200) {
 
+            $desconto = $desconto / 100;
             $venda = new Venda;
             $venda->aluno_id = $aluno->id;
             $venda->carrinho_id = $carrinho->id;
