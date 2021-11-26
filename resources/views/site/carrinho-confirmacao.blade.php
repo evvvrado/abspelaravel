@@ -114,29 +114,9 @@
         <div class="container-fav">
             <div class="_half">
                 <div class="_top">
-                    <div class="_title _active">
-                        <div class="_img">
-                            <img src="https://abs-pe.com.br/site/img/sistema/doorData.svg" alt="">
-                        </div>
-                        <h2><a href="/">Home</a></h2>
-                    </div><div class="arrow _title _active">
-                        <img src="https://abs-pe.com.br/site/img/sistema/loadingArrow.svg" alt="">
-                    </div><div class="_title _active">
-                        <div class="_img">
-                            <img src="https://abs-pe.com.br/site/img/sistema/personIdentificacao.svg" alt="">
-                        </div>
-                        <h2><a href="https://abs-pe.com.br/carrinho/identificacao">Identificação</a></h2>
-                    </div>
-                    
 
-                    <div class="arrow _title _active">
-                        <img src="https://abs-pe.com.br/site/img/sistema/loadingArrow.svg" alt="">
-                    </div><div class="_title _active">
-                        <div class="_img">
-                            <img src="https://abs-pe.com.br/site/img/sistema/card.svg" alt="">
-                        </div>
-                        <h2>Pagamento</h2>
-                    </div>
+                    <picture><img src="{{ asset('site/img/sistema/approved2.svg')}}" alt=""></picture>
+                    <h2 style="color: green;">Sua compra foi aprovada!</h2>
                 </div>
                 <div class="_title">
                     <h2>Pedido - {{ $venda->codigo }}</h2>

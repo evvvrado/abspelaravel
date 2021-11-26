@@ -229,13 +229,16 @@
                             <p>- R$ 20 aplicado na sua compra</p>
                         </div>
                     </div> --}}
+
+
+                 
                     <div class="_choose">
                         <div class="_title">
                             <span>Escolha a forma de pagamento</span>
                             <p>Selecione qual opçao deseja realizar o pagamento</p>
                         </div>
                         <div class="_buttons">
-                            <div class="bolet button"
+                            <div class="bolet button invalid"
                                 onclick="window.location.href = '{{ route('site.carrinho.pagamento.boleto') }}'">
                                 <div class="_icon">
                                     <img src="{{ asset('site/img/sistema/boleto.svg') }}" alt="" />
@@ -246,7 +249,7 @@
                                 </div>
                             </div>
 
-                            <div class="creditCard button"
+                            <div class="creditCard button invalid"
                                 onclick="window.location.href = '{{ route('site.carrinho.pagamento.cartao') }}'">
                                 <div class="_icon">
                                     <img src="{{ asset('site/img/sistema/creditcard.svg') }}" alt="" />
@@ -258,6 +261,21 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <span style="margin-top: 15px; border-top: 1px solid var(--gray11); display: block;padding-top: 20px; font-size: 1.8rem; font-weight: normal">Termos de contrato</span>
+
+                    <a style="font-size: 14px; color: gray; float: right;" target="_blank" href="{{route('site.termos')}}">
+                        Clique aqui para ler os termos
+                    </a>
+
+
+                    <p style="color: gray; display: flex; align-items:center; justify-content: flex-start; gap: 12px;"> 
+                         <input type="checkbox" name="termos"> 
+                         Li e aceito os termos de contrato. 
+                    
+                    </p>
+
                 </div>
             </div>
         </div>
@@ -372,6 +390,11 @@
                 400
             );
         });
+        
+$('input[name = "termos"]').change(()=> {
+$('.bolet.button').toggleClass('invalid');
+    $('.creditCard.button').toggleClass('invalid');
+})
     </script>
   </body>
 </html>

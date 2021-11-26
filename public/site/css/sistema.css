@@ -460,12 +460,16 @@ section._meusPedidos ._pedidosList ._pedido ._status {
     padding-top: 2.2rem;
     display: flex;
     gap: 1.2rem;
+
+    align-items: center;
+    justify-content: unset;
 }
 section._meusPedidos ._pedidosList ._pedido ._status::before {
     content: "";
     position: absolute;
     height: 0.1rem;
     width: 100%;
+    top: 75%;
     left: 0;
     margin-top: -2.5rem;
     background-color: var(--gray11);
@@ -1264,6 +1268,10 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._buttons .but
 
     cursor: pointer;
 }
+body._carrinho section.s_identificacao .container-fav ._pagamento ._buttons .button.invalid {
+    pointer-events: none;
+    opacity: 0.5;
+}
 body._carrinho section.s_identificacao .container-fav ._pagamento ._buttons .button p {
     margin: 0;
 }
@@ -1279,6 +1287,29 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCar
     font-weight: 400;
     position: static;
 }
+
+section._meusPedidos ._pedidosList ._pedido._approved {
+    border-color: #00ff00;
+}
+section._meusPedidos ._pedidosList ._pedido._approved ._status ._icon {
+    background: #0080004d;
+}
+section._meusPedidos ._pedidosList ._pedido._approved ._status ._icon img {
+    filter: saturate(0) brightness(0) invert(1);
+}
+section._meusPedidos ._pedidosList ._pedido._approved ._status::before {
+    background-color: #00ff00;
+}
+/* 
+section._meusPedidos ._pedidosList ._pedido._approved .btn-primary{
+    background-color: #00a800;
+
+} */
+
+section._meusPedidos ._pedidosList ._pedido._approved h3 {
+    color: #00a800;
+}
+
 body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCartao ._form form label input,
 body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCartao ._form form label select {
     font-size: 1.6rem;
