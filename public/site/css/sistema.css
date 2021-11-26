@@ -1305,7 +1305,8 @@ section._meusPedidos ._pedidosList ._pedido._approved .btn-primary{
     background-color: #00a800;
 
 } */
-section._meusPedidos ._pedidosList ._pedido._approved h3{
+
+section._meusPedidos ._pedidosList ._pedido._approved h3 {
     color: #00a800;
 }
 

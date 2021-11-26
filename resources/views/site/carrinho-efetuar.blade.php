@@ -231,19 +231,7 @@
                     </div> --}}
 
 
-                    <span style="display: block;padding-top: 20px; font-size: 1.8rem; font-weight: normal">Termos de contrato</span>
-
-                    <a style="font-size: 14px; color: gray; float: right;" target="_blank" href="{{route('site.termos')}}">
-                        Clique aqui para ler os termos
-                    </a>
-
-
-                    <p style="color: gray; display: flex; align-items:center; justify-content: flex-start; gap: 12px;"> 
-                         <input type="checkbox" name="termos"> 
-                         Li e aceito os termos de contrato. 
-                    
-                    </p>
-
+                 
                     <div class="_choose">
                         <div class="_title">
                             <span>Escolha a forma de pagamento</span>
@@ -273,6 +261,21 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <span style="margin-top: 15px; border-top: 1px solid var(--gray11); display: block;padding-top: 20px; font-size: 1.8rem; font-weight: normal">Termos de contrato</span>
+
+                    <a style="font-size: 14px; color: gray; float: right;" target="_blank" href="{{route('site.termos')}}">
+                        Clique aqui para ler os termos
+                    </a>
+
+
+                    <p style="color: gray; display: flex; align-items:center; justify-content: flex-start; gap: 12px;"> 
+                         <input type="checkbox" name="termos"> 
+                         Li e aceito os termos de contrato. 
+                    
+                    </p>
+
                 </div>
             </div>
         </div>
