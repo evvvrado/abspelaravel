@@ -65,7 +65,7 @@
             <div class="_svg">
                 <img src="{{ asset('site/img/sistema/arrowright.svg') }}" alt="" />
             </div>
-            <span>R$ <span class="_subtotalValue">{{ number_format($venda->total, 2, ',', '.') }}</span></span>
+            <span>R$ <span class="_subtotalValue">{{ number_format($carrinho->total - ($carrinho->total * 10 / 100), 2, ',', '.') }}</span></span>
         </div>
         {{-- <div class="_subDesconto _bottomSub">
             <span>Desconto</span>
