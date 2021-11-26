@@ -51,6 +51,7 @@ class CieloRequisicaoCredito
     public function addPayment($valor)
     {
         $this->payment = $this->sale->payment(intval($valor * 100));
+        dd($this->payment);
     }
 
     public function addCreditCard($numero, $bandeira, $expiracao, $cvv, $nome, $parcelas)
