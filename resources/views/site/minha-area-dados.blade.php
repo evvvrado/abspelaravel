@@ -376,7 +376,7 @@
         </div>
     </section>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.11.2/jquery.mask.min.js" integrity="sha512-Y/GIYsd+LaQm6bGysIClyez2HGCIN1yrs94wUrHoRAD5RSURkqqVQEU6mM51O90hqS80ABFTGtiDpSXd2O05nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js "></script>
     <script>
         $(document).ready(function() {
@@ -436,6 +436,20 @@
                 backdrop.visivel = false;
             },
         };
+
+
+
+            // MASCARAS PARA OS FORMULARIOS
+        $(document).ready(function () {
+            $('form label input[name = "cpf"]').mask("000.000.000-00", {
+                reverse: true,
+            });
+            $('form label input[name = "telefone"]').mask("(00) 00000-0000");
+            $('form label input[name = "expiracao"]').mask("00/0000");
+            $('form label input[name= "numero"]').mask("0000 0000 0000 0000");
+        });
+
+
 
         backdrop.esconde();
     </script>
