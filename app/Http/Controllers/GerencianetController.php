@@ -75,7 +75,7 @@ class GerencianetController extends Controller
             $venda->aluno_id = $aluno->id;
             $venda->carrinho_id = $carrinho->id;
             $venda->codigo = date("Ymd") . str_pad($carrinho->id, 8, "0", STR_PAD_LEFT);
-            $venda->total = $carrinho->total - $desconto;
+            $venda->total = $carrinho->total - ($carrinho->total * $desconto / 100);
             $venda->status = 0;
             $venda->gateway = 0;
             $venda->parcelas = $parcelas;
