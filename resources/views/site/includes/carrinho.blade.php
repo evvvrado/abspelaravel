@@ -47,15 +47,25 @@
         </div>
         @endforeach
     </div>
+
+    <div class="_finalTotal _bottomSub">
+        <span>Total</span>
+        <div class="_svg">
+            <img src="{{ asset('site/img/sistema/arrowright.svg') }}" alt="" />
+        </div>
+        <strong>R$ <span class="_finaltotalValue">{{ number_format($carrinho->total, 2, ',', '.') }}</span> </strong>
+    </div>
+
+
     <div class="_bottom">
         <div class="_subTotal _bottomSub">
             <div class="_title">
-                <span>Sub Total</span>
+                <span>No boleto</span>
             </div>
             <div class="_svg">
                 <img src="{{ asset('site/img/sistema/arrowright.svg') }}" alt="" />
             </div>
-            <span>R$ <span class="_subtotalValue">{{ number_format($carrinho->total, 2, ',', '.') }}</span></span>
+            <span>R$ <span class="_subtotalValue">{{ number_format($venda->total, 2, ',', '.') }}</span></span>
         </div>
         {{-- <div class="_subDesconto _bottomSub">
             <span>Desconto</span>
@@ -66,13 +76,6 @@
         </div> --}}
     </div>
 
-    <div class="_finalTotal _bottomSub">
-        <span>Total</span>
-        <div class="_svg">
-            <img src="{{ asset('site/img/sistema/arrowright.svg') }}" alt="" />
-        </div>
-        <strong>R$ <span class="_finaltotalValue">{{ number_format($carrinho->total, 2, ',', '.') }}</span> </strong>
-    </div>
 </section>
 
 
@@ -262,12 +265,15 @@
 
     section._meuCarrinho ._bottom {
         width: 100%;
-        padding-top: 3.5rem;
+        padding-top: 2rem;
 
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 2.8rem;
+
+
+        padding-bottom: 1.7rem;
     }
 
     section._meuCarrinho ._bottom span,
@@ -296,7 +302,7 @@
         background-color: var(--gray19);
         width: 100%;
         max-width: 100%;
-        margin-top: 1.7rem;
+        /* margin-top: 1.7rem; */
         padding: 2.1rem 2.4rem;
     }
 
