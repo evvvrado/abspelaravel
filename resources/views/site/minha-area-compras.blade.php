@@ -227,7 +227,7 @@
                                         <span>Pagamento Realizado</span>     
 
                                     @elseif($pedido->forma == 2)
-                                        <span>Pagamento em processo</span>         
+                                        <span>Verificar parcelas</span>         
                                     @endif
                                 </div>
                             </div>
