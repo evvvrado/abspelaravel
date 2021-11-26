@@ -288,7 +288,7 @@ section._menu .container-fav ._user ._img {
 ._menuMax img {
     /* margin-top: 3rem; */
     margin-left: 3rem;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 section._mobileMenu {
     top: 104px;
