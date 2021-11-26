@@ -223,8 +223,11 @@
                                         <span>{{config("gerencianet.status")[$pedido->boleto->status]}}</span>
                                         {{-- <p>{{ date('d.m.Y', strtotime($pedido->boleto->expira)) }}</p> --}}
                                         
-                                    @elseif($pedido->forma== 1)
-                                        <span>Pagamento Realizado</span>           
+                                    @elseif($pedido->forma == 1)
+                                        <span>Pagamento Realizado</span>     
+
+                                    @elseif($pedido->forma == 2)
+                                        <span>Pagamento em processo</span>         
                                     @endif
                                 </div>
                             </div>
@@ -397,7 +400,7 @@
 
     <section class="container-fluid _copyRight">
         <div class="container-fav">
-            <p>Copyright © ABS PERNAMBUCO - Todos os direitos reservados. Todo o conteúdo do site, incluindo fotos, imagens,
+            <p>Copyright © ABS-PERNAMBUCO - Todos os direitos reservados. Todo o conteúdo do site, incluindo fotos, imagens,
                 logotipos, marcas, dizeres, som, software, conjunto imagem, layout e trade dress, são de propriedade
                 exclusiva da ABS. É vedada a reprodução total ou parcial de qualquer elemento de identidade sem a
                 expressa autorização. A violação de qualquer direito mencionado implicará na responsabilização cível e

@@ -116,7 +116,7 @@
                 <div class="_top">
 
                     <picture><img src="{{ asset('site/img/sistema/approved2.svg')}}" alt=""></picture>
-                    <h2 style="color: green;">Sua compra foi aprovada!</h2>
+                    <h2 style="color: green;">Sua compra foi realizada com sucesso! Aguardando o pagamento.</h2>
                 </div>
                 <div class="_title">
                     <h2>Pedido - {{ $venda->codigo }}</h2>
@@ -256,7 +256,7 @@
 
     <section class="container-fluid _copyRight">
         <div class="container-fav">
-            <p>Copyright © ABS PERNAMBUCO - Todos os direitos reservados. Todo o conteúdo do site, incluindo fotos, imagens,
+            <p>Copyright © ABS-PERNAMBUCO - Todos os direitos reservados. Todo o conteúdo do site, incluindo fotos, imagens,
                 logotipos, marcas, dizeres, som, software, conjunto imagem, layout e trade dress, são de propriedade
                 exclusiva da ABS. É vedada a reprodução total ou parcial de qualquer elemento de identidade sem a
                 expressa autorização. A violação de qualquer direito mencionado implicará na responsabilização cível e

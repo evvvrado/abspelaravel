@@ -340,7 +340,7 @@
 
     <section class="container-fluid _copyRight">
         <div class="container-fav">
-            <p>Copyright © ABS PERNAMBUCO - Todos os direitos reservados. Todo o conteúdo do site, incluindo fotos, imagens,
+            <p>Copyright © ABS-PERNAMBUCO - Todos os direitos reservados. Todo o conteúdo do site, incluindo fotos, imagens,
                 logotipos, marcas, dizeres, som, software, conjunto imagem, layout e trade dress, são de propriedade
                 exclusiva da ABS. É vedada a reprodução total ou parcial de qualquer elemento de identidade sem a
                 expressa autorização. A violação de qualquer direito mencionado implicará na responsabilização cível e

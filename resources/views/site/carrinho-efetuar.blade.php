@@ -263,7 +263,7 @@
                     </div>
 
 
-                    <span style="margin-top: 15px; border-top: 1px solid var(--gray11); display: block;padding-top: 20px; font-size: 1.8rem; font-weight: normal">Termos de contrato</span>
+                    <span style="margin-top: 15px; display: block;padding-top: 20px; font-size: 1.8rem; font-weight: normal">Termos de contrato</span>
 
                     <a style="font-size: 14px; color: gray; float: right;" target="_blank" href="{{route('site.termos')}}">
                         Clique aqui para ler os termos
@@ -342,7 +342,7 @@
 
     <section class="container-fluid _copyRight">
         <div class="container-fav">
-            <p>Copyright © ABS PERNAMBUCO - Todos os direitos reservados. Todo o conteúdo do site, incluindo fotos, imagens,
+            <p>Copyright © ABS-PERNAMBUCO - Todos os direitos reservados. Todo o conteúdo do site, incluindo fotos, imagens,
                 logotipos, marcas, dizeres, som, software, conjunto imagem, layout e trade dress, são de propriedade
                 exclusiva da ABS. É vedada a reprodução total ou parcial de qualquer elemento de identidade sem a
                 expressa autorização. A violação de qualquer direito mencionado implicará na responsabilização cível e

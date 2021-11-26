@@ -91,7 +91,7 @@
                             <img src="{{ asset('site/img/textalign.svg') }}" alt="">
                             @endif
                         </div>
-                        <a href="{{ route('site.curso', ['slug' => $curso->slug]) }}#conteudo">Detalhes</a>
+                        <a href="{{ route('site.curso', ['slug' => $curso->slug]) }}#conteudo">Descrição</a>
                     </div>
                     <div onclick="window.location.href = '{{ route('site.curso.programacao', ['slug' => $curso->slug]) }}#conteudo'" class="nav-component @if ($aba == 'programacao') _active @endif">
                         <div class="img">
@@ -127,7 +127,7 @@
             </div>
             <div id="text" class="_text">
                 @if ($aba == 'detalhes')
-                <h2>Detalhes</h2>
+                <h2>Descrição</h2>
                 {!! $curso->detalhes_conteudo !!}
                 @elseif($aba == 'programacao')
                 <h2>Programação</h2>
