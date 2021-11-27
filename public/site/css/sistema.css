@@ -288,6 +288,7 @@ section._menu .container-fav ._user ._img {
 ._menuMax img {
     /* margin-top: 3rem; */
     margin-left: 3rem;
+    height: 2.4rem;
     /* border-radius: 50%; */
 }
 section._mobileMenu {
@@ -1941,6 +1942,9 @@ header main .btn-primary {
 
 header main button.hamburguer-menu {
     display: none;
+}
+header main button.hamburguer-menu img {
+    height: 2.4rem;
 }
 
 @media (max-width: 720px) {

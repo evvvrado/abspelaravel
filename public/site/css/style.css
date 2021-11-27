@@ -243,6 +243,7 @@ header main .btn-primary {
 
 header main button.hamburguer-menu {
     display: none;
+    height: 2.4rem;
 }
 div._sidemenu {
     display: none;

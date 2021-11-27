@@ -15,6 +15,16 @@
     <!-- BARRA SUPERIOR DE LOGIN E HEADER-->
 
 
+    <!-- SECTION HERO -->
+    <section class="container-fluid s_hero">
+        <div class="container-fav">
+            <h1>Diretoria</h1>
+        </div>
+
+    </section>
+    <!-- SECTION HERO -->
+
+
     <!-- SECTIONS EXTRAS -->
     <section class="container-fluid s_quem-somos _diretoria" id="quem-somos">
         <div class="container-fav">
