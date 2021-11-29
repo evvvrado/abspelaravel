@@ -44,7 +44,7 @@ Listagem de Cursos
                             <th style="width: 30px;"></th>
                             <th>Título, Turmas</th>
                             <th style="text-align: left; width: 150px;">Valor</th>
-                            <th style="width: 30px;">Ativo</th>
+                            <th style="width: 30px;">Status</th>
                         </tr>
                     </thead>
 
@@ -81,10 +81,10 @@ Listagem de Cursos
                             </td>
 
                             <td>
-                                @if ($curso->turmas->count() > 0)
+                                @if ($curso->turmas->where("ativo", true)->count() > 0)
                                 R$ {{ number_format($curso->turmas->where("ativo", true)->sortBy("data")->first()->preco, 2, ",", ".") }}
                                 @else
-                                Sem turmas registradas
+                                Sem turmas ativadas
                                 @endif
                             </td>
 
