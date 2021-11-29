@@ -44,8 +44,7 @@
                                             @if($venda->forma == 1)
                                                 <a href="{{route('painel.venda.cielo.capturar', ['venda' => $venda])}}" id="" class="dropdown-item" role="button"><i class="bx bx-edit-alt pr-3"></i> Capturar</a>
                                             @endif
-                                            {{-- <a href="{{route('painel.estadual.deletar', ['estadual' => $estadual])}}" id="" class="dropdown-item" role="button"><i class="fas fa-trash-alt pr-3"></i> Excluir</a>
-                                            <a href="{{route('painel.diretorias', ['estadual' => $estadual])}}" id="" class="dropdown-item" role="button"><i class="fas fa-user pr-3"></i> Diretoria</a>  --}}
+                                            <a href="{{route('painel.venda', ['venda' => $venda])}}" id="" class="dropdown-item" role="button"><i class="fas fa-search pr-3"></i> Visualizar</a>
                                         </div>
                                     </div>
                                 </td>
@@ -56,9 +55,9 @@
                                     @if($venda->forma == 0)
                                         {{config("gerencianet.status")[$venda->boleto->status]}}
                                     @elseif($venda->forma == 1)
-
+                                        {{config("cielo.status")[$venda->cartao->status]}}
                                     @else
-
+                                        Consultar Parcelas
                                     @endif
                                     
                                 </td>

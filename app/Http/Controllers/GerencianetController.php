@@ -137,6 +137,34 @@ class GerencianetController extends Controller
         }
     }
 
+    public function alterar_vencimento(PagamentoBoleto $boleto, Request $request){
+        // dd($request->all());
+        $gerencianet = new GerencianetRequisicaoBoleto();
+        $res = $gerencianet->alterarVencimento($boleto->charge_id, $request->data);
+        if($res == 200){
+            $boleto->expira = $request->data;
+            $boleto->save();
+            toastr()->success("Data alterada com sucesso!");
+            return redirect()->back();
+        }
+
+        toastr()->error("Erro ao alterar a data de vencimento.");
+        return redirect()->back();
+    }
+
+    public function cancelar_boleto(PagamentoBoleto $boleto){
+        $gerencianet = new GerencianetRequisicaoBoleto();
+        $res = $gerencianet->cancelarTransacao($boleto->charge_id);
+        if($res == 200){
+            $boleto->status = 'canceled';
+            $boleto->save();
+            toastr()->success("Boleto cancelado com sucesso!");
+            return redirect()->back();
+        }
+        toastr()->error("Erro ao cancelar o boleto!");
+        return redirect()->back();
+    }
+
     public function notificacao()
     {
         Log::channel('notificacoes')->info('NOTIFICAÇÃO: Tentativa de notificação no token ' . $_POST['notification']);

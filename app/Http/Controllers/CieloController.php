@@ -97,4 +97,12 @@ class CieloController extends Controller
         $res = $cielo->capturar($pagamento->codigo, $pagamento->venda->total);
         dd($res);
     }
+
+    public function estornar(Venda $venda){
+        $pagamento = $venda->cartao;
+        $cielo = new CieloRequisicaoCredito();
+        $res = $cielo->estornar($pagamento->codigo, $pagamento->venda->total);
+        session()->flash("mensagem", $res->getReturnMessage());
+        return redirect()->back();
+    }
 }

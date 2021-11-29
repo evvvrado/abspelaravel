@@ -145,7 +145,7 @@ class GerencianetRequisicaoBoleto{
         }
     }
 
-    public function alterarDataBoleto($charge_id, $nova_data){
+    public function alterarVencimento($charge_id, $nova_data){
         $params = [
             'id' => $charge_id
         ];
