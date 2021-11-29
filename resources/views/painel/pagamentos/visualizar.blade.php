@@ -66,6 +66,7 @@
                                         <td>Status</td>
                                         <td>Vencimento</td>
                                         <td>Link</td>
+                                        </td>
                                     </th>
                                 </thead>
                                 <tbody>
@@ -74,7 +75,7 @@
                                             <td><b>{{$parcela->parcela}}</b></td>
                                             <td>R${{number_format($parcela->valor, 2, ",", ".")}}</td>
                                             <td>{{config("gerencianet.status")[$parcela->status]}}</td>
-                                            <td>{{date("d/m/Y", strtotime($parcela->data_expiracao))}}</td>
+                                            <td>{{date("d/m/Y", strtotime($parcela->data_expiracao))}}  @if($parcela->status != 'canceled' && $parcela->status != 'paid') - <a class="cpointer" data-bs-toggle="modal" data-bs-target="#modalAlterarVencimentoParcela{{$parcela->id}}">Alterar</a> @endif</td>
                                             <td><a href="{{$parcela->link}}">Visualizar</a></td>
                                         </tr>
                                     @endforeach
@@ -120,10 +121,12 @@
                                         <td><b>Status:</b></td>
                                         <td class="px-2">{{config("cielo.status")[$venda->cartao->status]}}</td>
                                     </tr>
-                                    {{-- <tr>
-                                        <td><b>Operações:</b></td>
-                                        <td class="px-2"><a href="{{route('painel.venda.cielo.estornar', ['venda' => $venda])}}">Estornar pagamento</a></td>
-                                    </tr> --}}
+                                    @if($venda->cartao->status != 2)
+                                        <tr>
+                                            <td><b>Operações:</b></td>
+                                            <td class="px-2"><a href="{{route('painel.venda.cielo.estornar', ['venda' => $venda])}}">Estornar pagamento</a></td>
+                                        </tr>
+                                    @endif
                                 @else
                                     <tr>
                                         <td><b>Carnê id:</b></td>
@@ -172,6 +175,40 @@
             </div>
         </div>
     </div>
+@endif
+
+@if($venda->forma == 2)
+
+    @foreach($venda->carne->parcelas as $parcela)
+    <div class="modal fade" id="modalAlterarVencimentoParcela{{$parcela->id}}" tabindex="-1" role="dialog" aria-labelledby="modalAlterarVencimentoParcela{{$parcela->id}}Label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form action="{{route('painel.venda.carne.parcela.vencimento.alterar', ["parcela" => $parcela])}}" method="post">
+                        @csrf
+                        <div class="row">
+                            <div class="form-group col-12">
+                                <label for="nome">Nova data</label>
+                                <input type="date" class="form-control" name="data"
+                                    id="data" aria-describedby="helpId"  min="{{date("Y-m-d")}}"
+                                >
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12 text-end">
+                                <button type="submit"
+                                    class="btn btn-primary">Salvar</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endforeach
+
 @endif
 @endsection
 

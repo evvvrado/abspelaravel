@@ -102,7 +102,13 @@ class CieloController extends Controller
         $pagamento = $venda->cartao;
         $cielo = new CieloRequisicaoCredito();
         $res = $cielo->estornar($pagamento->codigo, $pagamento->venda->total);
-        session()->flash("mensagem", $res->getReturnMessage());
+        if($res->getReturnCode() == 9){
+            $venda->cartao->status = 2;
+            $venda->cartao->save();
+            toastr()->success("Pagamento estornado com sucesso!", "Sucesso!");
+        }else{
+            toastr()->error($res->getReturnMessage(), "Erro");
+        }
         return redirect()->back();
     }
 }

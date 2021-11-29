@@ -157,7 +157,33 @@ class GerencianetRequisicaoBoleto{
         try {
             $api = new Gerencianet($this->options);
             $charge = $api->updateBillet($params, $body);
+            dd($charge);
             return 200;
+        } catch (GerencianetException $e) {
+            print_r($e->code);
+            print_r($e->error);
+            print_r($e->errorDescription);
+        } catch (Exception $e) {
+            print_r($e->getMessage());
+        }
+    }
+
+    public function alterarVencimentoParcela($charge_id, $parcela, $nova_data){
+        $params = [
+            'id' => $charge_id,
+            'parcel' => $parcela
+        ];
+        
+        $body = [
+            'expire_at' => $nova_data
+        ];
+        
+        try {
+            $api = new Gerencianet($this->options);
+            $charge = $api->updateParcel($params, $body);
+            if($charge["code"] == 200){
+                return 200;
+            }
         } catch (GerencianetException $e) {
             print_r($e->code);
             print_r($e->error);

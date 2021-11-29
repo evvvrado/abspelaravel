@@ -118,7 +118,7 @@ class GerencianetController extends Controller
                     $parcela->status = $charge["status"];
                     $parcela->valor = $charge["value"] / 100;
                     $parcela->data_expiracao = $charge["expire_at"];
-                    $parcela->link = $charge["pdf"]["charge"];
+                    $parcela->link = $charge["url"];
                     $parcela->save();
                 }
             }
@@ -144,6 +144,20 @@ class GerencianetController extends Controller
         if($res == 200){
             $boleto->expira = $request->data;
             $boleto->save();
+            toastr()->success("Data alterada com sucesso!");
+            return redirect()->back();
+        }
+
+        toastr()->error("Erro ao alterar a data de vencimento.");
+        return redirect()->back();
+    }
+
+    public function alterar_vencimento_parcela_carne(ParcelaCarne $parcela, Request $request){
+        $gerencianet = new GerencianetRequisicaoBoleto();
+        $res = $gerencianet->alterarVencimentoParcela($parcela->carne->carnet_id, $parcela->parcela, $request->data);
+        if($res == 200){
+            $parcela->data_expiracao = $request->data;
+            $parcela->save();
             toastr()->success("Data alterada com sucesso!");
             return redirect()->back();
         }

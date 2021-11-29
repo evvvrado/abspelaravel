@@ -186,6 +186,7 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/sistema/vendas', [\App\Http\Controllers\PagamentosController::class, 'vendas'])->name("painel.vendas");
     Route::get('/sistema/venda/{venda}', [\App\Http\Controllers\PagamentosController::class, 'venda'])->name("painel.venda");
     Route::post('/sistema/venda/boleto/{boleto}/vencimento/alterar', [\App\Http\Controllers\GerencianetController::class, 'alterar_vencimento'])->name("painel.venda.boleto.vencimento.alterar");
+    Route::post('/sistema/venda/carne/parcela/{parcela}/vencimento/alterar', [\App\Http\Controllers\GerencianetController::class, 'alterar_vencimento_parcela_carne'])->name("painel.venda.carne.parcela.vencimento.alterar");
     Route::get('/sistema/venda/boleto/{boleto}/cancelar', [\App\Http\Controllers\GerencianetController::class, 'cancelar_boleto'])->name("painel.venda.boleto.cancelar");
     Route::get('/sistema/venda/cielo/estornar/{venda}', [\App\Http\Controllers\CieloController::class, 'estornar'])->name("painel.venda.cielo.estornar");
     Route::get('/sistema/venda/cielo/capturar/{venda}', [\App\Http\Controllers\CieloController::class, 'capturar'])->name("painel.venda.cielo.capturar");
