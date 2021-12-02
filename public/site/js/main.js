@@ -352,60 +352,6 @@ $(document).scroll(() => {
     }
 });
 
-var images = Array("/site/img/bannerhero.jpg", "/site/img/bannerhero2.jpg");
-
-// Usage:
-
-var currimg = 0;
-
-$(document).ready(function () {
-    if ($("body._home").length) {
-        function loadimg() {
-            $(".s_hero").animate({ opacity: 1 }, 700, function () {
-                //finished animating, minifade out and fade new back in
-                $(".s_hero").animate({ opacity: 0.7 }, 100, function () {
-                    currimg++;
-
-                    if (currimg > images.length - 1) {
-                        $(".hero_indicator div img").attr(
-                            "src",
-                            "/site/img/heroindicator_B.svg"
-                        );
-                        $(".hero_indicator div:first-child img").attr(
-                            "src",
-                            "/site/img/heroindicator_A.svg"
-                        );
-
-                        currimg = 0;
-                    } else {
-                        $(".hero_indicator div img").attr(
-                            "src",
-                            "/site/img/heroindicator_B.svg"
-                        );
-                        $(".hero_indicator div:nth-child(2) img").attr(
-                            "src",
-                            "/site/img/heroindicator_A.svg"
-                        );
-                    }
-
-                    var newimage = images[currimg];
-
-                    //swap out bg src
-                    $(".s_hero").css(
-                        "background-image",
-                        "url(" + newimage + ")"
-                    ); //animate fully back in
-                    $(".s_hero").animate({ opacity: 1 }, 400, function () {
-                        //set timer for next
-                        setTimeout(loadimg, 5000);
-                    });
-                });
-            });
-        }
-        setTimeout(loadimg, 5000);
-    }
-});
-
 $("div._toUp").click(() => {
     $(document).scrollTop(0);
 });

@@ -6,32 +6,27 @@
     <title>Área do Cliente - ABS PE</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='icon' type='image/vnd.microsoft.icon'
-        sizes='16x16 32x32 48x48 64x64 96x96 128x128 144x144 180x180 192x192 256x256'
-        href='{{ asset('favicon.ico') }}' />
-    <link rel='apple-touch-icon' sizes='180x180' href='{{ asset('site/img/logo180.png') }}'>
-    {{-- <link rel='manifest' href='/_ifl1/manifest.php' type='application/x-web-app-manifest+json'> --}}
+    <link rel='icon' type='image/vnd.microsoft.icon' sizes='16x16 32x32 48x48 64x64 96x96 128x128 144x144 180x180 192x192 256x256' href='{{ asset(' favicon.ico') }}' />
+    <link rel='apple-touch-icon' sizes='180x180' href='{{ asset(' site/img/logo180.png') }}'>
+    {{--
+    <link rel='manifest' href='/_ifl1/manifest.php' type='application/x-web-app-manifest+json'> --}}
     <link rel='preload' type='text/css' as='style'
-        href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Lato&family=Roboto:wght@500&family=Spartan:wght@400;700&display=swap'
-        crossorigin='anonymous' />
-    <link rel='preload' type='text/css' as='style' href='{{ asset('site/css/reset.css') }}' />
-    <link rel='preload' type='text/css' as='style' href='{{ asset('site/css/sistema.css') }}' />
+        href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Lato&family=Roboto:wght@500&family=Spartan:wght@400;700&display=swap' crossorigin='anonymous' />
+    <link rel='preload' type='text/css' as='style' href='{{ asset(' site/css/reset.css') }}' />
+    <link rel='preload' type='text/css' as='style' href='{{ asset(' site/css/sistema.css') }}' />
 
-    <link rel='preload' type='application/javascript' as='script' href='https://code.jquery.com/jquery-3.5.1.min.js'
-        integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=' crossorigin='anonymous' />
-    <link rel='preload' type='application/javascript' as='script' href='{{ asset('site/js/script.js') }}'>
-
-    <link rel='preload' type='text/css' as='style' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css'
+    <link rel='preload' type='application/javascript' as='script' href='https://code.jquery.com/jquery-3.5.1.min.js' integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0='
         crossorigin='anonymous' />
+    <link rel='preload' type='application/javascript' as='script' href='{{ asset(' site/js/script.js') }}'>
+
+    <link rel='preload' type='text/css' as='style' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' crossorigin='anonymous' />
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' crossorigin='anonymous'>
 
-    <link rel='stylesheet'
-        href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Poppins&family=Lato&family=Roboto:wght@500&family=Spartan:wght@400;700&display=swap'
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Poppins&family=Lato&family=Roboto:wght@500&family=Spartan:wght@400;700&display=swap'
         crossorigin='anonymous'>
-    <link rel='stylesheet' href='{{ asset('site/css/reset.css') }}'>
-    <link rel='stylesheet' href='{{ asset('site/css/sistema.css') }}'>
-    <script src='https://code.jquery.com/jquery-3.5.1.min.js'
-        integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=' crossorigin='anonymous'></script>
+    <link rel='stylesheet' href='{{ asset(' site/css/reset.css') }}'>
+    <link rel='stylesheet' href='{{ asset(' site/css/sistema.css') }}'>
+    <script src='https://code.jquery.com/jquery-3.5.1.min.js' integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=' crossorigin='anonymous'></script>
 </head>
 
 
@@ -85,7 +80,7 @@
                 <div class="_user">
                     <div class="_img">
                         @if (!$aluno->avatar)
-                            <img src="{{ asset('site/img/sistema/user.svg') }}" style="max-width: 100%;
+                        <img src="{{ asset('site/img/sistema/user.svg') }}" style="max-width: 100%;
                             min-height: unset;
                             min-width: unset;" alt="">
                         @else
@@ -93,8 +88,7 @@
                         @endif
                     </div>
                     <div class="_text">
-                        Olá <span
-                            class="_username">{{ explode(' ', session()->get('aluno')['nome'])[0] }}</span>
+                        Olá <span class="_username">{{ explode(' ', session()->get('aluno')['nome'])[0] }}</span>
                         <a href="{{ route('site.aluno.deslogar') }}" class="_sair">
                             Sair
                         </a>
@@ -150,7 +144,7 @@
                 <div class="_user">
                     <div class="_img">
                         @if (!$aluno->avatar)
-                            <img src="{{ asset('site/img/sistema/user.svg') }}" style="max-width: 100%;
+                        <img src="{{ asset('site/img/sistema/user.svg') }}" style="max-width: 100%;
                             min-height: unset;
                             min-width: unset;" alt="">
                         @else
@@ -158,8 +152,7 @@
                         @endif
                     </div>
                     <div class="_text">
-                        Olá <span
-                            class="_username">{{ explode(' ', session()->get('aluno')['nome'])[0] }}</span>
+                        Olá <span class="_username">{{ explode(' ', session()->get('aluno')['nome'])[0] }}</span>
                         <a href="{{ route('site.aluno.deslogar') }}" class="_sair">
                             Sair
                         </a>
@@ -211,24 +204,21 @@
                     <div class="dados-div">
 
                         <label>
-                            <input type="text" name="rua" placeholder="Rua, 180" value="{{ $aluno->rua }}"
-                                class="_dadosComponent">
+                            <input type="text" name="rua" placeholder="Rua, 180" value="{{ $aluno->rua }}" class="_dadosComponent">
                             <div class="_icon">
                                 <img src="{{ asset('site/img/sistema/doorData.svg') }}" alt="">
                             </div>
                         </label>
 
                         <label>
-                            <input type="text" name="cidade" placeholder="Cidade" value="{{ $aluno->cidade }}"
-                                class="_dadosComponent">
+                            <input type="text" name="cidade" placeholder="Cidade" value="{{ $aluno->cidade }}" class="_dadosComponent">
                             <div class="_icon">
                                 <img src="{{ asset('site/img/sistema/pinData.svg') }}" alt="">
                             </div>
                         </label>
 
                         <label>
-                            <input type="text" name="estado" placeholder="Estado" value="{{ $aluno->estado }}"
-                                class="_dadosComponent">
+                            <input type="text" name="estado" placeholder="Estado" value="{{ $aluno->estado }}" class="_dadosComponent">
                             <div class="_icon">
                                 <img src="{{ asset('site/img/sistema/pinData.svg') }}" alt="">
                             </div>
@@ -250,15 +240,13 @@
                 </div>
                 <form class="_dados">
                     <label>
-                        <input type="password" name="senha_antiga" placeholder="Senha Antiga" value=""
-                            class="_dadosComponent">
+                        <input type="password" name="senha_antiga" placeholder="Senha Antiga" value="" class="_dadosComponent">
                         <div class="_icon">
                             <img src="{{ asset('site/img/sistema/lockData.svg') }}" alt="">
                         </div>
                     </label>
                     <label>
-                        <input type="password" name="senha_nova" value="" placeholder="Senha Nova"
-                            class="_dadosComponent">
+                        <input type="password" name="senha_nova" value="" placeholder="Senha Nova" class="_dadosComponent">
                         <div class="_icon">
                             <img src="{{ asset('site/img/sistema/lockData.svg') }}" alt="">
                         </div>
@@ -271,18 +259,16 @@
             <div class="_left">
                 <div class="userImg">
                     @if (!$aluno->avatar)
-                        <img src="{{ asset('site/img/sistema/userBig.svg') }}" style="max-width: 100%;
+                    <img src="{{ asset('site/img/sistema/userBig.svg') }}" style="max-width: 100%;
                                 min-height: unset;
                                 min-width: unset;" alt="">
-                        @else
-                        <img src="{{ asset($aluno->avatar) }}" style="width: 100%; height: 100%; object-fit: cover;" alt="">
-                        @endif
+                    @else
+                    <img src="{{ asset($aluno->avatar) }}" style="width: 100%; height: 100%; object-fit: cover;" alt="">
+                    @endif
                 </div>
                 <a href="" id="select_avatar">Alterar Imagem</a>
-                <a style="display:none;     margin-left: 8.7rem;" id="ajax_loading"><img src="{{ asset('site/img/ajax-loading.gif') }}" alt=""
-                        width="50"></a>
-                <form id="form-avatar" action="{{ route('site.minha-area-dados.avatar.alterar') }}" method="post"
-                    enctype="multipart/form-data" style="display: none;">
+                <a style="display:none;     margin-left: 8.7rem;" id="ajax_loading"><img src="{{ asset('site/img/ajax-loading.gif') }}" alt="" width="50"></a>
+                <form id="form-avatar" action="{{ route('site.minha-area-dados.avatar.alterar') }}" method="post" enctype="multipart/form-data" style="display: none;">
                     @csrf
                     <input type="file" id="avatar" name="avatar">
                 </form>
@@ -376,7 +362,8 @@
         </div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.11.2/jquery.mask.min.js" integrity="sha512-Y/GIYsd+LaQm6bGysIClyez2HGCIN1yrs94wUrHoRAD5RSURkqqVQEU6mM51O90hqS80ABFTGtiDpSXd2O05nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.11.2/jquery.mask.min.js"
+        integrity="sha512-Y/GIYsd+LaQm6bGysIClyez2HGCIN1yrs94wUrHoRAD5RSURkqqVQEU6mM51O90hqS80ABFTGtiDpSXd2O05nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js "></script>
     <script>
         $(document).ready(function() {

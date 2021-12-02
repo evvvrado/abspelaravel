@@ -480,6 +480,9 @@ section.s_hero .container-fav .hero_indicator {
     max-width: 7rem;
     margin-top: 57.6rem;
 }
+section.s_hero .container-fav .hero_indicator div:last-child{
+    display: none;
+}
 
 body._experiencia section.s_hero .container-fav .text {
     border: none;

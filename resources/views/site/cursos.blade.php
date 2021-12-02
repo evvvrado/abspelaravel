@@ -66,7 +66,7 @@
                                 </div>
                                 <div class="curso_online">
                                     <img src="{{ asset('site/img/greenball.svg') }}" alt="" />
-                                    <p>Curso online</p>
+                                    <p>Curso presencial</p>
                                 </div>
                             </div>
                             <div class="curso-content">

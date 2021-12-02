@@ -23,22 +23,35 @@
     <!-- BARRA SUPERIOR DE LOGIN E HEADER-->
 
 
+    @php
+    $turma = $turmas->first();
+    $turma2 = $turmas->skip(1)->first();
+    $banner = "/site/img/bannerhero1.jpg";
+    $banner2= "/site/img/bannerhero2.jpg";
+
+
+    if($turma){
+    $parcelas = $turma->parcelas;
+    $valor_parcela = $turma->preco / $parcelas;
+    $reais_parcelas = floor($valor_parcela);
+    $centavos_parcelas = $valor_parcela - $reais_parcelas;
+    $banner = $turma->curso->banner;
+    };
+    if($turma2){
+    $banner2 = $turma2->curso->banner;
+    $parcelas2 = $turma2->parcelas;
+    $valor_parcela2 = $turma2->preco / $parcelas2;
+    $reais_parcelas2 = floor($valor_parcela2);
+    $centavos_parcelas2 = $valor_parcela2 - $reais_parcelas2;
+    };
+    @endphp
+
+
     <!-- SECTION HERO -->
-    <section class="container-fluid s_hero">
-        @php
-        $turma = $turmas->first();
+    <section class="container-fluid s_hero" style="background-image: url('/{{$banner}}')">
 
-
-        if($turma){
-        $parcelas = $turma->parcelas;
-        $valor_parcela = $turma->preco / $parcelas;
-        $reais_parcelas = floor($valor_parcela);
-        $centavos_parcelas = $valor_parcela - $reais_parcelas;
-        };
-        @endphp
-
-
-        @if ($turma)
+        @if ($turma && !$turma2)
+        {{-- Turma 1 --}}
         <div class="hero_cards">
             <div>
                 <img src="{{ asset('site/img/calendarpointed.svg') }}" alt="" />
@@ -54,7 +67,7 @@
             <div class="text">
                 <div class="curso_online">
                     <img src="{{ asset('site/img/greenball.svg') }}" alt="" />
-                    <p>Curso online</p>
+                    <p>Curso presencial</p>
                 </div>
 
                 <div class="title">
@@ -88,12 +101,135 @@
                     <img src="{{ asset('site/img/heroindicator_B.svg') }}" alt="" />
                 </div>
                 <!-- 
-            <div>
-                <img src="{{ asset('site/img/heroindicator_B.svg') }}" alt="" />
-            </div> -->
+                <div>
+                    <img src="{{ asset('site/img/heroindicator_B.svg') }}" alt="" />
+                </div> -->
             </div>
         </div>
+
+        @elseif($turma && $turma2)
+
+        {{-- Turma 1 --}}
+        <div class="hero_cards turma1">
+            <div>
+                <img src="{{ asset('site/img/calendarpointed.svg') }}" alt="" />
+                <span>{{ date('d.m.y', strtotime($turma->data)) }}</span>
+            </div>
+            <div>
+                <img src="{{ asset('site/img/alarm.svg') }}" alt="" />
+                <span>Às {{ date('H:i', strtotime($turma->horario)) }}</span>
+            </div>
+        </div>
+
+        <div class="container-fav turma1">
+            <div class="text">
+                <div class="curso_online">
+                    <img src="{{ asset('site/img/greenball.svg') }}" alt="" />
+                    <p>Curso presencial</p>
+                </div>
+
+                <div class="title">
+                    <h1>{{ $turma->curso->titulo }}</h1>
+                </div>
+                <div class="info">
+                    <p class="minitext">Apenas</p>
+                    <h1>
+                        {{ $turma->parcelas }}x <span class="lowsized">R$</span>@if($reais_parcelas > 1000){{ number_format($reais_parcelas, 0, ",", ".") }}@else{{$reais_parcelas}}@endif<span
+                            class="lowsized">,@if ($centavos_parcelas == 0)00
+                            @else{{number_format($centavos_parcelas * 100)}}
+                            @endif
+                        </span>
+
+                        <script>
+                            console.log({{number_format($centavos_parcelas2)}})
+                        </script>
+                    </h1>
+                </div>
+                <button class="btn-primary" onclick="window.location.href = '{{route('site.curso', ['slug' => $turma->curso->slug])}}'">
+                    Inscreva-se
+                </button>
+            </div>
+
+            <div class="hero_indicator">
+                <div>
+                    <img src="{{ asset('site/img/heroindicator_A.svg') }}" alt="" />
+                </div>
+
+                <div>
+                    <img src="{{ asset('site/img/heroindicator_B.svg') }}" alt="" />
+                </div>
+                <!-- 
+                <div>
+                    <img src="{{ asset('site/img/heroindicator_B.svg') }}" alt="" />
+                </div> -->
+            </div>
+        </div>
+
+        {{-- Turma 2 --}}
+        <div class="hero_cards turma2 inactive">
+            <div>
+                <img src="{{ asset('site/img/calendarpointed.svg') }}" alt="" />
+                <span>{{ date('d.m.y', strtotime($turma2->data)) }}</span>
+            </div>
+            <div>
+                <img src="{{ asset('site/img/alarm.svg') }}" alt="" />
+                <span>Às {{ date('H:i', strtotime($turma2->horario)) }}</span>
+            </div>
+        </div>
+
+        <div class="container-fav turma2 inactive">
+            <div class="text">
+                <div class="curso_online">
+                    <img src="{{ asset('site/img/greenball.svg') }}" alt="" />
+                    <p>Curso presencial</p>
+                </div>
+
+                <div class="title">
+                    <h1>{{ $turma2->curso->titulo }}</h1>
+                </div>
+                <div class="info">
+                    <p class="minitext">Apenas</p>
+                    <h1>
+                        {{ $turma2->parcelas }}x <span class="lowsized">R$</span>@if($reais_parcelas2 > 1000){{ number_format($reais_parcelas2, 0, ",", ".") }}@else{{$reais_parcelas2}}@endif<span
+                            class="lowsized">,@if ($centavos_parcelas2 == 0)00
+                            @else{{number_format($centavos_parcelas2 * 100)}}
+                            @endif
+                        </span>
+
+                        <script>
+                            console.log({{number_format($centavos_parcelas)}})
+                        </script>
+                    </h1>
+                </div>
+                <button class="btn-primary" onclick="window.location.href = '{{route('site.curso', ['slug' => $turma->curso->slug])}}'">
+                    Inscreva-se
+                </button>
+            </div>
+
+            <div class="hero_indicator">
+                <div>
+                    <img src="{{ asset('site/img/heroindicator_A.svg') }}" alt="" />
+                </div>
+
+                <div>
+                    <img src="{{ asset('site/img/heroindicator_B.svg') }}" alt="" />
+                </div>
+                <!-- 
+                <div>
+                    <img src="{{ asset('site/img/heroindicator_B.svg') }}" alt="" />
+                </div> -->
+            </div>
+        </div>
+
+        <style>
+            .turma1.inactive,
+            .turma2.inactive {
+                display: none !important;
+            }
+        </style>
+
         @else
+        {{-- Sem Turma --}}
         <div class="container-fav">
             <div class="text">
                 <div class="curso_online">
@@ -157,7 +293,7 @@
                             </div>
                             <div class="curso_online">
                                 <img src="{{ asset('site/img/greenball.svg') }}" alt="" />
-                                <p>Curso online</p>
+                                <p>Curso presencial</p>
                             </div>
                         </div>
                         <div class="curso-content">
@@ -234,7 +370,7 @@
                         </div>
                         <div class="curso_online">
                             <img src="{{asset('site/img/greenball.svg')}}" alt="" />
-                            <p>Curso online</p>
+                            <p>Curso presencial</p>
                         </div>
                     </div>
                     <div class="curso-content">
@@ -288,7 +424,7 @@
                         </div>
                         <div class="curso_online">
                             <img src="{{asset('site/img/greenball.svg')}}" alt="" />
-                            <p>Curso online</p>
+                            <p>Curso presencial</p>
                         </div>
                     </div>
                     <div class="curso-content">
@@ -429,3 +565,71 @@
     @include("site.includes.parceiros")
 
     @include("site.includes.footer")
+
+    @if ($turmas->count() >= 2)
+    <style>
+        section.s_hero .container-fav .hero_indicator div:last-child {
+            display: block;
+        }
+    </style>
+
+    <script>
+        var images = Array("{{$banner}}", "{{$banner2}}");
+        // Usage:
+
+        var currimg = 0;
+        var curturma =0;
+
+        
+        function loadimg() {
+            $(".s_hero").animate({ opacity: 1 }, 700, function () {
+                //finished animating, minifade out and fade new back in
+                $(".s_hero").animate({ opacity: 0.7 }, 100, function () {
+                    currimg++;
+                    curturma++;
+
+                    if (currimg > images.length - 1) {
+                        $(".hero_indicator div img").attr(
+                            "src",
+                            "/site/img/heroindicator_B.svg"
+                        );
+                        $(".hero_indicator div:first-child img").attr(
+                            "src",
+                            "/site/img/heroindicator_A.svg"
+                        );
+
+                        currimg = 0;
+                    } else {
+                        $(".hero_indicator div img").attr(
+                            "src",
+                            "/site/img/heroindicator_B.svg"
+                        );
+                        $(".hero_indicator div:nth-child(2) img").attr(
+                            "src",
+                            "/site/img/heroindicator_A.svg"
+                        );
+                    }
+
+                    var newimage = images[currimg];
+
+                    $('.turma1, .turma2').toggleClass('inactive');
+
+                    //swap out bg src
+                    $(".s_hero").css(
+                        "background-image",
+                        "url("+ newimage + ")"
+                    ); //animate fully back in
+                    $(".s_hero").animate({ opacity: 1 }, 400, function () {
+                        //set timer for next
+                        setTimeout(loadimg, 5000);
+                    });
+                });
+            });
+        }
+        setTimeout(loadimg, 5000);
+
+
+
+
+    </script>
+    @endif
