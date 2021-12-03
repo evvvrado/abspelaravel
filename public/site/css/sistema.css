@@ -1269,8 +1269,14 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._buttons .but
 
     cursor: pointer;
 }
-body._carrinho section.s_identificacao .container-fav ._pagamento ._buttons .button.invalid {
+body._carrinho section.s_identificacao .container-fav ._pagamento ._buttons .button.invalid,
+a.invalid {
+    opacity: 0.5;
     pointer-events: none;
+}
+
+body._carrinho section.s_identificacao .container-fav ._pagamento ._buttons .button.unchoosed,
+a.unchoosed {
     opacity: 0.5;
 }
 body._carrinho section.s_identificacao .container-fav ._pagamento ._buttons .button p {
@@ -1350,6 +1356,21 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCar
 
     background: var(--orange2);
 }
+
+body._carrinho section.s_identificacao .container-fav ._pagamento .btn-primary {
+    width: 100%;
+    max-width: 25.5rem;
+    height: 6.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    border-radius: 0.4rem;
+
+    background: var(--orange2);
+}
+
 @media (max-width: 1400px) {
     header main nav {
         max-width: 60%;

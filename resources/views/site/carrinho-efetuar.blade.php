@@ -235,11 +235,11 @@
                     <div class="_choose">
                         <div class="_title">
                             <span>Escolha a forma de pagamento</span>
-                            <p>Selecione qual opçao deseja realizar o pagamento</p>
+                            <p style="color: unset">Aceite os termos e selecione uma forma de pagamento</p>
                         </div>
                         <div class="_buttons">
-                            <div class="bolet button invalid"
-                                onclick="window.location.href = '{{ route('site.carrinho.pagamento.boleto') }}'">
+                            <div class="bolet button unchoosed"
+                                onclick="defineBO()">
                                 <div class="_icon">
                                     <img src="{{ asset('site/img/sistema/boleto.svg') }}" alt="" />
                                 </div>
@@ -249,8 +249,8 @@
                                 </div>
                             </div>
 
-                            <div class="creditCard button invalid"
-                                onclick="window.location.href = '{{ route('site.carrinho.pagamento.cartao') }}'">
+                            <div class="creditCard button unchoosed"
+                                onclick="defineCC()">
                                 <div class="_icon">
                                     <img src="{{ asset('site/img/sistema/creditcard.svg') }}" alt="" />
                                 </div>
@@ -271,10 +271,14 @@
 
 
                     <p style="color: gray; display: flex; align-items:center; justify-content: flex-start; gap: 12px;"> 
-                         <input type="checkbox" name="termos"> 
+                         <input type="checkbox" name="termos" checked> 
                          Li e aceito os termos de contrato. 
-                    
                     </p>
+
+                    
+                    <a class="btn-primary invalid" style="float: left; margin-top: 20px;">
+                        Continuar
+                    </a>
 
                 </div>
             </div>
@@ -339,6 +343,32 @@
         </section>
     </footer>
 
+    <script>
+        
+    $('input[name = "termos"]').change(()=> {
+        $('.bolet.button, .creditCard.button').addClass('unchoosed');
+        $('a.btn-primary').addClass('invalid');
+        $('.bolet.button, .creditCard.button').toggleClass('invalid');
+    })
+
+
+    function defineCC(){
+            $('.button').addClass('unchoosed');
+            $('.button.creditCard').toggleClass('unchoosed');
+            $('a.btn-primary').attr('href', "{{ route('site.carrinho.pagamento.cartao')}}");
+            $('a.btn-primary').removeClass('invalid')
+        }
+
+        
+    function defineBO(){
+            $('.button').addClass('unchoosed');
+            $('.button.bolet').toggleClass('unchoosed');
+            $('a.btn-primary').attr('href', "{{ route('site.carrinho.pagamento.boleto')}}");
+            $('a.btn-primary').removeClass('invalid')
+        }
+     
+    </script>
+
 
     <section class="container-fluid _copyRight">
         <div class="container-fav">
@@ -378,7 +408,7 @@
 
         $("._carButton").click(() => {
             $("._meuCarrinho").animate({
-                    top: "0",
+                    top: "0",r
                 },
                 400
             );
@@ -390,11 +420,6 @@
                 400
             );
         });
-        
-$('input[name = "termos"]').change(()=> {
-$('.bolet.button').toggleClass('invalid');
-    $('.creditCard.button').toggleClass('invalid');
-})
     </script>
   </body>
 </html>
