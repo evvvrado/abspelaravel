@@ -63,11 +63,14 @@
                     {{-- <button class="btn-primary" onclick="window.location.href ='{!! $turma->botao_comprar !!}'">
                         Inscrever
                     </button> --}}
-
-                    <button class="btn-primary" onclick="window.location.href ='{{ route('site.carrinho-adicionar', ['turma' => $turma]) }}' ">Inscrever</a>
+                        @if($turma->inscritos < $turma->vagas)
+                            <button class="btn-primary" onclick="window.location.href ='{{ route('site.carrinho-adicionar', ['turma' => $turma]) }}' ">Inscrever</a>
                         @else
-                        Encerrado
+                            Lotado
                         @endif
+                    @else
+                        Encerrado
+                    @endif
                 </div>
             </div>
         </div>

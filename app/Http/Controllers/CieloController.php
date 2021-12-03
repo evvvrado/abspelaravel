@@ -59,6 +59,7 @@ class CieloController extends Controller
                 $pagamento->numero = $res["numero"];
                 $pagamento->status = 1;
                 $pagamento->save();
+                
 
                 // $cielo->capturar($pagamento->codigo, $pagamento->venda->total);
 
@@ -68,6 +69,9 @@ class CieloController extends Controller
                     $matricula->aluno_id = $venda->aluno_id;
                     $matricula->turma_id = $produto->turma_id;
                     $matricula->save();
+                    
+                    $produto->turma->inscritos += 1;
+                    $produto->turma->save();
                 }
 
                 $carrinho->aberto = false;

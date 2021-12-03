@@ -26,6 +26,11 @@ class CarrinhoController extends Controller
             if (session()->get("produto_adicionar")) {
                 session()->forget("produto_adicionar");
             }
+            
+            if($turma->inscritos >= $turma->vagas){
+                return redirect()->back();
+            }
+
             if (!session()->get("carrinho")) {
                 $carrinho = new Carrinho();
                 $carrinho->aluno_id = session()->get("aluno")["id"];

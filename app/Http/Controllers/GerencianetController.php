@@ -29,15 +29,6 @@ class GerencianetController extends Controller
         // dd($desconto);
         // $gerencianet->enviarBoletoEmail(1334034, 'gusouza980@gmail.com');
         $turmas = [];
-        foreach ($carrinho->produtos as $produto) {
-            $produto->turma->inscritos += 1;
-            $produto->turma->save();
-            $gerencianet->addItem([
-                'name' => $produto->turma->curso->titulo, // nome do item, produto ou serviço
-                'amount' => 1, // quantidade
-                'value' => intval($produto->total * 100)
-            ]);
-        }
 
         $cpf = str_replace(".", "", $aluno->cpf);
         $cpf = str_replace("-", "", $cpf);
@@ -88,6 +79,16 @@ class GerencianetController extends Controller
             $venda->valor_parcela = number_format($venda->total / $parcelas, 2, ".", "");
             $venda->desconto = ($carrinho->total * $desconto / 100);
             $venda->save();
+
+            foreach ($carrinho->produtos as $produto) {
+                $produto->turma->inscritos += 1;
+                $produto->turma->save();
+                $gerencianet->addItem([
+                    'name' => $produto->turma->curso->titulo, // nome do item, produto ou serviço
+                    'amount' => 1, // quantidade
+                    'value' => intval($produto->total * 100)
+                ]);
+            }
 
             if ($parcelas == 1) {
                 $boleto = new PagamentoBoleto;
