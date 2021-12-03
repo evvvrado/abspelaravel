@@ -26,9 +26,16 @@ class GerencianetController extends Controller
         } else {
             $desconto = 0;
         }
-        // dd($desconto);
         // $gerencianet->enviarBoletoEmail(1334034, 'gusouza980@gmail.com');
         $turmas = [];
+
+        foreach ($carrinho->produtos as $produto) {
+            $gerencianet->addItem([
+                'name' => $produto->turma->curso->titulo, // nome do item, produto ou serviço
+                'amount' => 1, // quantidade
+                'value' => intval($produto->total * 100)
+            ]);
+        }
 
         $cpf = str_replace(".", "", $aluno->cpf);
         $cpf = str_replace("-", "", $cpf);
@@ -58,7 +65,6 @@ class GerencianetController extends Controller
             $gerencianet->addParcelas($parcelas);
             $res = $gerencianet->gerarCarne();
         }
-
         // dd($res);
         if ($res["code"] == 200) {
 
@@ -83,11 +89,6 @@ class GerencianetController extends Controller
             foreach ($carrinho->produtos as $produto) {
                 $produto->turma->inscritos += 1;
                 $produto->turma->save();
-                $gerencianet->addItem([
-                    'name' => $produto->turma->curso->titulo, // nome do item, produto ou serviço
-                    'amount' => 1, // quantidade
-                    'value' => intval($produto->total * 100)
-                ]);
             }
 
             if ($parcelas == 1) {
@@ -129,10 +130,6 @@ class GerencianetController extends Controller
             session()->put(["venda_finalizada" => $venda->id]);
             return redirect()->route("site.carrinho-confirmacao");
         } else {
-            foreach ($carrinho->produtos as $produto) {
-                $produto->turma->inscritos -= 1;
-                $produto->turma->save();
-            }
             session()->flash("erro", "Problema na finalização da compra. Tente novamente mais tarde.");
             return redirect()->route("site.carrinho.pagamento.boleto");
         }
