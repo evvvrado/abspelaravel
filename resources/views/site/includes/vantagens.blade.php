@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="_right">
-            <h2>Aguarde! Novidades te esperam em 2022.</h2>
+            <h2>Aguarde! Novidades lhe esperam em 2022.</h2>
         </div>
     </div>
 </section>

@@ -10,7 +10,7 @@
         </div>
     </section>
 
-     
+
 
     <!-- MENU LATERAL -->
     @include("site.includes.menu_lateral")
@@ -31,7 +31,7 @@
             <div class="text">
 
                 <div class="title">
-                    <h1>Novidades te esperam em 2022</h1>
+                    <h1>Novidades lhe esperam em 2022</h1>
                 </div>
             </div>
         </div>
