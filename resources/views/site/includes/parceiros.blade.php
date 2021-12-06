@@ -5,16 +5,16 @@
         </div>
         <div class="_partnes">
             <div class="partner">
-                <img src="{{asset('site/img/logo7Seven.png')}}" alt="">
+                <img height="101" src="{{asset('site/img/logo7Seven.png')}}" alt="">
             </div>
             <div class="partner">
-                <img src="{{asset('site/img/logoHyp8.png')}}" alt="">
+                <img height="101" src="{{asset('site/img/logoHyp8.png')}}" alt="">
             </div>
             <div class="partner">
-                <img src="{{asset('site/img/logoPingo.png')}}" alt="">
+                <img height="80" src="{{asset('site/img/logoSenac.png')}}" alt="">
             </div>
             <div class="partner">
-                <img src="{{asset('site/img/logoDigital.png')}}" alt="">
+                <img height="101" src="{{asset('site/img/logoDigital.png')}}" alt="">
             </div>
         </div>
     </div>
