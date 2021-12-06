@@ -256,7 +256,7 @@
                                 </div>
                                 <div class="_text">
                                     <span>Cartão de Crédito</span>
-                                    <p>em até 10x sem juros</p>
+                                    <p>em até 7x sem juros</p>
                                 </div>
                             </div>
                         </div>
