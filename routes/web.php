@@ -39,7 +39,7 @@ Route::get('/estadual/{slug}', [\App\Http\Controllers\SiteController::class, 'es
 Route::get('/abspe/sommelier', [\App\Http\Controllers\SiteController::class, 'sommelier'])->name("site.sommelier");
 Route::get('/noticias/{slug?}', [\App\Http\Controllers\SiteController::class, 'noticias'])->name("site.noticias");
 Route::get('/noticia/{categoria}/{noticia}', [\App\Http\Controllers\SiteController::class, 'noticia'])->name("site.noticia");
-Route::get('/recuperar-senha', [\App\Http\Controllers\SiteController::class, 'recuperar_senha'])->name("site.recuperar-senha");
+Route::post('/recuperar-senha', [\App\Http\Controllers\AlunosController::class, 'recuperar_senha'])->name("site.recuperar-senha");
 
 
 Route::get('/newsletter', [\App\Http\Controllers\SiteController::class, 'newsletter'])->name("site.newsletter");
