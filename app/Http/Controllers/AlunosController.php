@@ -7,6 +7,8 @@ use App\Models\Aluno;
 use App\Models\Carrinho;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
+use App\Classes\Email;
+use Illuminate\Support\Str;
 
 class AlunosController extends Controller
 {
@@ -64,5 +66,28 @@ class AlunosController extends Controller
     public function deslogar(){
         session()->forget("aluno");
         return redirect()->route("site.index");
+    }
+
+    public function recuperar_senha(Request $request){
+        $aluno = Aluno::where("email", $request->email)->first();
+        if(!$aluno){
+            session()->flash("erro", "Não existe uma conta com o e-mail informado");
+            return redirect()->back();
+        }else{
+            $nova_senha = Str::random(6);
+            $aluno->senha = Hash::make($nova_senha);
+            $aluno->save();
+            $file = "Olá <b>" . $aluno->nome . "</b><br>";
+            $file .= "Estamos enviando uma senha para que consiga acessar nosso sistema !<br>";
+            $file .= "Se tiver mais dúvidas, entre em contato pelo site !";
+            $file .= "<br><br>Nova Senha: " . $nova_senha;
+            if(Email::enviar($file, "Nova senha", $aluno->email)){
+                session()->flash("sucesso", "Uma senha temporária foi enviada para o e-mail informado no seu cadastro.");
+                return redirect()->route("site.minha-conta");
+            }else{
+                session()->flash("erro", "Não foi possível enviar um e-mail com sua nova senha temporária no momento. Por favor, tente mais tarde.");
+                return redirect()->back();
+            } 
+        }
     }
 }

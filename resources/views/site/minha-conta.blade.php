@@ -130,7 +130,7 @@
                         </div>
                         <h2>Esqueceu sua senha?</h2>
                     </div>
-                    <form action="" method="POST">
+                    <form action="{{route('site.recuperar-senha')}}" method="POST">
                         @csrf
                         <label>
                             <span>Meu e-mail</span>
