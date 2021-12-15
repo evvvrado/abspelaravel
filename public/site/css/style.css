@@ -329,8 +329,11 @@ body._curso-detalhes section.s_hero ._curso-card {
     padding: 6rem 6rem 4rem 4rem;
 
     width: 100%;
-    max-width: 48.5rem;
+    /* max-width: 48.5rem; */
+    max-width: max-content;
     height: 22.4rem;
+
+        
 
     align-items: center;
 
