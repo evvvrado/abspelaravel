@@ -26,8 +26,8 @@ class CarrinhoController extends Controller
             if (session()->get("produto_adicionar")) {
                 session()->forget("produto_adicionar");
             }
-            
-            if($turma->inscritos >= $turma->vagas){
+
+            if ($turma->inscritos >= $turma->vagas) {
                 return redirect()->back();
             }
 
@@ -41,7 +41,7 @@ class CarrinhoController extends Controller
                 $carrinho = Carrinho::find(session()->get("carrinho"));
             }
 
-            if($carrinho->produtos->where("turma_id", $turma->id)->count() > 0){
+            if ($carrinho->produtos->where("turma_id", $turma->id)->count() > 0) {
                 return redirect()->route("site.carrinho-efetuar");
             }
 
@@ -136,8 +136,9 @@ class CarrinhoController extends Controller
             return redirect()->route('site.index');
         }
         $carrinho = Carrinho::find(session()->get("carrinho"));
+        $configuracao = Configuracao::first();
         $aluno = $carrinho->aluno;
-        return view("site.carrinho-efetuar", ["carrinho" => $carrinho, "aluno" => $aluno]);
+        return view("site.carrinho-efetuar", ["carrinho" => $carrinho, "aluno" => $aluno, "configuracao" => $configuracao]);
     }
 
     public function finalizar_boleto(Request $request)

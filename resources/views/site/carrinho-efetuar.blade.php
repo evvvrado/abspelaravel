@@ -245,7 +245,7 @@
                                 </div>
                                 <div class="_text">
                                     <span>Boleto Bancário</span>
-                                    <p>10% de desconto</p>
+                                    <p>7.48% de desconto</p>
                                 </div>
                             </div>
 
