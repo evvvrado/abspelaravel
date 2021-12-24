@@ -185,7 +185,7 @@ class GerencianetController extends Controller
         if ($res["code"] == 200) {
             $pagamento = PagamentoBoleto::where("charge_id", $res["charge_id"])->first();
             if (!$pagamento) {
-                $pagamento = PagamentoCarne::where("charge_id", $res["charge_id"])->first();
+                $pagamento = ParcelaCarne::where("charge_id", $res["charge_id"])->first();
             }
             $pagamento->status = $res["status"];
             if ($res["status"] == "paid") {
