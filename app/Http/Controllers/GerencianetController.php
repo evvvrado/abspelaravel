@@ -22,7 +22,7 @@ class GerencianetController extends Controller
         $carrinho = Carrinho::find(session()->get("carrinho"));
         $aluno = Aluno::find(session()->get("aluno")["id"]);
         if ($parcelas == 1) {
-            $desconto = 1000;
+            $desconto = 748;
         } else {
             $desconto = 0;
         }
@@ -135,11 +135,12 @@ class GerencianetController extends Controller
         }
     }
 
-    public function alterar_vencimento(PagamentoBoleto $boleto, Request $request){
+    public function alterar_vencimento(PagamentoBoleto $boleto, Request $request)
+    {
         // dd($request->all());
         $gerencianet = new GerencianetRequisicaoBoleto();
         $res = $gerencianet->alterarVencimento($boleto->charge_id, $request->data);
-        if($res == 200){
+        if ($res == 200) {
             $boleto->expira = $request->data;
             $boleto->save();
             toastr()->success("Data alterada com sucesso!");
@@ -150,10 +151,11 @@ class GerencianetController extends Controller
         return redirect()->back();
     }
 
-    public function alterar_vencimento_parcela_carne(ParcelaCarne $parcela, Request $request){
+    public function alterar_vencimento_parcela_carne(ParcelaCarne $parcela, Request $request)
+    {
         $gerencianet = new GerencianetRequisicaoBoleto();
         $res = $gerencianet->alterarVencimentoParcela($parcela->carne->carnet_id, $parcela->parcela, $request->data);
-        if($res == 200){
+        if ($res == 200) {
             $parcela->data_expiracao = $request->data;
             $parcela->save();
             toastr()->success("Data alterada com sucesso!");
@@ -164,10 +166,11 @@ class GerencianetController extends Controller
         return redirect()->back();
     }
 
-    public function cancelar_boleto(PagamentoBoleto $boleto){
+    public function cancelar_boleto(PagamentoBoleto $boleto)
+    {
         $gerencianet = new GerencianetRequisicaoBoleto();
         $res = $gerencianet->cancelarTransacao($boleto->charge_id);
-        if($res == 200){
+        if ($res == 200) {
             $boleto->status = 'canceled';
             $boleto->save();
             toastr()->success("Boleto cancelado com sucesso!");
