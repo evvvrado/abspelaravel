@@ -187,20 +187,35 @@ class GerencianetController extends Controller
         $res = $gerencianet->notificacao($_POST["notification"]);
         if ($res["code"] == 200) {
             $pagamento = PagamentoBoleto::where("charge_id", $res["charge_id"])->first();
+            $tipo = 0;
             if (!$pagamento) {
                 $pagamento = ParcelaCarne::where("charge_id", $res["charge_id"])->first();
+                $tipo = 1;
             }
             $pagamento->status = $res["status"];
             if ($res["status"] == "paid") {
-                $pagamento->venda->status = 1;
-                $pagamento->venda->save();
-                $aluno = $pagamento->venda->aluno_id;
-                foreach ($pagamento->venda->carrinho->produtos as $produto) {
-                    $matricula = new Matricula;
-                    $matricula->aluno_id = $aluno;
-                    $matricula->turma_id = $produto->turma_id;
-                    $matricula->save();
+                if($tipo == 0){
+                    $pagamento->venda->status = 1;
+                    $pagamento->venda->save();
+                    $aluno = $pagamento->venda->aluno_id;
+                    foreach ($pagamento->venda->carrinho->produtos as $produto) {
+                        $matricula = new Matricula;
+                        $matricula->aluno_id = $aluno;
+                        $matricula->turma_id = $produto->turma_id;
+                        $matricula->save();
+                    }
+                }else{
+                    $pagamento->carne->venda->status = 1;
+                    $pagamento->carne->venda->save();
+                    $aluno = $pagamento->carne->venda->aluno_id;
+                    foreach ($pagamento->carne->venda->carrinho->produtos as $produto) {
+                        $matricula = new Matricula;
+                        $matricula->aluno_id = $aluno;
+                        $matricula->turma_id = $produto->turma_id;
+                        $matricula->save();
+                    }
                 }
+                
             }
             Log::channel('notificacoes')->info('NOTIFICAÇÃO: Pagamento ' . $res["charge_id"] . " notificado com o status " . config("gerencianet.status")[$res["status"]]);
             $pagamento->save();
