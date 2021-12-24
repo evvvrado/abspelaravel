@@ -209,10 +209,13 @@ class GerencianetController extends Controller
                     $pagamento->carne->venda->save();
                     $aluno = $pagamento->carne->venda->aluno_id;
                     foreach ($pagamento->carne->venda->carrinho->produtos as $produto) {
-                        $matricula = new Matricula;
-                        $matricula->aluno_id = $aluno;
-                        $matricula->turma_id = $produto->turma_id;
-                        $matricula->save();
+                        $matricula = Matricula::where([["aluno_id", $aluno], ["turma_id", $produto->turma_id]])->first();
+                        if(!$matricula){
+                            $matricula = new Matricula;
+                            $matricula->aluno_id = $aluno;
+                            $matricula->turma_id = $produto->turma_id;
+                            $matricula->save();
+                        }
                     }
                 }
                 
