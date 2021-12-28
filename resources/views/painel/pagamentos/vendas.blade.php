@@ -27,6 +27,7 @@
                             <th>Forma</th>
                             <th>Status</th>
                             <th>Total</th>
+                            <th>Data</th>
                         </tr>
                     </thead>
 
@@ -62,7 +63,7 @@
                                     
                                 </td>
                                 <td>R${{number_format($venda->total, 2, ",", ".")}}</td>
-
+                                <td>{{date("d/m/Y H:i:s", strtotime($venda->created_at))}}</td>
                             </tr>
                         @endforeach
                     </tbody>
@@ -76,11 +77,16 @@
 
 @section('scripts')
     <!-- Required datatable js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
     <script src="{{asset('admin/libs/datatables.net/js/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('admin/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="https://cdn.datatables.net/plug-ins/1.10.10/sorting/datetime-moment.js"></script>
     <script>
         $(document).ready(function() {
+            $.fn.dataTable.moment( 'DD/MM/YYYY HH:mm:ss' );    //Formatação com Hora
+            $.fn.dataTable.moment('DD/MM/YYYY');    //Formatação sem Hora
             $('#datatable').DataTable( {
+                order: [[6, "desc"]],
                 language:{
                     "emptyTable": "Nenhum registro encontrado",
                     "info": "Mostrando de _START_ até _END_ de _TOTAL_ registros",

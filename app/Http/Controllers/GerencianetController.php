@@ -193,6 +193,7 @@ class GerencianetController extends Controller
                 $tipo = 1;
             }
             $pagamento->status = $res["status"];
+            $pagamento->save();
             if ($res["status"] == "paid") {
                 if($tipo == 0){
                     $pagamento->venda->status = 1;
