@@ -250,12 +250,12 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 text-center modal-erro-text">
-                                    <h1  style="color: #e81f60!important;">Uma senha temporária foi enviada para o e-mail informado no seu cadastro.</h1>
+                                    <h1  style="color: #e81f60!important;">Sucesso!</h1>
                                 </div>
                             </div>
                             <div class="row mt-5 mb-4">
                                 <div class="col-12 text-center modal-erro-text">
-                                    <h2>Sua nova senha foi enviada ao seu e-mail com sucesso!</h2>
+                                    <h2>Uma senha temporária foi enviada para o e-mail informado no seu cadastro.</h2>
                                 </div>
                             </div>
                         </div>
