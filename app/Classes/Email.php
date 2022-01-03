@@ -13,7 +13,7 @@ class Email{
         try {
 
             // Mail server settings
-            $mail->SMTPDebug = 6; // Enable verbose debug output
+            $mail->SMTPDebug = 0; // Enable verbose debug output
             $mail->isSMTP(); // Set mailer to use SMTP
             $mail->Host = "email-ssl.com.br"; // Endereço do servidor SMTP
             $mail->SMTPAuth = true; // Enable SMTP authentication
@@ -48,14 +48,12 @@ class Email{
             // $mail->AltBody = plain text version of your message;
 
             if( !$mail->send() ) {
-                die();
                 return false;
             } else {
                 return true;
             }
 
         } catch (Exception $e) {
-            dd($e);
             return false;
         }
     }
