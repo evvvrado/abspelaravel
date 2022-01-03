@@ -258,6 +258,8 @@ class SiteController extends Controller
     }
 
     public function recuperar_senha(){
+        session()->flash("erro", "O email ou CPF já pertence a um usuário cadastrado.");
+            return redirect()->back();
         return view("site.recuperar_senha");
     }
 
