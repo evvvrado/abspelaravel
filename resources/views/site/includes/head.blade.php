@@ -33,4 +33,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&family=Bebas+Neue&family=Inter&family=Poppins:wght@500;600;700&family=Share+Tech&display=swap" rel="stylesheet" />
 
   <title>ABS PE - Associação Brasileira de Sommeliers - Pernambuco</title>
+
+  <meta name="facebook-domain-verification" content="tb729pfe1wytdm6fmqvx2r2km1cylz" />
 </head>
