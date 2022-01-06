@@ -20,6 +20,10 @@ class GerencianetController extends Controller
     {
         $gerencianet = new GerencianetRequisicaoBoleto();
         $carrinho = Carrinho::find(session()->get("carrinho"));
+        if(!$carrinho){
+            toastr()->error("Você não possui um carrinho aberto ou não está logado");
+            return redirect()->back();
+        }
         $aluno = Aluno::find(session()->get("aluno")["id"]);
         if ($parcelas == 1) {
             $desconto = 748;
