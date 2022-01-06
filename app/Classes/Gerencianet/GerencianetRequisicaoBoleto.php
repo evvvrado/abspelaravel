@@ -93,15 +93,21 @@ class GerencianetRequisicaoBoleto{
             return $pay_charge;
             
         } catch (GerencianetException $e) {
-            Log::channel('boletos')->error('ERRO:' . $e->error . "\n" . $e->errorDescription);
-            print_r($e->code);
-            print_r($e->error);
-            print_r($e->errorDescription);
-            die();
+            Log::channel('boletos')->error('ERRO:' . $e->error . "\n" . json_encode($e->errorDescription));
+            $return = [
+                "code" => $e->code,
+                "erro" => $e->error,
+                "descricao" => $e->errorDescription
+            ];
+            return $return;
         } catch (Exception $e) {
             Log::channel('boletos')->error('ERRO:' . $e->getMessage());
-            print_r($e->getMessage());
-            die();
+            $return = [
+                "code" => -1,
+                "erro" => $e->getMessage(),
+                "descricao" => "Erro geral"
+            ];
+            return $return;
         }
     }
 
@@ -124,7 +130,7 @@ class GerencianetRequisicaoBoleto{
             return $pay_charge;
             
         } catch (GerencianetException $e) {
-            Log::channel('boletos')->error('ERRO:' . $e->code . " - " . $e->error . "\n" . $e->errorDescription);
+            Log::channel('boletos')->error('ERRO:' . $e->code . " - " . $e->error . "\n" . json_encode($e->errorDescription));
             $return = [
                 "code" => $e->code,
                 "erro" => $e->error,
