@@ -2,6 +2,20 @@
 <html lang="pt-br">
 
 <head>
+    
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TQXZXML');
+    </script>
+    <!-- End Google Tag Manager -->
+  
+    <meta name="facebook-domain-verification" content="tb729pfe1wytdm6fmqvx2r2km1cylz" />
+
+    
     <meta charset='utf-8'>
     <title>Área do Cliente - ABS PE</title>
 
@@ -36,7 +50,10 @@
 
 
 <body class="_minhaArea">
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQXZXML"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <div style="position: fixed; width: 100%; top: 0; z-index: 9999">
         {{-- NAVBAR SUPEROR --}}

@@ -31,7 +31,10 @@
 
 
 <body class="_minhaArea">
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQXZXML"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <div style="position: fixed; width: 100%; top: 0; z-index: 9999">
         {{-- NAVBAR SUPEROR --}}

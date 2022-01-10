@@ -21,7 +21,7 @@ class Email
             $mail->Host = "email-ssl.com.br"; // Endereço do servidor SMTP
             $mail->SMTPAuth = true; // Enable SMTP authentication
             $mail->Username = 'contato@abs-pe.com.br'; // SMTP username
-            $mail->Password = 'adm@77Abs'; // SMTP password
+            $mail->Password = 'abs77@Adm'; // SMTP password
             $mail->SMTPSecure = 'ssl'; // Enable TLS encryption, `ssl` also accepted
             $mail->Port = 465;
 
@@ -51,14 +51,14 @@ class Email
             // $mail->AltBody = plain text version of your message;
 
             if (!$mail->send()) {
-
+                // die();
                 return false;
             } else {
-
+                // die();
                 return true;
             }
         } catch (Exception $e) {
-
+            // die();
             return false;
         }
     }
