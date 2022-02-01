@@ -2,57 +2,51 @@
 <html lang="pt-br">
 
 <head>
-    
+
     <!-- Google Tag Manager -->
     <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-TQXZXML');
     </script>
     <!-- End Google Tag Manager -->
-  
+
     <meta name="facebook-domain-verification" content="tb729pfe1wytdm6fmqvx2r2km1cylz" />
 
-    
+
     <meta charset='utf-8'>
     <title>Área do Cliente - ABS PE</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='icon' type='image/vnd.microsoft.icon'
-        sizes='16x16 32x32 48x48 64x64 96x96 128x128 144x144 180x180 192x192 256x256'
-        href='{{ asset('favicon.ico') }}' />
-    <link rel='apple-touch-icon' sizes='180x180' href='{{ asset('site/img/logo180.png') }}'>
-    {{-- <link rel='manifest' href='/_ifl1/manifest.php' type='application/x-web-app-manifest+json'> --}}
+    <link rel='icon' type='image/vnd.microsoft.icon' sizes='16x16 32x32 48x48 64x64 96x96 128x128 144x144 180x180 192x192 256x256' href='{{ asset(' favicon.ico') }}' />
+    <link rel='apple-touch-icon' sizes='180x180' href='{{ asset(' site/img/logo180.png') }}'>
+    {{--
+    <link rel='manifest' href='/_ifl1/manifest.php' type='application/x-web-app-manifest+json'> --}}
     <link rel='preload' type='text/css' as='style'
-        href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Lato&family=Roboto:wght@500&family=Spartan:wght@400;700&display=swap'
-        crossorigin='anonymous' />
-    <link rel='preload' type='text/css' as='style' href='{{ asset('site/css/reset.css') }}' />
-    <link rel='preload' type='text/css' as='style' href='{{ asset('site/css/sistema.css') }}' />
+        href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Lato&family=Roboto:wght@500&family=Spartan:wght@400;700&display=swap' crossorigin='anonymous' />
+    <link rel='preload' type='text/css' as='style' href='{{ asset(' site/css/reset.css') }}' />
+    <link rel='preload' type='text/css' as='style' href='{{ asset(' site/css/sistema.css') }}' />
 
-    <link rel='preload' type='application/javascript' as='script' href='https://code.jquery.com/jquery-3.5.1.min.js'
-        integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=' crossorigin='anonymous' />
-    <link rel='preload' type='application/javascript' as='script' href='{{ asset('site/js/script.js') }}'>
-
-    <link rel='preload' type='text/css' as='style' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css'
+    <link rel='preload' type='application/javascript' as='script' href='https://code.jquery.com/jquery-3.5.1.min.js' integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0='
         crossorigin='anonymous' />
+    <link rel='preload' type='application/javascript' as='script' href='{{ asset(' site/js/script.js') }}'>
+
+    <link rel='preload' type='text/css' as='style' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' crossorigin='anonymous' />
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' crossorigin='anonymous'>
 
-    <link rel='stylesheet'
-        href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Poppins&family=Lato&family=Roboto:wght@500&family=Spartan:wght@400;700&display=swap'
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Poppins&family=Lato&family=Roboto:wght@500&family=Spartan:wght@400;700&display=swap'
         crossorigin='anonymous'>
-    <link rel='stylesheet' href='{{ asset('site/css/reset.css') }}'>
-    <link rel='stylesheet' href='{{ asset('site/css/sistema.css') }}'>
-    <script src='https://code.jquery.com/jquery-3.5.1.min.js'
-        integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=' crossorigin='anonymous'></script>
+    <link rel='stylesheet' href='{{ asset(' site/css/reset.css') }}'>
+    <link rel='stylesheet' href='{{ asset(' site/css/sistema.css') }}'>
+    <script src='https://code.jquery.com/jquery-3.5.1.min.js' integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=' crossorigin='anonymous'></script>
 </head>
 
 
 <body class="_minhaArea">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQXZXML"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQXZXML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <div style="position: fixed; width: 100%; top: 0; z-index: 9999">
@@ -102,7 +96,7 @@
                 <div class="_user">
                     <div class="_img">
                         @if (!$aluno->avatar)
-                            <img src="{{ asset('site/img/sistema/user.svg') }}" style="max-width: 100%;
+                        <img src="{{ asset('site/img/sistema/user.svg') }}" style="max-width: 100%;
                             min-height: unset;
                             min-width: unset;" alt="">
                         @else
@@ -110,8 +104,7 @@
                         @endif
                     </div>
                     <div class="_text">
-                        Olá <span
-                            class="_username">{{ explode(' ', session()->get('aluno')['nome'])[0] }}</span>
+                        Olá <span class="_username">{{ explode(' ', session()->get('aluno')['nome'])[0] }}</span>
                         <a href="{{ route('site.aluno.deslogar') }}" class="_sair">
                             Sair
                         </a>
@@ -167,7 +160,7 @@
                 <div class="_user">
                     <div class="_img">
                         @if (!$aluno->avatar)
-                            <img src="{{ asset('site/img/sistema/user.svg') }}" style="max-width: 100%;
+                        <img src="{{ asset('site/img/sistema/user.svg') }}" style="max-width: 100%;
                             min-height: unset;
                             min-width: unset;" alt="">
                         @else
@@ -175,8 +168,7 @@
                         @endif
                     </div>
                     <div class="_text">
-                        Olá <span
-                            class="_username">{{ explode(' ', session()->get('aluno')['nome'])[0] }}</span>
+                        Olá <span class="_username">{{ explode(' ', session()->get('aluno')['nome'])[0] }}</span>
                         <a href="{{ route('site.aluno.deslogar') }}" class="_sair">
                             Sair
                         </a>
@@ -196,37 +188,34 @@
             </div>
             <div class="_contentList">
                 <div class="_matriculasList">
-                    @if (count($aluno->matriculas) <= 0)
+                    @if (count($aluno->matriculas) <= 0) <h3>Ainda não há nenhuma matrícula</h3>
 
-                        <h3>Ainda não há nenhuma matrícula</h3>
-
-                    @else
-                        @foreach ($aluno->matriculas->sortByDesc("created_at")  as $matricula)
-                            <div class="_matricula">
-                                <div class="_image">
-                                    <img src="{{ asset($matricula->turma->curso->miniatura) }}" alt="">
-                                </div>
-                                <div class="_content">
-                                    <h3>{{ $matricula->turma->curso->titulo }}</h3>
-                                    {{-- <p>N. 558893390122</p> --}}
-                                    <div class="_date">
-                                        <div class="_svg">
-                                            <img src="{{ asset('site/img/sistema/calendar.svg') }}" alt="">
-                                        </div>
-                                        <p>{{ date('d.m.Y', strtotime($matricula->created_at)) }}</p>
-                                    </div>
-                                    <p>Curso Online</p>
-                                    <button class="btn-primary"
-                                        onclick="window.location.href = '{{ route('site.minha-area-matricula.conteudo', ['matricula' => $matricula]) }}'">
-                                        Acessar Curso
-                                        <div class="_svg">
-                                            <img src="{{ asset('site/img/sistema/buttonArrowRight.svg') }}" alt="">
-                                        </div>
-                                    </button>
-                                </div>
+                        @else
+                        @foreach ($aluno->matriculas->sortByDesc("created_at") as $matricula)
+                        <div class="_matricula">
+                            <div class="_image">
+                                <img src="{{ asset($matricula->turma->curso->miniatura) }}" alt="">
                             </div>
+                            <div class="_content">
+                                <h3>{{ $matricula->turma->curso->titulo }}</h3>
+                                {{-- <p>N. 558893390122</p> --}}
+                                <div class="_date">
+                                    <div class="_svg">
+                                        <img src="{{ asset('site/img/sistema/calendar.svg') }}" alt="">
+                                    </div>
+                                    <p>{{ date('d.m.Y', strtotime($matricula->created_at)) }}</p>
+                                </div>
+                                <p>Curso Presencial</p>
+                                {{-- <button class="btn-primary" onclick="window.location.href = '{{ route('site.minha-area-matricula.conteudo', ['matricula' => $matricula]) }}'">
+                                    Acessar Curso
+                                    <div class="_svg">
+                                        <img src="{{ asset('site/img/sistema/buttonArrowRight.svg') }}" alt="">
+                                    </div>
+                                </button> --}}
+                            </div>
+                        </div>
                         @endforeach
-                    @endif
+                        @endif
 
                 </div>
             </div>
@@ -307,7 +296,7 @@
             <p>
                 <strong>
                     Desenvolvido por
-                    <a href="https://7seventrends.com"" class="                                _img">
+                    <a href="https://7seventrends.com"" class=" _img">
                         <img src="{{ asset('site/img/_logo7seven.png') }}" style="filter: brightness(0);" alt="">
                     </a>
         </div>
