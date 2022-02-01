@@ -112,6 +112,10 @@ Route::middleware(['admin'])->group(function () {
     Route::post('/sistema/estaduais/salvar/{estadual}', [\App\Http\Controllers\EstaduaisController::class, 'salvar'])->name("painel.estadual.salvar");
     Route::get('/sistema/estaduais/deletar/{estadual}', [\App\Http\Controllers\EstaduaisController::class, 'deletar'])->name("painel.estadual.deletar");
 
+    // ROTAS DE MATRICULAS
+    Route::get('/sistema/matriculas', [\App\Http\Controllers\MatriculasController::class, 'consultar'])->name("painel.matriculas");
+    Route::post('/sistema/matriculas/matricular', [\App\Http\Controllers\MatriculasController::class, 'matricular'])->name("painel.matricula.matricular");
+
     // ROTAS DE DIRETORIAS
     Route::get('/sistema/{estadual}/diretorias', [\App\Http\Controllers\DiretoriasController::class, 'consultar'])->name("painel.diretorias");
     Route::post('/sistema/diretorias/cadastrar', [\App\Http\Controllers\DiretoriasController::class, 'cadastrar'])->name("painel.diretoria.cadastrar");

@@ -12,4 +12,8 @@ class Matricula extends Model
     public function turma(){
         return $this->belongsTo(Turma::class);
     }
+
+    public function aluno(){
+        return $this->belongsTo(Aluno::class);
+    }
 }

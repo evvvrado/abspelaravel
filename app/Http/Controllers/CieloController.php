@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Http;
 use App\Models\Venda;
 use App\Models\PagamentoCartao;
 use App\Models\Carrinho;
+use Illuminate\Support\Facades\Log;
 use Jlorente\CreditCards\CreditCardTypeConfig;
 use Jlorente\CreditCards\CreditCardValidator;
 use App\Classes\Cielo\CieloRequisicaoCredito;
@@ -52,6 +53,7 @@ class CieloController extends Controller
                 $venda->valor_parcela = $venda->total / $venda->parcelas;
                 $venda->desconto = 0;
                 $venda->save();
+                Log::channel('pagamentos')->info("Venda " . $venda->id . " criada para o aluno " . $venda->aluno->nome. ".\nForma de pagamento: [cartão]");
 
                 $pagamento = new PagamentoCartao;
                 $pagamento->venda_id = $venda->id;
@@ -59,7 +61,8 @@ class CieloController extends Controller
                 $pagamento->numero = $res["numero"];
                 $pagamento->status = 1;
                 $pagamento->save();
-                
+                Log::channel('pagamentos')->info("Adicionado pagamento por cartão na venda " . $venda->id);
+
 
                 // $cielo->capturar($pagamento->codigo, $pagamento->venda->total);
 
@@ -70,6 +73,8 @@ class CieloController extends Controller
                     $matricula->turma_id = $produto->turma_id;
                     $matricula->save();
                     
+                    Log::channel('pagamentos')->info("Criada matricula do turma " . $produto->turma_id);
+
                     $produto->turma->inscritos += 1;
                     $produto->turma->save();
                 }
@@ -81,6 +86,7 @@ class CieloController extends Controller
 
                 return redirect()->route("site.carrinho-confirmacao");
             } else {
+                Log::channel('cartoes')->error('ERRO:' . json_encode($res));
                 if (isset(config("cielo.erros")[$res["retorno"]])) {
                     session()->flash("erro", config("cielo.erros")[$res["retorno"]]);
                 } else {
@@ -89,6 +95,7 @@ class CieloController extends Controller
                 return redirect()->route("site.carrinho.pagamento.cartao");
             }
         } else {
+            Log::channel('cartoes')->error('ERRO:' . json_encode($res));
             session()->flash("erro", "Erro nos dados do cartão. Verifique se as informações estão corretas e tente novamente.");
             return redirect()->route("site.carrinho.pagamento.cartao");
         }

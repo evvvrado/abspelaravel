@@ -107,6 +107,24 @@ return [
             'level' => env('LOG_LEVEL', 'info'),
         ],
 
+        'cartoes' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/cartoes.log'),
+            'level' => env('LOG_LEVEL', 'info'),
+        ],
+
+        'pagamentos' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/pagamentos.log'),
+            'level' => env('LOG_LEVEL', 'info'),
+        ],
+
+        'matriculas' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/matriculas.log'),
+            'level' => env('LOG_LEVEL', 'info'),
+        ],
+
         'app' => [
             'driver' => 'single',
             'path' => storage_path('logs/app.log'),

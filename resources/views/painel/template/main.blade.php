@@ -259,6 +259,15 @@ $usuario = \App\Models\Usuario::find(session()->get("usuario")["id"]);
                             </ul> --}}
                         </li>
                         <li>
+                            <a href="{{route('painel.matriculas')}}" class="waves-effect">
+                                <i class="bx bx-font-family" aria-hidden="true"></i>
+                                <span key="t-dashboards">Matrículas</span>
+                            </a>
+                            {{-- <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="{{route('painel.indisponivel')}}" key="t-default">Turma (i)</a></li>
+                            </ul> --}}
+                        </li>
+                        <li>
                             <a href="javascript: void(0);" class="waves-effect">
                                 <i class="bx bx-calendar-event" aria-hidden="true"></i>
                                 <span key="t-dashboards">Eventos</span>
