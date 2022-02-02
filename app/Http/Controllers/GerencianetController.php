@@ -226,12 +226,12 @@ class GerencianetController extends Controller
                 }
                 
             }
-            Log::channel('notificacoes')->info('NOTIFICAÇÃO: Pagamento ' . $res["charge_id"] . " notificado com o status " . config("gerencianet.status")[$res["status"]]);
+            Log::channel('notificacoes')->info('NOTIFICAÇÃO (3): Pagamento ' . $res["charge_id"] . " notificado com o status " . config("gerencianet.status")[$res["status"]]);
             $pagamento->save();
         } elseif ($res["code"] == -1) {
-            Log::channel('notificacoes')->error('ERRO:' . $res["erro"]);
+            Log::channel('notificacoes')->error('ERRO (2):' . json_encode($res));
         } else {
-            Log::channel('notificacoes')->error('ERRO:' . $res["erro"] . "\n" . $res["descricao"]);
+            Log::channel('notificacoes')->error('ERRO (2):' . json_encode($res));
         }
     }
 }
