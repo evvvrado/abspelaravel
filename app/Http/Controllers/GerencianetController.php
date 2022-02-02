@@ -20,7 +20,7 @@ class GerencianetController extends Controller
     {
         $gerencianet = new GerencianetRequisicaoBoleto();
         $carrinho = Carrinho::find(session()->get("carrinho"));
-        if(!$carrinho){
+        if (!$carrinho) {
             toastr()->error("Você não possui um carrinho aberto ou não está logado");
             return redirect()->back();
         }
@@ -61,7 +61,7 @@ class GerencianetController extends Controller
                 'value' => $desconto
             ]);
             $gerencianet->addBoleto([
-                'expire_at' => date("Y-m-d", strtotime("+15 days")), // data de vencimento do titulo
+                'expire_at' => date("Y-m-d", strtotime("+2 days")), // data de vencimento do titulo
                 'message' => 'Acompanhe o status do seu pagamento no seu painel do cliente.', // mensagem a ser exibida no boleto
             ]);
             $res = $gerencianet->gerarBoleto();
@@ -200,7 +200,7 @@ class GerencianetController extends Controller
             $pagamento->status = $res["status"];
             $pagamento->save();
             if ($res["status"] == "paid") {
-                if($tipo == 0){
+                if ($tipo == 0) {
                     $pagamento->venda->status = 1;
                     $pagamento->venda->save();
                     $aluno = $pagamento->venda->aluno_id;
@@ -210,13 +210,13 @@ class GerencianetController extends Controller
                         $matricula->turma_id = $produto->turma_id;
                         $matricula->save();
                     }
-                }else{
+                } else {
                     $pagamento->carne->venda->status = 1;
                     $pagamento->carne->venda->save();
                     $aluno = $pagamento->carne->venda->aluno_id;
                     foreach ($pagamento->carne->venda->carrinho->produtos as $produto) {
                         $matricula = Matricula::where([["aluno_id", $aluno], ["turma_id", $produto->turma_id]])->first();
-                        if(!$matricula){
+                        if (!$matricula) {
                             $matricula = new Matricula;
                             $matricula->aluno_id = $aluno;
                             $matricula->turma_id = $produto->turma_id;
@@ -224,7 +224,6 @@ class GerencianetController extends Controller
                         }
                     }
                 }
-                
             }
             Log::channel('notificacoes')->info('NOTIFICAÇÃO (3): Pagamento ' . $res["charge_id"] . " notificado com o status " . config("gerencianet.status")[$res["status"]]);
             $pagamento->save();
