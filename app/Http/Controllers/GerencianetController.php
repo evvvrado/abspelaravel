@@ -186,10 +186,11 @@ class GerencianetController extends Controller
 
     public function notificacao()
     {
-        Log::channel('notificacoes')->info('NOTIFICAÇÃO: Tentativa de notificação no token ' . $_POST['notification']);
+        Log::channel('notificacoes')->info('NOTIFICAÇÃO (1): Tentativa de notificação no token ' . $_POST['notification']);
         $gerencianet = new GerencianetRequisicaoBoleto();
         $res = $gerencianet->notificacao($_POST["notification"]);
         if ($res["code"] == 200) {
+            Log::channel('notificacoes')->info('NOTIFICAÇÃO (2): Sucesso ao recuperar informações do token ' . $_POST['notification'] . '. Charge ID: ' . $res["charge_id"] . "<br>" . json_encode($res));
             $pagamento = PagamentoBoleto::where("charge_id", $res["charge_id"])->first();
             $tipo = 0;
             if (!$pagamento) {
