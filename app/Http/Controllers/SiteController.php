@@ -17,6 +17,7 @@ use App\Models\Galeria;
 use App\Models\Matricula;
 use App\Models\Venda;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Hash;
 
 class SiteController extends Controller
 {
@@ -153,8 +154,9 @@ class SiteController extends Controller
         if(Hash::check($request->senha_antiga, $aluno->senha)){
             $aluno->senha = Hash::make($request->senha_nova);
             $aluno->save();
+            session()->flash("sucesso_senha", "Senha alterada com sucesso!");
         }else{
-            session()->flash("erro", "A senha antiga informada está incorreta");
+            session()->flash("erro_senha", "A senha antiga informada está incorreta");
         }
         return redirect()->back();
     }

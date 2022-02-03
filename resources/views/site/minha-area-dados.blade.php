@@ -241,7 +241,8 @@
                 <div class="_top">
                     <h2>Alterar Senha de Acesso</h2>
                 </div>
-                <form class="_dados">
+                <form action="{{route('site.minha-area-dados.senha.alterar')}}" method="POST" class="_dados">
+                    @csrf
                     <label>
                         <input type="password" name="senha_antiga" placeholder="Senha Antiga" value="" class="_dadosComponent">
                         <div class="_icon">
