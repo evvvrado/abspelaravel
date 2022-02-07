@@ -2,38 +2,38 @@
 <html lang="pt-br">
 
 <head>
-
+    
     <!-- Google Tag Manager -->
     <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-TQXZXML');
     </script>
     <!-- End Google Tag Manager -->
-
+  
     <meta name="facebook-domain-verification" content="tb729pfe1wytdm6fmqvx2r2km1cylz" />
     <meta charset='utf-8'>
     @if (isset($pagina))
-    <title>{{ $pagina->titulo }}</title>
-    <meta name='keywords' content='{{ $pagina->palavras }}'>
-    <meta name='description' content='{{ $pagina->descricao }}'>
-    <meta property='og:title' content='{{ $pagina->titulo }}'>
-    <meta property='og:site_name' content='{{ $pagina->titulo }}'>
-    <meta name='twitter:title' content='{{ $pagina->titulo }}'>
-    <meta property='og:description' content='{{ $pagina->descricao }}'>
-    <meta name='twitter:description' content='{{ $pagina->descricao }}'>
+        <title>{{ $pagina->titulo }}</title>
+        <meta name='keywords' content='{{ $pagina->palavras }}'>
+        <meta name='description' content='{{ $pagina->descricao }}'>
+        <meta property='og:title' content='{{ $pagina->titulo }}'>
+        <meta property='og:site_name' content='{{ $pagina->titulo }}'>
+        <meta name='twitter:title' content='{{ $pagina->titulo }}'>
+        <meta property='og:description' content='{{ $pagina->descricao }}'>
+        <meta name='twitter:description' content='{{ $pagina->descricao }}'>
 
     @else
-    <title>Associação Brasileira de Sommeliers - Pernambuco</title>
-    <meta name='keywords' content=''>
-    <meta name='description' content=''>
-    <meta property='og:title' content='Associação Brasileira de Sommeliers - Brasil'>
-    <meta property='og:site_name' content='Associação Brasileira de Sommeliers - Brasil'>
-    <meta name='twitter:title' content='Associação Brasileira de Sommeliers - Brasil'>
-    <meta property='og:description' content=''>
-    <meta name='twitter:description' content=''>
+        <title>Associação Brasileira de Sommeliers - Pernambuco</title>
+        <meta name='keywords' content=''>
+        <meta name='description' content=''>
+        <meta property='og:title' content='Associação Brasileira de Sommeliers - Brasil'>
+        <meta property='og:site_name' content='Associação Brasileira de Sommeliers - Brasil'>
+        <meta name='twitter:title' content='Associação Brasileira de Sommeliers - Brasil'>
+        <meta property='og:description' content=''>
+        <meta name='twitter:description' content=''>
     @endif
     <link rel='canonical' href='https://homolog.abs-brasil.com'>
 
@@ -59,35 +59,43 @@
     <meta name='mobile-web-app-capable' content='yes'>
     <meta name='apple-mobile-web-app-capable' content='yes'>
     <meta name='twitter:card' content='summary'>
-    <link rel='icon' type='image/vnd.microsoft.icon' sizes='16x16 32x32 48x48 64x64 96x96 128x128 144x144 180x180 192x192 256x256' href='{{ asset(' favicon.ico') }}' />
-    <link rel='apple-touch-icon' sizes='180x180' href='{{ asset(' site/img/logo180.png') }}'>
-    {{--
-    <link rel='manifest' href='/_ifl1/manifest.php' type='application/x-web-app-manifest+json'> --}}
+    <link rel='icon' type='image/vnd.microsoft.icon'
+        sizes='16x16 32x32 48x48 64x64 96x96 128x128 144x144 180x180 192x192 256x256'
+        href='{{ asset('favicon.ico') }}' />
+    <link rel='apple-touch-icon' sizes='180x180' href='{{ asset('site/img/logo180.png') }}'>
+    {{-- <link rel='manifest' href='/_ifl1/manifest.php' type='application/x-web-app-manifest+json'> --}}
     <link rel='preload' type='text/css' as='style'
-        href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Lato&family=Roboto:wght@500&family=Spartan:wght@400;700&display=swap' crossorigin='anonymous' />
-    <link rel='preload' type='text/css' as='style' href='{{ asset(' site/css/reset.css') }}' />
-    <link rel='preload' type='text/css' as='style' href='{{ asset(' site/css/sistema.css') }}' />
-
-    <link rel='preload' type='application/javascript' as='script' href='https://code.jquery.com/jquery-3.5.1.min.js' integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0='
+        href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Lato&family=Roboto:wght@500&family=Spartan:wght@400;700&display=swap'
         crossorigin='anonymous' />
-    <link rel='preload' type='application/javascript' as='script' href='{{ asset(' site/js/script.js') }}'>
+    <link rel='preload' type='text/css' as='style' href='{{ asset('site/css/reset.css') }}' />
+    <link rel='preload' type='text/css' as='style' href='{{ asset('site/css/sistema.css') }}' />
 
-    <link rel='preload' type='text/css' as='style' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' crossorigin='anonymous' />
+    <link rel='preload' type='application/javascript' as='script' href='https://code.jquery.com/jquery-3.5.1.min.js'
+        integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=' crossorigin='anonymous' />
+    <link rel='preload' type='application/javascript' as='script' href='{{ asset('site/js/script.js') }}'>
+
+    <link rel='preload' type='text/css' as='style' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css'
+        crossorigin='anonymous' />
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' crossorigin='anonymous'>
 
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Poppins&family=Lato&family=Roboto:wght@500&family=Spartan:wght@400;700&display=swap'
+    <link rel='stylesheet'
+        href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Poppins&family=Lato&family=Roboto:wght@500&family=Spartan:wght@400;700&display=swap'
         crossorigin='anonymous'>
-    <link rel='stylesheet' href='{{ asset(' site/css/reset.css') }}'>
-    <link rel='stylesheet' href='{{ asset(' site/css/sistema.css') }}'>
-    <script src='https://code.jquery.com/jquery-3.5.1.min.js' integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=' crossorigin='anonymous'></script>
+    <link rel='stylesheet' href='{{ asset('site/css/reset.css') }}'>
+    <link rel='stylesheet' href='{{ asset('site/css/sistema.css') }}'>
+    <script src='https://code.jquery.com/jquery-3.5.1.min.js'
+        integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=' crossorigin='anonymous'></script>
 </head>
 
 <body class="_carrinho">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQXZXML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQXZXML"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet" />
 
 
 
@@ -100,7 +108,7 @@
                     <a href="/" class="logo-abspe">
                         <img src="{{ asset('site/img/_logo92.png') }}" alt="Logo ABS-Pernambuco" />
                     </a>
-
+    
                     <a href="https://abs-pe.com.br/noticia/abs-pe/association-de-la-sommellerie-internationale-asi" class="logo-asi">
                         <img src="{{ asset('site/img/_logoASI_92.png') }}" alt="Logo ASI" />
                     </a>
@@ -150,7 +158,8 @@
 
             <div class="pop-up-buttons">
                 <button class="cancel" onclick="activepopup()">Cancelar</button>
-                <button class="confirm" onclick="window.location = '{{ route('site.carrinho.finalizar.boleto') }}'">Finalizar
+                <button class="confirm"
+                    onclick="window.location = '{{ route('site.carrinho.finalizar.boleto') }}'">Finalizar
                     Compra</button>
             </div>
 
@@ -177,22 +186,19 @@
                             <img src="https://abs-pe.com.br/site/img/sistema/doorData.svg" alt="">
                         </div>
                         <h2><a href="/">Home</a></h2>
-                    </div>
-                    <div class="arrow _title _active">
+                    </div><div class="arrow _title _active">
                         <img src="https://abs-pe.com.br/site/img/sistema/loadingArrow.svg" alt="">
-                    </div>
-                    <div class="_title _active">
+                    </div><div class="_title _active">
                         <div class="_img">
                             <img src="https://abs-pe.com.br/site/img/sistema/personIdentificacao.svg" alt="">
                         </div>
                         <h2><a href="https://abs-pe.com.br/carrinho/identificacao">Identificação</a></h2>
                     </div>
-
+                    
 
                     <div class="arrow _title _active">
                         <img src="https://abs-pe.com.br/site/img/sistema/loadingArrow.svg" alt="">
-                    </div>
-                    <div class="_title _active">
+                    </div><div class="_title _active">
                         <div class="_img">
                             <img src="https://abs-pe.com.br/site/img/sistema/card.svg" alt="">
                         </div>
@@ -242,14 +248,15 @@
                     </div> --}}
 
 
-
+                 
                     <div class="_choose">
                         <div class="_title">
                             <span>Escolha a forma de pagamento</span>
                             <p style="color: unset">Aceite os termos e selecione uma forma de pagamento</p>
                         </div>
                         <div class="_buttons">
-                            {{-- <div class="bolet button unchoosed" onclick="defineBO()">
+                            {{-- <div class="bolet button unchoosed"
+                                onclick="defineBO()">
                                 <div class="_icon">
                                     <img src="{{ asset('site/img/sistema/boleto.svg') }}" alt="" />
                                 </div>
@@ -259,7 +266,8 @@
                                 </div>
                             </div> --}}
 
-                            <div class="creditCard button unchoosed" onclick="defineCC()">
+                            <div class="creditCard button unchoosed"
+                                onclick="defineCC()">
                                 <div class="_icon">
                                     <img src="{{ asset('site/img/sistema/creditcard.svg') }}" alt="" />
                                 </div>
@@ -279,12 +287,12 @@
                     </a>
 
 
-                    <p style="color: gray; display: flex; align-items:center; justify-content: flex-start; gap: 12px;">
-                        <input type="checkbox" name="termos" checked>
-                        Li e aceito os termos de contrato.
+                    <p style="color: gray; display: flex; align-items:center; justify-content: flex-start; gap: 12px;"> 
+                         <input type="checkbox" name="termos" checked> 
+                         Li e aceito os termos de contrato. 
                     </p>
 
-
+                    
                     <a class="btn-primary invalid" style="float: left; margin-top: 20px;">
                         Continuar
                     </a>
@@ -353,7 +361,8 @@
     </footer>
 
     <script>
-        $('input[name = "termos"]').change(()=> {
+        
+    $('input[name = "termos"]').change(()=> {
         $('.bolet.button, .creditCard.button').addClass('unchoosed');
         $('a.btn-primary').addClass('invalid');
         $('.bolet.button, .creditCard.button').toggleClass('invalid');
@@ -391,7 +400,7 @@
             <p>
                 <strong>
                     Desenvolvido por
-                    <a href="https://7seventrends.com"" class=" _img">
+                    <a href="https://7seventrends.com"" class="   _img">
                         <img src="{{ asset('site/img/_logo7seven.png') }}" style="filter: brightness(0);""  alt="">
               </a> </div></p> 
               </strong>
@@ -401,24 +410,33 @@
 
 
 
-    <script src=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js "></script>
     <script>
-        $(" form label input,form label textarea").focus(function() { $(this).parent().find("span").addClass("active"); }); $("form label input,form label textarea").focusout(function() { if
-                            ($(this).val()=="" ) { $(this).parent().find("span").removeClass("active"); } }); $("._carButton").click(()=> {
-                        $("._meuCarrinho").animate({
-                        top: "0",r
-                        },
-                        400
-                        );
-                        });
-                        $(" section._meuCarrinho ._top ._title ._icon img:last-child").click(() => {
-                        $("._meuCarrinho").animate({
-                        top: "-200vh",
-                        },
-                        400
-                        );
-                        });
-                        </script>
-</body>
+        $("form label input,form label textarea").focus(function() {
+            $(this).parent().find("span").addClass("active");
+        });
 
+        $("form label input,form label textarea").focusout(function() {
+            if ($(this).val() == "") {
+                $(this).parent().find("span").removeClass("active");
+            }
+        });
+
+
+        $("._carButton").click(() => {
+            $("._meuCarrinho").animate({
+                    top: "0",r
+                },
+                400
+            );
+        });
+        $(" section._meuCarrinho ._top ._title ._icon img:last-child").click(() => {
+            $("._meuCarrinho").animate({
+                    top: "-200vh",
+                },
+                400
+            );
+        });
+    </script>
+  </body>
 </html>
