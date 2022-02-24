@@ -14,7 +14,7 @@
                 <img height="80" src="{{asset('site/img/logoSenac.png')}}" alt="">
             </div>
             <div class="partner">
-                <img height="101" src="{{asset('site/img/logoDigital.png')}}" alt="">
+                <img height="101" src="{{asset('site/img/logoMH.jpg')}}" alt="">
             </div>
         </div>
     </div>
