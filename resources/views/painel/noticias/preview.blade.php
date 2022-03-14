@@ -1,41 +1,98 @@
-@include('site.includes.head')
-<body class="cursos" style="overflow:hidden;">
-    @include('site.includes.bodyHeader', [
-        "classe" => "blog"    
-    ])
-    <main class="main">
-        <section id="blogItem">
-            <article>
-                <header>
-                    <h2>{{$noticia->titulo}}</h2>
-                    <hr>
-                    <nav>
-                        <address class="author">
-                            <a rel="author" title="Enviar email para o autor" href="mailto:">
-                                <img width="27" height="27" src="{{asset('site/img/ico_user.svg')}}" alt="Ícone usuário">
-                                <span>
-                                    {{$noticia->autor}}
-                                </span>
-                            </a>
-                        </address>
-                        <div class="direita">
-                            <a href="."><img width="20" height="20" src="{{asset('site/img/ico_compart.svg')}}" alt="Icone compartilhar"><span>Share</span></a>
-                            <a class="whatsapp" href="https://api.whatsapp.com/send?text=Artigo blog ABS Brasil: {{ url()->current() }}" title="Compartilhar via WhatsApp" target="_blank" rel="nofollow noopener"><img width="27" height="27" src="{{asset('site/img/ico_whats.svg')}}" alt="WhatsApp"></a>
-                            <a href="http://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}" title="Compartilhar via Facebook" target="_blank" rel="nofollow noopener"><img width="27" height="27" src="{{asset('site/img/ico_face.svg')}}" alt="Facebook"></a>
-                            <a href="mailto:?subject=Artigo blog ABS Brasil&amp;body={{ url()->current() }}" title="Compartilhar via Email" target="_blank" rel="nofollow noopener"><img width="25" height="25" src="{{asset('site/img/ico_envelope.svg')}}" alt="Email"></a>
-                            <a href="https://twitter.com/home?status={{ url()->current() }}" title="Compartilhar via Twitter" target="_blank" rel="nofollow noopener"><img width="23" height="18" src="{{asset('site/img/ico_twitter.svg')}}" alt="Twitter"></a>
-                        </div>
-                    </nav>
-                    <img style="max-width: 100%;" src="{{asset($noticia->banner)}}" alt="Ilustração blog {{ url()->current() }}">
-                </header>
-                <main>
-                    <h3>{{$noticia->subtitulo}}</h3>
-                   {!! $noticia->conteudo !!}
-                </main>
-            </article>
-        </section>
-    </main>
-    @include('site.includes.footer')
-</body>
+@include("site.includes.head")
 
-</html>
+<body class="_blog-post">
+
+    <section class="container-fluid _infobox">
+        <div class="_box">
+            <span id="_info"></span>
+        </div>
+        <div class="_loadingBox">
+        </div>
+    </section>
+
+
+
+    <!-- MENU LATERAL -->
+    @include("site.includes.menu_lateral")
+    <!-- MENU LATERAL -->
+
+    {{-- BARRA DE LOGIN E CADASTRE-SE --}}
+    @include("site.includes.barra_login")
+
+
+    {{-- NAVBAR SUPEROR --}}
+    @include("site.includes.navbar")
+    <!-- BARRA SUPERIOR DE LOGIN E HEADER-->
+
+
+
+    <!-- SECTION HERO -->
+    <section class="container-fluid s_hero">
+        <div class="container-fav">
+            <h1></h1>
+        </div>
+
+    </section>
+    <!-- SECTION HERO -->
+
+
+    <!-- SECTIONS EXTRAS -->
+    <section class="container-fluid s_post">
+
+        <div class="container-fav">
+
+            <nav class="post_topbar">
+                <div class="author">
+                    <div class="svg">
+                        <img src="{{ asset('site/img/bUser.svg') }}" alt="">
+                    </div>
+                    <p id="post_author">{{$noticia->autor}}</p>
+                </div>
+                <div class="share">
+                    <button class="share_btn">
+                        <div class="svg">
+                            <img src="{{ asset('site/img/share.svg') }}" alt="">
+                        </div>
+                        <p>Share</p>
+                    </button>
+                    <div class="svg">
+                        <a target="_blank" href="https://wa.me/?text=Veja só essa notícia da ABS Pernambuco {{ url()->current() }}"><img src="{{ asset('site/img/WhatsappLogoOferta.svg') }}"
+                                height="28px" alt=""></a>
+                    </div>
+                    <div class="svg">
+                        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}"><img src="{{ asset('site/img/FacebookLogo.svg') }}" height="28px" alt=""></a>
+                    </div>
+                    <div class="svg">
+                        <a target="_blank" href="mailto:?subject=Veja só essa notícia da ABS Pernambuco&amp;body={{ url()->current() }}"><img src="{{ asset('site/img/shareEnvelop.svg') }}" alt=""></a>
+                    </div>
+                    <div class="svg">
+                        <a target="_blank" href="https://twitter.com/home?status={{ url()->current() }}"><img src="{{ asset('site/img/shareTwitter.svg') }}" alt=""></a>
+                    </div>
+                </div>
+
+
+            </nav>
+
+
+            <div class="_text">
+                <h2 id="post_title">{{$noticia->titulo}}</h2>
+                <p id="post_content">
+                    {{$noticia->subtitulo}}
+
+                    <br><br>
+                    {!! $noticia->conteudo !!}
+            </div>
+        </div>
+    </section>
+
+    @include('site.includes.vantagens')
+
+
+    {{-- PARCEIROS --}}
+    @include("site.includes.parceiros")
+
+    <script>
+
+    </script>
+
+    @include("site.includes.footer")
