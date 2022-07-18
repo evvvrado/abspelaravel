@@ -82,14 +82,14 @@
             <div class="niv-right-area">
                 <h3 n-class="fade">
                     Por que você deve<br>
-                    <strong>FAZER ESSE CURSO?</strong>
+                    <strong>FAZER ESTE CURSO?</strong>
                 </h3>
 
                 <p>
                     O Amantes do Vinho não é um curso profissionalizante, é um curso, como indica o nome, para amantes da
                     bebida.
                     <br><br>
-                    Se você tem mais de 18 anos, é apaixonado por vinhos, quer aprender mais sobre esse universo fascinante
+                    Se você tem mais de 18 anos, é apaixonado por vinhos, quer aprender mais sobre este universo fascinante
                     junto de especialistas renomados que te guiarão rumo a um conhecimento valioso,
                     <br>
                     ESSE CURSO FOI FEITO

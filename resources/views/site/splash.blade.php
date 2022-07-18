@@ -85,7 +85,6 @@
                 <div class="box">
                     <p><strong>R$ 900,00</strong>
                         à vista</p>
-
                 </div>
 
                 <div class="buttons-row">
