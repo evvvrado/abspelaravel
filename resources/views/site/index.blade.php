@@ -166,8 +166,7 @@
                         </button>
                     @else
                         <button class="btn-primary" onclick="window.location.href = '{{ route('site.infinite') }}'">
-                            Inscreva-se
-
+                            Inscreva-se]
                         </button>
                     @endif
                 </div>
@@ -227,11 +226,10 @@
                             </script>
                         </h1>
                     </div>
-                    @if ($turma->curso->id != 4)
+                    @if ($turma2->curso->id != 4)
                         <button class="btn-primary"
                             onclick="window.location.href = '{{ route('site.curso', ['slug' => $turma->curso->slug]) }}'">
                             Inscreva-se
-
                         </button>
                     @else
                         <button class="btn-primary" onclick="window.location.href = '{{ route('site.infinite') }}'">
