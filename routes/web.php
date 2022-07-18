@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/testes', [\App\Http\Controllers\CieloController::class, 'capturar']);
 
+Route::get('/amantesdovinho', [\App\Http\Controllers\SiteController::class, 'infinite'])->name("site.infinite");
+Route::get('/escolherforma', [\App\Http\Controllers\SiteController::class, 'splash'])->name("site.splash");
+
+
 Route::get('/', [\App\Http\Controllers\SiteController::class, 'index'])->name("site.index");
 Route::get('/termos', [\App\Http\Controllers\SiteController::class, 'termos'])->name("site.termos");
 Route::get('/abspe/quem-somos', [\App\Http\Controllers\SiteController::class, 'quem_somos'])->name("site.quem_somos");

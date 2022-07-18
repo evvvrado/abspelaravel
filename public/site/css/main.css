@@ -1,0 +1,4281 @@
+header [n-class*="niv"] nav ul li a,
+.btn,
+div[n-class*="splash"] [n-class*="niv"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
+  --black: $black;
+  --white: $white;
+  --blue: $blue;
+  --indigo: $indigo;
+  --purple: $purple;
+  --pink: $pink;
+  --red: $red;
+  --orange: $orange;
+  --yellow: $yellow;
+  --green: $green;
+  --teal: $teal;
+  --cyan: $cyan;
+  --white: $white;
+  --grey: $grey;
+  --grey-dark: $grey-dark;
+  --success: $success;
+  --info: $info;
+  --warning: $warning;
+  --danger: $danger;
+  --light: $light;
+  --dark: $dark;
+  --muted: $muted;
+  --hyp8-dark: $hyp8-dark;
+  --opacity-bg: $opacity-bg;
+  --principal: #d9a863;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h1 strong,
+h2,
+section.members div[n-class="niv"] h2 b,
+h2 section.members div[n-class="niv"] strong b,
+section.members div[n-class="niv"] h2 b strong,
+h2 section.members div[n-class="niv"] strong b strong,
+section.members div[n-class="niv"] h2 b b,
+h2 section.members div[n-class="niv"] strong b b,
+section.members div[n-class="niv"] h2 b section.members div[n-class="niv"] strong b,
+h2 section.members div[n-class="niv"] strong b section.members div[n-class="niv"] strong b,
+h2 strong,
+section.members div[n-class="niv"] h2 b strong,
+h2 section.members div[n-class="niv"] strong b strong,
+section.members div[n-class="niv"] h2 b strong strong,
+h2 section.members div[n-class="niv"] strong b strong strong,
+section.members div[n-class="niv"] h2 b b strong,
+h2 section.members div[n-class="niv"] strong b b strong,
+section.members div[n-class="niv"] h2 b section.members div[n-class="niv"] strong b strong,
+h2 section.members div[n-class="niv"] strong b section.members div[n-class="niv"] strong b strong,
+h3,
+h3 strong,
+h4,
+section.modules div[n-class*="niv"] div.niv-area div.picture-side h4 strong,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+  height: 100%;
+  box-sizing: border-box;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+  /* CUSTOM ATTR */
+  /* RESET */
+  /* GRID */
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+html body {
+  height: 100%;
+  opacity: 1;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: none;
+  width: 100%;
+  background-color: #000;
+}
+html ::-moz-selection {
+  color: var(--principal);
+  background: #505050;
+}
+html ::selection {
+  color: var(--principal);
+  background: #505050;
+}
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+  background: #000;
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--principal);
+}
+html::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background: var(--principal);
+}
+html [disabled] {
+  pointer-events: none;
+  filter: grayscale(0);
+}
+html * {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+html *,
+html *:before,
+html *:after {
+  box-sizing: inherit;
+  outline: none;
+  -webkit-touch-callout: none;
+}
+html a,
+html button {
+  all: unset;
+  cursor: pointer;
+  color: inherit;
+  outline: none;
+  pointer-events: auto;
+  text-decoration: none;
+  background: none;
+  border: none;
+  border-radius: none;
+  color: inherit;
+  font: inherit;
+  outline: none;
+  pointer-events: auto;
+}
+html img {
+  max-width: 100%;
+  display: block;
+}
+html ul,
+html ol {
+  margin: 0;
+}
+html :focus {
+  outline: none;
+}
+html ::-moz-focus-inner {
+  border: 0;
+}
+html input,
+html textarea {
+  background: none;
+  border: none;
+  border-radius: none;
+  color: inherit;
+  font: inherit;
+  outline: none;
+  pointer-events: auto;
+}
+html section,
+html [n-class*="fluid"] {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+html section [n-class*="niv"],
+html [n-class*="fluid"] [n-class*="niv"] {
+  width: 100%;
+  max-width: 1336px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+html [niv-follow] {
+  transition: 0.32s;
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 52%;
+  }
+}
+
+@-webkit-keyframes upandown {
+  0% {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(0.3rem);
+  }
+  66% {
+    transform: translateY(-0.3rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes upandown {
+  0% {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(0.3rem);
+  }
+  66% {
+    transform: translateY(-0.3rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+@-webkit-keyframes svganimation {
+  0% {
+    stroke-dasharray: 78;
+  }
+  70% {
+    stroke-dasharray: 400;
+  }
+  100% {
+    fill: #fff;
+    stroke: 1px;
+  }
+}
+@keyframes svganimation {
+  0% {
+    stroke-dasharray: 78;
+  }
+  70% {
+    stroke-dasharray: 400;
+  }
+  100% {
+    fill: #fff;
+    stroke: 1px;
+  }
+}
+@-webkit-keyframes typing {
+  0% {
+    max-width: 0;
+  }
+  50% {
+    max-width: 120%;
+  }
+  100% {
+    max-width: 0;
+  }
+}
+@keyframes typing {
+  0% {
+    max-width: 0;
+  }
+  50% {
+    max-width: 120%;
+  }
+  100% {
+    max-width: 0;
+  }
+}
+@-webkit-keyframes zigzag {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0.5rem);
+  }
+  100% {
+    transform: translateX(-0.5rem);
+  }
+}
+@keyframes zigzag {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0.5rem);
+  }
+  100% {
+    transform: translateX(-0.5rem);
+  }
+}
+div[n-class="modal"] {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 7;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.32s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0;
+  -webkit-backdrop-filter: blur(2.5rem);
+  backdrop-filter: blur(2.5rem);
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+div[n-class="modal"][show] {
+  opacity: 1;
+  pointer-events: all;
+}
+div[n-class="modal"][show] [n-class="modal-box"] {
+  top: 0;
+  opacity: 1;
+}
+div[n-class="modal"] [n-class="modal-box"] {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 67.2rem;
+  height: 72.8rem;
+  transition: 0.32s;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 80px 20px rgba(0, 0, 0, 0.25);
+  position: relative;
+  top: -15rem;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0;
+}
+div[n-class="modal"] [n-class="modal-box"] [n-class="modal-content"] {
+  position: relative;
+  height: 67.2rem;
+  width: 100%;
+  background-color: #111111;
+  padding: 4rem;
+}
+div[n-class="modal"] [n-class="modal-box"] [n-class="modal-close-icon"] {
+  position: absolute;
+  right: 4rem;
+  top: 4rem;
+  cursor: pointer;
+}
+div[n-class="modal"] [n-class="modal-box"] [n-class="modal-close-icon"]:hover {
+  opacity: 0.7;
+}
+div[n-class="modal"] [n-class="modal-close"] {
+  background-color: rgba(0, 0, 0, 0.39);
+  cursor: default;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  content: "";
+}
+div[n-class="modal"]#lista_modal [n-class="modal-box"] [n-class="modal-content"] form {
+  background-color: #070707;
+  padding: 3.7rem;
+}
+div[n-class="modal"]#lista_modal [n-class="modal-box"] [n-class="modal-content"] form button.btn.--filled {
+  --width: 19.5rem;
+  --content: "inscrever";
+}
+div[n-class="modal"]#lista_modal [n-class="modal-box"] [n-class="modal-content"] strong {
+  margin-top: 5rem;
+  margin-bottom: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 141.19%;
+  color: #fff;
+  display: block;
+}
+div[n-class="modal"]#lista_modal [n-class="modal-box"] [n-class="modal-content"] p {
+  max-width: 40rem;
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 5rem;
+}
+div[n-class="modal"]#video_modal {
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+div[n-class="modal"]#video_modal [n-class="modal-box"] {
+  aspect-ratio: 16/9;
+  height: unset;
+  max-width: 55vw;
+  padding: 0;
+}
+div[n-class="modal"]#video_modal [n-class="modal-box"] [n-class="modal-content"] {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  max-width: unset;
+  max-height: unset;
+}
+div[n-class="modal"]#video_modal [n-class="modal-box"] [n-class="modal-content"] [n-class="modal-close-icon"] {
+  background-color: #070707;
+  border-radius: 100%;
+  padding: 2rem;
+  top: 2rem;
+  right: 2rem;
+}
+@media (max-width: 800px) {
+  div[n-class="modal"]#video_modal [n-class="modal-box"] {
+    max-width: 80vw;
+  }
+}
+@media (max-width: 1150px) {
+  div[n-class="modal"]#lista_modal [n-class="modal-box"] {
+    max-width: 100%;
+    height: 100%;
+  }
+  div[n-class="modal"]#lista_modal [n-class="modal-box"] [n-class="modal-content"] {
+    max-width: 100%;
+    height: 100%;
+  }
+  div[n-class="modal"]#lista_modal [n-class="modal-box"] [n-class="modal-content"] p {
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  div[n-class="modal"]#lista_modal [n-class="modal-box"] {
+    max-width: 100%;
+    height: 100%;
+  }
+  div[n-class="modal"]#lista_modal [n-class="modal-box"] [n-class="modal-content"] {
+    max-width: 100%;
+    height: 100%;
+  }
+  div[n-class="modal"]#lista_modal [n-class="modal-box"] [n-class="modal-content"] p {
+    margin-bottom: 6rem;
+  }
+}
+
+[n-class*="title"] {
+  position: relative;
+}
+[n-class*="title"] span[n-class*="--tooltip"] {
+  position: absolute;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.74);
+  text-align: center;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 666;
+  transition: 0.32s;
+  opacity: 0;
+  pointer-events: none;
+}
+[n-class*="title"] span[n-class*="--tooltip"]::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+[n-class*="title"][n-class*="--top"] span[n-class*="--tooltip"] {
+  bottom: calc(100% + 7px);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+[n-class*="title"][n-class*="--top"] span[n-class*="--tooltip"]::after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgba(0, 0, 0, 0.74);
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+[n-class*="title"][n-class*="--bottom"] span[n-class*="--tooltip"] {
+  top: calc(100% + 7px);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+[n-class*="title"][n-class*="--bottom"] span[n-class*="--tooltip"]::after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.74);
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+[n-class*="title"][n-class*="--right"] span[n-class*="--tooltip"] {
+  top: 0;
+  bottom: 0;
+  left: calc(100% + 15px);
+  margin: auto 0;
+}
+[n-class*="title"][n-class*="--right"] span[n-class*="--tooltip"]::after {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid rgba(0, 0, 0, 0.74);
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  margin: auto 0;
+}
+[n-class*="title"][n-class*="--left"] span[n-class*="--tooltip"] {
+  top: 0;
+  bottom: 0;
+  right: calc(100% + 15px);
+  margin: auto 0;
+}
+[n-class*="title"][n-class*="--left"] span[n-class*="--tooltip"]::after {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid rgba(0, 0, 0, 0.74);
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  margin: auto 0;
+}
+[n-class*="title"]:hover span[n-class*="--tooltip"] {
+  opacity: 1;
+}
+
+div[n-class*="splash"] {
+  background: #000;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  pointer-events: none;
+  z-index: 666;
+  transition: 0.32s;
+  transition-delay: 2s;
+}
+div[n-class*="splash"] [n-class*="niv"] {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  gap: 3rem;
+}
+div[n-class*="splash"] [n-class*="niv"] > span {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1rem;
+  letter-spacing: 0.16em;
+  color: #fff;
+  transition: 0.1s !important;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0;
+  gap: 0.9rem;
+}
+div[n-class*="splash"] [n-class*="niv"] > span picture {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 0;
+  -webkit-animation: border-animation 1s linear infinite;
+  animation: border-animation 1s linear infinite;
+  overflow: hidden;
+}
+div[n-class*="splash"] [n-class*="niv"] > span picture img {
+  display: block;
+  margin: 30% 30%;
+  position: relative;
+  left: -137%;
+  -webkit-animation: move-arrow-animation 1s infinite ease-in-out;
+  animation: move-arrow-animation 1s infinite ease-in-out;
+}
+@-webkit-keyframes move-arrow-animation {
+  100% {
+    transform: translateX(180%);
+  }
+}
+@keyframes move-arrow-animation {
+  100% {
+    transform: translateX(180%);
+  }
+}
+@-webkit-keyframes border-animation {
+  0% {
+    box-shadow: 0px 0px 0px 0rem var(--principal);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 0.4rem #ff575728;
+  }
+}
+@keyframes border-animation {
+  0% {
+    box-shadow: 0px 0px 0px 0rem var(--principal);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 0.4rem #ff575728;
+  }
+}
+div[n-class*="splash"] div.progress {
+  height: 0.4rem;
+  width: 13rem;
+  background-color: #505050;
+  transition: 0.32s;
+  transition-delay: 2s;
+}
+div[n-class*="splash"] div.progress span {
+  display: block;
+  height: 100%;
+  background-color: var(--principal);
+  -webkit-animation: progress-bar-animation 2s linear;
+  animation: progress-bar-animation 2s linear;
+}
+@-webkit-keyframes progress-bar-animation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes progress-bar-animation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+div[n-class*="splash"][hide] {
+  opacity: 0;
+}
+div[n-class*="splash"][hide] [n-class*="niv"] div.progress {
+  transform: scaleX(0);
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  transition: 0.3s;
+}
+
+[n-tab] {
+  cursor: pointer;
+}
+
+[n-tab-content] {
+  display: none;
+  opacity: 0;
+}
+[n-tab-content][active] {
+  display: unset;
+  opacity: 1;
+}
+
+[n-class*="magnet"] {
+  transition: 0.01s;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition-property: cubic-bezier(0.32, 0.85, 0.63, 0.85);
+}
+
+#effect_slide {
+  transition: 1s;
+  transition-delay: 0s;
+  opacity: 0;
+  transform: none;
+}
+#effect_slide[range="in"],
+#effect_slide[range="initial"] {
+  opacity: 1;
+  transform: initial;
+}
+#effect_slide picture {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: relative;
+  display: block;
+  margin-top: 15rem;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+#effect_slide picture img {
+  display: block;
+  transition-delay: 1s;
+  margin: auto auto;
+}
+#effect_slide picture::after {
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  content: "";
+  transition: 1s;
+  transition-timing-function: cubic-bezier(0.5, 0, 0, 1);
+  background-image: linear-gradient(45deg, red, #4d2fa1);
+}
+#effect_slide[range="out"] picture::after {
+  transform: scaleX(0);
+}
+#effect_slide[range="out"] picture img {
+  opacity: 0;
+}
+#effect_slide[range="in"],
+#effect_slide[range="initial"] {
+  opacity: 1;
+}
+#effect_slide[range="in"] picture,
+#effect_slide[range="initial"] picture {
+  opacity: 1;
+}
+#effect_slide[range="in"] picture::after,
+#effect_slide[range="initial"] picture::after {
+  -webkit-animation-name: lazy_load;
+  animation-name: lazy_load;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease(inout);
+  animation-timing-function: ease(inout);
+}
+@-webkit-keyframes lazy_load {
+  0% {
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: 0% 50%;
+  }
+  50.1% {
+    transform: scaleX(1);
+    transform-origin: 100% 50%;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: 100% 50%;
+  }
+}
+@keyframes lazy_load {
+  0% {
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: 0% 50%;
+  }
+  50.1% {
+    transform: scaleX(1);
+    transform-origin: 100% 50%;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: 100% 50%;
+  }
+}
+
+h1,
+h1 strong {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 5.6099rem;
+  line-height: 134.19%;
+  color: #fff;
+}
+h1 strong {
+  font-weight: 700;
+  color: var(--principal);
+}
+
+h2,
+section.members div[n-class="niv"] h2 b,
+h2 section.members div[n-class="niv"] strong b,
+section.members div[n-class="niv"] h2 b strong,
+h2 section.members div[n-class="niv"] strong b strong,
+h2 strong {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 3.9918rem;
+  line-height: 101.19%;
+  text-align: right;
+  color: #fff;
+}
+h2 strong,
+section.members div[n-class="niv"] h2 b strong,
+h2 section.members div[n-class="niv"] strong b strong {
+  font-weight: 700;
+}
+
+h3,
+h3 strong {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.4rem;
+  line-height: 134.19%;
+}
+h3 strong {
+  font-weight: 700;
+}
+
+h4,
+section.modules div[n-class*="niv"] div.niv-area div.picture-side h4 strong {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22.0954px;
+  line-height: 134.19%;
+  color: var(--principal);
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+form label {
+  width: 100%;
+  display: block;
+  margin-bottom: 2rem;
+}
+form label span {
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.663rem;
+  line-height: 141.19%;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+form label input {
+  width: 100%;
+  height: 5.2rem;
+  color: #fff;
+  background: #111111;
+  padding-left: 2.3rem;
+}
+form label :is(input, textarea):focus {
+  border: solid 1px #ff575728;
+}
+form label textarea {
+  width: 100%;
+  height: 17.4rem;
+  color: #fff;
+  resize: none;
+  background: #111111;
+  padding-left: 2.3rem;
+  padding-top: 1.8rem;
+}
+form button.btn.--filled {
+  --width: 100%;
+  --height: 5.6rem;
+  --content: "enviar mensagem";
+}
+
+a {
+  color: unset;
+}
+a:hover,
+a:focus {
+  color: #505050;
+}
+
+.btn {
+  --width: 14rem;
+  --height: 5rem;
+  --font-size: 1.8rem;
+  --content: "everaldo";
+  width: var(--width);
+  height: var(--height);
+  transition: 0.32s;
+  overflow: hidden;
+  background-color: unset;
+}
+.btn span {
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--font-size);
+  font-weight: 500;
+  line-height: 113.2%;
+  color: #fff;
+  position: relative;
+  top: 0;
+  transition: 0.32s;
+  text-transform: lowercase;
+  display: block;
+}
+.btn span::after {
+  content: var(--content);
+  position: absolute;
+  left: 0;
+  top: var(--height);
+}
+.btn.--filled {
+  background-color: var(--principal);
+}
+.btn.--filled:hover {
+  box-shadow: 0px 0px 17px var(--principal);
+}
+.btn.--bordered {
+  background-color: unset;
+  border: solid 1px #fff;
+}
+.btn.--bordered:hover {
+  background-color: var(--principal);
+}
+.btn:hover span {
+  top: calc(var(--height) * -1);
+}
+.btn:hover,
+.btn:focus {
+  color: unset;
+}
+
+picture.filtered {
+  position: relative;
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+picture.filtered::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.32s;
+  transition-delay: 1s;
+  background: linear-gradient(6.81deg, var(--principal) 9.76%, rgba(255, 0, 0, 0) 67.83%);
+}
+
+.--lazy {
+  transition: 1s;
+  transition-delay: 0s;
+  opacity: 0;
+  transform: none;
+}
+.--lazy[range="in"],
+.--lazy[range="initial"] {
+  opacity: 1;
+  transform: initial;
+}
+.--lazy picture {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.--lazy picture img {
+  display: block;
+  transition-delay: 1s;
+  margin: auto auto;
+}
+.--lazy picture::after {
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  content: "";
+  transition: 1s;
+  transition-timing-function: cubic-bezier(0.5, 0, 0, 1);
+  background-image: linear-gradient(45deg, red, #a12f2f);
+}
+.--lazy[range="out"] picture::after {
+  transform: scaleX(0);
+}
+.--lazy[range="out"] picture::before {
+  opacity: 0;
+}
+.--lazy[range="out"] picture img {
+  opacity: 0;
+}
+.--lazy[range="in"],
+.--lazy[range="initial"] {
+  opacity: 1;
+}
+.--lazy[range="in"] picture,
+.--lazy[range="initial"] picture {
+  opacity: 1;
+}
+.--lazy[range="in"] picture::after,
+.--lazy[range="initial"] picture::after {
+  -webkit-animation-name: lazy_load;
+  animation-name: lazy_load;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease(inout);
+  animation-timing-function: ease(inout);
+}
+@keyframes lazy_load {
+  0% {
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: 0% 50%;
+  }
+  50.1% {
+    transform: scaleX(1);
+    transform-origin: 100% 50%;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: 100% 50%;
+  }
+}
+
+header {
+  background: rgba(0, 0, 0, 0.42);
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+header [n-class*="niv"] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0;
+}
+header [n-class*="niv"] div.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0;
+  width: 100%;
+  max-width: 86.8rem;
+}
+header [n-class*="niv"] div.menu > a.btn.--bordered {
+  --height: 3.8rem;
+  --width: 12.1rem;
+  --content: "inscrever";
+  --font-size: 1.4rem;
+}
+header [n-class*="niv"] nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 4.8rem;
+}
+header [n-class*="niv"] nav ul li a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7rem;
+  line-height: 113.2%;
+  color: #fff;
+  position: relative;
+  transition: 0.32s;
+}
+header [n-class*="niv"] nav ul li a::after {
+  position: absolute;
+  content: "";
+  transition: 0.32s;
+  width: 0%;
+  bottom: -1px;
+  height: 1px;
+  background-color: var(--principal);
+  transform-origin: center;
+}
+header [n-class*="niv"] nav ul li a[active],
+header [n-class*="niv"] nav ul li a:hover {
+  font-weight: 700;
+}
+header [n-class*="niv"] nav ul li a[active]::after,
+header [n-class*="niv"] nav ul li a:hover::after {
+  width: 100%;
+}
+header [n-class*="niv"] button.mobile-menu {
+  display: none;
+}
+@media (max-width: 1150px) {
+  header div[n-class*="niv"] > a {
+    width: 100%;
+    max-width: 33%;
+    display: block;
+  }
+}
+@media (max-width: 800px) {
+  header {
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+  }
+  header div[n-class*="niv"] div.menu {
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    transition: 0.32s;
+    z-index: -1;
+    width: 70%;
+    height: 100vh;
+    background-color: black;
+    padding-top: 12rem;
+    padding-bottom: 4rem;
+    padding-left: 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 0;
+  }
+  header div[n-class*="niv"] div.menu[show] {
+    left: 0;
+  }
+  header div[n-class*="niv"] div.menu nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header div[n-class*="niv"] button.mobile-menu {
+    display: block;
+    transition: 0.32s;
+  }
+  header div[n-class*="niv"] button.mobile-menu:active {
+    transform: scale(0.5);
+  }
+}
+@media (max-width: 600px) {
+  header div[n-class*="niv"] > a {
+    width: 100%;
+    max-width: 70%;
+    display: block;
+  }
+  header div[n-class*="niv"] div.menu {
+    width: 100%;
+  }
+}
+
+section.hero {
+  padding-top: 7.9rem;
+  padding-bottom: 8.2rem;
+  background-image: url("../assets/img/hero_background.jpg");
+  background-size: cover;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.hero div[n-class*="niv"] {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0;
+}
+section.hero div[n-class*="niv"] div.niv-left-area {
+  z-index: 2;
+}
+section.hero div[n-class*="niv"] div.niv-left-area h1,
+section.hero div[n-class*="niv"] div.niv-left-area h1 strong,
+h1 section.hero div[n-class*="niv"] div.niv-left-area strong {
+  margin-top: 11.3rem;
+  margin-bottom: 6rem;
+  max-width: 45.8rem;
+  position: relative;
+  z-index: 2;
+}
+section.hero div[n-class*="niv"] div.niv-left-area h1:not(strong),
+section.hero div[n-class*="niv"] div.niv-left-area h1 strong:not(strong),
+h1 section.hero div[n-class*="niv"] div.niv-left-area strong:not(strong) {
+  transition: 0.32s;
+  transition-delay: 0s;
+  opacity: 0;
+  transform: translateY(-10rem);
+}
+section.hero div[n-class*="niv"] div.niv-left-area h1:not(strong)[range="in"],
+section.hero div[n-class*="niv"] div.niv-left-area h1 strong:not(strong)[range="in"],
+h1 section.hero div[n-class*="niv"] div.niv-left-area strong:not(strong)[range="in"],
+section.hero div[n-class*="niv"] div.niv-left-area h1:not(strong)[range="initial"],
+section.hero div[n-class*="niv"] div.niv-left-area h1 strong:not(strong)[range="initial"],
+h1 section.hero div[n-class*="niv"] div.niv-left-area strong:not(strong)[range="initial"] {
+  opacity: 1;
+  transform: initial;
+}
+section.hero div[n-class*="niv"] div.niv-left-area h1:not(strong)::after,
+section.hero div[n-class*="niv"] div.niv-left-area h1 strong:not(strong)::after,
+h1 section.hero div[n-class*="niv"] div.niv-left-area strong:not(strong)::after {
+  content: url(../assets/img/hero_slice_efeito.svg);
+  position: absolute;
+  right: 1.5rem;
+  top: 8rem;
+  z-index: -1;
+}
+section.hero div[n-class*="niv"] div.niv-left-area p {
+  color: #fff;
+  max-width: 40.5rem;
+}
+section.hero div[n-class*="niv"] div.niv-left-area > a {
+  margin-top: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 2.9rem;
+  font-weight: 500;
+  font-size: 2.1rem;
+  letter-spacing: 0.06em;
+  color: #fff;
+  transition: 0.32s;
+}
+section.hero div[n-class*="niv"] div.niv-left-area > a picture {
+  -webkit-animation: upandown 3s linear infinite;
+  animation: upandown 3s linear infinite;
+}
+section.hero div[n-class*="niv"] div.niv-left-area > a:hover {
+  letter-spacing: 0.1em;
+}
+section.hero div[n-class*="niv"] div.niv-mid-area {
+  width: 100%;
+  max-width: 59.9rem;
+  z-index: 1;
+}
+section.hero div[n-class*="niv"] div.niv-mid-area img {
+  pointer-events: none;
+}
+section.hero div[n-class*="niv"] div.niv-mid-area picture {
+  transform: translateX(-10.3rem);
+  position: absolute;
+}
+section.hero div[n-class*="niv"] div.niv-mid-area picture img {
+  transition: 0.32s;
+  transition-delay: 0s;
+  opacity: 0;
+  transform: translateY(10rem);
+}
+section.hero div[n-class*="niv"] div.niv-mid-area picture img[range="in"],
+section.hero div[n-class*="niv"] div.niv-mid-area picture img[range="initial"] {
+  opacity: 1;
+  transform: initial;
+}
+section.hero div[n-class*="niv"] div.niv-mid-area div.selo {
+  margin-top: 120%;
+}
+section.hero div[n-class*="niv"] div.niv-right-area {
+  z-index: 2;
+}
+section.hero div[n-class*="niv"] div.niv-right-area h2,
+section.hero div[n-class*="niv"] div.niv-right-area section.members div[n-class="niv"] h2 b,
+section.members div[n-class="niv"] h2 section.hero div[n-class*="niv"] div.niv-right-area b,
+section.hero div[n-class*="niv"] div.niv-right-area h2 section.members div[n-class="niv"] strong b,
+h2 section.members div[n-class="niv"] strong section.hero div[n-class*="niv"] div.niv-right-area b,
+section.hero div[n-class*="niv"] div.niv-right-area h2 strong,
+h2 section.hero div[n-class*="niv"] div.niv-right-area strong {
+  margin-top: 11.3rem;
+}
+section.hero div[n-class*="niv"] div.niv-right-area p {
+  color: #fff;
+  text-align: right;
+  max-width: 31rem;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+@media (max-width: 1150px) {
+  section.hero div[n-class*="niv"] div.niv-left-area h2,
+  section.hero div[n-class*="niv"] div.niv-left-area section.members div[n-class="niv"] h2 b,
+  section.members div[n-class="niv"] h2 section.hero div[n-class*="niv"] div.niv-left-area b,
+  section.hero div[n-class*="niv"] div.niv-left-area h2 section.members div[n-class="niv"] strong b,
+  h2 section.members div[n-class="niv"] strong section.hero div[n-class*="niv"] div.niv-left-area b,
+  section.hero div[n-class*="niv"] div.niv-left-area h2 strong,
+  h2 section.hero div[n-class*="niv"] div.niv-left-area strong,
+  section.hero div[n-class*="niv"] div.niv-left-area h1,
+  section.hero div[n-class*="niv"] div.niv-left-area h1 strong,
+  h1 section.hero div[n-class*="niv"] div.niv-left-area strong,
+  section.hero div[n-class*="niv"] div.niv-right-area h2,
+  section.hero div[n-class*="niv"] div.niv-right-area section.members div[n-class="niv"] h2 b,
+  section.members div[n-class="niv"] h2 section.hero div[n-class*="niv"] div.niv-right-area b,
+  section.hero div[n-class*="niv"] div.niv-right-area h2 section.members div[n-class="niv"] strong b,
+  h2 section.members div[n-class="niv"] strong section.hero div[n-class*="niv"] div.niv-right-area b,
+  section.hero div[n-class*="niv"] div.niv-right-area h2 strong,
+  h2 section.hero div[n-class*="niv"] div.niv-right-area strong,
+  section.hero div[n-class*="niv"] div.niv-right-area h1,
+  section.hero div[n-class*="niv"] div.niv-right-area h1 strong,
+  h1 section.hero div[n-class*="niv"] div.niv-right-area strong {
+    margin-top: 5rem;
+  }
+  section.hero div[n-class*="niv"] div.niv-left-area a,
+  section.hero div[n-class*="niv"] div.niv-right-area a {
+    margin-top: 5rem;
+  }
+}
+@media (max-width: 800px) {
+  section.hero {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    background-size: auto 100%;
+    background-position: center;
+  }
+  section.hero div[n-class*="niv"] {
+    flex-direction: column;
+  }
+  section.hero div[n-class*="niv"] div.niv-left-area,
+  section.hero div[n-class*="niv"] div.niv-right-area,
+  section.hero div[n-class*="niv"] div.niv-mid-area {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0;
+  }
+  section.hero div[n-class*="niv"] div.niv-left-area h1,
+  section.hero div[n-class*="niv"] div.niv-left-area h1 strong,
+  h1 section.hero div[n-class*="niv"] div.niv-left-area strong,
+  section.hero div[n-class*="niv"] div.niv-left-area h2,
+  section.hero div[n-class*="niv"] div.niv-left-area section.members div[n-class="niv"] h2 b,
+  section.members div[n-class="niv"] h2 section.hero div[n-class*="niv"] div.niv-left-area b,
+  section.hero div[n-class*="niv"] div.niv-left-area h2 section.members div[n-class="niv"] strong b,
+  h2 section.members div[n-class="niv"] strong section.hero div[n-class*="niv"] div.niv-left-area b,
+  section.hero div[n-class*="niv"] div.niv-left-area section.members div[n-class="niv"] h2 b strong,
+  section.members div[n-class="niv"] h2 b section.hero div[n-class*="niv"] div.niv-left-area strong,
+  section.hero div[n-class*="niv"] div.niv-left-area h2 section.members div[n-class="niv"] strong b strong,
+  h2 section.members div[n-class="niv"] strong b section.hero div[n-class*="niv"] div.niv-left-area strong,
+  section.hero div[n-class*="niv"] div.niv-left-area section.members div[n-class="niv"] h2 b b,
+  section.members div[n-class="niv"] h2 b section.hero div[n-class*="niv"] div.niv-left-area b,
+  section.hero div[n-class*="niv"] div.niv-left-area h2 section.members div[n-class="niv"] strong b b,
+  h2 section.members div[n-class="niv"] strong b section.hero div[n-class*="niv"] div.niv-left-area b,
+  section.hero
+    div[n-class*="niv"]
+    div.niv-left-area
+    section.members
+    div[n-class="niv"]
+    h2
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    b,
+  section.members
+    div[n-class="niv"]
+    h2
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    section.hero
+    div[n-class*="niv"]
+    div.niv-left-area
+    b,
+  section.hero
+    div[n-class*="niv"]
+    div.niv-left-area
+    h2
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    b,
+  h2
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    section.hero
+    div[n-class*="niv"]
+    div.niv-left-area
+    b,
+  section.hero div[n-class*="niv"] div.niv-left-area h2 strong,
+  section.hero div[n-class*="niv"] div.niv-left-area section.members div[n-class="niv"] h2 b strong,
+  section.members div[n-class="niv"] h2 section.hero div[n-class*="niv"] div.niv-left-area b strong,
+  section.hero div[n-class*="niv"] div.niv-left-area h2 section.members div[n-class="niv"] strong b strong,
+  h2 section.members div[n-class="niv"] strong section.hero div[n-class*="niv"] div.niv-left-area b strong,
+  section.hero div[n-class*="niv"] div.niv-left-area section.members div[n-class="niv"] h2 b strong strong,
+  section.members div[n-class="niv"] h2 b section.hero div[n-class*="niv"] div.niv-left-area strong strong,
+  section.hero div[n-class*="niv"] div.niv-left-area h2 section.members div[n-class="niv"] strong b strong strong,
+  h2 section.members div[n-class="niv"] strong b section.hero div[n-class*="niv"] div.niv-left-area strong strong,
+  section.hero div[n-class*="niv"] div.niv-left-area section.members div[n-class="niv"] h2 b b strong,
+  section.members div[n-class="niv"] h2 b section.hero div[n-class*="niv"] div.niv-left-area b strong,
+  section.hero div[n-class*="niv"] div.niv-left-area h2 section.members div[n-class="niv"] strong b b strong,
+  h2 section.members div[n-class="niv"] strong b section.hero div[n-class*="niv"] div.niv-left-area b strong,
+  section.hero
+    div[n-class*="niv"]
+    div.niv-left-area
+    section.members
+    div[n-class="niv"]
+    h2
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    strong,
+  section.members
+    div[n-class="niv"]
+    h2
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    section.hero
+    div[n-class*="niv"]
+    div.niv-left-area
+    b
+    strong,
+  section.hero
+    div[n-class*="niv"]
+    div.niv-left-area
+    h2
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    strong,
+  h2
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    section.hero
+    div[n-class*="niv"]
+    div.niv-left-area
+    b
+    strong,
+  h2 section.hero div[n-class*="niv"] div.niv-left-area strong,
+  section.members div[n-class="niv"] h2 b section.hero div[n-class*="niv"] div.niv-left-area strong,
+  h2 section.members div[n-class="niv"] strong b section.hero div[n-class*="niv"] div.niv-left-area strong,
+  section.members div[n-class="niv"] h2 b strong section.hero div[n-class*="niv"] div.niv-left-area strong,
+  h2 section.members div[n-class="niv"] strong b strong section.hero div[n-class*="niv"] div.niv-left-area strong,
+  section.members div[n-class="niv"] h2 b b section.hero div[n-class*="niv"] div.niv-left-area strong,
+  h2 section.members div[n-class="niv"] strong b b section.hero div[n-class*="niv"] div.niv-left-area strong,
+  section.members
+    div[n-class="niv"]
+    h2
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.hero
+    div[n-class*="niv"]
+    div.niv-left-area
+    strong,
+  h2
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.hero
+    div[n-class*="niv"]
+    div.niv-left-area
+    strong,
+  section.hero div[n-class*="niv"] div.niv-right-area h1,
+  section.hero div[n-class*="niv"] div.niv-right-area h1 strong,
+  h1 section.hero div[n-class*="niv"] div.niv-right-area strong,
+  section.hero div[n-class*="niv"] div.niv-right-area h2,
+  section.hero div[n-class*="niv"] div.niv-right-area section.members div[n-class="niv"] h2 b,
+  section.members div[n-class="niv"] h2 section.hero div[n-class*="niv"] div.niv-right-area b,
+  section.hero div[n-class*="niv"] div.niv-right-area h2 section.members div[n-class="niv"] strong b,
+  h2 section.members div[n-class="niv"] strong section.hero div[n-class*="niv"] div.niv-right-area b,
+  section.hero div[n-class*="niv"] div.niv-right-area section.members div[n-class="niv"] h2 b strong,
+  section.members div[n-class="niv"] h2 b section.hero div[n-class*="niv"] div.niv-right-area strong,
+  section.hero div[n-class*="niv"] div.niv-right-area h2 section.members div[n-class="niv"] strong b strong,
+  h2 section.members div[n-class="niv"] strong b section.hero div[n-class*="niv"] div.niv-right-area strong,
+  section.hero div[n-class*="niv"] div.niv-right-area section.members div[n-class="niv"] h2 b b,
+  section.members div[n-class="niv"] h2 b section.hero div[n-class*="niv"] div.niv-right-area b,
+  section.hero div[n-class*="niv"] div.niv-right-area h2 section.members div[n-class="niv"] strong b b,
+  h2 section.members div[n-class="niv"] strong b section.hero div[n-class*="niv"] div.niv-right-area b,
+  section.hero
+    div[n-class*="niv"]
+    div.niv-right-area
+    section.members
+    div[n-class="niv"]
+    h2
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    b,
+  section.members
+    div[n-class="niv"]
+    h2
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    section.hero
+    div[n-class*="niv"]
+    div.niv-right-area
+    b,
+  section.hero
+    div[n-class*="niv"]
+    div.niv-right-area
+    h2
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    b,
+  h2
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    section.hero
+    div[n-class*="niv"]
+    div.niv-right-area
+    b,
+  section.hero div[n-class*="niv"] div.niv-right-area h2 strong,
+  section.hero div[n-class*="niv"] div.niv-right-area section.members div[n-class="niv"] h2 b strong,
+  section.members div[n-class="niv"] h2 section.hero div[n-class*="niv"] div.niv-right-area b strong,
+  section.hero div[n-class*="niv"] div.niv-right-area h2 section.members div[n-class="niv"] strong b strong,
+  h2 section.members div[n-class="niv"] strong section.hero div[n-class*="niv"] div.niv-right-area b strong,
+  section.hero div[n-class*="niv"] div.niv-right-area section.members div[n-class="niv"] h2 b strong strong,
+  section.members div[n-class="niv"] h2 b section.hero div[n-class*="niv"] div.niv-right-area strong strong,
+  section.hero div[n-class*="niv"] div.niv-right-area h2 section.members div[n-class="niv"] strong b strong strong,
+  h2 section.members div[n-class="niv"] strong b section.hero div[n-class*="niv"] div.niv-right-area strong strong,
+  section.hero div[n-class*="niv"] div.niv-right-area section.members div[n-class="niv"] h2 b b strong,
+  section.members div[n-class="niv"] h2 b section.hero div[n-class*="niv"] div.niv-right-area b strong,
+  section.hero div[n-class*="niv"] div.niv-right-area h2 section.members div[n-class="niv"] strong b b strong,
+  h2 section.members div[n-class="niv"] strong b section.hero div[n-class*="niv"] div.niv-right-area b strong,
+  section.hero
+    div[n-class*="niv"]
+    div.niv-right-area
+    section.members
+    div[n-class="niv"]
+    h2
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    strong,
+  section.members
+    div[n-class="niv"]
+    h2
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    section.hero
+    div[n-class*="niv"]
+    div.niv-right-area
+    b
+    strong,
+  section.hero
+    div[n-class*="niv"]
+    div.niv-right-area
+    h2
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    strong,
+  h2
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    section.hero
+    div[n-class*="niv"]
+    div.niv-right-area
+    b
+    strong,
+  h2 section.hero div[n-class*="niv"] div.niv-right-area strong,
+  section.members div[n-class="niv"] h2 b section.hero div[n-class*="niv"] div.niv-right-area strong,
+  h2 section.members div[n-class="niv"] strong b section.hero div[n-class*="niv"] div.niv-right-area strong,
+  section.members div[n-class="niv"] h2 b strong section.hero div[n-class*="niv"] div.niv-right-area strong,
+  h2 section.members div[n-class="niv"] strong b strong section.hero div[n-class*="niv"] div.niv-right-area strong,
+  section.members div[n-class="niv"] h2 b b section.hero div[n-class*="niv"] div.niv-right-area strong,
+  h2 section.members div[n-class="niv"] strong b b section.hero div[n-class*="niv"] div.niv-right-area strong,
+  section.members
+    div[n-class="niv"]
+    h2
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.hero
+    div[n-class*="niv"]
+    div.niv-right-area
+    strong,
+  h2
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.hero
+    div[n-class*="niv"]
+    div.niv-right-area
+    strong,
+  section.hero div[n-class*="niv"] div.niv-mid-area h1,
+  section.hero div[n-class*="niv"] div.niv-mid-area h1 strong,
+  h1 section.hero div[n-class*="niv"] div.niv-mid-area strong,
+  section.hero div[n-class*="niv"] div.niv-mid-area h2,
+  section.hero div[n-class*="niv"] div.niv-mid-area section.members div[n-class="niv"] h2 b,
+  section.members div[n-class="niv"] h2 section.hero div[n-class*="niv"] div.niv-mid-area b,
+  section.hero div[n-class*="niv"] div.niv-mid-area h2 section.members div[n-class="niv"] strong b,
+  h2 section.members div[n-class="niv"] strong section.hero div[n-class*="niv"] div.niv-mid-area b,
+  section.hero div[n-class*="niv"] div.niv-mid-area section.members div[n-class="niv"] h2 b strong,
+  section.members div[n-class="niv"] h2 b section.hero div[n-class*="niv"] div.niv-mid-area strong,
+  section.hero div[n-class*="niv"] div.niv-mid-area h2 section.members div[n-class="niv"] strong b strong,
+  h2 section.members div[n-class="niv"] strong b section.hero div[n-class*="niv"] div.niv-mid-area strong,
+  section.hero div[n-class*="niv"] div.niv-mid-area section.members div[n-class="niv"] h2 b b,
+  section.members div[n-class="niv"] h2 b section.hero div[n-class*="niv"] div.niv-mid-area b,
+  section.hero div[n-class*="niv"] div.niv-mid-area h2 section.members div[n-class="niv"] strong b b,
+  h2 section.members div[n-class="niv"] strong b section.hero div[n-class*="niv"] div.niv-mid-area b,
+  section.hero
+    div[n-class*="niv"]
+    div.niv-mid-area
+    section.members
+    div[n-class="niv"]
+    h2
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    b,
+  section.members
+    div[n-class="niv"]
+    h2
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    section.hero
+    div[n-class*="niv"]
+    div.niv-mid-area
+    b,
+  section.hero
+    div[n-class*="niv"]
+    div.niv-mid-area
+    h2
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    b,
+  h2
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    section.hero
+    div[n-class*="niv"]
+    div.niv-mid-area
+    b,
+  section.hero div[n-class*="niv"] div.niv-mid-area h2 strong,
+  section.hero div[n-class*="niv"] div.niv-mid-area section.members div[n-class="niv"] h2 b strong,
+  section.members div[n-class="niv"] h2 section.hero div[n-class*="niv"] div.niv-mid-area b strong,
+  section.hero div[n-class*="niv"] div.niv-mid-area h2 section.members div[n-class="niv"] strong b strong,
+  h2 section.members div[n-class="niv"] strong section.hero div[n-class*="niv"] div.niv-mid-area b strong,
+  section.hero div[n-class*="niv"] div.niv-mid-area section.members div[n-class="niv"] h2 b strong strong,
+  section.members div[n-class="niv"] h2 b section.hero div[n-class*="niv"] div.niv-mid-area strong strong,
+  section.hero div[n-class*="niv"] div.niv-mid-area h2 section.members div[n-class="niv"] strong b strong strong,
+  h2 section.members div[n-class="niv"] strong b section.hero div[n-class*="niv"] div.niv-mid-area strong strong,
+  section.hero div[n-class*="niv"] div.niv-mid-area section.members div[n-class="niv"] h2 b b strong,
+  section.members div[n-class="niv"] h2 b section.hero div[n-class*="niv"] div.niv-mid-area b strong,
+  section.hero div[n-class*="niv"] div.niv-mid-area h2 section.members div[n-class="niv"] strong b b strong,
+  h2 section.members div[n-class="niv"] strong b section.hero div[n-class*="niv"] div.niv-mid-area b strong,
+  section.hero
+    div[n-class*="niv"]
+    div.niv-mid-area
+    section.members
+    div[n-class="niv"]
+    h2
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    strong,
+  section.members
+    div[n-class="niv"]
+    h2
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    section.hero
+    div[n-class*="niv"]
+    div.niv-mid-area
+    b
+    strong,
+  section.hero
+    div[n-class*="niv"]
+    div.niv-mid-area
+    h2
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    strong,
+  h2
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    section.hero
+    div[n-class*="niv"]
+    div.niv-mid-area
+    b
+    strong,
+  h2 section.hero div[n-class*="niv"] div.niv-mid-area strong,
+  section.members div[n-class="niv"] h2 b section.hero div[n-class*="niv"] div.niv-mid-area strong,
+  h2 section.members div[n-class="niv"] strong b section.hero div[n-class*="niv"] div.niv-mid-area strong,
+  section.members div[n-class="niv"] h2 b strong section.hero div[n-class*="niv"] div.niv-mid-area strong,
+  h2 section.members div[n-class="niv"] strong b strong section.hero div[n-class*="niv"] div.niv-mid-area strong,
+  section.members div[n-class="niv"] h2 b b section.hero div[n-class*="niv"] div.niv-mid-area strong,
+  h2 section.members div[n-class="niv"] strong b b section.hero div[n-class*="niv"] div.niv-mid-area strong,
+  section.members
+    div[n-class="niv"]
+    h2
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.hero
+    div[n-class*="niv"]
+    div.niv-mid-area
+    strong,
+  h2
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.members
+    div[n-class="niv"]
+    strong
+    b
+    section.hero
+    div[n-class*="niv"]
+    div.niv-mid-area
+    strong {
+    text-align: center;
+    margin: 0;
+  }
+  section.hero div[n-class*="niv"] div.niv-left-area p,
+  section.hero div[n-class*="niv"] div.niv-right-area p,
+  section.hero div[n-class*="niv"] div.niv-mid-area p {
+    text-align: center;
+    max-width: 50%;
+    font-size: 1.8rem;
+  }
+  section.hero div[n-class*="niv"] div.niv-left-area h1,
+  section.hero div[n-class*="niv"] div.niv-left-area h1 strong,
+  h1 section.hero div[n-class*="niv"] div.niv-left-area strong {
+    font-size: 4rem;
+  }
+  section.hero div[n-class*="niv"] div.niv-left-area h1:not(strong)::after,
+  section.hero div[n-class*="niv"] div.niv-left-area h1 strong:not(strong)::after,
+  h1 section.hero div[n-class*="niv"] div.niv-left-area strong:not(strong)::after {
+    right: 7.5rem;
+    top: 6rem;
+  }
+  section.hero div[n-class*="niv"] div.niv-left-area p,
+  section.hero div[n-class*="niv"] div.niv-left-area a {
+    display: none;
+  }
+  section.hero div[n-class*="niv"] div.niv-mid-area picture {
+    position: static;
+    transform: none;
+  }
+  section.hero div[n-class*="niv"] div.niv-mid-area div.selo {
+    margin-top: -20rem;
+    top: -3rem;
+    width: 14.5rem;
+    aspect-ratio: 1/1;
+  }
+}
+
+footer[n-class*="fluid"] {
+  padding-top: 4rem;
+}
+footer[n-class*="fluid"] div[n-class*="niv"] {
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+footer[n-class*="fluid"] div[n-class*="niv"] div.niv-top {
+  padding-bottom: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0;
+}
+footer[n-class*="fluid"] div[n-class*="niv"] div.niv-top ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 1.6rem;
+}
+footer[n-class*="fluid"] div[n-class*="niv"] div.niv-top ul li {
+  transition: 0.32s;
+}
+footer[n-class*="fluid"] div[n-class*="niv"] div.niv-top ul li:hover {
+  opacity: 0.8;
+  border: solid 1px var(--principal);
+}
+footer[n-class*="fluid"] div[n-class*="niv"] hr {
+  width: 100%;
+  border-top: solid 0.4px #ffffff1a;
+}
+footer[n-class*="fluid"] div[n-class*="niv"] div.niv-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+footer[n-class*="fluid"] div[n-class*="niv"] div.niv-bottom span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 1rem;
+}
+footer[n-class*="fluid"] div[n-class*="niv"] div.niv-bottom span p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  color: #fff;
+}
+footer[n-class*="fluid"] div[n-class*="niv"] div.niv-bottom span a {
+  transition: 0.32s;
+}
+footer[n-class*="fluid"] div[n-class*="niv"] div.niv-bottom span a:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 600px) {
+  footer[n-class*="fluid"] div[n-class*="niv"] div.niv-top,
+  footer[n-class*="fluid"] div[n-class*="niv"] div.niv-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+  }
+}
+
+div.mini-splash {
+  background: #000;
+  top: -10vh;
+  position: fixed;
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  pointer-events: none;
+  z-index: 666;
+  transition: 0.6s;
+  transition-delay: 0.6s;
+  border-top: 1rem solid var(--principal);
+  box-shadow: 0px 0px 0px 5rem #ff575728, 0px 0px 0px 10rem #ff575728, 0px 0px 0px 15rem #ff575728,
+    0px 0px 0px 25rem #ff575728;
+}
+div.mini-splash div[n-class="niv"] {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0;
+}
+div.mini-splash[hide] {
+  top: 145vh;
+}
+
+div.selo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0;
+}
+div.selo img {
+  position: absolute;
+}
+div.selo img[alt="Parte externa do selo"] {
+  -webkit-animation: rotation-selo-animation 12s linear infinite;
+  animation: rotation-selo-animation 12s linear infinite;
+}
+@-webkit-keyframes rotation-selo-animation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotation-selo-animation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+section.second {
+  background: url(../assets/img/second_background.jpg) no-repeat;
+  background-size: cover;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.second.--no-background {
+  background: none;
+}
+section.second div[n-class*="niv"] {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 8.6rem;
+  flex-wrap: wrap;
+}
+section.second div[n-class*="niv"] div.niv-left-area {
+  width: 100%;
+  position: relative;
+  max-width: 44.4rem;
+}
+section.second div[n-class*="niv"] div.niv-left-area div:first-child picture {
+  margin-left: auto;
+}
+section.second div[n-class*="niv"] div.niv-left-area div:nth-child(2) picture {
+  position: absolute;
+  right: 5.4rem;
+  bottom: -5.1rem;
+}
+section.second div[n-class*="niv"] div.niv-right-area {
+  max-width: 55.7rem;
+  width: 100%;
+}
+section.second div[n-class*="niv"] div.niv-right-area h3,
+section.second div[n-class*="niv"] div.niv-right-area h3 strong,
+h3 section.second div[n-class*="niv"] div.niv-right-area strong {
+  color: #fff;
+}
+section.second div[n-class*="niv"] div.niv-right-area h3:not(strong),
+section.second div[n-class*="niv"] div.niv-right-area h3 strong:not(strong),
+h3 section.second div[n-class*="niv"] div.niv-right-area strong:not(strong) {
+  transition: 0.32s;
+  transition-delay: 0s;
+  opacity: 0;
+  transform: scale(0);
+}
+section.second div[n-class*="niv"] div.niv-right-area h3:not(strong)[range="in"],
+section.second div[n-class*="niv"] div.niv-right-area h3 strong:not(strong)[range="in"],
+h3 section.second div[n-class*="niv"] div.niv-right-area strong:not(strong)[range="in"],
+section.second div[n-class*="niv"] div.niv-right-area h3:not(strong)[range="initial"],
+section.second div[n-class*="niv"] div.niv-right-area h3 strong:not(strong)[range="initial"],
+h3 section.second div[n-class*="niv"] div.niv-right-area strong:not(strong)[range="initial"] {
+  opacity: 1;
+  transform: initial;
+}
+section.second div[n-class*="niv"] div.niv-right-area h3 strong,
+h3 section.second div[n-class*="niv"] div.niv-right-area strong strong {
+  color: var(--principal);
+}
+section.second div[n-class*="niv"] div.niv-right-area p {
+  margin-top: 2.6rem;
+  margin-bottom: 4.2rem;
+  color: #fff;
+  max-width: 37.7rem;
+}
+section.second div[n-class*="niv"] div.niv-right-area div.logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 3.4rem;
+  flex-wrap: wrap;
+  max-width: 55.7rem;
+}
+section.second.--alternative {
+  background: url("../assets/img/alternative_background.png");
+  background-size: cover;
+  padding-top: 22.2rem;
+  margin-top: -21rem;
+}
+section.second.--alternative div[n-class="niv"] div.niv-left-area {
+  max-width: 65rem;
+}
+section.second.--alternative div[n-class="niv"] div.niv-left-area > div {
+  transition: 0.32s;
+  transition-delay: 0s;
+  opacity: 0;
+  transform: scale(0);
+}
+section.second.--alternative div[n-class="niv"] div.niv-left-area > div[range="in"],
+section.second.--alternative div[n-class="niv"] div.niv-left-area > div[range="initial"] {
+  opacity: 1;
+  transform: initial;
+}
+section.second.--alternative div[n-class="niv"] div.niv-right-area a.btn.--filled {
+  --content: "inscrever";
+}
+@media (max-width: 800px) {
+  section.second div[n-class*="niv"] div.niv-left-area,
+  section.second div[n-class*="niv"] div.niv-right-area {
+    width: 100%;
+    max-width: 100%;
+  }
+  section.second div[n-class*="niv"] div.niv-left-area h3,
+  section.second div[n-class*="niv"] div.niv-left-area h3 strong,
+  h3 section.second div[n-class*="niv"] div.niv-left-area strong,
+  section.second div[n-class*="niv"] div.niv-left-area p,
+  section.second div[n-class*="niv"] div.niv-right-area h3,
+  section.second div[n-class*="niv"] div.niv-right-area h3 strong,
+  h3 section.second div[n-class*="niv"] div.niv-right-area strong,
+  section.second div[n-class*="niv"] div.niv-right-area p {
+    text-align: center;
+  }
+  section.second div[n-class*="niv"] div.niv-left-area div picture {
+    margin-right: auto;
+  }
+  section.second div[n-class*="niv"] div.niv-right-area p {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  section.second div[n-class*="niv"] div.niv-right-area div.logos {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+section.boxes {
+  background: url("../assets/img/boxes_background.jpg");
+  background-size: cover;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  overflow-x: hidden;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.boxes div[n-class*="niv"] div.boxes {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0;
+  flex-wrap: wrap;
+}
+section.boxes div[n-class*="niv"] div.boxes div.box {
+  width: 100%;
+  max-width: 40rem;
+  height: 21rem;
+  background-color: #070707;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0;
+  gap: 1.3rem;
+}
+section.boxes div[n-class*="niv"] div.boxes div.box:first-child {
+  transition: 0.6s;
+  transition-delay: 0s;
+  opacity: 0;
+  transform: translateX(10rem);
+}
+section.boxes div[n-class*="niv"] div.boxes div.box:first-child[range="in"],
+section.boxes div[n-class*="niv"] div.boxes div.box:first-child[range="initial"] {
+  opacity: 1;
+  transform: initial;
+}
+section.boxes div[n-class*="niv"] div.boxes div.box:nth-child(2) {
+  transition: 0.6s;
+  transition-delay: 0s;
+  opacity: 0;
+  transform: none;
+}
+section.boxes div[n-class*="niv"] div.boxes div.box:nth-child(2)[range="in"],
+section.boxes div[n-class*="niv"] div.boxes div.box:nth-child(2)[range="initial"] {
+  opacity: 1;
+  transform: initial;
+}
+section.boxes div[n-class*="niv"] div.boxes div.box:last-child {
+  transition: 0.6s;
+  transition-delay: 0s;
+  opacity: 0;
+  transform: translateX(-10rem);
+}
+section.boxes div[n-class*="niv"] div.boxes div.box:last-child[range="in"],
+section.boxes div[n-class*="niv"] div.boxes div.box:last-child[range="initial"] {
+  opacity: 1;
+  transform: initial;
+}
+section.boxes div[n-class*="niv"] div.boxes div.box p {
+  color: #fff;
+  max-width: 25rem;
+  text-align: center;
+}
+section.boxes div[n-class*="niv"] div.boxes div.box p strong {
+  font-weight: 700;
+}
+section.boxes.--no-background {
+  background: none;
+  padding-top: 0;
+  margin-top: -5rem;
+}
+@media (max-width: 1150px) {
+  section.boxes div[n-class*="niv"] div.boxes {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+  }
+}
+
+section.depoiments {
+  background-color: #fff;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.depoiments div.case {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  height: 100vh;
+}
+section.depoiments div.case div[n-class*="niv"] {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0;
+}
+section.depoiments div.case div[n-class*="niv"] div.niv-text span.tag {
+  padding: 1rem 2.8rem;
+  display: block;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin-bottom: 4.7rem;
+  border-radius: 30rem;
+  border: solid 1px var(--principal);
+  color: var(--principal);
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.8233rem;
+  line-height: 113.2%;
+}
+section.depoiments div.case div[n-class*="niv"] div.niv-text h3,
+section.depoiments div.case div[n-class*="niv"] div.niv-text h3 strong,
+h3 section.depoiments div.case div[n-class*="niv"] div.niv-text strong {
+  max-width: 20.5rem;
+  margin-bottom: 3.7rem;
+}
+section.depoiments div.case div[n-class*="niv"] div.niv-text p {
+  line-height: 141.19%;
+  color: #505050;
+  max-width: 30%;
+  margin-bottom: 3.7rem;
+}
+section.depoiments div.case div[n-class*="niv"] div.niv-text a.btn.--filled {
+  --height: 5rem;
+  --width: 14rem;
+  --font-size: 1.8rem;
+  --content: "conhecer";
+}
+section.depoiments div.case div[n-class*="niv"] picture {
+  position: absolute;
+  top: 0;
+  right: -1.5rem;
+  height: 100%;
+}
+@media (max-width: 800px) {
+  section.depoiments div.case div[n-class*="niv"] picture {
+    width: 50%;
+  }
+  section.depoiments div.case div[n-class*="niv"] picture img {
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
+@media (max-width: 600px) {
+  section.depoiments div.case div[n-class*="niv"] div.niv-text p {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  section.depoiments {
+    padding: 0;
+  }
+  section.depoiments div.case {
+    height: 60vh;
+  }
+  section.depoiments div.case div[n-class*="niv"] {
+    justify-content: flex-start;
+    padding-top: 3rem;
+  }
+  section.depoiments div.case div[n-class*="niv"] picture {
+    bottom: 0;
+    height: 20vh;
+    top: unset;
+    left: -1.5rem;
+    right: unset;
+    width: calc(100vw + 1.5rem);
+    max-width: calc(100vw + 1.5rem);
+  }
+  section.depoiments div.case div[n-class*="niv"] picture img {
+    width: 100%;
+  }
+}
+
+section.modules {
+  background-color: #fff;
+  padding-top: 7.2rem;
+  padding-bottom: 7.2rem;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.modules div[n-class*="niv"] div.niv-title {
+  margin-bottom: 7.2rem;
+}
+section.modules div[n-class*="niv"] div.niv-area {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0;
+}
+section.modules div[n-class*="niv"] div.niv-area div.modules-side {
+  max-width: 67.2rem;
+  width: 100%;
+}
+section.modules div[n-class*="niv"] div.niv-area div.modules-side details {
+  width: 100%;
+  transition: 0.32s;
+  margin-bottom: 2.7rem;
+}
+section.modules div[n-class*="niv"] div.niv-area div.modules-side details summary {
+  cursor: pointer;
+  padding-left: 2.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.968rem;
+  line-height: 141.19%;
+  color: #070707;
+  width: 100%;
+  height: 6rem;
+  background-color: #f8f6f6;
+  position: relative;
+}
+section.modules div[n-class*="niv"] div.niv-area div.modules-side details summary::after {
+  position: absolute;
+  content: url("../assets/img/modules_arrow.svg");
+  transition: 0.32s;
+  right: 2.2rem;
+  transform: rotate(180deg);
+}
+section.modules div[n-class*="niv"] div.niv-area div.modules-side details p {
+  padding-left: 2.1rem;
+  padding-top: 2.2rem;
+  transition: 0.32s;
+  font-weight: 400;
+  font-size: 1.604rem;
+  line-height: 141.19%;
+  color: #505050;
+}
+section.modules div[n-class*="niv"] div.niv-area div.modules-side details[open] summary {
+  color: var(--principal);
+}
+section.modules div[n-class*="niv"] div.niv-area div.modules-side details[open] summary::after {
+  transform: rotate(0);
+}
+section.modules div[n-class*="niv"] div.niv-area div.picture-side {
+  width: 100%;
+  max-width: 31rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10rem;
+}
+section.modules div[n-class*="niv"] div.niv-area div.picture-side div.--lazy {
+  margin-bottom: 3.8rem;
+}
+section.modules div[n-class*="niv"] div.niv-area div.picture-side h4,
+section.modules div[n-class*="niv"] div.niv-area div.picture-side h4 strong {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.1155rem;
+  line-height: 134.19%;
+  color: #000;
+  margin-bottom: 3rem;
+}
+section.modules div[n-class*="niv"] div.niv-area div.picture-side h4 strong {
+  font-weight: 700;
+}
+section.modules div[n-class*="niv"] div.niv-area div.picture-side p {
+  font-size: 1.6rem;
+  line-height: 141.19%;
+  color: #505050;
+  margin-bottom: 3rem;
+}
+section.modules div[n-class*="niv"] div.niv-area div.picture-side a.btn.--filled {
+  --content: "inscrever";
+}
+@media (max-width: 800px) {
+  section.modules div[n-class*="niv"] div.niv-area {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+  section.modules div[n-class*="niv"] div.niv-area div.picture-side {
+    position: static;
+    text-align: center;
+  }
+  section.modules div[n-class*="niv"] div.niv-area div.picture-side a.btn.--filled {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+section.contact {
+  padding-top: 7.1rem;
+  padding-bottom: 7.1rem;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.contact div[n-class*="niv"] {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0;
+}
+section.contact div[n-class*="niv"] div.niv-picture-side {
+  position: relative;
+}
+section.contact div[n-class*="niv"] div.niv-picture-side h2,
+section.contact div[n-class*="niv"] div.niv-picture-side section.members div[n-class="niv"] h2 b,
+section.members div[n-class="niv"] h2 section.contact div[n-class*="niv"] div.niv-picture-side b,
+section.contact div[n-class*="niv"] div.niv-picture-side h2 section.members div[n-class="niv"] strong b,
+h2 section.members div[n-class="niv"] strong section.contact div[n-class*="niv"] div.niv-picture-side b,
+section.contact div[n-class*="niv"] div.niv-picture-side h2 strong,
+h2 section.contact div[n-class*="niv"] div.niv-picture-side strong {
+  font-size: 4.5rem;
+  line-height: 112.19%;
+}
+section.contact div[n-class*="niv"] div.niv-picture-side h2:not(strong),
+section.contact div[n-class*="niv"] div.niv-picture-side section.members div[n-class="niv"] h2 b:not(strong),
+section.members div[n-class="niv"] h2 section.contact div[n-class*="niv"] div.niv-picture-side b:not(strong),
+section.contact div[n-class*="niv"] div.niv-picture-side h2 section.members div[n-class="niv"] strong b:not(strong),
+h2 section.members div[n-class="niv"] strong section.contact div[n-class*="niv"] div.niv-picture-side b:not(strong),
+section.contact div[n-class*="niv"] div.niv-picture-side h2 strong:not(strong),
+h2 section.contact div[n-class*="niv"] div.niv-picture-side strong:not(strong) {
+  max-width: 69.7rem;
+  position: absolute;
+  bottom: 8.9rem;
+  left: 4.3rem;
+  text-align: left;
+}
+section.contact div[n-class*="niv"] div.niv-form-side {
+  width: 100%;
+  max-width: 48.2rem;
+}
+section.contact div[n-class*="niv"] div.niv-form-side h3,
+section.contact div[n-class*="niv"] div.niv-form-side h3 strong,
+h3 section.contact div[n-class*="niv"] div.niv-form-side strong {
+  color: #fff;
+  margin-bottom: 4.6rem;
+}
+section.contact div[n-class*="niv"] div.niv-form-side form {
+  width: 100%;
+  max-width: 48.2rem;
+  background: #070707;
+  border: 0.1161rem solid #000;
+  padding: 3.3rem;
+}
+@media (max-width: 1150px) {
+  section.contact div[n-class*="niv"] div.niv-picture-side {
+    width: 45%;
+  }
+  section.contact div[n-class*="niv"] div.niv-picture-side div.--lazy {
+    width: 100%;
+    overflow: hidden;
+  }
+  section.contact div[n-class*="niv"] div.niv-picture-side div.--lazy picture img {
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
+@media (max-width: 800px) {
+  section.contact div[n-class*="niv"] {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+  section.contact div[n-class*="niv"] div.niv-picture-side {
+    width: 100%;
+  }
+}
+
+section.contador {
+  background: url("../assets/img/full_background.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.contador div[n-class*="niv"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+section.contador div[n-class*="niv"] picture {
+  margin-bottom: 12rem;
+}
+section.contador div[n-class*="niv"] h1,
+section.contador div[n-class*="niv"] h1 strong,
+h1 section.contador div[n-class*="niv"] strong {
+  font-size: 4rem;
+}
+section.contador div[n-class*="niv"] h1,
+section.contador div[n-class*="niv"] h1 strong,
+h1 section.contador div[n-class*="niv"] strong,
+section.contador div[n-class*="niv"] p {
+  text-align: center;
+}
+section.contador div[n-class*="niv"] p {
+  color: #fff;
+  margin-top: 0.8rem;
+  font-family: "Montserrat", sans-serif;
+}
+section.contador div[n-class*="niv"] div.contador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0;
+  gap: 8.3rem;
+  margin-top: 5.5rem;
+  margin-bottom: 7rem;
+}
+section.contador div[n-class*="niv"] div.contador span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0;
+}
+section.contador div[n-class*="niv"] div.contador strong {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12.4146rem;
+  line-height: 134.19%;
+  text-align: center;
+  color: var(--principal);
+}
+section.contador div[n-class*="niv"] div.contador p {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 2.3324rem;
+  line-height: 101.19%;
+}
+section.contador div[n-class*="niv"] button.btn.--filled {
+  --content: "inscrever";
+}
+@media (max-width: 1280px) {
+  section.contador div[n-class*="niv"] picture {
+    margin-bottom: 6rem;
+  }
+  section.contador div[n-class*="niv"] div.contador strong {
+    font-size: 8rem;
+  }
+}
+@media (max-width: 600px) {
+  section.contador div[n-class*="niv"] {
+    justify-content: space-evenly;
+  }
+  section.contador div[n-class*="niv"] div.contador {
+    gap: 3rem;
+  }
+}
+
+section.landing-hero {
+  background: url("../assets/img/landing_background.png");
+  background-size: cover;
+  padding-top: 10.7rem;
+  margin-bottom: 10rem;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.landing-hero div[n-class*="niv"] {
+  position: relative;
+}
+section.landing-hero div[n-class*="niv"] picture {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+section.landing-hero div[n-class*="niv"] picture img {
+  text-align: center;
+}
+section.landing-hero div[n-class*="niv"] picture:nth-child(2) {
+  position: relative;
+  z-index: 2;
+  transition: 0.32s;
+  transition-delay: 0s;
+  opacity: 0;
+  transform: translateY(100px);
+}
+section.landing-hero div[n-class*="niv"] picture:nth-child(2)[range="in"],
+section.landing-hero div[n-class*="niv"] picture:nth-child(2)[range="initial"] {
+  opacity: 1;
+  transform: initial;
+}
+section.landing-hero div[n-class*="niv"] picture:first-child,
+section.landing-hero div[n-class*="niv"] picture:last-child {
+  position: absolute;
+}
+section.landing-hero div[n-class*="niv"] picture:first-child {
+  top: 14.2rem;
+  z-index: 1;
+}
+section.landing-hero div[n-class*="niv"] picture:last-child {
+  bottom: 2.2rem;
+}
+section.landing-hero div[n-class*="niv"] h1,
+section.landing-hero div[n-class*="niv"] h1 strong,
+h1 section.landing-hero div[n-class*="niv"] strong {
+  max-width: 35.2rem;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  font-size: 4.3rem;
+}
+@media (max-width: 1280px) {
+  section.landing-hero div[n-class="niv"] picture:first-child,
+  section.landing-hero div[n-class="niv"] picture:last-child {
+    max-width: 100%;
+  }
+}
+
+section.mini-video {
+  padding-bottom: 10rem;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.mini-video div[n-class="niv"] picture {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+section.mini-video div[n-class="niv"] picture:last-child {
+  position: relative;
+  top: -2.2rem;
+  pointer-events: none;
+}
+section.mini-video div[n-class="niv"] picture:first-child {
+  cursor: pointer;
+}
+section.mini-video div[n-class="niv"] h1,
+section.mini-video div[n-class="niv"] h1 strong,
+h1 section.mini-video div[n-class="niv"] strong {
+  font-size: 4rem;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  margin-top: 2.1rem;
+}
+section.mini-video div[n-class="niv"] h4,
+section.mini-video div[n-class="niv"] section.modules div[n-class*="niv"] div.niv-area div.picture-side h4 strong,
+section.modules div[n-class*="niv"] div.niv-area div.picture-side h4 section.mini-video div[n-class="niv"] strong {
+  color: var(--principal);
+  font-size: 1.8rem;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin-top: -6.2rem;
+  position: relative;
+  z-index: 3;
+}
+section.mini-video div[n-class="niv"] button {
+  --content: "inscrever";
+  margin: 0 auto;
+  margin-top: 2.4rem;
+}
+@media (max-width: 1280px) {
+  section.mini-video div[n-class="niv"] picture:last-child {
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  section.mini-video div[n-class="niv"] picture:first-child {
+    max-width: 100%;
+  }
+}
+
+section.members {
+  padding-top: 10rem;
+  padding-bottom: 6rem;
+  background: url("../assets/img/people_list_background.png");
+  background-size: cover;
+}
+section.members div[n-class="niv"] {
+  text-align: center;
+}
+section.members div[n-class="niv"] h2,
+section.members div[n-class="niv"] h2 b,
+h2 section.members div[n-class="niv"] strong b,
+section.members div[n-class="niv"] h2 strong,
+h2 section.members div[n-class="niv"] strong {
+  font-size: 4rem;
+  text-align: center;
+  width: 100%;
+}
+section.members div[n-class="niv"] h2:not(b),
+section.members div[n-class="niv"] h2 b:not(b),
+h2 section.members div[n-class="niv"] strong b:not(b),
+section.members div[n-class="niv"] h2 strong:not(b),
+h2 section.members div[n-class="niv"] strong:not(b) {
+  transition: 0.32s;
+  transition-delay: 0s;
+  opacity: 0;
+  transform: translateY(200px);
+}
+section.members div[n-class="niv"] h2:not(b)[range="in"],
+section.members div[n-class="niv"] h2 b:not(b)[range="in"],
+h2 section.members div[n-class="niv"] strong b:not(b)[range="in"],
+section.members div[n-class="niv"] h2 strong:not(b)[range="in"],
+h2 section.members div[n-class="niv"] strong:not(b)[range="in"],
+section.members div[n-class="niv"] h2:not(b)[range="initial"],
+section.members div[n-class="niv"] h2 b:not(b)[range="initial"],
+h2 section.members div[n-class="niv"] strong b:not(b)[range="initial"],
+section.members div[n-class="niv"] h2 strong:not(b)[range="initial"],
+h2 section.members div[n-class="niv"] strong:not(b)[range="initial"] {
+  opacity: 1;
+  transform: initial;
+}
+section.members div[n-class="niv"] h2 b,
+h2 section.members div[n-class="niv"] strong b {
+  font-weight: bold;
+}
+section.members div[n-class="niv"] hr {
+  width: 10rem;
+  height: 0.5rem;
+  background-color: var(--principal);
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+section.members div[n-class="niv"] p {
+  max-width: 65.2rem;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 181.19%;
+}
+section.members div[n-class="niv"] a.btn.--filled {
+  --content: "conhecer";
+  margin: 3rem auto 0;
+}
+
+section.grupo-whatsapp {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.grupo-whatsapp div[n-class="niv"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0;
+  gap: 8.6rem;
+}
+section.grupo-whatsapp div[n-class="niv"] div.niv-text {
+  max-width: 37.7rem;
+}
+section.grupo-whatsapp div[n-class="niv"] div.niv-text h2,
+section.grupo-whatsapp div[n-class="niv"] div.niv-text h2 strong,
+h2 section.grupo-whatsapp div[n-class="niv"] div.niv-text strong,
+section.grupo-whatsapp section.members div[n-class="niv"] div.niv-text h2 b,
+section.members section.grupo-whatsapp div[n-class="niv"] div.niv-text h2 b,
+section.grupo-whatsapp section.members div[n-class="niv"] h2 div.niv-text b,
+section.members section.grupo-whatsapp div[n-class="niv"] h2 div.niv-text b,
+section.grupo-whatsapp h2 section.members div[n-class="niv"] div.niv-text strong b,
+h2 section.members section.grupo-whatsapp div[n-class="niv"] div.niv-text strong b,
+section.grupo-whatsapp h2 section.members div[n-class="niv"] strong div.niv-text b,
+h2 section.members section.grupo-whatsapp div[n-class="niv"] strong div.niv-text b,
+section.grupo-whatsapp section.members div[n-class="niv"] h2 b div.niv-text strong,
+section.members section.grupo-whatsapp div[n-class="niv"] h2 b div.niv-text strong,
+section.grupo-whatsapp h2 section.members div[n-class="niv"] div.niv-text strong b strong,
+section.grupo-whatsapp h2 section.members div[n-class="niv"] strong b div.niv-text strong {
+  text-align: left;
+}
+section.grupo-whatsapp div[n-class="niv"] div.niv-text h2 strong,
+h2 section.grupo-whatsapp div[n-class="niv"] div.niv-text strong strong,
+section.grupo-whatsapp section.members div[n-class="niv"] h2 div.niv-text b strong,
+section.members section.grupo-whatsapp div[n-class="niv"] h2 div.niv-text b strong,
+section.grupo-whatsapp h2 section.members div[n-class="niv"] div.niv-text strong b strong,
+section.grupo-whatsapp h2 section.members div[n-class="niv"] strong div.niv-text b strong,
+h2 section.members section.grupo-whatsapp div[n-class="niv"] strong div.niv-text b strong,
+section.grupo-whatsapp section.members div[n-class="niv"] h2 b div.niv-text strong strong,
+section.members section.grupo-whatsapp div[n-class="niv"] h2 b div.niv-text strong strong,
+section.grupo-whatsapp h2 section.members div[n-class="niv"] strong b div.niv-text strong strong {
+  color: var(--principal);
+}
+section.grupo-whatsapp div[n-class="niv"] div.niv-text p {
+  margin-top: 2.6rem;
+  color: #fff;
+}
+section.grupo-whatsapp div[n-class="niv"] div.niv-text a.btn.--filled {
+  --width: 23.7rem;
+  --height: 4.9rem;
+  --content: "entrar no grupo";
+  margin-top: 6.2rem;
+  gap: 1.3rem;
+  background: linear-gradient(93.48deg, #51c833 -41.28%, #74f254 27.59%, #209d00 110.7%);
+}
+@media (max-width: 600px) {
+  section.grupo-whatsapp div[n-class="niv"] {
+    flex-direction: column;
+  }
+  section.grupo-whatsapp div[n-class="niv"] div.niv-text h2,
+  section.grupo-whatsapp div[n-class="niv"] div.niv-text h2 strong,
+  h2 section.grupo-whatsapp div[n-class="niv"] div.niv-text strong,
+  section.grupo-whatsapp section.members div[n-class="niv"] div.niv-text h2 b,
+  section.members section.grupo-whatsapp div[n-class="niv"] div.niv-text h2 b,
+  section.grupo-whatsapp section.members div[n-class="niv"] h2 div.niv-text b,
+  section.members section.grupo-whatsapp div[n-class="niv"] h2 div.niv-text b,
+  section.grupo-whatsapp h2 section.members div[n-class="niv"] div.niv-text strong b,
+  h2 section.members section.grupo-whatsapp div[n-class="niv"] div.niv-text strong b,
+  section.grupo-whatsapp h2 section.members div[n-class="niv"] strong div.niv-text b,
+  h2 section.members section.grupo-whatsapp div[n-class="niv"] strong div.niv-text b,
+  section.grupo-whatsapp section.members div[n-class="niv"] h2 b div.niv-text strong,
+  section.members section.grupo-whatsapp div[n-class="niv"] h2 b div.niv-text strong,
+  section.grupo-whatsapp h2 section.members div[n-class="niv"] div.niv-text strong b strong,
+  section.grupo-whatsapp h2 section.members div[n-class="niv"] strong b div.niv-text strong,
+  section.grupo-whatsapp div[n-class="niv"] div.niv-text p,
+  section.grupo-whatsapp div[n-class="niv"] div.niv-text a.btn {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+section.infinite-hero {
+  padding-top: 4.3rem;
+  padding-bottom: 4.3rem;
+  background-image: url("../assets/img/hero_background.jpg");
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.infinite-hero div[n-class="niv"] {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0;
+}
+section.infinite-hero div[n-class="niv"] div.niv-left-area {
+  z-index: 2;
+}
+section.infinite-hero div[n-class="niv"] div.niv-left-area h1,
+section.infinite-hero div[n-class="niv"] div.niv-left-area h1 strong,
+h1 section.infinite-hero div[n-class="niv"] div.niv-left-area strong {
+  margin-top: 11.3rem;
+  margin-bottom: 6rem;
+  max-width: 45.8rem;
+  position: relative;
+  z-index: 2;
+}
+section.infinite-hero div[n-class="niv"] div.niv-left-area h1:not(strong),
+section.infinite-hero div[n-class="niv"] div.niv-left-area h1 strong:not(strong),
+h1 section.infinite-hero div[n-class="niv"] div.niv-left-area strong:not(strong) {
+  transition: 0.32s;
+  transition-delay: 0s;
+  opacity: 0;
+  transform: translateY(-10rem);
+}
+section.infinite-hero div[n-class="niv"] div.niv-left-area h1:not(strong)[range="in"],
+section.infinite-hero div[n-class="niv"] div.niv-left-area h1 strong:not(strong)[range="in"],
+h1 section.infinite-hero div[n-class="niv"] div.niv-left-area strong:not(strong)[range="in"],
+section.infinite-hero div[n-class="niv"] div.niv-left-area h1:not(strong)[range="initial"],
+section.infinite-hero div[n-class="niv"] div.niv-left-area h1 strong:not(strong)[range="initial"],
+h1 section.infinite-hero div[n-class="niv"] div.niv-left-area strong:not(strong)[range="initial"] {
+  opacity: 1;
+  transform: initial;
+}
+/* section.infinite-hero div[n-class="niv"] div.niv-left-area h1:not(strong)::after,
+section.infinite-hero div[n-class="niv"] div.niv-left-area h1 strong:not(strong)::after,
+h1 section.infinite-hero div[n-class="niv"] div.niv-left-area strong:not(strong)::after {
+  content: url(../assets/img/hero_slice_efeito.svg);
+  position: absolute;
+  right: 1.5rem;
+  top: 8rem;
+  z-index: -1;
+} */
+section.infinite-hero div[n-class="niv"] div.niv-left-area p {
+  color: #fff;
+  max-width: 40.5rem;
+}
+section.infinite-hero div[n-class="niv"] div.niv-right-area picture {
+  /* max-height: 68rem; */
+  margin-top: 12rem;
+  overflow: hidden;
+  display: block;
+}
+section.infinite-hero.--bottom-expanded {
+  margin-bottom: 12rem;
+}
+@media (max-width: 1150px) {
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area h2,
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area h2 strong,
+  h2 section.infinite-hero div[n-class*="niv"] div.niv-left-area strong,
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area section.members div[n-class="niv"] h2 b,
+  section.members div[n-class="niv"] h2 section.infinite-hero div[n-class*="niv"] div.niv-left-area b,
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area h2 section.members div[n-class="niv"] strong b,
+  h2 section.members div[n-class="niv"] strong section.infinite-hero div[n-class*="niv"] div.niv-left-area b,
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area h1,
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area h1 strong,
+  h1 section.infinite-hero div[n-class*="niv"] div.niv-left-area strong {
+    margin-top: 5rem;
+  }
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area a {
+    margin-top: 5rem;
+  }
+}
+@media (max-width: 800px) {
+  section.infinite-hero {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    background-size: auto 100%;
+    background-position: center;
+  }
+  section.infinite-hero div[n-class*="niv"] {
+    flex-direction: column;
+  }
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area,
+  section.infinite-hero div[n-class*="niv"] div.niv-right-area,
+  section.infinite-hero div[n-class*="niv"] div.niv-mid-area {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0;
+  }
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area h1,
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area h1 strong,
+  h1 section.infinite-hero div[n-class*="niv"] div.niv-left-area strong,
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area h2,
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area h2 strong,
+  h2 section.infinite-hero div[n-class*="niv"] div.niv-left-area strong,
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area section.members div[n-class="niv"] h2 b,
+  section.members div[n-class="niv"] h2 section.infinite-hero div[n-class*="niv"] div.niv-left-area b,
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area h2 section.members div[n-class="niv"] strong b,
+  h2 section.members div[n-class="niv"] strong section.infinite-hero div[n-class*="niv"] div.niv-left-area b,
+  section.infinite-hero div[n-class*="niv"] div.niv-right-area h1,
+  section.infinite-hero div[n-class*="niv"] div.niv-right-area h1 strong,
+  h1 section.infinite-hero div[n-class*="niv"] div.niv-right-area strong,
+  section.infinite-hero div[n-class*="niv"] div.niv-right-area h2,
+  section.infinite-hero div[n-class*="niv"] div.niv-right-area h2 strong,
+  h2 section.infinite-hero div[n-class*="niv"] div.niv-right-area strong,
+  section.infinite-hero div[n-class*="niv"] div.niv-right-area section.members div[n-class="niv"] h2 b,
+  section.members div[n-class="niv"] h2 section.infinite-hero div[n-class*="niv"] div.niv-right-area b,
+  section.infinite-hero div[n-class*="niv"] div.niv-right-area h2 section.members div[n-class="niv"] strong b,
+  h2 section.members div[n-class="niv"] strong section.infinite-hero div[n-class*="niv"] div.niv-right-area b,
+  section.infinite-hero div[n-class*="niv"] div.niv-mid-area h1,
+  section.infinite-hero div[n-class*="niv"] div.niv-mid-area h1 strong,
+  h1 section.infinite-hero div[n-class*="niv"] div.niv-mid-area strong,
+  section.infinite-hero div[n-class*="niv"] div.niv-mid-area h2,
+  section.infinite-hero div[n-class*="niv"] div.niv-mid-area h2 strong,
+  h2 section.infinite-hero div[n-class*="niv"] div.niv-mid-area strong,
+  section.infinite-hero div[n-class*="niv"] div.niv-mid-area section.members div[n-class="niv"] h2 b,
+  section.members div[n-class="niv"] h2 section.infinite-hero div[n-class*="niv"] div.niv-mid-area b,
+  section.infinite-hero div[n-class*="niv"] div.niv-mid-area h2 section.members div[n-class="niv"] strong b,
+  h2 section.members div[n-class="niv"] strong section.infinite-hero div[n-class*="niv"] div.niv-mid-area b {
+    text-align: center;
+    margin: 0;
+  }
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area p,
+  section.infinite-hero div[n-class*="niv"] div.niv-right-area p,
+  section.infinite-hero div[n-class*="niv"] div.niv-mid-area p {
+    text-align: center;
+    max-width: 50%;
+    font-size: 1.8rem;
+  }
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area h1,
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area h1 strong,
+  h1 section.infinite-hero div[n-class*="niv"] div.niv-left-area strong {
+    font-size: 4rem;
+  }
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area h1:not(strong)::after,
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area h1 strong:not(strong)::after,
+  h1 section.infinite-hero div[n-class*="niv"] div.niv-left-area strong:not(strong)::after {
+    right: 7.5rem;
+    top: 6rem;
+  }
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area p,
+  section.infinite-hero div[n-class*="niv"] div.niv-left-area a {
+    display: none;
+  }
+  section.infinite-hero div[n-class*="niv"] div.niv-right-area picture {
+    position: static;
+    transform: none;
+  }
+}
+
+section.infinite-effect {
+  padding-top: 18rem;
+  padding-bottom: 18rem;
+  background: url("../assets/img/infinite_background.jpg");
+  background-size: cover;
+  background-position: right;
+}
+section.infinite-effect div[n-class="niv"] h4,
+section.infinite-effect div[n-class="niv"] section.modules div[n-class*="niv"] div.niv-area div.picture-side h4 strong,
+section.modules div[n-class*="niv"] div.niv-area div.picture-side h4 section.infinite-effect div[n-class="niv"] strong,
+section.infinite-effect div[n-class="niv"] p {
+  transition: 0.32s;
+  transition-delay: 0s;
+  opacity: 0;
+  transform: translateX(-200px);
+}
+section.infinite-effect div[n-class="niv"] h4[range="in"],
+section.infinite-effect
+  div[n-class="niv"]
+  section.modules
+  div[n-class*="niv"]
+  div.niv-area
+  div.picture-side
+  h4
+  strong[range="in"],
+section.modules
+  div[n-class*="niv"]
+  div.niv-area
+  div.picture-side
+  h4
+  section.infinite-effect
+  div[n-class="niv"]
+  strong[range="in"],
+section.infinite-effect div[n-class="niv"] h4[range="initial"],
+section.infinite-effect
+  div[n-class="niv"]
+  section.modules
+  div[n-class*="niv"]
+  div.niv-area
+  div.picture-side
+  h4
+  strong[range="initial"],
+section.modules
+  div[n-class*="niv"]
+  div.niv-area
+  div.picture-side
+  h4
+  section.infinite-effect
+  div[n-class="niv"]
+  strong[range="initial"],
+section.infinite-effect div[n-class="niv"] p[range="in"],
+section.infinite-effect div[n-class="niv"] p[range="initial"] {
+  opacity: 1;
+  transform: initial;
+}
+/* section.infinite-effect div[n-class="niv"] h4,
+section.infinite-effect div[n-class="niv"] section.modules div[n-class*="niv"] div.niv-area div.picture-side h4 strong,
+section.modules div[n-class*="niv"] div.niv-area div.picture-side h4 section.infinite-effect div[n-class="niv"] strong {
+  color: #070707;
+  margin-bottom: 0.3rem;
+} */
+section.infinite-effect div[n-class="niv"] h2,
+section.infinite-effect div[n-class="niv"] h2 strong,
+h2 section.infinite-effect div[n-class="niv"] strong,
+section.infinite-effect section.members div[n-class="niv"] h2 b,
+section.members section.infinite-effect div[n-class="niv"] h2 b,
+section.infinite-effect h2 section.members div[n-class="niv"] strong b,
+h2 section.members section.infinite-effect div[n-class="niv"] strong b,
+section.infinite-effect h2 section.members div[n-class="niv"] strong b strong {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+section.infinite-effect div[n-class="niv"] p {
+  max-width: 49.1rem;
+  margin-bottom: 5.2rem;
+  color: #fff;
+}
+section.infinite-effect div[n-class="niv"] a.btn.--filled {
+  --content: "inscrever";
+  /* background: #070707; */
+}
+
+section.video {
+  padding-bottom: 10rem;
+  margin-top: -20rem;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.video div[n-class="niv"] picture {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+section.video div[n-class="niv"] picture:last-child {
+  position: relative;
+  top: -2.2rem;
+  pointer-events: none;
+}
+section.video div[n-class="niv"] picture:first-child {
+  cursor: pointer;
+}
+section.video div[n-class="niv"] h1,
+section.video div[n-class="niv"] h1 strong,
+h1 section.video div[n-class="niv"] strong {
+  font-size: 4rem;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  margin-top: 2.1rem;
+}
+section.video div[n-class="niv"] h4,
+section.video div[n-class="niv"] section.modules div[n-class*="niv"] div.niv-area div.picture-side h4 strong,
+section.modules div[n-class*="niv"] div.niv-area div.picture-side h4 section.video div[n-class="niv"] strong {
+  color: var(--principal);
+  font-size: 1.8rem;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin-top: -11.2rem;
+  position: relative;
+  z-index: 3;
+}
+section.video div[n-class="niv"] button {
+  --content: "inscrever";
+  margin: 0 auto;
+  margin-top: 2.4rem;
+}
+@media (max-width: 1280px) {
+  section.video div[n-class="niv"] picture:last-child {
+    max-width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  section.video div[n-class="niv"] picture:first-child {
+    max-width: 100%;
+  }
+}
+
+section.planos {
+  padding-bottom: 7rem;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.planos div[n-class="niv"] div.niv-list {
+  width: 100%;
+}
+section.planos div[n-class="niv"] div.niv-list div.scroll {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0;
+}
+section.planos div[n-class="niv"] div.niv-list div.scroll div.plano {
+  width: 34rem;
+  background-color: #070707;
+  padding: 4rem 3rem;
+}
+section.planos div[n-class="niv"] div.niv-list div.scroll div.plano > strong {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.8rem;
+  line-height: 120%;
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 6.1rem;
+  position: relative;
+}
+section.planos div[n-class="niv"] div.niv-list div.scroll div.plano > strong::after {
+  width: 9.5rem;
+  height: 0.2rem;
+  background-color: var(--principal);
+  position: absolute;
+  content: "";
+  bottom: -1.2rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+section.planos div[n-class="niv"] div.niv-list div.scroll div.plano > a.btn.--filled {
+  --content: "inscrever";
+  margin: 4.7rem auto 0;
+}
+section.planos div[n-class="niv"] div.niv-list div.scroll div.plano > small {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 140%;
+  text-align: center;
+  color: #b3beda;
+  width: 100%;
+  margin-top: 4.7rem;
+}
+section.planos div[n-class="niv"] div.niv-list div.scroll div.plano > ul li {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 1rem;
+}
+section.planos div[n-class="niv"] div.niv-list div.scroll div.plano > ul li span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 100%;
+  color: #b3beda;
+}
+section.planos div[n-class="niv"] div.niv-list div.scroll div.plano span.price {
+  margin-bottom: 4.7rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+section.planos div[n-class="niv"] div.niv-list div.scroll div.plano span.price.--sliced {
+  margin-bottom: 2rem;
+  position: relative;
+}
+section.planos div[n-class="niv"] div.niv-list div.scroll div.plano span.price.--sliced::after {
+  content: url("../assets/img/price_slice.svg");
+  position: absolute;
+}
+section.planos div[n-class="niv"] div.niv-list div.scroll div.plano span.price.--sliced::before {
+  transform: scaleY(-1);
+  content: url("../assets/img/price_slice.svg");
+  position: absolute;
+}
+section.planos div[n-class="niv"] div.niv-list div.scroll div.plano span.price.--sliced strong {
+  color: #505050;
+  font-size: 2.7rem;
+}
+section.planos div[n-class="niv"] div.niv-list div.scroll div.plano span.price.--sliced > div strong {
+  font-size: 4.7rem;
+}
+section.planos div[n-class="niv"] div.niv-list div.scroll div.plano span.price strong {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%;
+  font-size: 3.3748rem;
+  letter-spacing: -0.03em;
+  color: var(--principal);
+}
+section.planos div[n-class="niv"] div.niv-list div.scroll div.plano span.price > div strong {
+  font-size: 5.9556rem;
+  line-height: 66%;
+}
+section.planos div[n-class="niv"] div.niv-list div.scroll div.plano span.price > div p {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 97.5%;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-top: 1rem;
+}
+section.planos div[n-class="niv"] div.niv-list div.scroll div.plano.--fav {
+  position: relative;
+}
+section.planos div[n-class="niv"] div.niv-list div.scroll div.plano.--fav::after {
+  content: url("../assets/img/path.svg");
+  position: absolute;
+  right: 1.6rem;
+  top: 1.6rem;
+}
+@media (max-width: 800px) {
+  section.planos {
+    padding: 0 0 7rem 0;
+  }
+  section.planos div[n-class="niv"] {
+    padding: 0;
+  }
+  section.planos div[n-class="niv"] div.niv-list {
+    overflow: scroll;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+  }
+  section.planos div[n-class="niv"] div.niv-list::-webkit-scrollbar {
+    display: none;
+  }
+  section.planos div[n-class="niv"] div.niv-list div.scroll {
+    padding-right: 30rem;
+    padding-left: 30rem;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    gap: 3rem;
+  }
+  section.planos div[n-class="niv"] div.niv-list div.scroll div.plano {
+    scroll-snap-align: center;
+  }
+}
+
+section.duvidas {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+section.duvidas div[n-class="niv"] div.niv-title h3,
+section.duvidas div[n-class="niv"] div.niv-title h3 strong,
+h3 section.duvidas div[n-class="niv"] div.niv-title strong {
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+section.duvidas div[n-class="niv"] div.niv-area {
+  width: 100%;
+  max-width: 100.8rem;
+  margin: 4.6rem auto 0;
+}
+section.duvidas div[n-class="niv"] div.niv-area details {
+  width: 100%;
+  transition: 0.32s;
+  margin-bottom: 2.7rem;
+}
+section.duvidas div[n-class="niv"] div.niv-area details summary {
+  cursor: pointer;
+  padding-left: 2.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.968rem;
+  line-height: 141.19%;
+  color: #fff;
+  width: 100%;
+  height: 6rem;
+  background-color: #070707;
+  position: relative;
+}
+section.duvidas div[n-class="niv"] div.niv-area details summary::after {
+  position: absolute;
+  content: url("../assets/img/modules_arrow.svg");
+  transition: 0.32s;
+  right: 2.2rem;
+  transform: rotate(180deg);
+}
+section.duvidas div[n-class="niv"] div.niv-area details p {
+  padding-left: 2.1rem;
+  padding-top: 2.2rem;
+  transition: 0.32s;
+  font-weight: 400;
+  font-size: 1.604rem;
+  line-height: 141.19%;
+  color: #fff;
+}
+section.duvidas div[n-class="niv"] div.niv-area details[open] summary {
+  color: var(--principal);
+}
+section.duvidas div[n-class="niv"] div.niv-area details[open] summary::after {
+  transform: rotate(0);
+}
+
+section.call-to-action {
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+}
+section.call-to-action div[n-class="niv"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0;
+  text-align: center;
+}
+section.call-to-action div[n-class="niv"] h2,
+section.call-to-action div[n-class="niv"] h2 strong,
+h2 section.call-to-action div[n-class="niv"] strong,
+section.call-to-action section.members div[n-class="niv"] h2 b,
+section.members section.call-to-action div[n-class="niv"] h2 b,
+section.call-to-action h2 section.members div[n-class="niv"] strong b,
+h2 section.members section.call-to-action div[n-class="niv"] strong b,
+section.call-to-action h2 section.members div[n-class="niv"] strong b strong {
+  text-align: center;
+}
+section.call-to-action div[n-class="niv"] a.btn.--filled {
+  --content: "inscrever";
+  margin-top: 6rem;
+}
+section.call-to-action div[n-class="niv"] picture {
+  margin-top: -2rem;
+  display: block;
+}
+
+section.download-form {
+  padding-top: 14rem;
+  padding-bottom: 14rem;
+  background: url("../assets/img/landing_background.png") no-repeat;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.download-form div[n-class="niv"] {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+section.download-form div[n-class="niv"] > picture.draw {
+  position: absolute;
+  top: 37.6rem;
+  z-index: 1;
+  max-width: 100%;
+}
+section.download-form div[n-class="niv"] > picture.draw img {
+  max-width: 100%;
+}
+section.download-form div[n-class="niv"] div.niv-left-area {
+  position: relative;
+  z-index: 2;
+  max-width: 70rem;
+}
+section.download-form div[n-class="niv"] div.niv-left-area div.selo {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  left: 0;
+  top: 2rem;
+}
+section.download-form div[n-class="niv"] div.niv-left-area h2,
+section.download-form div[n-class="niv"] div.niv-left-area h2 strong,
+h2 section.download-form div[n-class="niv"] div.niv-left-area strong,
+section.download-form section.members div[n-class="niv"] div.niv-left-area h2 b,
+section.members section.download-form div[n-class="niv"] div.niv-left-area h2 b,
+section.download-form section.members div[n-class="niv"] h2 div.niv-left-area b,
+section.members section.download-form div[n-class="niv"] h2 div.niv-left-area b,
+section.download-form h2 section.members div[n-class="niv"] div.niv-left-area strong b,
+h2 section.members section.download-form div[n-class="niv"] div.niv-left-area strong b,
+section.download-form h2 section.members div[n-class="niv"] strong div.niv-left-area b,
+h2 section.members section.download-form div[n-class="niv"] strong div.niv-left-area b,
+section.download-form section.members div[n-class="niv"] h2 b div.niv-left-area strong,
+section.members section.download-form div[n-class="niv"] h2 b div.niv-left-area strong,
+section.download-form h2 section.members div[n-class="niv"] div.niv-left-area strong b strong,
+section.download-form h2 section.members div[n-class="niv"] strong b div.niv-left-area strong {
+  text-align: left;
+  max-width: 35rem;
+  font-size: 4.3rem;
+}
+section.download-form div[n-class="niv"] div.niv-left-area h2 strong,
+h2 section.download-form div[n-class="niv"] div.niv-left-area strong strong,
+section.download-form section.members div[n-class="niv"] h2 div.niv-left-area b strong,
+section.members section.download-form div[n-class="niv"] h2 div.niv-left-area b strong,
+section.download-form h2 section.members div[n-class="niv"] div.niv-left-area strong b strong,
+section.download-form h2 section.members div[n-class="niv"] strong div.niv-left-area b strong,
+h2 section.members section.download-form div[n-class="niv"] strong div.niv-left-area b strong,
+section.download-form section.members div[n-class="niv"] h2 b div.niv-left-area strong strong,
+section.members section.download-form div[n-class="niv"] h2 b div.niv-left-area strong strong,
+section.download-form h2 section.members div[n-class="niv"] strong b div.niv-left-area strong strong {
+  color: var(--principal);
+}
+section.download-form div[n-class="niv"] div.niv-left-area h2:not(strong),
+section.download-form div[n-class="niv"] div.niv-left-area h2 strong:not(strong),
+h2 section.download-form div[n-class="niv"] div.niv-left-area strong:not(strong),
+section.download-form section.members div[n-class="niv"] div.niv-left-area h2 b:not(strong),
+section.members section.download-form div[n-class="niv"] div.niv-left-area h2 b:not(strong),
+section.download-form section.members div[n-class="niv"] h2 div.niv-left-area b:not(strong),
+section.members section.download-form div[n-class="niv"] h2 div.niv-left-area b:not(strong),
+section.download-form h2 section.members div[n-class="niv"] div.niv-left-area strong b:not(strong),
+h2 section.members section.download-form div[n-class="niv"] div.niv-left-area strong b:not(strong),
+section.download-form h2 section.members div[n-class="niv"] strong div.niv-left-area b:not(strong),
+h2 section.members section.download-form div[n-class="niv"] strong div.niv-left-area b:not(strong),
+section.download-form section.members div[n-class="niv"] h2 b div.niv-left-area strong:not(strong),
+section.members section.download-form div[n-class="niv"] h2 b div.niv-left-area strong:not(strong),
+section.download-form h2 section.members div[n-class="niv"] div.niv-left-area strong b strong:not(strong),
+section.download-form h2 section.members div[n-class="niv"] strong b div.niv-left-area strong:not(strong) {
+  margin: -5.9rem auto 0;
+}
+section.download-form div[n-class="niv"] div.niv-right-area {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  max-width: 48.2rem;
+}
+section.download-form div[n-class="niv"] div.niv-right-area h3,
+section.download-form div[n-class="niv"] div.niv-right-area h3 strong,
+h3 section.download-form div[n-class="niv"] div.niv-right-area strong {
+  color: #fff;
+  margin-bottom: 4.6rem;
+}
+section.download-form div[n-class="niv"] div.niv-right-area form {
+  width: 100%;
+  max-width: 48.2rem;
+  background: #070707;
+  border: 0.1161rem solid #000;
+  padding: 3.3rem;
+}
+section.download-form div[n-class="niv"] div.niv-right-area form button.btn.--filled {
+  --content: "inscrever";
+}
+section.download-form div[n-class="niv"] div.niv-right-area p {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+section.download-form.--bonus div[n-class="niv"] {
+  gap: 14rem;
+}
+section.download-form.--bonus div[n-class="niv"] div.niv-left-area {
+  padding-left: 11.2rem;
+}
+section.download-form.--bonus div[n-class="niv"] div.niv-left-area h4,
+section.download-form.--bonus
+  div[n-class="niv"]
+  div.niv-left-area
+  section.modules
+  div[n-class*="niv"]
+  div.niv-area
+  div.picture-side
+  h4
+  strong,
+section.modules
+  div[n-class*="niv"]
+  div.niv-area
+  div.picture-side
+  h4
+  section.download-form.--bonus
+  div[n-class="niv"]
+  div.niv-left-area
+  strong {
+  margin-bottom: 0.3rem;
+}
+section.download-form.--bonus div[n-class="niv"] div.niv-left-area h3,
+section.download-form.--bonus div[n-class="niv"] div.niv-left-area h3 strong,
+h3 section.download-form.--bonus div[n-class="niv"] div.niv-left-area strong {
+  margin-bottom: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5.0346rem;
+  line-height: 134.19%;
+  color: #fff;
+}
+section.download-form.--bonus div[n-class="niv"] div.niv-left-area p {
+  color: #fff;
+  max-width: 49.1rem;
+  margin-bottom: 5.8rem;
+}
+@media (max-width: 800px) {
+  section.download-form div[n-class="niv"] {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  section.download-form div[n-class="niv"] div.niv-left-area {
+    padding: 0 !important;
+  }
+  section.download-form div[n-class="niv"] div.niv-left-area h2,
+  section.download-form div[n-class="niv"] div.niv-left-area h2 strong,
+  h2 section.download-form div[n-class="niv"] div.niv-left-area strong,
+  section.download-form section.members div[n-class="niv"] div.niv-left-area h2 b,
+  section.members section.download-form div[n-class="niv"] div.niv-left-area h2 b,
+  section.download-form section.members div[n-class="niv"] h2 div.niv-left-area b,
+  section.members section.download-form div[n-class="niv"] h2 div.niv-left-area b,
+  section.download-form h2 section.members div[n-class="niv"] div.niv-left-area strong b,
+  h2 section.members section.download-form div[n-class="niv"] div.niv-left-area strong b,
+  section.download-form h2 section.members div[n-class="niv"] strong div.niv-left-area b,
+  h2 section.members section.download-form div[n-class="niv"] strong div.niv-left-area b,
+  section.download-form section.members div[n-class="niv"] h2 b div.niv-left-area strong,
+  section.members section.download-form div[n-class="niv"] h2 b div.niv-left-area strong,
+  section.download-form h2 section.members div[n-class="niv"] div.niv-left-area strong b strong,
+  section.download-form h2 section.members div[n-class="niv"] strong b div.niv-left-area strong,
+  section.download-form div[n-class="niv"] div.niv-left-area h3,
+  section.download-form div[n-class="niv"] div.niv-left-area h3 strong,
+  h3 section.download-form div[n-class="niv"] div.niv-left-area strong,
+  section.download-form div[n-class="niv"] div.niv-left-area h4,
+  section.download-form
+    div[n-class="niv"]
+    div.niv-left-area
+    section.modules
+    div[n-class*="niv"]
+    div.niv-area
+    div.picture-side
+    h4
+    strong,
+  section.modules
+    div[n-class*="niv"]
+    div.niv-area
+    div.picture-side
+    h4
+    section.download-form
+    div[n-class="niv"]
+    div.niv-left-area
+    strong,
+  section.download-form div[n-class="niv"] div.niv-left-area p {
+    text-align: center;
+  }
+}
+
+section.agradecimento {
+  padding-top: 17.4rem;
+  padding-bottom: 18.2rem;
+  background: url("../assets/img/full_background.jpg");
+}
+section.agradecimento.--no-background {
+  background: none;
+  padding-bottom: 0;
+}
+section.agradecimento.--alternative-background {
+  background: url("../assets/img/landing_background.png") no-repeat;
+  padding-bottom: 0;
+}
+section.agradecimento div[n-class="niv"] {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0;
+}
+section.agradecimento div[n-class="niv"] > picture {
+  margin-bottom: 3.8rem;
+}
+section.agradecimento div[n-class="niv"] > picture.logo {
+  margin-bottom: 6rem;
+}
+section.agradecimento div[n-class="niv"] > h3,
+section.agradecimento h3 div[n-class="niv"] > strong,
+h3 section.agradecimento div[n-class="niv"] > strong {
+  color: #fff;
+  font-size: 5rem;
+  margin-bottom: 3.8rem;
+}
+section.agradecimento div[n-class="niv"] > p {
+  color: #fff;
+  max-width: 71rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+section.agradecimento div[n-class="niv"] > p.--reduced {
+  max-width: 58.2rem;
+}
+section.agradecimento div[n-class="niv"] a.btn.--filled {
+  --width: 19.4rem;
+  --content: "descobrir mais";
+  margin-bottom: 5rem;
+}
+section.agradecimento div[n-class="niv"] a.btn.--filled.--download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1.3rem;
+  --content: "baixar arquivo";
+}
+
+section.medium-video {
+  padding-bottom: 10rem;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.medium-video div[n-class="niv"] picture {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+@media (max-width: 1280px) {
+  section.medium-video div[n-class="niv"] picture:last-child {
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  section.medium-video div[n-class="niv"] picture:first-child {
+    max-width: 100%;
+  }
+}
+
+div.solitary-logo {
+  width: 100%;
+  text-align: center;
+  padding-top: 7.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0;
+}
+div.solitary-logo.--extended {
+  margin-bottom: 35rem;
+  padding-top: 17.8rem;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+@media (max-width: 800px) {
+  div.solitary-logo.--extended img {
+    max-width: 80vw;
+  }
+}
+
+section.wizard-form div[n-class="niv"] {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0;
+}
+section.wizard-form div[n-class="niv"] div.indicator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0;
+  width: 100%;
+  margin-top: 6.6rem;
+  max-width: 40rem;
+  position: relative;
+}
+section.wizard-form div[n-class="niv"] div.indicator span {
+  height: 1.8rem;
+  aspect-ratio: 1/1;
+  background-color: #000;
+  border: solid 1px #505050;
+  border-radius: 100%;
+  position: relative;
+  z-index: 2;
+}
+section.wizard-form div[n-class="niv"] div.indicator span[active] {
+  border-color: var(--principal);
+}
+section.wizard-form div[n-class="niv"] div.indicator::after {
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  position: absolute;
+  content: "";
+  height: 0.3rem;
+  background-color: #505050;
+  margin: auto auto;
+  z-index: 1;
+}
+section.wizard-form div[n-class="niv"] p {
+  margin-top: 6.6rem;
+  margin-bottom: 6.6rem;
+  color: #fff;
+}
+section.wizard-form div[n-class="niv"] form {
+  padding: 0;
+  width: 100%;
+  max-width: 38.7rem;
+  transition: 0.32s;
+  transition-delay: 0s;
+}
+section.wizard-form div[n-class="niv"] form[refresh] {
+  opacity: 0;
+  transform: scale(0);
+  transition: 0s;
+}
+section.wizard-form div[n-class="niv"] form button.btn.--filled {
+  --content: "continuar";
+}
+section.wizard-form div[n-class="niv"] form button.btn.--filled.--finalizar {
+  --content: "finalizar";
+}
+
+section.splash {
+  position: relative;
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+  /**
+
+  @include responsive(1400px) {}
+  @include responsive(1200px) {}
+  @include responsive(992px) {}
+  @include responsive(730px) {}
+  @include responsive(600px) {}
+
+  **/
+}
+section.splash div[n-class="niv"] {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  height: 100vh;
+}
+section.splash div[n-class="niv"] div.niv-picture-side {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+section.splash div[n-class="niv"] div.niv-content-side picture {
+  display: block;
+  margin-bottom: 8rem;
+}
+section.splash div[n-class="niv"] div.niv-content-side h4,
+section.splash
+  div[n-class="niv"]
+  div.niv-content-side
+  section.modules
+  div[n-class*="niv"]
+  div.niv-area
+  div.picture-side
+  h4
+  strong,
+section.modules
+  div[n-class*="niv"]
+  div.niv-area
+  div.picture-side
+  h4
+  section.splash
+  div[n-class="niv"]
+  div.niv-content-side
+  strong {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.2095rem;
+  line-height: 134.19%;
+  color: var(--principal);
+}
+section.splash div[n-class="niv"] div.niv-content-side h3,
+section.splash div[n-class="niv"] div.niv-content-side h3 strong,
+h3 section.splash div[n-class="niv"] div.niv-content-side strong {
+  color: #fff;
+  margin-bottom: 8rem;
+  font-size: 5rem;
+}
+section.splash div[n-class="niv"] div.niv-content-side p {
+  max-width: 49.1rem;
+  color: #fff;
+  margin-bottom: 8rem;
+}
+section.splash div[n-class="niv"] div.niv-content-side div.buttons-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+section.splash div[n-class="niv"] div.niv-content-side div.buttons-row a.btn.--filled:first-child {
+  --content: "parcelado";
+  --height: 4.9rem;
+  --width: 17rem;
+}
+section.splash div[n-class="niv"] div.niv-content-side div.buttons-row a.btn.--filled:last-child {
+  --content: "à vista";
+  --height: 4.9rem;
+  --width: 17rem;
+}
+section.splash div[n-class="niv"] div.niv-content-side picture:last-child {
+  margin: -2.4rem 0 0 20.1rem;
+}
+@media (max-width: 1440px) {
+  section.splash {
+    overflow: hidden;
+  }
+  section.splash div[n-class="niv"] div.niv-picture-side {
+    right: -21rem;
+  }
+}
+@media (max-width: 1150px) {
+  section.splash {
+    overflow: hidden;
+  }
+  section.splash div[n-class="niv"] div.niv-picture-side {
+    right: -43rem;
+  }
+}
+@media (max-width: 800px) {
+  section.splash {
+    overflow: hidden;
+  }
+  section.splash div[n-class="niv"] div.niv-content-side {
+    position: relative;
+    z-index: 2;
+  }
+  section.splash div[n-class="niv"] div.niv-picture-side {
+    right: unset;
+    left: 0;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 1;
+  }
+}

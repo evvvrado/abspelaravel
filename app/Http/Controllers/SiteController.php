@@ -265,4 +265,15 @@ class SiteController extends Controller
         return view("site.recuperar_senha");
     }
 
+
+    public function splash()
+    {
+        return view("site.splash");
+    }
+    
+    public function infinite()
+    {
+        return view("site.infinite");
+    }
+
 }
