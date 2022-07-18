@@ -124,7 +124,7 @@
     <section class="duvidas" id="duvidas">
         <div n-class="niv">
             <div class="niv-title">
-                <h3>Dúvidas</h3>
+                <h3>Módulos</h3>
             </div>
 
             <div class="niv-area">
