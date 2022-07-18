@@ -167,9 +167,7 @@
                     @else
                         <button class="btn-primary" onclick="window.location.href = '{{ route('site.infinite') }}'">
                             Inscreva-se
-                            <div class="svg">
-                                <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
-                            </div>
+
                         </button>
                     @endif
                 </div>
@@ -233,16 +231,12 @@
                         <button class="btn-primary"
                             onclick="window.location.href = '{{ route('site.curso', ['slug' => $turma->curso->slug]) }}'">
                             Inscreva-se
-                            <div class="svg">
-                                <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
-                            </div>
+
                         </button>
                     @else
                         <button class="btn-primary" onclick="window.location.href = '{{ route('site.infinite') }}'">
                             Inscreva-se
-                            <div class="svg">
-                                <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
-                            </div>
+
                         </button>
                     @endif
                 </div>
