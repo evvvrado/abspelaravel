@@ -72,14 +72,21 @@
                 </picture>
 
                 <h4>Faça sua inscrição!</h4>
-                <h3>Amantes do vinho</h3>
-
-                <p>
-                    A escalada do saber é um caminho sem volta e queremos que você dê o primeiro passo.
-                    <br><br>
+                <h3>
+                    Amantes do vinho <br>
                     <small>OBS: O curso não possui caráter profissionalizante. </small>
-                </p>
+                </h3>
 
+                <div class="box">
+                    <p><strong>R$ 1000,00</strong>
+                        Em até 5x</p>
+                </div>
+
+                <div class="box">
+                    <p><strong>R$ 900,00</strong>
+                        à vista</p>
+
+                </div>
 
                 <div class="buttons-row">
                     <a href="https://cielolink.com.br/3zhlr7L" class="btn --filled"><span>Parcelado</span></a>
