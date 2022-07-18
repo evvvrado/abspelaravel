@@ -50,7 +50,7 @@
 
         @if ($turma && !$turma2)
             {{-- Turma 1 --}}
-            <div class="hero_cards">
+            {{-- <div class="hero_cards">
                 <div>
                     <img src="{{ asset('site/img/calendarpointed.svg') }}" alt="" />
                     <span>{{ date('d.m.y', strtotime($turma->data)) }}</span>
@@ -59,7 +59,7 @@
                     <img src="{{ asset('site/img/alarm.svg') }}" alt="" />
                     <span>Às {{ date('H:i', strtotime($turma->horario)) }}</span>
                 </div>
-            </div>
+            </div> --}}
 
             <div class="container-fav">
                 <div class="text">
@@ -89,10 +89,22 @@
                             </script>
                         </h1>
                     </div>
-                    <button class="btn-primary"
-                        onclick="window.location.href = '{{ route('site.curso', ['slug' => $turma->curso->slug]) }}'">
-                        Inscreva-se
-                    </button>
+                    @if ($turma->curso->id != 4)
+                        <button class="btn-primary"
+                            onclick="window.location.href = '{{ route('site.curso', ['slug' => $turma->curso->slug]) }}'">
+                            Inscreva-se
+                            <div class="svg">
+                                <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
+                            </div>
+                        </button>
+                    @else
+                        <button class="btn-primary" onclick="window.location.href = '{{ route('site.infinite') }}'">
+                            Inscreva-se
+                            <div class="svg">
+                                <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
+                            </div>
+                        </button>
+                    @endif
                 </div>
 
                 <div class="hero_indicator">
@@ -111,7 +123,7 @@
             </div>
         @elseif($turma && $turma2)
             {{-- Turma 1 --}}
-            <div class="hero_cards turma1">
+            {{-- <div class="hero_cards turma1">
                 <div>
                     <img src="{{ asset('site/img/calendarpointed.svg') }}" alt="" />
                     <span>{{ date('d.m.y', strtotime($turma->data)) }}</span>
@@ -120,7 +132,7 @@
                     <img src="{{ asset('site/img/alarm.svg') }}" alt="" />
                     <span>Às {{ date('H:i', strtotime($turma->horario)) }}</span>
                 </div>
-            </div>
+            </div> --}}
 
             <div class="container-fav turma1">
                 <div class="text">
@@ -150,10 +162,22 @@
                             </script>
                         </h1>
                     </div>
-                    <button class="btn-primary"
-                        onclick="window.location.href = '{{ route('site.curso', ['slug' => $turma->curso->slug]) }}'">
-                        Inscreva-se
-                    </button>
+                    @if ($turma->curso->id != 4)
+                        <button class="btn-primary"
+                            onclick="window.location.href = '{{ route('site.curso', ['slug' => $turma->curso->slug]) }}'">
+                            Inscreva-se
+                            <div class="svg">
+                                <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
+                            </div>
+                        </button>
+                    @else
+                        <button class="btn-primary" onclick="window.location.href = '{{ route('site.infinite') }}'">
+                            Inscreva-se
+                            <div class="svg">
+                                <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
+                            </div>
+                        </button>
+                    @endif
                 </div>
 
                 <div class="hero_indicator">
@@ -172,7 +196,7 @@
             </div>
 
             {{-- Turma 2 --}}
-            <div class="hero_cards turma2 inactive">
+            {{-- <div class="hero_cards turma2 inactive">
                 <div>
                     <img src="{{ asset('site/img/calendarpointed.svg') }}" alt="" />
                     <span>{{ date('d.m.y', strtotime($turma2->data)) }}</span>
@@ -181,7 +205,7 @@
                     <img src="{{ asset('site/img/alarm.svg') }}" alt="" />
                     <span>Às {{ date('H:i', strtotime($turma2->horario)) }}</span>
                 </div>
-            </div>
+            </div> --}}
 
             <div class="container-fav turma2 inactive">
                 <div class="text">
@@ -211,10 +235,22 @@
                             </script>
                         </h1>
                     </div>
-                    <button class="btn-primary"
-                        onclick="window.location.href = '{{ route('site.curso', ['slug' => $turma->curso->slug]) }}'">
-                        Inscreva-se
-                    </button>
+                    @if ($turma->curso->id != 4)
+                        <button class="btn-primary"
+                            onclick="window.location.href = '{{ route('site.curso', ['slug' => $turma->curso->slug]) }}'">
+                            Inscreva-se
+                            <div class="svg">
+                                <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
+                            </div>
+                        </button>
+                    @else
+                        <button class="btn-primary" onclick="window.location.href = '{{ route('site.infinite') }}'">
+                            Inscreva-se
+                            <div class="svg">
+                                <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" />
+                            </div>
+                        </button>
+                    @endif
                 </div>
 
                 <div class="hero_indicator">
