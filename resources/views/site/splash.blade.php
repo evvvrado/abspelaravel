@@ -76,6 +76,8 @@
 
                 <p>
                     A escalada do saber é um caminho sem volta e queremos que você dê o primeiro passo.
+                    <br><br>
+                    <small>OBS: O curso não possui caráter profissionalizante. </small>
                 </p>
 
 
