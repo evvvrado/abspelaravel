@@ -349,7 +349,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                @if ($turma->curso != 4)
+                                @if ($turma->curso->id != 4)
                                     <button class="btn-primary"
                                         onclick="window.location.href = '{{ route('site.curso', ['slug' => $turma->curso->slug]) }}'">
                                         Inscreva-se
