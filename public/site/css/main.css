@@ -3223,6 +3223,26 @@ section.infinite-hero div[n-class="niv"] div.niv-left-area p {
   color: #fff;
   max-width: 40.5rem;
 }
+section.infinite-hero div[n-class="niv"] div.niv-left-area div.details {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+section.infinite-hero div[n-class="niv"] div.niv-left-area div.details span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  margin-bottom: 1rem;
+  color: white;
+
+  font-size: 1.8rem;
+}
+
+section.infinite-hero div[n-class="niv"] div.niv-left-area div.details i {
+  color: var(--principal);
+  font-size: 2.4rem;
+}
+
 section.infinite-hero div[n-class="niv"] div.niv-right-area picture {
   /* max-height: 68rem; */
   margin-top: 12rem;
@@ -4296,4 +4316,8 @@ section.splash div[n-class="niv"] div.niv-content-side picture:last-child {
     pointer-events: none;
     z-index: 1;
   }
+}
+
+section.boxes div[n-class*="niv"] div.boxes div.box a.btn.--filled {
+  --content: "inscrever";
 }

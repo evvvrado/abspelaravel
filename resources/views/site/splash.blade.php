@@ -78,8 +78,8 @@
                 </h3>
 
                 <div class="box">
-                    <p><strong>R$ 1000,00</strong>
-                        Em até 5x</p>
+                    <p><strong>R$ 1.000,00</strong>
+                        em até 5x</p>
                 </div>
 
                 <div class="box">

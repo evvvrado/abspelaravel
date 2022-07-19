@@ -17,6 +17,17 @@
                     O Curso Amantes do Vinho foi criado para você, apaixonado pela bebida, para descobrir um pouco mais
                     desse fascinante universo do vinho.
                 </p>
+
+                <div class="details">
+                    <span>
+                        <i class='bx bx-calendar-alt'></i>
+                        22/08,29/08,05/09,12/09, e 19/09.
+                    </span>
+                    <span>
+                        <i class='bx bx-pin'></i>
+                        Senac, Av Visconde Suassuna, 500 - Santo Amaro.
+                    </span>
+                </div>
             </div>
 
             <div class="niv-right-area">
@@ -54,8 +65,12 @@
                         <img src="{{ asset('site/assets/img/boxes_icon.svg') }}" alt="ícone">
                     </picture>
 
-                    <p><strong>R$ 1000,00</strong>
-                        Em até 5x</p>
+                    <p><strong>R$ 1.000,00</strong>
+                        em até 5x</p>
+
+                    <a href="{{ route('site.splash') }}" class="btn --filled">
+                        <span>inscrever</span>
+                    </a>
                 </div>
                 <div class="box" n-class="fade">
                     <picture>
@@ -64,6 +79,11 @@
 
                     <p><strong>R$ 900,00</strong>
                         à vista</p>
+
+
+                    <a href="{{ route('site.splash') }}" class="btn --filled">
+                        <span>inscrever</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -152,7 +172,7 @@
                     <p>
                         1. Rótulos<br>
                         2. Como Comprar e Armazenar o Vinho<br>
-                        3. Venificação dos Espumantes<br>
+                        3. Vinificação dos Espumantes<br>
                         4. Degustação Espumantes e Champagne
                     </p>
                 </details>
