@@ -166,7 +166,7 @@
                         </button>
                     @else
                         <button class="btn-primary" onclick="window.location.href = '{{ route('site.infinite') }}'">
-                            Inscreva-se]
+                            Inscreva-se
                         </button>
                     @endif
                 </div>
@@ -234,7 +234,6 @@
                     @else
                         <button class="btn-primary" onclick="window.location.href = '{{ route('site.infinite') }}'">
                             Inscreva-se
-
                         </button>
                     @endif
                 </div>

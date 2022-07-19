@@ -21,11 +21,11 @@
                 <div class="details">
                     <span>
                         <i class='bx bx-calendar-alt'></i>
-                        22/08,29/08,05/09,12/09, e 19/09.
+                        22/08, 29/08, 05/09, 12/09, e 19/09.
                     </span>
                     <span>
                         <i class='bx bx-pin'></i>
-                        Senac, Av Visconde Suassuna, 500 - Santo Amaro.
+                        Senac, Av. Visconde Suassuna, 500 - Santo Amaro.
                     </span>
                 </div>
             </div>
@@ -172,7 +172,7 @@
                     <p>
                         1. Rótulos<br>
                         2. Como Comprar e Armazenar o Vinho<br>
-                        3. Vinificação dos Espumantes<br>
+                        3. Vinificação de Espumantes<br>
                         4. Degustação Espumantes e Champagne
                     </p>
                 </details>
@@ -208,7 +208,7 @@
         <div n-class="niv">
             <h2>Garanta já sua <strong>ativação!</strong></h2>
 
-            <a href="{{ route('site.splash') }}" class="btn --filled"><span>ativar</span></a>
+            <a href="{{ route('site.splash') }}" class="btn --filled"><span>inscrever</span></a>
 
             <picture>
                 <img src="{{ asset('site/assets/img/button_effect_mini.png') }}" alt="efeito botão">
