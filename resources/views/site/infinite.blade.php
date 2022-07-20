@@ -24,6 +24,10 @@
                         22/08, 29/08, 05/09, 12/09, e 19/09.
                     </span>
                     <span>
+                        <i class="bx bx-time"></i>
+                        Das 19h às 22h
+                    </span>
+                    <span>
                         <i class='bx bx-pin'></i>
                         Senac, Av. Visconde Suassuna, 500 - Santo Amaro.
                     </span>
@@ -51,7 +55,7 @@
 
             </p>
 
-            <a href="{{ route('site.splash') }}" class="btn --filled">
+            <a href="{{ route('site.splash') }}" class="btn --filled animation-expanding">
                 <span>inscrever</span>
             </a>
         </div>
@@ -117,7 +121,7 @@
 
                 </p>
 
-                <a href="{{ route('site.splash') }}" class="btn --filled">
+                <a href="{{ route('site.splash') }}" class="btn --filled animation-expanding">
                     <span>inscrever</span>
                 </a>
             </div>
@@ -133,10 +137,12 @@
                     <img src="{{ asset('/site/assets/default/close_icon.svg') }}" alt="Fechar">
                 </div>
 
-                <iframe style="width: 100%; height: 100%;" src="https://www.youtube.com/embed/" title="YouTube video player"
+                {{-- <iframe style="width: 100%; height: 100%;" src="https://www.youtube.com/embed/" title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                    allowfullscreen></iframe> --}}
+
+                <video src="{{ asset('site/assets/video.mp4') }}" controls></video>
             </div>
         </div>
     </div>
@@ -206,7 +212,7 @@
 
     <section class="call-to-action">
         <div n-class="niv">
-            <h2>Garanta já sua <strong>ativação!</strong></h2>
+            <h2 class="animation-expanding">Garanta já sua <strong>inscrição!</strong></h2>
 
             <a href="{{ route('site.splash') }}" class="btn --filled"><span>inscrever</span></a>
 

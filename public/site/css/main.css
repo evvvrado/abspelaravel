@@ -183,6 +183,7 @@ html body {
   width: 100%;
   background-color: #000;
 }
+
 html ::-moz-selection {
   color: var(--principal);
   background: #505050;
@@ -460,6 +461,7 @@ div[n-class="modal"] [n-class="modal-box"] [n-class="modal-close-icon"] {
   right: 4rem;
   top: 4rem;
   cursor: pointer;
+  z-index: 5;
 }
 div[n-class="modal"] [n-class="modal-box"] [n-class="modal-close-icon"]:hover {
   opacity: 0.7;
@@ -511,12 +513,19 @@ div[n-class="modal"]#video_modal {
   **/
 }
 div[n-class="modal"]#video_modal [n-class="modal-box"] {
-  aspect-ratio: 16/9;
-  height: unset;
-  max-width: 55vw;
+  aspect-ratio: 9/16;
+  width: unset;
+  max-height: 33vw;
   padding: 0;
 }
 div[n-class="modal"]#video_modal [n-class="modal-box"] [n-class="modal-content"] {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  max-width: unset;
+  max-height: unset;
+}
+div[n-class="modal"]#video_modal [n-class="modal-box"] [n-class="modal-content"] video {
   padding: 0;
   height: 100%;
   width: 100%;
@@ -532,7 +541,30 @@ div[n-class="modal"]#video_modal [n-class="modal-box"] [n-class="modal-content"]
 }
 @media (max-width: 800px) {
   div[n-class="modal"]#video_modal [n-class="modal-box"] {
-    max-width: 80vw;
+    max-height: 60vh;
+  }
+
+  section.infinite-effect {
+    background: none !important;
+  }
+  section.infinite-hero div[n-class="niv"] div.niv-left-area div.details i {
+    font-size: 3.8rem !important;
+    margin-top: 2rem;
+  }
+  section.infinite-hero div[n-class="niv"] div.niv-left-area div.details span {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.8rem !important;
+    max-width: 80%;
+
+    margin: 0 auto;
+  }
+  section.infinite-effect h2,
+  section.infinite-effect h4,
+  section.infinite-effect p {
+    text-align: center !important;
   }
 }
 @media (max-width: 1150px) {
@@ -559,6 +591,11 @@ div[n-class="modal"]#video_modal [n-class="modal-box"] [n-class="modal-content"]
   }
   div[n-class="modal"]#lista_modal [n-class="modal-box"] [n-class="modal-content"] p {
     margin-bottom: 6rem;
+  }
+
+  section.second.--alternative div[n-class="niv"] div.niv-right-area a.btn.--filled,
+  section.infinite-effect div[n-class="niv"] a.btn.--filled {
+    margin: 0 auto;
   }
 }
 
@@ -3747,6 +3784,8 @@ section.duvidas div[n-class="niv"] div.niv-area details[open] summary::after {
 section.call-to-action {
   padding-top: 4rem;
   padding-bottom: 8rem;
+
+  overflow: hidden;
 }
 section.call-to-action div[n-class="niv"] {
   display: flex;
@@ -4320,4 +4359,18 @@ section.splash div[n-class="niv"] div.niv-content-side picture:last-child {
 
 section.boxes div[n-class*="niv"] div.boxes div.box a.btn.--filled {
   --content: "inscrever";
+}
+
+.animation-expanding {
+  transform-origin: center;
+  animation: spandind 3s alternate-reverse infinite;
+}
+
+@keyframes spandind {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.4);
+  }
 }
