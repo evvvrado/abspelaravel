@@ -513,9 +513,9 @@ div[n-class="modal"]#video_modal {
   **/
 }
 div[n-class="modal"]#video_modal [n-class="modal-box"] {
-  aspect-ratio: 9/16;
-  width: unset;
-  max-height: 33vw;
+  aspect-ratio: 16/9;
+  height: unset;
+  max-width: 55vw;
   padding: 0;
 }
 div[n-class="modal"]#video_modal [n-class="modal-box"] [n-class="modal-content"] {
@@ -541,7 +541,7 @@ div[n-class="modal"]#video_modal [n-class="modal-box"] [n-class="modal-content"]
 }
 @media (max-width: 800px) {
   div[n-class="modal"]#video_modal [n-class="modal-box"] {
-    max-height: 60vh;
+    max-width: 97vw;
   }
 
   section.infinite-effect {
