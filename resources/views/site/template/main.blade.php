@@ -77,18 +77,13 @@
 
                 <ul>
                     <li>
-                        <a href="#" title="Acessar Facebook"><img
+                        <a href="https://www.facebook.com/abspernambuco/" title="Acessar Facebook"><img
                                 src="{{ asset('site/assets/img/footer_social_facebook.svg') }}"
                                 alt="ícone rede social"></a>
                     </li>
                     <li>
-                        <a href="#" title="Acessar Instagram"><img
+                        <a href="https://www.instagram.com/abs_pe/" title="Acessar Instagram"><img
                                 src="{{ asset('site/assets/img/footer_social_instagram.svg') }}"
-                                alt="ícone rede social"></a>
-                    </li>
-                    <li>
-                        <a href="#" title="Acessar Youtube"><img
-                                src="{{ asset('site/assets/img/footer_social_youtube.svg') }}"
                                 alt="ícone rede social"></a>
                     </li>
                 </ul>
