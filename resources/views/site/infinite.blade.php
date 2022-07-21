@@ -3,6 +3,15 @@
 @section('body_attr', 'class=infinite-page')
 
 @section('content')
+
+    <div class="solitary-logo">
+        <picture>
+            <img src="{{ asset('site/assets/img/bigger_logo.svg') }}" alt="logo">
+        </picture>
+    </div>
+
+
+
     <section class="infinite-hero" id="inicio">
         <div n-class="niv">
             <div class="niv-left-area">
@@ -29,7 +38,7 @@
                     </span>
                     <span>
                         <i class='bx bx-pin'></i>
-                        Senac, Av. Visconde Suassuna, 500 - Santo Amaro.
+                        Senac, Av. Visc. de Suassuna, 500 Santo Amaro, Recife - PE
                     </span>
                 </div>
             </div>
