@@ -18,7 +18,7 @@
                 <h1 n-class="fade --initial--no-delay">
                     Inicie sua jornada no apaixonante
                     <strong>
-                        no universo dos vinhos
+                        universo dos vinhos
                     </strong>
                 </h1>
 
